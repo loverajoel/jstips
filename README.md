@@ -52,7 +52,7 @@ If you have improvments or sugestions about the tips, PR are welcome!
 [Here the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Stay in touch
-For updates star and watch the repo and follow the Twitter account ***I will send only one tweet per day, I promise!***
+For updates star and watch the repo and follow the [Twitter account](https://twitter.com/tips_js) ***I will send only one tweet per day, I promise!***
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
