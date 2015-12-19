@@ -24,7 +24,6 @@ arr.push(6);
 arr[arr.length] = 6; // 43% faster in Chrome 46
 ```
 Both methods modify the original array.
-
 Doesn't belive me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
 Now we are trying to add a item to the beginning of the array 
