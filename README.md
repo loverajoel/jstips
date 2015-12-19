@@ -49,7 +49,7 @@ items.splice(2, 0, 'hello');
 ### Can you colaborate?
 Sure, send a PR with the tip and we can review and publish it.
 If you have improvments or sugestions about the tips, PR are welcome!
-[Here the instructions](https://github.com/loverajoel/jstips/CONTRIBUITING.md)
+[Here the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Stay in touch
 For updates star and watch the repo and follow the Twitter account ***I will send only one tweet per day, I promise!***
