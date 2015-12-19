@@ -23,8 +23,7 @@ var arr = [1,2,3,4,5];
 arr.push(6);
 arr[arr.length] = 6; // 43% faster in Chrome 46
 ```
-Both methods modify the original array.
-Doesn't belive me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
+Both methods modify the original array. Doesn't belive me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
 Now we are trying to add a item to the beginning of the array 
 
@@ -34,9 +33,7 @@ var arr = [1,2,3,4,5];
 arr.unshift(0);
 [0].concat(arr); // 98% faster in Chrome 46
 ```
-Here a litle bit detail, unshift edit the original array, concat return a new array.
-
-[jsperf](http://jsperf.com/unshift-item-inside-an-array)
+Here a litle bit detail, unshift edit the original array, concat return a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
 Add items at the middle of an array is easy con splice and is the most performant way to do it.
 
