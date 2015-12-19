@@ -1,3 +1,5 @@
+![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
+
 # Introducing JavaScript Tips
 > New year new project, this is about **one JS tip every day!**
 
