@@ -44,7 +44,7 @@ items.splice(2, 0, 'hello');
 I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
 
 ## Prefer the Triple-Equals Operator
-> 12/30/2015 by @madhur
+> 12/30/2015 by [madhur](https://github.com/madhur)
 
 A concept that any beginning developer of JavaScript needs to know is the difference between the double and triple equals. With a double equals comparison operator JavaScript will be a lot more lenient with the outcome. 
 
