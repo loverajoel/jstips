@@ -1,13 +1,13 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
-# Introducing JavaScript Tips
-> New year new project, this is about **one JS tip every day!**
+# Introducing Javascript Tips
+> New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce Javscript tips, the idea is a short and advance tip every day, that allow us improve our way of write code. The tips will be readble in less than 3 minutes and will be about performance, native js, frameworks, conventinos, hacks, interview questions and what the future of the awesome lenguage nos depare.
+With great excitement, I introduce short and useful Javascript tips per day that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performances, native js, frameworks, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
-Every day, weekends and non laboral day incluisve, at the middle of the day I will send a tip to Github and I will tweet it.
+At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
-In order to start, a gift. This is an example of how the tips would be.
+Just to give you a glance, this is an example of how the tips would be like.
 
 ## Insert item inside an array
 > 12/19/2015
@@ -42,13 +42,17 @@ var items = ['one', 'two', 'three', 'four'];
 items.splice(2, 0, 'hello');
 ```
 
-### Can you colaborate?
-Sure, send a PR with the tip and we can review and publish it.
-If you have improvments or sugestions about the tips, PR are welcome!
-[Here the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
-### Stay in touch
-For updates star and watch the repo and follow the [Twitter account](https://twitter.com/tips_js) ***I will send only one tweet per day, I promise!***
+### Can you help us enrich it?
+Please feel free to send us a PR with your own Java tip to be published here.
+Any improvements or suggestions are more than welcome!
+[Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
+
+### Let’s keep in touch
+To get star updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+
+# Tips list
+> Return back the January 1st
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)

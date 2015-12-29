@@ -1,9 +1,10 @@
 # Send your tip
-Tips are welcome!
+Every day one tip will be merged and you can spend yours. Make a pull request with the correct format.
 
 # Tip format
 
 ## #1(number) - Title
 > date mm/dd/yyyy by @username
 
-Your tip content remember that must be readble in less thatn 1 minute, you can add link to antoher sites or videos if you consider.
+Remember that your tip content must be readable in less than 2 minutes, you can add link to other sites or videos if you consider.
+You should let empty the date and the tip number, when we decide merge de PR you will add it and squash your commits.
