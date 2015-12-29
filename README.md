@@ -35,7 +35,7 @@ arr.unshift(0);
 ```
 Here a little bit detail, unshift edit the original array, concat return a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-Add items at the middle of an array is easy con splice and is the most performant way to do it.
+Add items at the middle of an array is easy with splice and is the most performant way to do it.
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
