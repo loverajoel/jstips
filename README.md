@@ -43,6 +43,88 @@ items.splice(2, 0, 'hello');
 ```
 I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
 
+## Improve Nested Conditionals
+> 12/30/2015 by [AlbertoFuente](https://github.com/AlbertoFuente)
+
+How can we improve and make more efficient nested if statement on javascript.
+
+```javascript
+if (color) {
+  if (color === 'black') {
+    printBlackBackground();
+  } else if (color === 'red') {
+    printRedBackground();
+  } else if (color === 'blue') {
+    printBlueBackground();
+  } else if (color === 'green') {
+    printGreenBackground();
+  } else {
+    printYellowBackground();
+  }
+}
+```
+
+One way to improve the nested if statement would be using the 'switch' statement.
+
+```javascript
+switch(color) {
+  case 'black':
+    printBlackBackground();
+    break;
+  case 'red':
+    printRedBackground();
+    break;
+  case 'blue':
+    printBlueBackground();
+    break;
+  case 'green':
+    printGreenBackground();
+    break;
+  default:
+    printYellowBackground();
+}
+```
+
+But the most efficient way to improve those nested conditional statements would be through an 'object'.
+
+```javascript
+var colorObj = {
+  'black': printBlackBackground,
+  'red': printRedBackground,
+  'blue': printBlueBackground,
+  'green': printGreenBackground,
+  'yellow': printYellowBackground
+};
+
+if (color) {
+  colorObj[color]();
+}
+```
+
+But what if we have a conditional with several checks in each statement. In this case we can use the conditional switch. 
+If we pass true as parameter to the switch statement allows us to put a conditional in each case.
+
+```javascript
+switch(true) {
+  case (typeof color === 'string' && color === 'black'):
+    printBlackBackground();
+    break;
+  case (typeof color === 'string' && color === 'red'):
+    printRedBackground();
+    break;
+  case (typeof color === 'string' && color === 'blue'):
+    printBlueBackground();
+    break;
+  case (typeof color === 'string' && color === 'green'):
+    printGreenBackground();
+    break;
+  case (typeof color === 'string' && color === 'yellow'):
+    printYellowBackground();
+    break;
+}
+```
+
+
 ### Can you help us enrich it?
 Please feel free to send us a PR with your own Javascript tip to be published here.
 Any improvements or suggestions are more than welcome!
