@@ -1,4 +1,4 @@
-!-[header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
+![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
