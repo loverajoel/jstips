@@ -43,6 +43,35 @@ items.splice(2, 0, 'hello');
 ```
 I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
 
+## Prefer the Triple-Equals Operator
+> 12/30/2015 by @madhur
+
+A concept that any beginning developer of JavaScript needs to know is the difference between the double and triple equals. With a double equals comparison operator JavaScript will be a lot more lenient with the outcome. 
+
+```javascript
+var x = 51;
+var str = "51";
+if(x == str) {
+    console.log("Somewhat lol");
+} else {
+    alert("WRONG");
+}
+```
+
+With the double equals, the if statement will return true and the first block will be executed. However if there was a triple equals in the same example.
+
+```javascript
+var x = 51;
+var str = "51";
+if(x === str) {
+    console.log("Somewhat lol");
+} else {
+    alert("WRONG");
+}
+```
+
+The alert would pop up instead. The reason being the triple equals will not convert the type of the values; making it more strict and therefore better in most situations.
+
 ### Can you help us enrich it?
 Please feel free to send us a PR with your own Javascript tip to be published here.
 Any improvements or suggestions are more than welcome!
