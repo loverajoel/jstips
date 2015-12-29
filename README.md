@@ -50,6 +50,7 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+> Don't forget Star the repo, this will help to diffuse the project!
 
 # Tips list
 > Return back the January 1st
