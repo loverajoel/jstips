@@ -1,4 +1,4 @@
-![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
+!-[header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
@@ -41,7 +41,7 @@ Add items at the middle of an array is easy con splice and is the most performan
 var items = ['one', 'two', 'three', 'four'];
 items.splice(2, 0, 'hello');
 ```
-
+I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
 
 ### Can you help us enrich it?
 Please feel free to send us a PR with your own Javascript tip to be published here.
