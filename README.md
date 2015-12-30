@@ -40,6 +40,10 @@ For inserting elements inbetween the existing ones [`Array.prototype.splice()`](
 var items = ['one', 'two', 'three', 'four'];
 items.splice(2, 0, 'hello');
 ```
+You may actually [go faster](https://jsperf.com/fast-array-splice/38) but at the cost of code readability.
+
+
+
 I tried run these test in various navigators and os and the results were similar. 
 Please do perform your own tests. I hope these tips turn out to be useful!
 
