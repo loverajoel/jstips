@@ -12,10 +12,10 @@ Just to give you a glance, this is an example of how the tips would be like.
 ## Insert item inside an array
 > 12/29/2015
 
-Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
+Insert an item into an existing array is a daily common task. You can add elements to the end of an array using [`Array.prototype.push()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/push), to the beginning using [`Array.prototype.unshift()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), or the middle using [`Array.prototype.splice()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 But those known methods doesn't mean that are the more porformant, here we go...
 
-Add a element at the end of the array is easy with push(), but there are a way more performant.
+Add a element at the end of the array is easy with [`Array.prototype.push()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/push), but there are a way more performant.
 
 ```javascript
 var arr = [1,2,3,4,5];
