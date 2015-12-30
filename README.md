@@ -25,7 +25,7 @@ arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
 Both methods modify the original array. Doesn't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
-Now we are trying to add a item to the beginning of the array 
+Now we are trying to add a item to the beginning of the array
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -39,7 +39,7 @@ Add items at the middle of an array is easy with splice and is the most performa
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
-items.splice(2, 0, 'hello');
+items.splice(items.length / 2, 0, 'hello');
 ```
 I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
 
