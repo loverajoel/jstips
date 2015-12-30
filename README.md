@@ -7,9 +7,18 @@ With great excitement, I introduce short and useful Javascript tips per day that
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
-Just to give you a glance, this is an example of how the tips would be like.
+### Can you help us enrich it?
+Please feel free to send us a PR with your own Javascript tip to be published here.
+Any improvements or suggestions are more than welcome!
+[Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
-## Insert item inside an Array
+### Let’s keep in touch
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+> Don't forget Star the repo, this will help to diffuse the project!
+
+# Tips list
+
+## #0 - Insert item inside an Array
 > 12/29/2015
 
 Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
@@ -43,18 +52,6 @@ var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 I tried to run these tests in various Browsers and OS and the results were similar. I hope this tips will be useful for you and encorage to perform your own tests! 
-
-### Can you help us enrich it?
-Please feel free to send us a PR with your own Javascript tip to be published here.
-Any improvements or suggestions are more than welcome!
-[Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
-
-### Let’s keep in touch
-To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
-> Don't forget Star the repo, this will help to diffuse the project!
-
-# Tips list
-> Return back the January 1st
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
