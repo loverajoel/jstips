@@ -17,20 +17,20 @@ But although these are the best known methods for those tasks, better performing
 
 Adding an element at the end of the array is easy with [`Array.prototype.push()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/push) but there's a faster alternative:
 ```javascript
-var arr = [1,2,3,4,5];
+var items = [1,2,3,4,5];
 
-arr.push(6);
-arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
+items.push(6);
+items[items.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
 Don't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)!
 Both methods will modify the original array. 
 
 Lets prepend an item to the the array:
 ```javascript
-var arr = [1,2,3,4,5];
+var items = [1,2,3,4,5];
 
-arr.unshift(0);
-[0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
+items.unshift(0);
+[0].concat(items); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
 Instead of using unshift we can also create a fresh array and join it with `arr`. [`Array.prototype.concat()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/push) will combine both into a new array and return the result. 
 Check the [jsperf](http://jsperf.com/unshift-item-inside-an-array)!
