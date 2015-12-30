@@ -9,8 +9,6 @@ At midday, no matter if it is a weekend or a holiday, a tip will be posted and t
 
 Just to give you a glance, this is an example of how the tips would be like.
 
-- [Insert item inside an array](#insert-item-inside-an-array)
-
 ## Insert item inside an Array
 > 12/29/2015
 
