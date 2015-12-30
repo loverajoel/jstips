@@ -38,7 +38,7 @@ Check the [jsperf](http://jsperf.com/unshift-item-inside-an-array)!
 For inserting elements inbetween the existing ones [`Array.prototype.splice()`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) turns out to be the best option.
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
-items.splice(2, 0, 'hello');
+items.splice(items.length, 0, 'hello');
 ```
 You may actually [go faster](https://jsperf.com/fast-array-splice/38) but at the cost of code readability.
 
