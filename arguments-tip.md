@@ -13,7 +13,7 @@ var args = [].slice.call(arguments);
 In this case, instead of calling `slice` from the `Array` prototype, it is simply being called from an empty array literal.
 
 ###Optimization
-Unfortunately, passing `arguments` into any function call will cause the V8 JavaScript engine used in Chrome and Node to skip optimization on the function that does this, which can result it considerably slower performance. See this article on [optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers). Passing `arguments` to any other function is known as *leaking `arguments`*.
+Unfortunately, passing `arguments` into any function call will cause the V8 JavaScript engine used in Chrome and Node to skip optimization on the function that does this, which can result in considerably slower performance. See this article on [optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers). Passing `arguments` to any other function is known as *leaking `arguments`*.
 
 Instead, if you want an array of the arguments that lets you use you need to resort to this:
 ```
