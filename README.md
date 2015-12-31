@@ -96,7 +96,7 @@ var colorObj = {
   'yellow': printYellowBackground
 };
 
-if (color) {
+if (color && colorObj.hasOwnProperty(color)) {
   colorObj[color]();
 }
 ```
