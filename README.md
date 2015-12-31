@@ -53,10 +53,10 @@ items.splice(items.length / 2, 0, 'hello');
 ```
 I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
 
-## Improve Nested Conditionals
-> 12/30/2015 by [AlbertoFuente](https://github.com/AlbertoFuente)
+## #3 - Improve Nested Conditionals
+> 01/03/2016 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
-How can we improve and make more efficient nested if statement on javascript.
+How can we improve and make more efficient nested `if` statement on javascript.
 
 ```javascript
 if (color) {
@@ -74,7 +74,7 @@ if (color) {
 }
 ```
 
-One way to improve the nested if statement would be using the 'switch' statement.
+One way to improve the nested `if` statement would be using the `switch` statement. It's not recommended it's use and it's prone to difficult debugging errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
@@ -95,7 +95,7 @@ switch(color) {
 }
 ```
 
-But the most efficient way to improve those nested conditional statements would be through an 'object'.
+But the most efficient way to improve those nested conditional statements would be through an `object`.
 
 ```javascript
 var colorObj = {
@@ -106,13 +106,12 @@ var colorObj = {
   'yellow': printYellowBackground
 };
 
-if (color) {
+if (color && colorObj.hasOwnProperty(color)) {
   colorObj[color]();
 }
 ```
-
-But what if we have a conditional with several checks in each statement. In this case we can use the conditional switch.
-If we pass true as parameter to the switch statement allows us to put a conditional in each case.
+But what if we have a conditional with several checks in each statement. In this case we can use the conditional `switch`.
+If we pass `true` as parameter to the `switch` statement allows us to put a conditional in each case.
 
 ```javascript
 switch(true) {
