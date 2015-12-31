@@ -75,7 +75,7 @@ if (color) {
 }
 ```
 
-One way to improve the nested `if` statement would be using the `switch` statement.
+One way to improve the nested `if` statement would be using the `switch` statement. It's not recommended it's use and it's prone to difficult debugging errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
