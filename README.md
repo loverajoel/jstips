@@ -74,7 +74,7 @@ if (color) {
 }
 ```
 
-One way to improve the nested `if` statement would be using the `switch` statement. It's not recommended it's use and it's prone to difficult debugging errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
+One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, It's not recommended to use it because it's so difficult to debug errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
@@ -95,23 +95,8 @@ switch(color) {
 }
 ```
 
-But the most efficient way to improve those nested conditional statements would be through an `object`.
-
-```javascript
-var colorObj = {
-  'black': printBlackBackground,
-  'red': printRedBackground,
-  'blue': printBlueBackground,
-  'green': printGreenBackground,
-  'yellow': printYellowBackground
-};
-
-if (color && colorObj.hasOwnProperty(color)) {
-  colorObj[color]();
-}
-```
-But what if we have a conditional with several checks in each statement. In this case we can use the conditional `switch`.
-If we pass `true` as parameter to the `switch` statement allows us to put a conditional in each case.
+But what if we have a conditional with several checks in each statement? In this case, if we like to do less verbose and more ordered, we can use the conditional `switch`.
+If we pass `true` as parameter to the `switch` statement, It allows us to put a conditional in each case.
 
 ```javascript
 switch(true) {
@@ -130,6 +115,22 @@ switch(true) {
   case (typeof color === 'string' && color === 'yellow'):
     printYellowBackground();
     break;
+}
+```
+
+But we must always avoid having several checks in every condition, avoiding use of `swith` as far as possible and take into account that the most efficient way to do this is through an `object`.
+
+```javascript
+var colorObj = {
+  'black': printBlackBackground,
+  'red': printRedBackground,
+  'blue': printBlueBackground,
+  'green': printGreenBackground,
+  'yellow': printYellowBackground
+};
+
+if (color && colorObj.hasOwnProperty(color)) {
+  colorObj[color]();
 }
 ```
 
