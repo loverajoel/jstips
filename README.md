@@ -51,7 +51,7 @@ Add items at the middle of an array is easy with splice and is the most performa
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
-I tried run these test in various navigators and os and the results was similar, I hope you try your own test and that these tips will be useful!
+I tried to run these tests in various Browsers and OS and the results were similar. I hope this tips will be useful for you and encorage to perform your own tests!
 
 ## #3 - Improve Nested Conditionals
 > 01/03/2016 by [AlbertoFuente](https://github.com/AlbertoFuente)
