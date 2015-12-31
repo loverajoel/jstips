@@ -134,5 +134,7 @@ if (color && colorObj.hasOwnProperty(color)) {
 }
 ```
 
+Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
