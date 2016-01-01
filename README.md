@@ -54,6 +54,7 @@ items.splice(items.length / 2, 0, 'hello');
 I tried to run these tests in various Browsers and OS and the results were similar. I hope this tips will be useful for you and encourage to perform your own tests!
 
 ## #1 - AngularJs: `$digest` vs `$apply`
+> 01/01/2016
 One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluate the changes between the model and the view through of cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
 Angular evaluate each watcher whenever one event was fired, this is the known `$digest` cycle.
