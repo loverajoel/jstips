@@ -27,14 +27,14 @@ One of the most appreciated features of AngularJs is the two way data binding. I
 Angular evaluate each watcher whenever one event was fired, this is the known `$digest` cycle.
 Sometimes you have to force to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
 
-## `$apply`
+### `$apply`
 This core method lets you to start the digestion cycle explicitly, that means that all watchers are checked, the entire application starts the `$digest loop`. Internally after execute an optional function parameter, call internally to `$rootScope.$digest();`.
 
-## `$digest`
+### `$digest`
 In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parents scopes will not be checked
  and not be affected.
 
-## Recomendations
+### Recomendations
 - Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
 - Pass a function expression to `$apply`, this have a error handling mechanism and allow integrate changes in the digest cycle
 
