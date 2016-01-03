@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #3 - Improve Nested Conditionals
+## #03 - Improve Nested Conditionals
 > 01/03/2016 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
 How can we improve and make more efficient nested `if` statement on javascript.
