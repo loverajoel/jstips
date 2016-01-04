@@ -83,7 +83,7 @@ switch(true) {
 }
 ```
 
-But we must always avoid having several checks in every condition, avoiding use of `swith` as far as possible and take into account that the most efficient way to do this is through an `object`.
+But we must always avoid having several checks in every condition, avoiding use of `switch` as far as possible and take into account that the most efficient way to do this is through an `object`.
 
 ```javascript
 var colorObj = {
