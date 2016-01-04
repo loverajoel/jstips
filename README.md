@@ -18,6 +18,63 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #04 - Sorting strings with accented characters
+> 01/04/2016
+
+Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` each value will be treated as a string and sorted alphabetically. Also you can create your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function passing it how argument.
+
+```javascript
+['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
+// ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
+```
+
+But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain an strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
+
+See the next example:
+
+```javascript
+// Spanish
+['único','árbol', 'cosas', 'fútbol'].sort();
+// ["cosas", "fútbol", "árbol", "único"] // bad order
+
+// German
+['Woche', 'wöchentlich', 'wäre', 'Wann'].sort();
+// ["Wann", "Woche", "wäre", "wöchentlich"] // bad order
+```
+
+Fortunately exists two ways to avoid this mistake [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
+
+> Both methods have his own custom parameters in order to configure it for work adequately.
+
+### Using `localeCompare()`
+
+```javascript
+['único','árbol', 'cosas', 'fútbol'].sort(function (a, b) {
+  return a.localeCompare(b);
+});
+// ["árbol", "cosas", "fútbol", "único"]
+
+['Woche', 'wöchentlich', 'wäre', 'Wann'].sort(function (a, b) {
+  return a.localeCompare(b);
+});
+// ["Wann", "wäre", "Woche", "wöchentlich"]
+```
+
+### Using `Intl.Collator()`
+
+```javascript
+['único','árbol', 'cosas', 'fútbol'].sort(Intl.Collator().compare);
+// ["árbol", "cosas", "fútbol", "único"]
+
+['Woche', 'wöchentlich', 'wäre', 'Wann'].sort(Intl.Collator().compare);
+// ["Wann", "wäre", "Woche", "wöchentlich"]
+```
+
+- For each method you can customize the location.
+- According [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator it's more fast for compare large numbers of strings.
+
+So remember when you are working with arrays of string in another language that not is english, use this methods to avoid unexpected errors.
+
 ## #03 - Improve Nested Conditionals
 > 01/03/2016 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
