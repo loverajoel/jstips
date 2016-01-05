@@ -19,6 +19,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 # Tips list
 
 ## #5 - Differences between `undefined` and `null`
+
 > 01/05/2016 by [@loverajoel](https://twitter.com/loverajoel)
 
 - `undefined` means a variable has not been declared, or has been declared but has not yet been assigned a value
@@ -47,7 +48,8 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 ```
 
 ## #04 - Sorting strings with accented characters
-> 01/04/2016
+
+> 01/04/2016 by [@loverajoel](https://twitter.com/loverajoel)
 
 Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` each value will be treated as a string and sorted alphabetically. Also you can create your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function passing it how argument.
 
@@ -188,7 +190,7 @@ Here you can find more information about [this](http://www.nicoespeon.com/en/201
 
 ## #02 - ReactJs - Keys in children components are important
 
-> 02/01/2016
+> 02/01/2016  by [@loverajoel](https://twitter.com/loverajoel)
 
 
 The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) is an attribute that you must pass to all components created dynamically from an array. It's unique and constant id that React use for identify each component in the DOM and know that it's a different component and not the same one. Using keys will ensure that the child component is preserved and not recreated and prevent that weird things happens.
@@ -223,7 +225,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 ## #1 - AngularJs: `$digest` vs `$apply`
 
-> 01/01/2016
+> 01/01/2016  by [@loverajoel](https://twitter.com/loverajoel)
 
 One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluate the changes between the model and the view through of cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
