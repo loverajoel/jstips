@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #5 - Differences between `undefined` and `null`
+## #05 - Differences between `undefined` and `null`
 
 > 01/05/2016 by [@loverajoel](https://twitter.com/loverajoel)
 
