@@ -18,6 +18,34 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #5 - Differences between `undefined` and `null`
+> 01/05/2016 by [@loverajoel](https://twitter.com/loverajoel)
+
+- `undefined` means a variable has not been declared, or has been declared but has not yet been assigned a value
+- `null` is an assignment value that means "no value"
+- Javascript sets unassigned variables with a default value of `undefined`
+- Javascript never sets a value to `null`, is used by programmers to indicate that a `var` have no value.
+- `undefined` typeof is `undefined`
+- `null` typeof is an `object`
+- Both are primitives
+- You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+
+  ```javascript
+  typeof(variable) === "undefined"
+```
+- You can check if a variable is [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+
+  ```javascript
+  variable === null
+```
+- The **equility** operator consider them equal, but the **identity** doesn't
+
+  ```javascript
+  null == undefined // true
+
+  null === undefined // false
+```
+
 ## #04 - Sorting strings with accented characters
 > 01/04/2016
 
