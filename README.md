@@ -268,7 +268,7 @@ This core method lets you to start the digestion cycle explicitly, that means th
 In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parents scopes will not be checked
  and not be affected.
 
-### Recomendations
+### Recommendations
 - Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
 - Pass a function expression to `$apply`, this have a error handling mechanism and allow integrate changes in the digest cycle
 
