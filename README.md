@@ -18,6 +18,69 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #1(number) - Avoid basic for loops when possible
+
+> yyyy/mm/dd(date) by [@chtefid](https://twitter.com/chtefid)
+
+Too often, we still see this kind of code :
+
+```javascript
+for (var i = 0; i < elements.length; i++) {
+  var element = elements[i];
+  doSomethingWith(element);
+}
+```
+
+You don't need `i`. You just want to loop over your elements to do something with them.
+To do that more clearly, you can do :
+
+```javascript
+elements.forEach(doSomethingWith);
+```
+Each item from `elements` will be passed as argument one by one to `doSomethingWith`.
+
+Same idea when you want to filter or transform some elements in an array, you can avoid the classic loop and use the proper ES5 Array functions.
+
+Instead of doing :
+
+```javascript
+var validElements = [];
+for (var i = 0; i < elements.length; i++) {
+  var element = elements[i];
+  if (element.isValid) {
+    validElements.push(element);
+  }
+}
+```
+
+You can do :
+
+```javascript
+var elements = [ { name: 'A', isValid: true }, { name: 'B', isValid: false } ];
+function isValid(element) {
+  return element.isValid;
+}
+var validElements = elements.filter(isValid);
+// validElements = [ { name: 'A', isValid: true } ]
+```
+
+And last but not least, make use of the `map` Array function to to get only what you need from your items.
+
+```javascript
+var people = [ { name: 'John', age: 13 }, { name: 'Henry', age: 37 } ];
+function getAge(person) {
+  return person.age;
+}
+var ages = people.map(getAge);
+// ages = [ 13, 37 ]
+```
+
+Those functions don't modify your original array.
+They return a new one (but if you have objects inside, they are not cloned, they have the same reference).
+
+Check out the [Mozilla documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array) to find out more about those functions.
+
+
 ## #06 - Writing a single method for arrays or single elements
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
