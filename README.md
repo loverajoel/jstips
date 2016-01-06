@@ -130,9 +130,9 @@ Fortunately exists two ways to avoid this mistake [localeCompare](https://develo
 ```
 
 - For each method you can customize the location.
-- According [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator it's more fast for compare large numbers of strings.
+- According to [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator is faster when comparing large numbers of strings.
 
-So remember when you are working with arrays of string in another language that not is english, use this methods to avoid unexpected errors.
+So remember when you are working with arrays of strings in a language other than English, use this method to avoid unexpected errors.
 
 ## #03 - Improve Nested Conditionals
 > 01/03/2016 by [AlbertoFuente](https://github.com/AlbertoFuente)
