@@ -18,6 +18,34 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #06 - Writing a single method for arrays or single elements
+
+>1/06/2015 by [@mattfxyz](https://twitter.com/mattfxyz)
+
+Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
+
+You just have to concat everything into an array first. `Array.concat` will accept an array or a single element.
+
+```javascript
+function printUpperCase(words) {
+  var elements = [].concat(words); 
+  for (var i = 0; i < elements.length; i++) {
+    console.log(elements[i].toUpperCase());
+  }
+}
+```
+
+`printUpperCase` is now ready to accept a single node or an array of nodes as it's parameter.
+
+```javascript
+printUpperCase("cactus"); 
+// => CACTUS
+printUpperCase(["cactus", "bear", "potato"]);
+// => CACTUS
+//  BEAR
+//  POTATO
+```
+
 ## #05 - Differences between `undefined` and `null`
 
 > 01/05/2016 by [@loverajoel](https://twitter.com/loverajoel)
