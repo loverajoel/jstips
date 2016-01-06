@@ -271,7 +271,7 @@ arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
 Both methods modify the original array. Don't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
-Now we are trying to add a item to the beginning of the array
+Now we are trying to add an item to the beginning of the array
 
 ```javascript
 var arr = [1,2,3,4,5];
