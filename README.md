@@ -54,6 +54,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 - `null` is an assignment value that means "no value"
 - Javascript sets unassigned variables with a default value of `undefined`
 - Javascript never sets a value to `null`, is used by programmers to indicate that a `var` have no value.
+- `undefined` is not valid in JSON while `null` is
 - `undefined` typeof is `undefined`
 - `null` typeof is an `object`
 - Both are primitives
