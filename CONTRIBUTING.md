@@ -3,8 +3,8 @@ Every day one tip will be merged and you can spend yours. Make a pull request wi
 
 # Tip format
 
-## #1(number) - Title
-> date mm/dd/yyyy by @username
+## #01(number) - Title
+> yyyy-mm-dd(date) by @username
 
 Remember that your tip content must be readable in less than 2 minutes, you can add link to other sites or videos if you consider.
 You should let empty the date and the tip number, when we decide merge de PR you will add it and squash your commits.
