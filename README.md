@@ -25,10 +25,10 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 Sometimes, for the sake of UI, it is a neccessity to have a full control over a fullname when displaying it.
 
 ```javascript
-Array.prototype.abbrFullName = function(name, surname){ 
+Array.prototype.abbrFullName = function(args){ 
     return this.map(function(elem, idx, arr){
         return idx != 0 && idx != arr.length-1 ? elem[0]+"." : 
-            (name && idx==0) || (surname && idx==arr.length-1) ? elem[0]+"." : 
+            (args.name && idx==0) || (args.surname && idx==arr.length-1) ? elem[0]+"." : 
             elem;
     }).join(" ");
 }
@@ -42,16 +42,16 @@ var fullname_word_list = fullname_str.split(" ");
 console.log(fullname_word_list);
 // ["John", "Ronald", "Reuel", "Tolkien"]
 
-fullname_word_list.abbrFullName(false, false); //abbreviate only the middle names
+fullname_word_list.abbrFullName({name:false, surname:false}); //abbreviate only the middle names
 // "John R. R. Tolkien"
 
-fullname_word_list.abbrFullName(true, false); //abbreviate name too, but not surname
+fullname_word_list.abbrFullName({name:true, surname:false}); //abbreviate name too, but not surname
 // "J. R. R. Tolkien"
 
-fullname_word_list.abbrFullName(false, true); // abbreviate surname too, but not name
+fullname_word_list.abbrFullName({name:false, surname:true}); // abbreviate surname too, but not name
 // "John R. R. T."
 
-fullname_word_list.abbrFullName(true, true); // abbreviate name and surname too
+fullname_word_list.abbrFullName({name:true, surname:true}); // abbreviate name and surname too
 // "J. R. R. T."
 ```
 
@@ -63,9 +63,10 @@ This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fish
   
 ```javascript
 function shuffle(arr){
-    for (var i = arr.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = arr[i];
+    var i,j,temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
@@ -85,9 +86,10 @@ Also, it can be used as a function in Array.prototype like this:
 
 ```javascript
 Array.prototype.shuffle = function(){
-    for (var i = this.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = this[i];
+    var i,j,temp;
+    for (i = this.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = this[i];
         this[i] = this[j];
         this[j] = temp;
     }
