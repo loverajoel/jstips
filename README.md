@@ -137,7 +137,7 @@ So when you are working with arrays of strings in a language other than English,
 ## #03 - Improve Nested Conditionals
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
-How can we improve and make more efficient nested `if` statement on javascript.
+How can we improve and make more efficient nested `if` statement in javascript.
 
 ```javascript
 if (color) {
