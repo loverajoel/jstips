@@ -3,7 +3,7 @@
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce short and useful Javascript tips per day that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
@@ -14,13 +14,13 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
-> Don't forget Star the repo, this will help to diffuse the project!
+> Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
 
 ## #06 - Writing a single method for arrays or single elements
 
->1/06/2015 by [@mattfxyz](https://twitter.com/mattfxyz)
+> 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
 
 Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
 
@@ -48,26 +48,27 @@ printUpperCase(["cactus", "bear", "potato"]);
 
 ## #05 - Differences between `undefined` and `null`
 
-> 01/05/2016 by [@loverajoel](https://twitter.com/loverajoel)
+> 2016-01-05 by [@loverajoel](https://twitter.com/loverajoel)
 
 - `undefined` means a variable has not been declared, or has been declared but has not yet been assigned a value
 - `null` is an assignment value that means "no value"
 - Javascript sets unassigned variables with a default value of `undefined`
-- Javascript never sets a value to `null`, is used by programmers to indicate that a `var` have no value.
+- Javascript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
+- `undefined` is not valid in JSON while `null` is
 - `undefined` typeof is `undefined`
 - `null` typeof is an `object`
 - Both are primitives
 - You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
   ```javascript
-  typeof(variable) === "undefined"
+  typeof variable === "undefined"
 ```
 - You can check if a variable is [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 
   ```javascript
   variable === null
 ```
-- The **equility** operator consider them equal, but the **identity** doesn't
+- The **equality** operator considers them equal, but the **identity** doesn't
 
   ```javascript
   null == undefined // true
@@ -77,16 +78,16 @@ printUpperCase(["cactus", "bear", "potato"]);
 
 ## #04 - Sorting strings with accented characters
 
-> 01/04/2016 by [@loverajoel](https://twitter.com/loverajoel)
+> 2016-01-04 by [@loverajoel](https://twitter.com/loverajoel)
 
-Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` each value will be treated as a string and sorted alphabetically. Also you can create your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function passing it how argument.
+Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. Also you can provide your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
 
 ```javascript
 ['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
 
-But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain an strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
+But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain a strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
 
 See the next example:
 
@@ -100,9 +101,9 @@ See the next example:
 // ["Wann", "Woche", "wäre", "wöchentlich"] // bad order
 ```
 
-Fortunately exists two ways to avoid this mistake [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
+Fortunately, there are two ways to overcome this behavior [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
 
-> Both methods have his own custom parameters in order to configure it for work adequately.
+> Both methods have their own custom parameters in order to configure it to work adequately.
 
 ### Using `localeCompare()`
 
@@ -129,12 +130,12 @@ Fortunately exists two ways to avoid this mistake [localeCompare](https://develo
 ```
 
 - For each method you can customize the location.
-- According [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator it's more fast for compare large numbers of strings.
+- According to [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator is faster when comparing large numbers of strings.
 
-So remember when you are working with arrays of string in another language that not is english, use this methods to avoid unexpected errors.
+So when you are working with arrays of strings in a language other than English, remember to use this method to avoid unexpected sorting.
 
 ## #03 - Improve Nested Conditionals
-> 01/03/2016 by [AlbertoFuente](https://github.com/AlbertoFuente)
+> 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
 How can we improve and make more efficient nested `if` statement on javascript.
 
@@ -218,7 +219,7 @@ Here you can find more information about [this](http://www.nicoespeon.com/en/201
 
 ## #02 - ReactJs - Keys in children components are important
 
-> 02/01/2016  by [@loverajoel](https://twitter.com/loverajoel)
+> 2016-01-02  by [@loverajoel](https://twitter.com/loverajoel)
 
 
 The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) is an attribute that you must pass to all components created dynamically from an array. It's unique and constant id that React use for identify each component in the DOM and know that it's a different component and not the same one. Using keys will ensure that the child component is preserved and not recreated and prevent that weird things happens.
@@ -253,7 +254,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 ## #1 - AngularJs: `$digest` vs `$apply`
 
-> 01/01/2016  by [@loverajoel](https://twitter.com/loverajoel)
+> 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
 One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluate the changes between the model and the view through of cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
@@ -267,7 +268,7 @@ This core method lets you to start the digestion cycle explicitly, that means th
 In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parents scopes will not be checked
  and not be affected.
 
-### Recomendations
+### Recommendations
 - Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
 - Pass a function expression to `$apply`, this have a error handling mechanism and allow integrate changes in the digest cycle
 
@@ -283,7 +284,7 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 
 
 ## #0 - Insert item inside an Array
-> 12/29/2015
+> 2015-12-29
 
 Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
 
@@ -299,7 +300,7 @@ arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
 Both methods modify the original array. Don't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
-Now we are trying to add a item to the beginning of the array
+Now we are trying to add an item to the beginning of the array
 
 ```javascript
 var arr = [1,2,3,4,5];
