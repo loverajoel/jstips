@@ -3,7 +3,7 @@ To submit a tip to the list, fork the repository and add your tip to the top of 
 
 Use the format below when writing your tip. Your tip should be readable in less than two minutes. You may add links to other sites or videos that give more insight if you wish. 
 
-Once your tip is ready, issue a pull request and your tip will be reviewed. Every day one tip will be merged from the available pull requests.
+Once your tip is ready, [issue a pull request](https://help.github.com/articles/using-pull-requests/) and your tip will be reviewed. Every day one tip will be merged from the available pull requests.
 
 # Tip format
 
