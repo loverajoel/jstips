@@ -59,6 +59,14 @@ By including this directive in a JavaScript file or function, we will direct the
 
 Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
 
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.  
+Strict mode is supported in:
+* Internet Explorer from version 10. 
+* Firefox from version 4.
+* Chrome from version 13. 
+* Safari from version 5.1. 
+* Opera from version 12.
+
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 
