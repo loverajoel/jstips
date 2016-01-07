@@ -3,7 +3,7 @@
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce short and useful Javascript tips per day that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
@@ -14,7 +14,7 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
-> Don't forget Star the repo, this will help to diffuse the project!
+> Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
 
@@ -53,7 +53,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 - `undefined` means a variable has not been declared, or has been declared but has not yet been assigned a value
 - `null` is an assignment value that means "no value"
 - Javascript sets unassigned variables with a default value of `undefined`
-- Javascript never sets a value to `null`, is used by programmers to indicate that a `var` have no value.
+- Javascript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
 - `undefined` is not valid in JSON while `null` is
 - `undefined` typeof is `undefined`
 - `null` typeof is an `object`
@@ -68,7 +68,7 @@ printUpperCase(["cactus", "bear", "potato"]);
   ```javascript
   variable === null
 ```
-- The **equility** operator consider them equal, but the **identity** doesn't
+- The **equality** operator considers them equal, but the **identity** doesn't
 
   ```javascript
   null == undefined // true
@@ -80,14 +80,14 @@ printUpperCase(["cactus", "bear", "potato"]);
 
 > 2016-01-04 by [@loverajoel](https://twitter.com/loverajoel)
 
-Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` each value will be treated as a string and sorted alphabetically. Also you can create your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function passing it how argument.
+Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. Also you can provide your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
 
 ```javascript
 ['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
 
-But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain an strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
+But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain a strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
 
 See the next example:
 
@@ -101,9 +101,9 @@ See the next example:
 // ["Wann", "Woche", "wäre", "wöchentlich"] // bad order
 ```
 
-Fortunately exists two ways to avoid this mistake [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
+Fortunately, there are two ways to overcome this behavior [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
 
-> Both methods have his own custom parameters in order to configure it for work adequately.
+> Both methods have their own custom parameters in order to configure it to work adequately.
 
 ### Using `localeCompare()`
 
@@ -132,7 +132,7 @@ Fortunately exists two ways to avoid this mistake [localeCompare](https://develo
 - For each method you can customize the location.
 - According to [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator is faster when comparing large numbers of strings.
 
-So remember when you are working with arrays of strings in a language other than English, use this method to avoid unexpected errors.
+So when you are working with arrays of strings in a language other than English, remember to use this method to avoid unexpected sorting.
 
 ## #03 - Improve Nested Conditionals
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
