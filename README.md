@@ -38,7 +38,7 @@ function doTheThing() {
 
   // Outputs: undefined
   console.log(definedSimulateneously);
-  var definedSimulateneouslyr = 'I am defined!'
+  var definedSimulateneously = 'I am defined!'
   // Outputs: 'I am defined!'
   console.log(definedSimulateneously)
 
