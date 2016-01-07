@@ -18,6 +18,55 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #07 - Shuffle an Array
+
+> 2016-01-07 by [@0xmtn](https://github.com/0xmtn/)
+
+This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+  
+```javascript
+function shuffle(arr){
+    for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+}
+```
+An example:
+
+```javascript
+a=[1,2,3,4,5,6,7,8];
+b = shuffle(a);
+console.log(b);
+//[2, 7, 8, 6, 5, 3, 1, 4]
+```
+
+Also, it can be used as a function in Array.prototype like this:
+
+```javascript
+Array.prototype.shuffle = function(){
+    for (var i = this.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+    }
+    return this;
+}
+```
+
+An example:
+
+```javascript
+a=[2, 7, 8, 6, 5, 3, 1, 4];
+a.shuffle();
+console.log(a);
+//[6, 5, 7, 4, 1, 8, 2, 3]
+```
+
 ## #06 - Writing a single method for arrays or single elements
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
