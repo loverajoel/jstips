@@ -18,6 +18,27 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #01(number) - Converting a Node List to an Array
+
+> yyyy-mm-dd(date) by [@Tevko](https://twitter.com/tevko)
+
+The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
+
+```
+const nodelist = document.querySelectorAll('div');
+const nodelistToArray = Array.apply(null, nodelist);
+
+//later on ..
+
+nodelistToArray.forEach(...);
+nodelistToArray.map(...);
+nodelistToArray.slice(...);
+
+//etc...
+```
+
+The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
+
 ## #07 - "use strict" and get lazy
 
 > 2016-01-07 by [@nainslie](https://twitter.com/nat5an)
@@ -28,7 +49,7 @@ By default, JavaScript allows the programmer to be pretty careless, for example,
 
 Programmers like to make the computer do the boring stuff for us, and automatically check our work for mistakes. That's what the JavaScript "use strict" directive allows us to do, by turning our mistakes into JavaScript errors.
 
-We add this directive either by adding it at the top of a js file: 
+We add this directive either by adding it at the top of a js file:
 
 ```javascript
 // Whole-script strict mode syntax
@@ -53,22 +74,21 @@ By including this directive in a JavaScript file or function, we will direct the
 * Variables can only be introduced when they are preceded with "var"
 * Attempting to write to readonly properties generates a noisy error
 * You have to call constructors with the "new" keyword
-* "this" is not implicitly bound to the global object 
+* "this" is not implicitly bound to the global object
 * Very limited use of eval() allowed
 * Protects you from using reserved words or future reserved words as variable names
 
 Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
 
-It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.  
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
 Strict mode is supported in:
-* Internet Explorer from version 10. 
+* Internet Explorer from version 10.
 * Firefox from version 4.
-* Chrome from version 13. 
-* Safari from version 5.1. 
+* Chrome from version 13.
+* Safari from version 5.1.
 * Opera from version 12.
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-
 
 ## #06 - Writing a single method for arrays or single elements
 
@@ -80,7 +100,7 @@ You just have to concat everything into an array first. `Array.concat` will acce
 
 ```javascript
 function printUpperCase(words) {
-  var elements = [].concat(words); 
+  var elements = [].concat(words);
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i].toUpperCase());
   }
@@ -90,7 +110,7 @@ function printUpperCase(words) {
 `printUpperCase` is now ready to accept a single node or an array of nodes as it's parameter.
 
 ```javascript
-printUpperCase("cactus"); 
+printUpperCase("cactus");
 // => CACTUS
 printUpperCase(["cactus", "bear", "potato"]);
 // => CACTUS
