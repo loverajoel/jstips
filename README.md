@@ -39,11 +39,11 @@ function printUpperCase(words) {
 
 ```javascript
 printUpperCase("cactus"); 
-// => Cactus
+// => CACTUS
 printUpperCase(["cactus", "bear", "potato"]);
-// => Cactus
-//  Bear
-//  Potato
+// => CACTUS
+//  BEAR
+//  POTATO
 ```
 
 ## #05 - Differences between `undefined` and `null`
