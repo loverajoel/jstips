@@ -18,9 +18,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #07 - Shuffle an Array
+## #01(number) - Shuffle an Array
 
-> 2016-01-07 by [@0xmtn](https://github.com/0xmtn/)
+> yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
 
 This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
   
