@@ -37,14 +37,14 @@ var v = "Hi!  I'm a strict mode script!";
 or inside a function:
 
 ```javascript
-function strict()
+function f()
 {
   // Function-level strict mode syntax
   'use strict';
   function nested() { return "And so am I!"; }
   return "Hi!  I'm a strict mode function!  " + nested();
 }
-function notStrict() { return "I'm not strict."; }
+function f2() { return "I'm not strict."; }
 ```
 
 By including this directive in a JavaScript file or function, we will direct the JavaScript engine to execute in strict mode which disables a bunch of behaviors that are usually undesirable in larger JavaScript projects.  Among other things, strict mode changes the following behaviors:
