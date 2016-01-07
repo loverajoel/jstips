@@ -18,6 +18,94 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #01(number) - Separate name and surname from fullname string.
+
+> yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
+
+Sometimes, for the sake of UI, it is a neccessity to have a full control over a fullname when displaying it.
+
+```javascript
+Array.prototype.abbrFullName = function(args){ 
+    return this.map(function(elem, idx, arr){
+        return idx != 0 && idx != arr.length-1 ? elem[0]+"." : 
+            (args.name && idx==0) || (args.surname && idx==arr.length-1) ? elem[0]+"." : 
+            elem;
+    }).join(" ");
+}
+```
+Examples:
+
+```javascript
+var fullname_str = "John Ronald Reuel Tolkien";
+
+var fullname_word_list = fullname_str.split(" ");
+console.log(fullname_word_list);
+// ["John", "Ronald", "Reuel", "Tolkien"]
+
+fullname_word_list.abbrFullName({name:false, surname:false}); //abbreviate only the middle names
+// "John R. R. Tolkien"
+
+fullname_word_list.abbrFullName({name:true, surname:false}); //abbreviate name too, but not surname
+// "J. R. R. Tolkien"
+
+fullname_word_list.abbrFullName({name:false, surname:true}); // abbreviate surname too, but not name
+// "John R. R. T."
+
+fullname_word_list.abbrFullName({name:true, surname:true}); // abbreviate name and surname too
+// "J. R. R. T."
+```
+
+## #01(number) - Shuffle an Array
+
+> yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
+
+This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+  
+```javascript
+function shuffle(arr){
+    var i,j,temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+}
+```
+An example:
+
+```javascript
+a=[1,2,3,4,5,6,7,8];
+b = shuffle(a);
+console.log(b);
+//[2, 7, 8, 6, 5, 3, 1, 4]
+```
+
+Also, it can be used as a function in Array.prototype like this:
+
+```javascript
+Array.prototype.shuffle = function(){
+    var i,j,temp;
+    for (i = this.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+    }
+    return this;
+}
+```
+
+An example:
+
+```javascript
+a=[2, 7, 8, 6, 5, 3, 1, 4];
+a.shuffle();
+console.log(a);
+//[6, 5, 7, 4, 1, 8, 2, 3]
+```
+
 ## #06 - Writing a single method for arrays or single elements
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
