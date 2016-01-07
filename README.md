@@ -58,6 +58,8 @@ printUpperCase(["cactus", "bear", "potato"]);
 - `undefined` typeof is `undefined`
 - `null` typeof is an `object`
 - Both are primitives
+- Both are [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+  (`Boolean(undefined) // false`, `Boolean(null) // false`)
 - You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
   ```javascript
