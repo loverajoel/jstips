@@ -61,7 +61,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 - You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
   ```javascript
-  typeof(variable) === "undefined"
+  typeof variable === "undefined"
 ```
 - You can check if a variable is [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 
