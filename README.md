@@ -310,9 +310,9 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 > 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
-One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluate the changes between the model and the view through of cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
+One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
-Angular evaluate each watcher whenever one event was fired, this is the known `$digest` cycle.
+Angular evaluates each watcher whenever one event is fired, this is the known `$digest` cycle.
 Sometimes you have to force to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
 
 ### `$apply`
