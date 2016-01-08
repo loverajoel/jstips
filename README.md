@@ -18,6 +18,58 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #15 - even simpler way of use indexOf as a contains clause
+
+> 2015-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
+
+javascript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
+
+```javascript
+var someText = 'javascript rules';
+if(someText.indexOf('javascript') !== -1) {
+}
+
+// or
+if(someText.indexOf('javascript') + 1) {
+}
+```
+
+but, let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
+
+[examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
+```javascript
+for (var key in obj) {
+  // "reserved" exports
+  if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) continue;
+```
+
+[lib/utils.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/lib/utils.js#L93)
+```javascript
+exports.normalizeType = function(type){
+  return ~type.indexOf('/')
+    ? acceptParams(type)
+    : { value: mime.lookup(type), params: {} };
+};
+```
+
+[examples/web-service/index.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/web-service/index.js#L35)
+```javascript
+// key is invalid
+if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
+```
+
+The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values."
+
+It transforms -1 into 0, and 0 is false in javascript, so:
+
+```javascript
+var someText = 'text';
+!!~someText.indexOf('tex'); //sometext contains text - true
+!~someText.indexOf('tex'); //sometext not contains text - false
+~someText.indexOf('asd'); //sometext contains asd - false
+~someText.indexOf('ext'); //sometext contains ext - true
+```
+
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
 
