@@ -306,7 +306,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 - When the amount of child are big or involve expensive components, use keys has performance improvements.
 - [You must provide the key attribute for all children of ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
 
-## #1 - AngularJs: `$digest` vs `$apply`
+## #01 - AngularJs: `$digest` vs `$apply`
 
 > 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
@@ -337,7 +337,7 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 - If you are using >AngularJS 1.2.X, use `$evalAsync` is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
 
 
-## #0 - Insert item inside an Array
+## #00 - Insert item inside an Array
 > 2015-12-29
 
 Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
