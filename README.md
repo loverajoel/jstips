@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #1(number) - Alternatives to classic `for`loops
+## #1(number) - Alternatives to classic `for` loops
 
 > yyyy/mm/dd(date) by [@chtefid](https://twitter.com/chtefid)
 
