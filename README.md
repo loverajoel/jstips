@@ -340,11 +340,11 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 ## #0 - Insert item inside an Array
 > 2015-12-29
 
-Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
+Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
 
 But those are known methods, doesn't mean there isn't a more performant way, here we go...
 
-Add a element at the end of the array is easy with push(), but there is a way more performant.
+Adding an element at the end of the array is easy with push(), but there is a way more performant.
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -362,16 +362,16 @@ var arr = [1,2,3,4,5];
 arr.unshift(0);
 [0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
-Here is a little bit detail, unshift edit the original array, concat return a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
+Here is a little bit detail, unshift edits the original array, concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-Add items at the middle of an array is easy with splice and is the most performant way to do it.
+Adding items at the middle of an array is easy with splice and is the most performant way to do it.
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 
-I tried to run these tests in various Browsers and OS and the results were similar. I hope this tips will be useful for you and encourage to perform your own tests!
+I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
