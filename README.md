@@ -87,7 +87,7 @@ function printUpperCase(words) {
 }
 ```
 
-`printUpperCase` is now ready to accept a single node or an array of nodes as it's parameter.
+`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
 
 ```javascript
 printUpperCase("cactus"); 
