@@ -18,48 +18,11 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #01(number) - Separate name and surname from fullname string.
-
-> yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
-
-Sometimes, for the sake of UI, it is a neccessity to have a full control over a fullname when displaying it.
-
-```javascript
-Array.prototype.abbrFullName = function(args){ 
-    return this.map(function(elem, idx, arr){
-        return idx != 0 && idx != arr.length-1 ? elem[0]+"." : 
-            (args.name && idx==0) || (args.surname && idx==arr.length-1) ? elem[0]+"." : 
-            elem;
-    }).join(" ");
-}
-```
-Examples:
-
-```javascript
-var fullname_str = "John Ronald Reuel Tolkien";
-
-var fullname_word_list = fullname_str.split(" ");
-console.log(fullname_word_list);
-// ["John", "Ronald", "Reuel", "Tolkien"]
-
-fullname_word_list.abbrFullName({name:false, surname:false}); //abbreviate only the middle names
-// "John R. R. Tolkien"
-
-fullname_word_list.abbrFullName({name:true, surname:false}); //abbreviate name too, but not surname
-// "J. R. R. Tolkien"
-
-fullname_word_list.abbrFullName({name:false, surname:true}); // abbreviate surname too, but not name
-// "John R. R. T."
-
-fullname_word_list.abbrFullName({name:true, surname:true}); // abbreviate name and surname too
-// "J. R. R. T."
-```
-
 ## #01(number) - Shuffle an Array
 
 > yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
 
-This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+### This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
   
 ```javascript
 function shuffle(arr){
@@ -104,6 +67,25 @@ a=[2, 7, 8, 6, 5, 3, 1, 4];
 a.shuffle();
 console.log(a);
 //[6, 5, 7, 4, 1, 8, 2, 3]
+```
+###### Important note:
+This version makes changes to the original array. To change this `Array.prototype.slice(0)` can be used to clone array in the first place, then proceed to shuffling.
+
+### Pure JS version by [@mvedie](https://github.com/mvedie)
+
+```javascript
+Array.prototype.shuffle = function() {
+    return this.slice(0).sort(function() {
+        return 0.5 - Math.random();
+    });
+};
+```
+
+An Example:
+```javascript
+my_array = [1,2,3,3,4,5,6]
+my_array.shuffle()
+// [4, 3, 5, 1, 2, 3, 6]
 ```
 
 ## #06 - Writing a single method for arrays or single elements
