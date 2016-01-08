@@ -24,7 +24,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
 
-```
+```javascript
 const nodelist = document.querySelectorAll('div');
 const nodelistToArray = Array.apply(null, nodelist);
 
