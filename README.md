@@ -18,11 +18,11 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #1(number) - Avoid basic for loops when possible
+## #1(number) - Alternatives to classic `for`loops
 
 > yyyy/mm/dd(date) by [@chtefid](https://twitter.com/chtefid)
 
-Too often, we still see this kind of code :
+Everybody knows the classic `for` loop :
 
 ```javascript
 for (var i = 0; i < elements.length; i++) {
@@ -31,17 +31,16 @@ for (var i = 0; i < elements.length; i++) {
 }
 ```
 
-You don't need `i`. You just want to loop over your elements to do something with them.
-To do that more clearly, you can do :
+But often, you don't need `i` anywhere else than getting the element at this index.
+You just want to loop over your elements to do something with them.
+An alternative is to use the ES5 Array functions, such as `forEach` :
 
 ```javascript
 elements.forEach(doSomethingWith);
 ```
 Each item from `elements` will be passed as argument one by one to `doSomethingWith`.
 
-Same idea when you want to filter or transform some elements in an array, you can avoid the classic loop and use the proper ES5 Array functions.
-
-Instead of doing :
+Same idea when you want to filter some elements in an array, you can replace this kind of loop: 
 
 ```javascript
 var validElements = [];
@@ -53,7 +52,7 @@ for (var i = 0; i < elements.length; i++) {
 }
 ```
 
-You can do :
+And use the `filter` Array function :
 
 ```javascript
 var elements = [ { name: 'A', isValid: true }, { name: 'B', isValid: false } ];
@@ -64,7 +63,7 @@ var validElements = elements.filter(isValid);
 // validElements = [ { name: 'A', isValid: true } ]
 ```
 
-And last but not least, make use of the `map` Array function to to get only what you need from your items.
+And last but not least, when you want an array with just a particular field (or severals) from your elements, you can use the `map` Array function :
 
 ```javascript
 var people = [ { name: 'John', age: 13 }, { name: 'Henry', age: 37 } ];
