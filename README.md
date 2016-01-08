@@ -18,6 +18,52 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## - Prototypal inheritance
+
+> by [@pingid](https://twitter.com/danmbeaven)
+
+Often you see the classical pattern where you use a constructor function and then instantiate an object using that function and the `new` operator. In the prototypal pattern, you create an object and use the `Object.create()` method to make a new instance of that object.
+
+```javascript
+var Cocktail = {
+  alcoholic: true,
+  sayName: function() {
+    console.log(this.name)
+  }
+}
+
+var martini = Object.create(Cocktail);
+martini.name = 'martini';
+martini.ingredients = [ 'dry gin', 'dry vermouth' ];
+
+martini.sayName() // martini
+```
+
+A neat trick is the make an ```extend()``` method which takes in a new object and adds all the values to the new instance.
+
+```javascript
+var Cocktail = {
+  extend: function(values) {
+    var instance = Object.create(this);
+    Object.keys(values).forEach(function(key){
+      instance[key] = values[key];
+    })
+    return instance;
+  },
+  sayName: function() {
+    console.log(this.name)
+  },
+  alcoholic: true
+}
+
+var martini = Cocktail.extend({
+  name: 'martini',
+  ingredients: [ 'dry gin', 'dry vermouth' ]
+})
+
+martini.sayName() // martini
+```
+
 ## #07 - "use strict" and get lazy
 
 > 2016-01-07 by [@nainslie](https://twitter.com/nat5an)
