@@ -89,8 +89,6 @@ Strict mode is supported in:
 * Opera from version 12.
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-=======
->>>>>>> b18c12a6124fc01e9f3b139b361cc7269066a127
 
 ## #06 - Writing a single method for arrays or single elements
 
