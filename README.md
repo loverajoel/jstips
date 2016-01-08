@@ -294,7 +294,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 	//good
 	<MyComponent key={{item.key}}/>
 	```
-- [Use the array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
+- [Using array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` will not work
 
 	```javascript
