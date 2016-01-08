@@ -18,74 +18,41 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #01(number) - Shuffle an Array
+## #01(number) - Separate name and surname from fullname string.
 
 > yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
 
-### This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
-  
+Sometimes, for the sake of UI, it is a neccessity to have a full control over a fullname when displaying it.
+
 ```javascript
-function shuffle(arr){
-    var i,j,temp;
-    for (i = arr.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    return arr;    
+Array.prototype.abbrFullName = function(name, surname){ 
+    return this.map(function(elem, idx, arr){
+        return idx != 0 && idx != arr.length-1 ? elem[0]+"." : 
+            (name && idx==0) || (surname && idx==arr.length-1) ? elem[0]+"." : 
+            elem;
+    }).join(" ");
 }
 ```
-An example:
+Examples:
 
 ```javascript
-a=[1,2,3,4,5,6,7,8];
-b = shuffle(a);
-console.log(b);
-//[2, 7, 8, 6, 5, 3, 1, 4]
-```
+var fullname_str = "John Ronald Reuel Tolkien";
 
-Also, it can be used as a function in Array.prototype like this:
+var fullname_word_list = fullname_str.split(" ");
+console.log(fullname_word_list);
+// ["John", "Ronald", "Reuel", "Tolkien"]
 
-```javascript
-Array.prototype.shuffle = function(){
-    var i,j,temp;
-    for (i = this.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = this[i];
-        this[i] = this[j];
-        this[j] = temp;
-    }
-    return this;
-}
-```
+fullname_word_list.abbrFullName(false, false); //abbreviate only the middle names
+// "John R. R. Tolkien"
 
-An example:
+fullname_word_list.abbrFullName(true, false); //abbreviate name too, but not surname
+// "J. R. R. Tolkien"
 
-```javascript
-a=[2, 7, 8, 6, 5, 3, 1, 4];
-a.shuffle();
-console.log(a);
-//[6, 5, 7, 4, 1, 8, 2, 3]
-```
-###### Important note:
-This version makes changes to the original array. To change this `Array.prototype.slice(0)` can be used to clone array in the first place, then proceed to shuffling.
+fullname_word_list.abbrFullName(false, true); // abbreviate surname too, but not name
+// "John R. R. T."
 
-### Pure JS version by [@mvedie](https://github.com/mvedie)
-
-```javascript
-Array.prototype.shuffle = function() {
-    return this.slice(0).sort(function() {
-        return 0.5 - Math.random();
-    });
-};
-```
-
-An Example:
-```javascript
-my_array = [1,2,3,3,4,5,6]
-my_array.shuffle()
-// [4, 3, 5, 1, 2, 3, 6]
+fullname_word_list.abbrFullName(true, true); // abbreviate name and surname too
+// "J. R. R. T."
 ```
 
 ## #06 - Writing a single method for arrays or single elements
