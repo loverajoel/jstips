@@ -20,7 +20,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 ## #09 - Template Strings
 
-As of ES6, JS now has template string as an alternative to classic end quotes strings.
+As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
 
 Ex: 
 Normal string
