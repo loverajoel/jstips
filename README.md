@@ -70,6 +70,7 @@ var someText = 'text';
 ~someText.indexOf('ext'); //sometext contains ext - true
 ```
 
+
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
 
