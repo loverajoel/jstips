@@ -18,9 +18,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #08 - Better readable indexOf as a contains clause 
+## #00 - Better readable indexOf as a contains clause
 
-> 2016-01-08 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
+> 0000-00-00 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
 let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
 
@@ -48,13 +48,34 @@ if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
 
 The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values."
 
-It transform -1 into 0, and 0 is false in javascript, so:
+It transforms -1 into 0, and 0 is false in javascript, so:
 ```javascript
 var someText = 'text';
 !!~someText.indexOf('tex'); //sometext contains text - true
 !~someText.indexOf('tex'); //sometext not contains text - false
 !!~someText.indexOf('asd'); //sometext contains asd - false
 ```
+
+## #08 - Converting a Node List to an Array
+
+> 2016-01-08 by [@Tevko](https://twitter.com/tevko)
+
+The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
+
+```javascript
+const nodelist = document.querySelectorAll('div');
+const nodelistToArray = Array.apply(null, nodelist);
+
+//later on ..
+
+nodelistToArray.forEach(...);
+nodelistToArray.map(...);
+nodelistToArray.slice(...);
+
+//etc...
+```
+
+The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
 
 ## #07 - "use strict" and get lazy
 
@@ -66,7 +87,7 @@ By default, JavaScript allows the programmer to be pretty careless, for example,
 
 Programmers like to make the computer do the boring stuff for us, and automatically check our work for mistakes. That's what the JavaScript "use strict" directive allows us to do, by turning our mistakes into JavaScript errors.
 
-We add this directive either by adding it at the top of a js file: 
+We add this directive either by adding it at the top of a js file:
 
 ```javascript
 // Whole-script strict mode syntax
@@ -91,18 +112,18 @@ By including this directive in a JavaScript file or function, we will direct the
 * Variables can only be introduced when they are preceded with "var"
 * Attempting to write to readonly properties generates a noisy error
 * You have to call constructors with the "new" keyword
-* "this" is not implicitly bound to the global object 
+* "this" is not implicitly bound to the global object
 * Very limited use of eval() allowed
 * Protects you from using reserved words or future reserved words as variable names
 
 Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
 
-It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.  
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
 Strict mode is supported in:
-* Internet Explorer from version 10. 
+* Internet Explorer from version 10.
 * Firefox from version 4.
-* Chrome from version 13. 
-* Safari from version 5.1. 
+* Chrome from version 13.
+* Safari from version 5.1.
 * Opera from version 12.
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
@@ -118,17 +139,17 @@ You just have to concat everything into an array first. `Array.concat` will acce
 
 ```javascript
 function printUpperCase(words) {
-  var elements = [].concat(words); 
+  var elements = [].concat(words);
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i].toUpperCase());
   }
 }
 ```
 
-`printUpperCase` is now ready to accept a single node or an array of nodes as it's parameter.
+`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
 
 ```javascript
-printUpperCase("cactus"); 
+printUpperCase("cactus");
 // => CACTUS
 printUpperCase(["cactus", "bear", "potato"]);
 // => CACTUS
@@ -332,7 +353,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 	//good
 	<MyComponent key={{item.key}}/>
 	```
-- [Use the array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
+- [Using array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` will not work
 
 	```javascript
@@ -348,9 +369,9 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 > 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
-One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluate the changes between the model and the view through of cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
+One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
-Angular evaluate each watcher whenever one event was fired, this is the known `$digest` cycle.
+Angular evaluates each watcher whenever one event is fired, this is the known `$digest` cycle.
 Sometimes you have to force to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
 
 ### `$apply`
@@ -378,11 +399,11 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 ## #0 - Insert item inside an Array
 > 2015-12-29
 
-Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
+Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
 
 But those are known methods, doesn't mean there isn't a more performant way, here we go...
 
-Add a element at the end of the array is easy with push(), but there is a way more performant.
+Adding an element at the end of the array is easy with push(), but there is a way more performant.
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -400,16 +421,16 @@ var arr = [1,2,3,4,5];
 arr.unshift(0);
 [0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
-Here is a little bit detail, unshift edit the original array, concat return a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
+Here is a little bit detail, unshift edits the original array, concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-Add items at the middle of an array is easy with splice and is the most performant way to do it.
+Adding items at the middle of an array is easy with splice and is the most performant way to do it.
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 
-I tried to run these tests in various Browsers and OS and the results were similar. I hope this tips will be useful for you and encourage to perform your own tests!
+I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
