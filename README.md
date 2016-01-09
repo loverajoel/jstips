@@ -17,6 +17,32 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+## #19 - Safe string concatenation
+
+> 2016-01-19 by [@gogainda]
+
+Suppose you have a couple of variables with unknown types and you want to concatenate them. To be sure that the arithmetical operation would not be applied during the concatenation:
+
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = ''.concat(one, two, three); //"123"
+```
+
+This way of concatention do exactly what you expect. On the conteraty, concatenation with pluses might lead to unexpected results:
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = one + two + three; //"33" instead of "123"
+```
+
+Speaking about performance, in comparison with ```join``` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of the ```concat``` type is pretty much the same.
+
+You can read more about ```concat``` method on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
 
 ## #18 - Rounding the fast way
 
