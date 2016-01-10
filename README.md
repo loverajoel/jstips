@@ -13,10 +13,123 @@ Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Let’s keep in touch
-To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+
+## #12 - Pseudomentatory parameters in ES6 functions 
+
+> 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
+
+
+In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+
+```javascript
+ const _err = function( message ){
+   throw new Error( message );
+ }
+
+ const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
+
+getSum( 10 ) // throws Error, b is not defined
+getSum( undefined, 10 ) // throws Error, a is not defined
+ ```
+
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+
+## #11 - Hoisting
+> 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
+
+Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line. Also, variable **declaration** is letting the system know that the variable exists while **definition** is assigning it a value.
+
+```javascript
+function doTheThing() {
+  // ReferenceError: notDeclared is not defined
+  console.log(notDeclared);
+
+  // Outputs: undefined
+  console.log(definedLater);
+  var definedLater;
+
+  definedLater = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedLater)
+
+  // Outputs: undefined
+  console.log(definedSimulateneously);
+  var definedSimulateneously = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedSimulateneously)
+
+  // Outputs: 'I did it!'
+  doSomethingElse();
+
+  function doSomethingElse(){
+    console.log('I did it!');
+  }
+
+  // TypeError: undefined is not a function
+  functionVar();
+
+  var functionVar = function(){
+    console.log('I did it!');
+  }
+}
+```
+
+To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way.
+
+## #10 - Check if a property is in a Object
+
+> 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
+
+When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+
+```javascript
+var myObject = {
+  name: '@tips_js'
+};
+if (typeof myObject['name'] !== 'undefined') { ... }
+
+if (myObject['name']) { ... }
+
+```
+
+Thats ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has available both ways.
+
+### See the big Difference
+
+```javascript
+var myObject = {
+  name: '@tips_js'
+};
+
+myObject.hasOwnProperty('name'); // true
+'name' in myObject; // true
+
+myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prototype chain
+'valueOf' in myObject; // true
+
+```
+
+Both differs in the depth how check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+
+Here another example
+
+```javascript
+var myFunc = function() {
+  this.name = '@tips_js';
+};
+myFunc.prototype.age = '10 days';
+
+var user = new myFunc();
+
+user.hasOwnProperty('name'); // true
+user.hasOwnProperty('age'); // false, because age is from the prototype chain
+```
+
+Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
 
 ## #09 - Template Strings
 
@@ -24,7 +137,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
 
-Ex: 
+Ex:
 Normal string
 ```javascript
 var firstName = 'Jake';
@@ -43,7 +156,7 @@ console.log(`My name is ${firstName} ${lastName}`);
 You can do Multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in Template String.
 
 You are also able to to modify the output of template strings using a function; they are called [Tagged template strings]
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings) for example usages of tagged template strings.
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings) for example usages of tagged template strings.
 
 You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more
 
@@ -67,6 +180,20 @@ nodelistToArray.slice(...);
 ```
 
 The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
+
+Or if you are using ES2015 you can use the [spread operator `...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+
+```js
+const nodelist = [...document.querySelectorAll('div')]; // returns a real Array
+
+//later on ..
+
+nodelist.forEach(...);
+nodelist.map(...);
+nodelist.slice(...);
+
+//etc...
+```
 
 ## #07 - "use strict" and get lazy
 
