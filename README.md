@@ -329,7 +329,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 > Key is not really about performance, it's more about identity (which in turn leads to better performance). randomly assigned and changing values are not identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
 
-- Use an exisiting unique value of the object.
+- Use an existing unique value of the object.
 - Define the keys in the parent components, not in child components
 
 	```javascript
