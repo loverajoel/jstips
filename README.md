@@ -18,10 +18,10 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## #07 - Hoisting
-> 2016-01-07 by [@squizzleflip](https://twitter.com/squizzleflip)
+## #11 - [Hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)
+> 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
 
-Understanding hoisting will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line.
+Understanding hoisting will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line. Also, variable **declaration** is letting the system know that the variable exists while **definition** is assigning it a value.
 
 ```javascript
 function doTheThing() {
