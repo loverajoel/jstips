@@ -22,7 +22,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 > 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
 
-When you have to check if a property is present of an object, you probably are doing something like this:
+When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
 
 ```javascript
 var myObject = {
@@ -34,7 +34,7 @@ if (myObject['name']) { ... }
 
 ```
 
-Thats ok, but you have to know that there are two native methods for this kind of thing, `Object.in` and `Object.hasOwnProperty`, every object descended from Object, has available both methods.
+Thats ok, but you have to know that there are two native methods for this kind of thing, [`Object.in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from Object, has available both methods.
 
 ### See the big Difference
  
