@@ -18,6 +18,57 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #10 - Check if a property is in a Object
+
+> 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
+
+When you have to check if a property is present of an object, you probably are doing something like this:
+
+```javascript
+var myObject = {
+  name: '@tips_js'
+};
+if (typeof myObject['name'] !== 'undefined') { ... }
+
+if (myObject['name']) { ... }
+
+```
+
+Thats ok, but you have to know that there are two native methods for this kind of thing, `Object.in` and `Object.hasOwnProperty`, every object descended from Object, has available both methods.
+
+### See the big Difference
+ 
+```javascript
+var myObject = {
+  name: '@tips_js'
+};
+
+myObject.hasOwnProperty('name'); // true
+'name' in myObject; // true
+
+myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prototype chain
+'valueOf' in myObject; // true
+
+```
+
+Both differs in the depth how check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+
+Here another example
+
+```javascript
+var myFunc = function() {
+  this.name = '@tips_js';
+};
+myFunc.prototype.age = '7 days';
+
+var user = new myFunc();
+
+user.hasOwnProperty('name'); // true
+user.hasOwnProperty('age'); // false, because valueOf is from the prototype chain
+```
+
+Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+
 ## #09 - Template Strings
 
 > 2016-01-09 by [@JakeRawr](https://github.com/JakeRawr)
