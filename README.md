@@ -59,12 +59,12 @@ Here another example
 var myFunc = function() {
   this.name = '@tips_js';
 };
-myFunc.prototype.age = '7 days';
+myFunc.prototype.age = '10 days';
 
 var user = new myFunc();
 
 user.hasOwnProperty('name'); // true
-user.hasOwnProperty('age'); // false, because valueOf is from the prototype chain
+user.hasOwnProperty('age'); // false, because age is from the prototype chain
 ```
 
 Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
