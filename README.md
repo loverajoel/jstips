@@ -18,6 +18,48 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## #11 - Hoisting
+> 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
+
+Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line. Also, variable **declaration** is letting the system know that the variable exists while **definition** is assigning it a value.
+
+```javascript
+function doTheThing() {
+  // ReferenceError: notDeclared is not defined
+  console.log(notDeclared);
+
+  // Outputs: undefined
+  console.log(definedLater);
+  var definedLater;
+
+  definedLater = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedLater)
+
+  // Outputs: undefined
+  console.log(definedSimulateneously);
+  var definedSimulateneously = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedSimulateneously)
+
+  // Outputs: 'I did it!'
+  doSomethingElse();
+
+  function doSomethingElse(){
+    console.log('I did it!');
+  }
+
+  // TypeError: undefined is not a function
+  functionVar();
+
+  var functionVar = function(){
+    console.log('I did it!');
+  }
+}
+```
+
+To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way. 
+
 ## #10 - Check if a property is in a Object
 
 > 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
