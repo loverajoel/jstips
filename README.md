@@ -45,32 +45,6 @@ console.log(b);
 //[2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
-Also, it can be used as a function in Array.prototype like this:
-
-```javascript
-Array.prototype.shuffle = function(){
-    var i,j,temp;
-    for (i = this.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = this[i];
-        this[i] = this[j];
-        this[j] = temp;
-    }
-    return this;
-}
-```
-
-An example:
-
-```javascript
-a=[2, 7, 8, 6, 5, 3, 1, 4];
-a.shuffle();
-console.log(a);
-//[6, 5, 7, 4, 1, 8, 2, 3]
-```
-###### Important note:
-This version makes changes to the original array. To change this `Array.prototype.slice(0)` can be used to clone array in the first place, then proceed to shuffling.
-
 ### Pure JS version by [@mvedie](https://github.com/mvedie)
 
 ```javascript
