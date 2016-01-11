@@ -60,6 +60,157 @@ function doTheThing() {
 
 To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way. 
 
+## #10 - Check if a property is in a Object
+
+> 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
+
+When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+
+```javascript
+var myObject = {
+  name: '@tips_js'
+};
+if (typeof myObject['name'] !== 'undefined') { ... }
+
+if (myObject['name']) { ... }
+
+```
+
+Thats ok, but you have to know that there are two native methods for this kind of thing, [`Object.in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from Object, has available both methods.
+
+### See the big Difference
+ 
+```javascript
+var myObject = {
+  name: '@tips_js'
+};
+
+myObject.hasOwnProperty('name'); // true
+'name' in myObject; // true
+
+myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prototype chain
+'valueOf' in myObject; // true
+
+```
+
+Both differs in the depth how check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+
+Here another example
+
+```javascript
+var myFunc = function() {
+  this.name = '@tips_js';
+};
+myFunc.prototype.age = '10 days';
+
+var user = new myFunc();
+
+user.hasOwnProperty('name'); // true
+user.hasOwnProperty('age'); // false, because age is from the prototype chain
+```
+
+Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+
+## #09 - Template Strings
+
+> 2016-01-09 by [@JakeRawr](https://github.com/JakeRawr)
+
+As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
+
+Ex: 
+Normal string
+```javascript
+var firstName = 'Jake';
+var lastName = 'Rawr';
+console.log('My name is ' + firstName + ' ' + lastName);
+// My name is Jake Rawr
+```
+Template String
+```javascript
+var firstName = 'Jake';
+var lastName = 'Rawr';
+console.log(`My name is ${firstName} ${lastName}`);
+// My name is Jake Rawr
+```
+
+You can do Multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in Template String.
+
+You are also able to to modify the output of template strings using a function; they are called [Tagged template strings]
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings) for example usages of tagged template strings.
+
+You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more
+
+## #08 - Converting a Node List to an Array
+
+> 2016-01-08 by [@Tevko](https://twitter.com/tevko)
+
+The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
+
+```javascript
+const nodelist = document.querySelectorAll('div');
+const nodelistToArray = Array.apply(null, nodelist);
+
+//later on ..
+
+nodelistToArray.forEach(...);
+nodelistToArray.map(...);
+nodelistToArray.slice(...);
+
+//etc...
+```
+
+The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
+
+## #07 - "use strict" and get lazy
+
+> 2016-01-07 by [@nainslie](https://twitter.com/nat5an)
+
+Strict-mode JavaScript makes it easier for the developer to write "secure" JavaScript.
+
+By default, JavaScript allows the programmer to be pretty careless, for example, by not requiring us to declare our variables with "var" when we first introduce them.  While this may seem like a convenience to the unseasoned developer, it's also the source of many errors when a variable name is misspelled or accidentally referred to out of its scope.
+
+Programmers like to make the computer do the boring stuff for us, and automatically check our work for mistakes. That's what the JavaScript "use strict" directive allows us to do, by turning our mistakes into JavaScript errors.
+
+We add this directive either by adding it at the top of a js file:
+
+```javascript
+// Whole-script strict mode syntax
+"use strict";
+var v = "Hi!  I'm a strict mode script!";
+```
+
+or inside a function:
+
+```javascript
+function f()
+{
+  // Function-level strict mode syntax
+  'use strict';
+  function nested() { return "And so am I!"; }
+  return "Hi!  I'm a strict mode function!  " + nested();
+}
+function f2() { return "I'm not strict."; }
+```
+
+By including this directive in a JavaScript file or function, we will direct the JavaScript engine to execute in strict mode which disables a bunch of behaviors that are usually undesirable in larger JavaScript projects.  Among other things, strict mode changes the following behaviors:
+* Variables can only be introduced when they are preceded with "var"
+* Attempting to write to readonly properties generates a noisy error
+* You have to call constructors with the "new" keyword
+* "this" is not implicitly bound to the global object
+* Very limited use of eval() allowed
+* Protects you from using reserved words or future reserved words as variable names
+
+Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
+
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+Strict mode is supported in:
+* Internet Explorer from version 10.
+* Firefox from version 4.
+* Chrome from version 13.
+* Safari from version 5.1.
+* Opera from version 12.
+
+[See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## #06 - Writing a single method for arrays or single elements
 
@@ -71,17 +222,17 @@ You just have to concat everything into an array first. `Array.concat` will acce
 
 ```javascript
 function printUpperCase(words) {
-  var elements = [].concat(words); 
+  var elements = [].concat(words);
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i].toUpperCase());
   }
 }
 ```
 
-`printUpperCase` is now ready to accept a single node or an array of nodes as it's parameter.
+`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
 
 ```javascript
-printUpperCase("cactus"); 
+printUpperCase("cactus");
 // => CACTUS
 printUpperCase(["cactus", "bear", "potato"]);
 // => CACTUS
@@ -101,6 +252,8 @@ printUpperCase(["cactus", "bear", "potato"]);
 - `undefined` typeof is `undefined`
 - `null` typeof is an `object`
 - Both are primitives
+- Both are [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+  (`Boolean(undefined) // false`, `Boolean(null) // false`)
 - You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
   ```javascript
@@ -180,7 +333,7 @@ So when you are working with arrays of strings in a language other than English,
 ## #03 - Improve Nested Conditionals
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
-How can we improve and make more efficient nested `if` statement on javascript.
+How can we improve and make more efficient nested `if` statement in javascript.
 
 ```javascript
 if (color) {
@@ -269,7 +422,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 > Key is not really about performance, it's more about identity (which in turn leads to better performance). randomly assigned and changing values are not identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
 
-- Use an exisiting unique value of the object.
+- Use an existing unique value of the object.
 - Define the keys in the parent components, not in child components
 
 	```javascript
@@ -283,7 +436,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 	//good
 	<MyComponent key={{item.key}}/>
 	```
-- [Use the array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
+- [Using array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` will not work
 
 	```javascript
@@ -299,9 +452,9 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 
 > 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
-One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluate the changes between the model and the view through of cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
+One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
-Angular evaluate each watcher whenever one event was fired, this is the known `$digest` cycle.
+Angular evaluates each watcher whenever one event is fired, this is the known `$digest` cycle.
 Sometimes you have to force to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
 
 ### `$apply`
@@ -329,11 +482,11 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 ## #0 - Insert item inside an Array
 > 2015-12-29
 
-Insert an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
+Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
 
 But those are known methods, doesn't mean there isn't a more performant way, here we go...
 
-Add a element at the end of the array is easy with push(), but there is a way more performant.
+Adding an element at the end of the array is easy with push(), but there is a way more performant.
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -351,16 +504,16 @@ var arr = [1,2,3,4,5];
 arr.unshift(0);
 [0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
-Here is a little bit detail, unshift edit the original array, concat return a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
+Here is a little bit detail, unshift edits the original array, concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-Add items at the middle of an array is easy with splice and is the most performant way to do it.
+Adding items at the middle of an array is easy with splice and is the most performant way to do it.
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 
-I tried to run these tests in various Browsers and OS and the results were similar. I hope this tips will be useful for you and encourage to perform your own tests!
+I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
