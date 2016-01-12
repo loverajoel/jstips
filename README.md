@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #12 - Pseudomentatory parameters in ES6 functions 
+## #12 - Pseudomentatory parameters in ES6 functions
 
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
