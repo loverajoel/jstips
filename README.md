@@ -18,6 +18,34 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
+## {{tip no}} - Passing arguments to callback functions
+> {{date}} by [@minhazav](https://twitter.com/minhazav)
+
+By default you cannot pass arguments to a callback function. For eaxmple:
+```js
+function callback() {
+	console.log('Hi human');
+}
+
+$('#someelem').on('click', callback);
+```
+You can take advantage of the closure scope in Javascript to pass arguments to callback funcitons. Check this example:
+```js
+function callback(a, b) {
+	return function() {
+		console.log('sum = ', (a+b));
+	}
+}
+
+var x = 1, y = 2;
+$('#someelem').on('click', callback(x, y));
+```
+
+**What is closure?**
+Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created.
+
+So this way the arguments `x` and `y` are in scope of the callback function when it is called.
+
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
 
