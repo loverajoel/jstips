@@ -116,7 +116,7 @@ var myObject = {
   name: '@tips_js'
 };
 
-if (myObject['name']) { ... }
+if (myObject.name) { ... }
 
 ```
 
