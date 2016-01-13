@@ -26,11 +26,11 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
 
 ```javascript
- const _err = function( message ){
-   throw new Error( message );
- }
+const _err = function( message ){
+  throw new Error( message );
+}
 
- const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
+const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
 
 getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
