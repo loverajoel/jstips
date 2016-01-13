@@ -29,7 +29,7 @@ function callback() {
 
 $('#someelem').on('click', callback);
 ```
-You can take advantage of the closure scope in Javascript to pass arguments to callback funcitons. Check this example:
+You can take advantage of the closure scope in Javascript to pass arguments to callback functions. Check this example:
 ```js
 function callback(a, b) {
 	return function() {
@@ -41,8 +41,8 @@ var x = 1, y = 2;
 $('#someelem').on('click', callback(x, y));
 ```
 
-**What is closure?**
-Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created.
+**What are closure?**
+Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) to learn more.
 
 So this way the arguments `x` and `y` are in scope of the callback function when it is called.
 
