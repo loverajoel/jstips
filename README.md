@@ -16,6 +16,23 @@ Any improvements or suggestions are more than welcome!
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
+# Table of Contents
+
+The zeroth tip: [Insert item inside an Array](#0---insert-item-inside-an-array)
+
+001. [AngularJs: `$digest` vs `$apply`](#1---angularjs-digest-vs-apply)
+002. [ReactJs - Keys in children components are important](#02---reactjs---keys-in-children-components-are-important)
+003. [Improve Nested Conditionals](#03---improve-nested-conditionals)
+004. [Sorting strings with accented characters](#04---sorting-strings-with-accented-characters)
+005. [Differences between `undefined` and `null`](#05---differences-between-undefined-and-null)
+006. [Writing a single method for arrays or single elements](#06---writing-a-single-method-for-arrays-or-single-elements)
+007. ["use strict" and get lazy](#07---use-strict-and-get-lazy)
+008. [Converting a Node List to an Array](#08---converting-a-node-list-to-an-array)
+009. [Template Strings](#09---template-strings)
+010. [Check if a property is in a Object](#10---check-if-a-property-is-in-a-object)
+011. [Hoisting](#11---hoisting)
+012. [Pseudomentatory parameters in ES6 functions](#12---pseudomentatory-parameters-in-es6-functions)
+
 # Tips list
 
 ## #12 - Pseudomentatory parameters in ES6 functions
