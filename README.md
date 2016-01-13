@@ -129,6 +129,7 @@ user.hasOwnProperty('age'); // false, because age is from the prototype chain
 ```
 
 Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+
 Also recommends read [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes at checking properties' existence in objects
 
 ## #09 - Template Strings
