@@ -3,7 +3,7 @@
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
