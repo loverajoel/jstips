@@ -3,7 +3,7 @@
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
@@ -13,7 +13,7 @@ Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Let’s keep in touch
-To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
@@ -21,7 +21,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 ## #14 - Fat Arrow Functions
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
 
-Inroduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in less lines. The name comes from its syntax as `=>` is a 'fat arrow' compared to a thin arrow `->`. Some programmers might already know this type of functions from different languages such as Haskell as 'lambda expressions' respectively 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
+Introduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in less lines. The name comes from its syntax as `=>` is a 'fat arrow' compared to a thin arrow `->`. Some programmers might already know this type of functions from different languages such as Haskell as 'lambda expressions' respectively 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
 
 ### What are the benefits?
 * Syntax: less LOC; no more typing `function` keyword over and over again
@@ -111,6 +111,53 @@ function CounterD() {
 
 Further information about fat arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
 
+
+## #13 - Tip to measure performance of a javascript block
+
+2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
+
+For quickly measuring performance of a javascript block, we can use the console functions like
+[```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+
+```javascript
+console.time("Array initialize");
+var arr = new Array(100),
+    len = arr.length,
+    i;
+
+for (i = 0; i < len; i++) {
+    arr[i] = new Object();
+};
+console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
+```
+
+More info:
+[Console object](https://github.com/DeveloperToolsWG/console-object),
+[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
+
+Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
+
+## #12 - Pseudomentatory parameters in ES6 functions
+
+> 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
+
+
+In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+
+```javascript
+const _err = function( message ){
+  throw new Error( message );
+}
+
+const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
+
+getSum( 10 ) // throws Error, b is not defined
+getSum( undefined, 10 ) // throws Error, a is not defined
+ ```
+
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+>>>>>>> master
+
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
 
@@ -151,7 +198,7 @@ function doTheThing() {
 }
 ```
 
-To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way. 
+To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way.
 
 ## #10 - Check if a property is in a Object
 
@@ -163,7 +210,6 @@ When you have to check if a property is present of an [object](https://developer
 var myObject = {
   name: '@tips_js'
 };
-if (typeof myObject['name'] !== 'undefined') { ... }
 
 if (myObject['name']) { ... }
 
@@ -172,7 +218,7 @@ if (myObject['name']) { ... }
 Thats ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has available both ways.
 
 ### See the big Difference
- 
+
 ```javascript
 var myObject = {
   name: '@tips_js'
@@ -204,13 +250,15 @@ user.hasOwnProperty('age'); // false, because age is from the prototype chain
 
 Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
 
+Also recommends read [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes at checking properties' existence in objects
+
 ## #09 - Template Strings
 
 > 2016-01-09 by [@JakeRawr](https://github.com/JakeRawr)
 
 As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
 
-Ex: 
+Ex:
 Normal string
 ```javascript
 var firstName = 'Jake';
