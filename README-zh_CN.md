@@ -21,7 +21,11 @@ Any improvements or suggestions are more than welcome!
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
+<!--
 # Tips list
+-->
+
+# 贴士列表
 
 ## #13 - Tip to measure performance of a javascript block
 
@@ -578,7 +582,11 @@ var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 
+<!--
 I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
+-->
+
+我已经在许多浏览器和操作系统，试着去运行这些测试，并且它们的结果非常相似。我希望这些贴士（建议）对你有用，并鼓励进行自己的测试！
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
