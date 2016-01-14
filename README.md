@@ -18,7 +18,6 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-
 ## #00 - even simpler way of use indexOf as a contains clause
 
 > 0000-00-00 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
@@ -68,6 +67,7 @@ var someText = 'text';
 !!~someText.indexOf('tex'); //sometext contains text - true
 !~someText.indexOf('tex'); //sometext not contains text - false
 ~someText.indexOf('asd'); //sometext contains asd - false
+~someText.indexOf('ext'); //sometext contains ext - true
 ``
 
 ## #13 - Tip to measure performance of a javascript block
@@ -238,6 +238,15 @@ You are also able to to modify the output of template strings using a function; 
 
 You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more
 
+=======
+```javascript
+var someText = 'text';
+!!~someText.indexOf('tex'); //sometext contains text - true
+!~someText.indexOf('tex'); //sometext not contains text - false
+!!~someText.indexOf('asd'); //sometext contains asd - false
+```
+
+>>>>>>> 45982cbd96bbc3f8ed35422f8aa7410932b378b4
 ## #08 - Converting a Node List to an Array
 
 > 2016-01-08 by [@Tevko](https://twitter.com/tevko)
@@ -323,6 +332,7 @@ Strict mode is supported in:
 * Opera from version 12.
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+
 
 ## #06 - Writing a single method for arrays or single elements
 
