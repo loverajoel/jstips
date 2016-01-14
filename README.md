@@ -1,14 +1,14 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
-# Introducing Javascript Tips
+# Introducing JavaScript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
 ### Can you help us enrich it?
-Please feel free to send us a PR with your own Javascript tip to be published here.
+Please feel free to send us a PR with your own JavaScript tip to be published here.
 Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
@@ -30,7 +30,7 @@ Introduced as a new feature in ES6, fat arrow functions may come as a handy tool
 ### Simple syntax example
 Have a look at these two code snippets, which exactly do the same job. You will quickly understand what fat arrow functions do.
 
-```javascript
+```JavaScript
 // general syntax for fat arrow functions
 param => expression
 
@@ -58,7 +58,7 @@ As you may see, the fat arrow function in this case may save you time typing out
 
 There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical sourrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
 
-```javascript
+```JavaScript
 
 // globally defined this.i
 this.i = 100;
@@ -112,14 +112,14 @@ function CounterD() {
 Further information about fat arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
 
 
-## #13 - Tip to measure performance of a javascript block
+## #13 - Tip to measure performance of a JavaScript block
 
 2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
 
-For quickly measuring performance of a javascript block, we can use the console functions like
+For quickly measuring performance of a JavaScript block, we can use the console functions like
 [```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
 
-```javascript
+```JavaScript
 console.time("Array initialize");
 var arr = new Array(100),
     len = arr.length,
@@ -133,7 +133,7 @@ console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
 
 More info:
 [Console object](https://github.com/DeveloperToolsWG/console-object),
-[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
+[JavaScript benchmarking](https://mathiasbynens.be/notes/JavaScript-benchmarking)
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
 
@@ -142,9 +142,9 @@ Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/a
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
 
-In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In JavaScript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
 
-```javascript
+```JavaScript
 const _err = function( message ){
   throw new Error( message );
 }
@@ -162,7 +162,7 @@ getSum( undefined, 10 ) // throws Error, a is not defined
 
 Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line. Also, variable **declaration** is letting the system know that the variable exists while **definition** is assigning it a value.
 
-```javascript
+```JavaScript
 function doTheThing() {
   // ReferenceError: notDeclared is not defined
   console.log(notDeclared);
@@ -205,7 +205,7 @@ To make things easier to read, declare all of your variables at the top of your 
 
 When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
 
-```javascript
+```JavaScript
 var myObject = {
   name: '@tips_js'
 };
@@ -218,7 +218,7 @@ Thats ok, but you have to know that there are two native ways for this kind of t
 
 ### See the big Difference
 
-```javascript
+```JavaScript
 var myObject = {
   name: '@tips_js'
 };
@@ -235,7 +235,7 @@ Both differs in the depth how check the properties, in other words `hasOwnProper
 
 Here another example
 
-```javascript
+```JavaScript
 var myFunc = function() {
   this.name = '@tips_js';
 };
@@ -259,14 +259,14 @@ As of ES6, JS now has template strings as an alternative to the classic end quot
 
 Ex:
 Normal string
-```javascript
+```JavaScript
 var firstName = 'Jake';
 var lastName = 'Rawr';
 console.log('My name is ' + firstName + ' ' + lastName);
 // My name is Jake Rawr
 ```
 Template String
-```javascript
+```JavaScript
 var firstName = 'Jake';
 var lastName = 'Rawr';
 console.log(`My name is ${firstName} ${lastName}`);
@@ -286,7 +286,7 @@ You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-templ
 
 The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
 
-```javascript
+```JavaScript
 const nodelist = document.querySelectorAll('div');
 const nodelistToArray = Array.apply(null, nodelist);
 
@@ -327,7 +327,7 @@ Programmers like to make the computer do the boring stuff for us, and automatica
 
 We add this directive either by adding it at the top of a js file:
 
-```javascript
+```JavaScript
 // Whole-script strict mode syntax
 "use strict";
 var v = "Hi!  I'm a strict mode script!";
@@ -335,7 +335,7 @@ var v = "Hi!  I'm a strict mode script!";
 
 or inside a function:
 
-```javascript
+```JavaScript
 function f()
 {
   // Function-level strict mode syntax
@@ -374,7 +374,7 @@ Rather than writing separate methods to handle an array and a single element par
 
 You just have to concat everything into an array first. `Array.concat` will accept an array or a single element.
 
-```javascript
+```JavaScript
 function printUpperCase(words) {
   var elements = [].concat(words);
   for (var i = 0; i < elements.length; i++) {
@@ -385,7 +385,7 @@ function printUpperCase(words) {
 
 `printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
 
-```javascript
+```JavaScript
 printUpperCase("cactus");
 // => CACTUS
 printUpperCase(["cactus", "bear", "potato"]);
@@ -400,8 +400,8 @@ printUpperCase(["cactus", "bear", "potato"]);
 
 - `undefined` means a variable has not been declared, or has been declared but has not yet been assigned a value
 - `null` is an assignment value that means "no value"
-- Javascript sets unassigned variables with a default value of `undefined`
-- Javascript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
+- JavaScript sets unassigned variables with a default value of `undefined`
+- JavaScript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
 - `undefined` is not valid in JSON while `null` is
 - `undefined` typeof is `undefined`
 - `null` typeof is an `object`
@@ -410,17 +410,17 @@ printUpperCase(["cactus", "bear", "potato"]);
   (`Boolean(undefined) // false`, `Boolean(null) // false`)
 - You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
-  ```javascript
+  ```JavaScript
   typeof variable === "undefined"
 ```
 - You can check if a variable is [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 
-  ```javascript
+  ```JavaScript
   variable === null
 ```
 - The **equality** operator considers them equal, but the **identity** doesn't
 
-  ```javascript
+  ```JavaScript
   null == undefined // true
 
   null === undefined // false
@@ -430,9 +430,9 @@ printUpperCase(["cactus", "bear", "potato"]);
 
 > 2016-01-04 by [@loverajoel](https://twitter.com/loverajoel)
 
-Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. Also you can provide your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
+JavaScript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. Also you can provide your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
 
-```javascript
+```JavaScript
 ['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
@@ -441,7 +441,7 @@ But when you try order an array of non ASCII characters like this `['é', 'a', '
 
 See the next example:
 
-```javascript
+```JavaScript
 // Spanish
 ['único','árbol', 'cosas', 'fútbol'].sort();
 // ["cosas", "fútbol", "árbol", "único"] // bad order
@@ -457,7 +457,7 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 
 ### Using `localeCompare()`
 
-```javascript
+```JavaScript
 ['único','árbol', 'cosas', 'fútbol'].sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -471,7 +471,7 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 
 ### Using `Intl.Collator()`
 
-```javascript
+```JavaScript
 ['único','árbol', 'cosas', 'fútbol'].sort(Intl.Collator().compare);
 // ["árbol", "cosas", "fútbol", "único"]
 
@@ -487,9 +487,9 @@ So when you are working with arrays of strings in a language other than English,
 ## #03 - Improve Nested Conditionals
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
-How can we improve and make more efficient nested `if` statement in javascript.
+How can we improve and make more efficient nested `if` statement in JavaScript.
 
-```javascript
+```JavaScript
 if (color) {
   if (color === 'black') {
     printBlackBackground();
@@ -507,7 +507,7 @@ if (color) {
 
 One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, It's not recommended to use it because it's so difficult to debug errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
-```javascript
+```JavaScript
 switch(color) {
   case 'black':
     printBlackBackground();
@@ -529,7 +529,7 @@ switch(color) {
 But what if we have a conditional with several checks in each statement? In this case, if we like to do less verbose and more ordered, we can use the conditional `switch`.
 If we pass `true` as parameter to the `switch` statement, It allows us to put a conditional in each case.
 
-```javascript
+```JavaScript
 switch(true) {
   case (typeof color === 'string' && color === 'black'):
     printBlackBackground();
@@ -551,7 +551,7 @@ switch(true) {
 
 But we must always avoid having several checks in every condition, avoiding use of `switch` as far as possible and take into account that the most efficient way to do this is through an `object`.
 
-```javascript
+```JavaScript
 var colorObj = {
   'black': printBlackBackground,
   'red': printRedBackground,
@@ -579,7 +579,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 - Use an existing unique value of the object.
 - Define the keys in the parent components, not in child components
 
-	```javascript
+	```JavaScript
 	//bad
 	...
 	render() {
@@ -593,7 +593,7 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 - [Using array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` will not work
 
-	```javascript
+	```JavaScript
 	//bad
 	<MyComponent key={{Math.random()}}/>
 	```
@@ -622,9 +622,9 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 - Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
 - Pass a function expression to `$apply`, this have a error handling mechanism and allow integrate changes in the digest cycle
 
-	```javascript
+	```JavaScript
 	$scope.$apply(() => {
-		$scope.tip = 'Javascript Tip';
+		$scope.tip = 'JavaScript Tip';
 	});
 	```
 
@@ -642,7 +642,7 @@ But those are known methods, doesn't mean there isn't a more performant way, her
 
 Adding an element at the end of the array is easy with push(), but there is a way more performant.
 
-```javascript
+```JavaScript
 var arr = [1,2,3,4,5];
 
 arr.push(6);
@@ -652,7 +652,7 @@ Both methods modify the original array. Don't believe me? Check the [jsperf](htt
 
 Now we are trying to add an item to the beginning of the array
 
-```javascript
+```JavaScript
 var arr = [1,2,3,4,5];
 
 arr.unshift(0);
@@ -662,7 +662,7 @@ Here is a little bit detail, unshift edits the original array, concat returns a 
 
 Adding items at the middle of an array is easy with splice and is the most performant way to do it.
 
-```javascript
+```JavaScript
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
