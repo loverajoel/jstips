@@ -1,7 +1,12 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
+<--
 # Introducing Javascript Tips
 > New year, new project. **A JS tip per day!**
+-->
+
+# JavaScript 贴士介绍
+> 新年，新项目。**每天一个 JS 贴士！**
 
 With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
