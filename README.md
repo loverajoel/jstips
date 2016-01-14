@@ -18,6 +18,31 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #13 - Tip to measure performance of a javascript block
+
+2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
+
+For quickly measuring performance of a javascript block, we can use the console functions like
+[```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+
+```javascript
+console.time("Array initialize");
+var arr = new Array(100),
+    len = arr.length,
+    i;
+
+for (i = 0; i < len; i++) {
+    arr[i] = new Object();
+};
+console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
+```
+
+More info:
+[Console object](https://github.com/DeveloperToolsWG/console-object),
+[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
+
+Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
+
 ## #12 - Pseudomentatory parameters in ES6 functions
 
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
@@ -26,11 +51,11 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
 
 ```javascript
- const _err = function( message ){
-   throw new Error( message );
- }
+const _err = function( message ){
+  throw new Error( message );
+}
 
- const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
+const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
 
 getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
