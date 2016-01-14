@@ -45,10 +45,10 @@ console.log(b);
 //[2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
-### Pure JS version by [@mvedie](https://github.com/mvedie)
+### Another way of shuffle by [@mvedie](https://github.com/mvedie)
 
 ```javascript
-Array.prototype.shuffle = function() {
+function shuffle() {
     return this.slice(0).sort(function() {
         return 0.5 - Math.random();
     });
@@ -58,7 +58,7 @@ Array.prototype.shuffle = function() {
 An Example:
 ```javascript
 my_array = [1,2,3,3,4,5,6]
-my_array.shuffle()
+shuffle(my_array)
 // [4, 3, 5, 1, 2, 3, 6]
 ```
 
