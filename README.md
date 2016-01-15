@@ -39,8 +39,8 @@ function shuffle(arr){
 An example:
 
 ```javascript
-a=[1,2,3,4,5,6,7,8];
-b = shuffle(a);
+var a=[1,2,3,4,5,6,7,8];
+var b = shuffle(a);
 console.log(b);
 //[2, 7, 8, 6, 5, 3, 1, 4]
 ```
@@ -57,8 +57,8 @@ function shuffle() {
 
 An Example:
 ```javascript
-my_array = [1,2,3,3,4,5,6]
-shuffle(my_array)
+var myArray = [1,2,3,3,4,5,6]
+shuffle(myArray)
 // [4, 3, 5, 1, 2, 3, 6]
 ```
 
