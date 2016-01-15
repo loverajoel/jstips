@@ -22,19 +22,19 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
-javascript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
+JavaScript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
 
 ```javascript
 var someText = 'javascript rules';
-if(someText.indexOf('javascript') !== -1) {
+if (someText.indexOf('javascript') !== -1) {
 }
 
 // or
-if(someText.indexOf('javascript') + 1) {
+if (someText.indexOf('javascript') >= 0) {
 }
 ```
 
-but, let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
+But let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
 
 [examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
 ```javascript
