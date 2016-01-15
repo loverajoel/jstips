@@ -31,7 +31,7 @@ for (var i = 0; i < elements.length; i++) {
 }
 ```
 
-But often, you don't need `i` anywhere else than getting the element at this index.
+But often, you don't need `i` anywhere else except to get the element at this index.
 You just want to loop over your elements to do something with them.
 An alternative is to use the ES5 Array functions, such as `forEach` :
 
@@ -52,29 +52,35 @@ for (var i = 0; i < elements.length; i++) {
 }
 ```
 
-And use the `filter` Array function :
+And use the `filter`'s Array function :
 
 ```javascript
 var elements = [ { name: 'A', isValid: true }, { name: 'B', isValid: false } ];
-function isValid(element) {
-  return element.isValid;
-}
-var validElements = elements.filter(isValid);
+var validElements = elements.filter(function(element) { return element.isValid; });
 // validElements = [ { name: 'A', isValid: true } ]
 ```
 
-And last but not least, when you want an array with just a particular field (or severals) from your elements, you can use the `map` Array function :
+Another useful function is `map`. When you want to extract a particular field (or severals) from an array of objects, or transform each element, it's the perfect candidate :
 
 ```javascript
 var people = [ { name: 'John', age: 13 }, { name: 'Henry', age: 37 } ];
-function getAge(person) {
-  return person.age;
-}
-var ages = people.map(getAge);
+var ages = people.map(function(person) { return person.age; });
 // ages = [ 13, 37 ]
+var uppercaseNames = people.map(function(person) { return person.name.toUpperCase(); });
+// uppercaseNames = [ "JOHN", "HENRY" ]
 ```
 
-Those functions don't modify your original array.
+Actually, the function you pass to `forEach`, `filter`, `map` will get three arguments, not only one :
+```javascript
+elements.forEach/filter/map(function(item, index, array) {
+	// item : current item in the loop
+	// index : the current index, the `i` in the classic `for`
+	// array : the array you're looping through. It can come in handy when your program is quite dynamic.
+});
+```
+It's not mandatory to always add them to the function parameters, often only `item` is needed.
+
+Last thing but very important : those functions don't modify your original array.
 They return a new one (but if you have objects inside, they are not cloned, they have the same reference).
 
 Check out the [Mozilla documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array) to find out more about those functions.
