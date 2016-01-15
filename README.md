@@ -18,8 +18,8 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter
 
 # Tips list
 
-## {{tip no}} - Passing arguments to callback functions
-> {{date}} by [@minhazav](https://twitter.com/minhazav)
+## #17 - Passing arguments to callback functions
+> 2016-01-17 by [@minhazav](https://twitter.com/minhazav)
 
 By default you cannot pass arguments to a callback function. For example:
 ```js
