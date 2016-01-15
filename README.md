@@ -18,6 +18,29 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #15 - Tip to angularjs ```$scope.on()``` and ```$rootScope.on()```
+
+> 2016-01-15 by [@xiaoyu5256](https://github.com/xiaoyu5256)
+
+If we use ```$state.reload()``` by angular-ui's UI-Router,we will find that,```$rootScope.on()``` will trigger many times;That's because when we call ```$state.reload()```,```$scope.on()``` will unbind,but ```$rootScope.on()``` will not. we can resolve it by two way.
+
+```javascript
+// one way: unbind when scope destroy
+
+var listener = $rootScope.on('event',function(){
+  console.log("trigger event");
+})
+$scope.on('$destroy',listener);
+
+// another way: check listener is exist
+//define listener outside
+var listener;
+!listener && listener = $rootScope.on('event',function(){
+  console.log("trigger event");
+});
+
+```
+
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
 
