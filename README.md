@@ -20,7 +20,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 ## #15 - even simpler way of use indexOf as a contains clause
 
-> 2015-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
+> 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
 javascript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
 
@@ -69,7 +69,6 @@ var someText = 'text';
 ~someText.indexOf('asd'); //sometext contains asd - false
 ~someText.indexOf('ext'); //sometext contains ext - true
 ```
-
 
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
