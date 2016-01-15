@@ -34,7 +34,7 @@ Have a look at these two code snippets, which exactly do the same job. You will 
 // general syntax for fat arrow functions
 param => expression
 
-// may also be written with parantheses
+// may also be written with parentheses
 // parentheses are required on multiple params
 (param1 [, param2]) => expression
 
@@ -56,7 +56,7 @@ As you may see, the fat arrow function in this case may save you time typing out
 
 ### Lexically binding `this`
 
-There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical sourrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
+There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
 
 ```javascript
 
