@@ -1,14 +1,14 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
-# Introducing Javascript Tips
+# Introducing JavaScript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
 ### Can you help us enrich it?
-Please feel free to send us a PR with your own Javascript tip to be published here.
+Please feel free to send us a PR with your own JavaScript tip to be published here.
 Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
