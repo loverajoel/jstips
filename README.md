@@ -18,6 +18,33 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #XX - Rounding the fast way
+
+> 2016-XX-XX by [pklinger](https://github.com/pklinger)
+
+
+Today's tip is about performance. [Ever came across the double tilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
+
+One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is being returned, which might come in handy some times instead of `Math.floor` return value `NaN on failure.
+
+```javascript
+// single ~
+console.log(~1337)    // -1338
+
+// numeric input 
+console.log(~~47.11)  // -> 47
+console.log(~~-12.88) // -> -12
+console.log(~~1.9999) // -> 1
+console.log(~~3)      // -> 3
+
+// on failure
+console.log(~~true) // -> 0 
+console.log(~~ÑaN)  // -> 0
+console.log(~~null) // -> 0
+```
+
+Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
+
 ## #15 - Even simpler way of use indexOf as a contains clause
 
 > 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
