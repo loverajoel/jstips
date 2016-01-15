@@ -22,10 +22,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > 2016-XX-XX by [pklinger](https://github.com/pklinger)
 
-
 Today's tip is about performance. [Ever came across the double tilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
 
-One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is being returned, which might come in handy some times instead of `Math.floor` return value `NaN on failure.
+One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is being returned, which might come in handy sometimes instead of `Math.floor()` return value `NaN` on failure.
 
 ```javascript
 // single ~
@@ -39,7 +38,7 @@ console.log(~~3)      // -> 3
 
 // on failure
 console.log(~~true) // -> 0 
-console.log(~~ÑaN)  // -> 0
+console.log(~~NaN)  // -> 0
 console.log(~~null) // -> 0
 ```
 
