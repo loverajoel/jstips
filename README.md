@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #15 - even simpler way of use indexOf as a contains clause
+## #15 - Even simpler way of use indexOf as a contains clause
 
 > 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
