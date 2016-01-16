@@ -1,19 +1,19 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
-# Introducing Javascript Tips
+# Introducing JavaScript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, frameworks, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
 ### Can you help us enrich it?
-Please feel free to send us a PR with your own Javascript tip to be published here.
+Please feel free to send us a PR with your own JavaScript tip to be published here.
 Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Let’s keep in touch
-To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
@@ -56,6 +56,214 @@ document.getElementById('someelem').addEventListener('click', alertText.bind(thi
 ```
 There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
 
+## #15 - Even simpler way of using indexOf as a contains clause
+
+> 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
+
+JavaScript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
+
+```javascript
+var someText = 'javascript rules';
+if (someText.indexOf('javascript') !== -1) {
+}
+
+// or
+if (someText.indexOf('javascript') >= 0) {
+}
+```
+
+But let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
+
+[examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
+```javascript
+for (var key in obj) {
+  // "reserved" exports
+  if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) continue;
+```
+
+[lib/utils.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/lib/utils.js#L93)
+```javascript
+exports.normalizeType = function(type){
+  return ~type.indexOf('/')
+    ? acceptParams(type)
+    : { value: mime.lookup(type), params: {} };
+};
+```
+
+[examples/web-service/index.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/web-service/index.js#L35)
+```javascript
+// key is invalid
+if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
+```
+
+The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values."
+
+It transforms -1 into 0, and 0 is false in javascript, so:
+
+```javascript
+var someText = 'text';
+!!~someText.indexOf('tex'); //sometext contains text - true
+!~someText.indexOf('tex'); //sometext not contains text - false
+~someText.indexOf('asd'); //sometext contains asd - false
+~someText.indexOf('ext'); //sometext contains ext - true
+```
+
+### String.prototype.includes()
+
+In ES6 was introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use to determine whether or not a string includes another string:
+
+```javascript
+'something'.includes('thing'); // true
+```
+
+With ECMAScript 2016 (ES7) is even possible uses with Arrays, like indexOf:
+
+```javascript
+!!~[1, 2, 3].indexOf(1); // true
+[1, 2, 3].includes(1); // true
+```
+
+**Unfortunately, It's got support only in Chrome, Firefox, Safari 9 or above and Edge. Not IE11 or less.**
+**It's better to using in controlled environments.**
+
+## #14 - Fat Arrow Functions #ES6
+> 2016-01-13 by [@pklinger](https://github.com/pklinger/)
+
+Introduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in less lines. The name comes from its syntax as `=>` is a 'fat arrow' compared to a thin arrow `->`. Some programmers might already know this type of functions from different languages such as Haskell as 'lambda expressions' respectively 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
+
+### What are the benefits?
+* Syntax: less LOC; no more typing `function` keyword over and over again
+* Semantics: capturing the keyword `this` from the surrounding context
+
+### Simple syntax example
+Have a look at these two code snippets, which exactly do the same job. You will quickly understand what fat arrow functions do.
+
+```javascript
+// general syntax for fat arrow functions
+param => expression
+
+// may also be written with parentheses
+// parentheses are required on multiple params
+(param1 [, param2]) => expression
+
+
+// using functions
+var arr = [5,3,2,9,1];
+var arrFunc = arr.map(function(x) {
+  return x * x;
+});
+console.log(arr)
+
+// using fat arrow
+var arr = [5,3,2,9,1];
+var arrFunc = arr.map((x) => x*x);
+console.log(arr)
+```
+
+As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability. 
+
+### Lexically binding `this`
+
+There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
+
+```javascript
+
+// globally defined this.i
+this.i = 100;
+
+var counterA = new CounterA();
+var counterB = new CounterB();
+var counterC = new CounterC();
+var counterD = new CounterD();
+
+// bad example 
+function CounterA() {
+  // CounterA's `this` instance (!! gets ignored here)
+  this.i = 0;
+  setInterval(function () {
+    // `this` refers to global object, not to CounterA's `this`
+    // therefore starts counting with 100, not with 0 (local this.i)
+    this.i++;
+    document.getElementById("counterA").innerHTML = this.i;
+  }, 500);
+}
+
+// manually binding that = this
+function CounterB() {
+  this.i = 0;
+  var that = this;
+  setInterval(function() {
+    that.i++;
+    document.getElementById("counterB").innerHTML = that.i;
+  }, 500);
+}
+
+// using .bind(this)
+function CounterC() {
+  this.i = 0;
+  setInterval(function() {
+    this.i++;
+    document.getElementById("counterC").innerHTML = this.i;
+  }.bind(this), 500);
+}
+
+// fat arrow function
+function CounterD() {
+  this.i = 0;
+  setInterval(() => {
+    this.i++;
+    document.getElementById("counterD").innerHTML = this.i;
+  }, 500);
+}
+```
+
+Further information about fat arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
+
+
+## #13 - Tip to measure performance of a javascript block
+
+2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
+
+For quickly measuring performance of a javascript block, we can use the console functions like
+[```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+
+```javascript
+console.time("Array initialize");
+var arr = new Array(100),
+    len = arr.length,
+    i;
+
+for (i = 0; i < len; i++) {
+    arr[i] = new Object();
+};
+console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
+```
+
+More info:
+[Console object](https://github.com/DeveloperToolsWG/console-object),
+[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
+
+Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
+
+## #12 - Pseudomentatory parameters in ES6 functions #ES6
+
+> 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
+
+
+In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+
+```javascript
+const _err = function( message ){
+  throw new Error( message );
+}
+
+const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
+
+getSum( 10 ) // throws Error, b is not defined
+getSum( undefined, 10 ) // throws Error, a is not defined
+ ```
+
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
 
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
@@ -97,7 +305,7 @@ function doTheThing() {
 }
 ```
 
-To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way. 
+To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way.
 
 ## #10 - Check if a property is in a Object
 
@@ -109,16 +317,15 @@ When you have to check if a property is present of an [object](https://developer
 var myObject = {
   name: '@tips_js'
 };
-if (typeof myObject['name'] !== 'undefined') { ... }
 
-if (myObject['name']) { ... }
+if (myObject.name) { ... }
 
 ```
 
 Thats ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has available both ways.
 
 ### See the big Difference
- 
+
 ```javascript
 var myObject = {
   name: '@tips_js'
@@ -150,13 +357,15 @@ user.hasOwnProperty('age'); // false, because age is from the prototype chain
 
 Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
 
+Also recommends read [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes at checking properties' existence in objects
+
 ## #09 - Template Strings
 
 > 2016-01-09 by [@JakeRawr](https://github.com/JakeRawr)
 
 As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
 
-Ex: 
+Ex:
 Normal string
 ```javascript
 var firstName = 'Jake';
