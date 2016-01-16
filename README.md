@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #15 - Even simpler way of use indexOf as a contains clause
+## #15 - Even simpler way of using indexOf as a contains clause
 
 > 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
@@ -69,6 +69,24 @@ var someText = 'text';
 ~someText.indexOf('asd'); //sometext contains asd - false
 ~someText.indexOf('ext'); //sometext contains ext - true
 ```
+
+### String.prototype.includes()
+
+In ES6 was introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use to determine whether or not a string includes another string:
+
+```javascript
+'something'.includes('thing'); // true
+```
+
+With ECMAScript 2016 (ES7) is even possible uses with Arrays, like indexOf:
+
+```javascript
+!!~[1, 2, 3].indexOf(1); // true
+[1, 2, 3].includes(1); // true
+```
+
+**Unfortunately, It's got support only in Chrome, Firefox, Safari 9 or above and Edge. Not IE11 or less.**
+**It's better to using in controlled environments.**
 
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
