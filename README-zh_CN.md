@@ -548,14 +548,29 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 - If you are using >AngularJS 1.2.X, use `$evalAsync` is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
 
 
+<!--
 ## #0 - Insert item inside an Array
+-->
+
+## #0 - 插入一项元素到数组中
 > 2015-12-29
 
+<!--
 Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
 
 But those are known methods, doesn't mean there isn't a more performant way, here we go...
 
 Adding an element at the end of the array is easy with push(), but there is a way more performant.
+-->
+
+在已存在的数组中插入一项元素是一件日常任务。你可以使用 push
+操作把元素添加到数组的末尾，使用 unshift 操作添加到开头，或者使用 splice
+添加到中间。
+
+但这些都是已知的方法，并不意味着没有性能更好的方式，我们开始吧……
+
+push() 可以很容易地把一个元素添加到数组的末尾，但这里有个更高效的方式。
+
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -563,9 +578,11 @@ var arr = [1,2,3,4,5];
 arr.push(6);
 arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
+<!--
 Both methods modify the original array. Don't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
 Now we are trying to add an item to the beginning of the array
+-->
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -586,7 +603,9 @@ items.splice(items.length / 2, 0, 'hello');
 I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
 -->
 
-我已经在许多浏览器和操作系统，试着去运行这些测试，并且它们的结果非常相似。我希望这些贴士（建议）对你有用，并鼓励进行自己的测试！
+我已经在许多浏览器和操作系统，试着去运行这些测试，并且它们的结果非常相似。
+
+我希望这些贴士（建议）对你有用，并鼓励进行自己的测试！
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
