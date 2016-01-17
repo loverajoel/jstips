@@ -20,7 +20,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 ## #18 - Advanced object properties
 
-Many don't know that, but it is possible to configure object properties in Javascript for example to set properties to be pseudo-private or readonly. It is not even a feature of ES6 (ES2015) since it was defined in ES5.1.
+It is possible to configure object properties in Javascript for example to set properties to be pseudo-private or readonly. It is not even a feature of ES6 (ES2015) since it was defined in ES5.1.
 
 To do so, you need to use the method `defineProperty` of the `Object` prototype like so:
 
