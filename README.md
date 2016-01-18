@@ -18,9 +18,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #XX - Rounding the fast way
+## #18 - Rounding the fast way
 
-> 2016-XX-XX by [pklinger](https://github.com/pklinger)
+> 2016-01-18 by [pklinger](https://github.com/pklinger)
 
 Today's tip is about performance. [Ever came across the double tilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
 
