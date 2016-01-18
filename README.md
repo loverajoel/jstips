@@ -9,7 +9,7 @@ At midday, no matter if it is a weekend or a holiday, a tip will be posted and t
 
 # Tips list
 
-* [2016](2016/tips/README.md)
+* [2016](2016-tips/README.md)
 
 ### Can you help us enrich it?
 Please feel free to send us a PR with your own JavaScript tip to be published here.
