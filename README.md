@@ -7,6 +7,10 @@ With great excitement, I introduce these short and useful daily JavaScript tips 
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
+# Tips list
+
+* [2016](2016/tips/README.md)
+
 ### Can you help us enrich it?
 Please feel free to send us a PR with your own JavaScript tip to be published here.
 Any improvements or suggestions are more than welcome!
@@ -16,9 +20,6 @@ Any improvements or suggestions are more than welcome!
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
-# Tips list
-
-* [2016]('2016/tips/README.md')
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
