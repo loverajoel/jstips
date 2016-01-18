@@ -1,14 +1,14 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
-# Introducing Javascript Tips
+# Introducing JavaScript Tips
 > New year, new project. **A JS tip per day!**
 
-With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
 ### Can you help us enrich it?
-Please feel free to send us a PR with your own Javascript tip to be published here.
+Please feel free to send us a PR with your own JavaScript tip to be published here.
 Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
@@ -47,8 +47,65 @@ console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
 
-## #15 - Even simpler way of use indexOf as a contains clause
+## #17 - Node.js: Run a module if it is not required
 
+> 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
+
+In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
+
+```js
+if (!module.parent) {
+    // ran with `node something.js`
+    app.listen(8088, function() {
+        console.log('app listening on port 8088');
+    })
+} else {
+    // used with `require('/.something.js')`
+    module.exports = app;
+}
+```
+
+See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.
+
+## #16 - Passing arguments to callback functions
+> 2016-01-16 by [@minhazav](https://twitter.com/minhazav)
+
+By default you cannot pass arguments to a callback function. For example:
+```js
+function callback() {
+  console.log('Hi human');
+}
+
+document.getElementById('someelem').addEventListener('click', callback);
+```
+You can take advantage of the closure scope in Javascript to pass arguments to callback functions. Check this example:
+```js
+function callback(a, b) {
+  return function() {
+    console.log('sum = ', (a+b));
+  }
+}
+
+var x = 1, y = 2;
+document.getElementById('someelem').addEventListener('click', callback(x, y));
+```
+
+**What are closure?**
+Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) to learn more.
+
+So this way the arguments `x` and `y` are in scope of the callback function when it is called.
+
+Another method to do this is using `bind` method. For example:
+```js
+var alertText = function(text) {
+  alert(text);
+};
+
+document.getElementById('someelem').addEventListener('click', alertText.bind(this, 'hello'));
+```
+There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
+
+## #15 - Even simpler way of using indexOf as a contains clause
 > 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
 JavaScript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
@@ -93,11 +150,29 @@ It transforms -1 into 0, and 0 is false in javascript, so:
 
 ```javascript
 var someText = 'text';
-!!~someText.indexOf('tex'); //sometext contains text - true
-!~someText.indexOf('tex'); //sometext not contains text - false
+!!~someText.indexOf('tex'); //sometext contains tex - true
+!~someText.indexOf('tex'); //sometext not contains tex - false
 ~someText.indexOf('asd'); //sometext contains asd - false
 ~someText.indexOf('ext'); //sometext contains ext - true
 ```
+
+### String.prototype.includes()
+
+In ES6 was introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use to determine whether or not a string includes another string:
+
+```javascript
+'something'.includes('thing'); // true
+```
+
+With ECMAScript 2016 (ES7) is even possible uses with Arrays, like indexOf:
+
+```javascript
+!!~[1, 2, 3].indexOf(1); // true
+[1, 2, 3].includes(1); // true
+```
+
+**Unfortunately, It's got support only in Chrome, Firefox, Safari 9 or above and Edge. Not IE11 or less.**
+**It's better to using in controlled environments.**
 
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
@@ -133,7 +208,7 @@ var arrFunc = arr.map((x) => x*x);
 console.log(arr)
 ```
 
-As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability. 
+As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability.
 
 ### Lexically binding `this`
 
@@ -149,7 +224,7 @@ var counterB = new CounterB();
 var counterC = new CounterC();
 var counterD = new CounterD();
 
-// bad example 
+// bad example
 function CounterA() {
   // CounterA's `this` instance (!! gets ignored here)
   this.i = 0;
@@ -291,7 +366,7 @@ var myObject = {
   name: '@tips_js'
 };
 
-if (myObject['name']) { ... }
+if (myObject.name) { ... }
 
 ```
 
@@ -485,7 +560,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 - Javascript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
 - `undefined` is not valid in JSON while `null` is
 - `undefined` typeof is `undefined`
-- `null` typeof is an `object`
+- `null` typeof is an `object`. [Why?](http://www.2ality.com/2013/10/typeof-null.html)
 - Both are primitives
 - Both are [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
   (`Boolean(undefined) // false`, `Boolean(null) // false`)
