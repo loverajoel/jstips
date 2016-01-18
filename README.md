@@ -512,7 +512,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 - Javascript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
 - `undefined` is not valid in JSON while `null` is
 - `undefined` typeof is `undefined`
-- `null` typeof is an `object`
+- `null` typeof is an `object`. [Why?](http://www.2ality.com/2013/10/typeof-null.html)
 - Both are primitives
 - Both are [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
   (`Boolean(undefined) // false`, `Boolean(null) // false`)
