@@ -563,13 +563,13 @@ But those are known methods, doesn't mean there isn't a more performant way, her
 Adding an element at the end of the array is easy with push(), but there is a way more performant.
 -->
 
-在已存在的数组中插入一项元素是一件日常任务。你可以使用 push
-操作把元素添加到数组的末尾，使用 unshift 操作添加到开头，或者使用 splice
+在已存在的数组中插入一项元素是一件日常任务。你可以使用 `push`
+操作把元素添加到数组的末尾，使用 `unshift` 操作添加到开头，或者使用 `splice`
 添加到中间。
 
 但这些都是已知的方法，并不意味着没有性能更好的方式，我们开始吧……
 
-push() 可以很容易地把一个元素添加到数组的末尾，但这里有个更高效的方式。
+`push()` 可以很容易地把一个元素添加到数组的末尾，但这里有个更高效的方式。
 
 
 ```javascript
@@ -600,9 +600,9 @@ Here is a little bit detail, unshift edits the original array, concat returns a 
 Adding items at the middle of an array is easy with splice and is the most performant way to do it.
 -->
 
-这里有个小细节，unshift 对原始数组进行编辑，而 concat 返回一个新数组。[jsperf](http://jsperf.com/unshift-item-inside-an-array)
+这里有个小细节，`unshift` 对原始数组进行编辑，而 `concat` 返回一个新数组。[jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-使用 splice 可以很容易地把元素添加到数组的中间，而且这样做是最高效的。
+使用 `splice` 可以很容易地把元素添加到数组的中间，而且这样做是最高效的。
 
 
 ```javascript
