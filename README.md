@@ -37,9 +37,12 @@ console.log(~~1.9999) // -> 1
 console.log(~~3)      // -> 3
 
 // on failure
-console.log(~~true) // -> 0 
+console.log(~~[]) // -> 0 
 console.log(~~NaN)  // -> 0
 console.log(~~null) // -> 0
+
+// greater than 32 bit integer fails
+console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
