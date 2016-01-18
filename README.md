@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #17 - node.js: run a module if it is not require'd
+## #17 - Node.js: Run a module if it is not required
 
 > 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
 
