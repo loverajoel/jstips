@@ -56,9 +56,9 @@ document.getElementById('someelem').addEventListener('click', alertText.bind(thi
 ```
 There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
 
-## #16 - node.js: run a module if it is not require'd
+## #17 - node.js: run a module if it is not require'd
 
-> 2016-01-16 by [@odsdq](https://twitter.com/odsdq)
+> 2017-01-16 by [@odsdq](https://twitter.com/odsdq)
 
 In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
 
