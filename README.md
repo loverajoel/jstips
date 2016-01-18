@@ -18,7 +18,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #17 - Passing arguments to callback functions
+## #16 - Passing arguments to callback functions
 > 2016-01-17 by [@minhazav](https://twitter.com/minhazav)
 
 By default you cannot pass arguments to a callback function. For example:
@@ -160,7 +160,7 @@ var arrFunc = arr.map((x) => x*x);
 console.log(arr)
 ```
 
-As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability. 
+As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability.
 
 ### Lexically binding `this`
 
@@ -176,7 +176,7 @@ var counterB = new CounterB();
 var counterC = new CounterC();
 var counterD = new CounterD();
 
-// bad example 
+// bad example
 function CounterA() {
   // CounterA's `this` instance (!! gets ignored here)
   this.i = 0;
