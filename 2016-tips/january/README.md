@@ -1,6 +1,6 @@
 ## January 2016 JS Tips
 
-#17 - Node.js: Run a module if it is not required
+## #17 - Node.js: Run a module if it is not required
 
 > 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
 
