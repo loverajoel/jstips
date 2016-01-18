@@ -270,7 +270,7 @@ Further information about fat arrow functions may be found at [MDN] (https://dev
 
 ## #13 - Tip to measure performance of a javascript block
 
-2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
+> 2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
 
 For quickly measuring performance of a javascript block, we can use the console functions like
 [```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
