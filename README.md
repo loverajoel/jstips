@@ -122,8 +122,8 @@ It transforms -1 into 0, and 0 is false in javascript, so:
 
 ```javascript
 var someText = 'text';
-!!~someText.indexOf('tex'); //sometext contains text - true
-!~someText.indexOf('tex'); //sometext not contains text - false
+!!~someText.indexOf('tex'); //sometext contains tex - true
+!~someText.indexOf('tex'); //sometext not contains tex - false
 ~someText.indexOf('asd'); //sometext contains asd - false
 ~someText.indexOf('ext'); //sometext contains ext - true
 ```
