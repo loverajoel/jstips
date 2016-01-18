@@ -584,15 +584,26 @@ Both methods modify the original array. Don't believe me? Check the [jsperf](htt
 Now we are trying to add an item to the beginning of the array
 -->
 
+这两个方法都修改了原始数组。不相信我？瞧这里 [jsperf](http://jsperf.com/push-item-inside-an-array)。
+
+现在，我们试着把元素添加到数组的开头。
+
 ```javascript
 var arr = [1,2,3,4,5];
 
 arr.unshift(0);
 [0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
+<!--
 Here is a little bit detail, unshift edits the original array, concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
 Adding items at the middle of an array is easy with splice and is the most performant way to do it.
+-->
+
+这里有个小细节，unshift 对原始数组进行编辑，而 concat 返回一个新数组。[jsperf](http://jsperf.com/unshift-item-inside-an-array)
+
+使用 splice 可以很容易地把元素添加到数组的中间，而且这样做是最高效的。
+
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
