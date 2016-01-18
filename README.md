@@ -18,8 +18,28 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #17 - node.js: run a module if it is not require'd
+
+> 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
+
+In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
+
+```js
+if (!module.parent) {
+    // ran with `node something.js`
+    app.listen(8088, function() {
+        console.log('app listening on port 8088');
+    })
+} else {
+    // used with `require('/.something.js')`
+    module.exports = app;
+}
+```
+
+See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.
+
 ## #16 - Passing arguments to callback functions
-> 2016-01-17 by [@minhazav](https://twitter.com/minhazav)
+> 2016-01-15 by [@minhazav](https://twitter.com/minhazav)
 
 By default you cannot pass arguments to a callback function. For example:
 ```js
@@ -55,26 +75,6 @@ var alertText = function(text) {
 document.getElementById('someelem').addEventListener('click', alertText.bind(this, 'hello'));
 ```
 There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
-
-## #17 - node.js: run a module if it is not require'd
-
-> 2017-01-16 by [@odsdq](https://twitter.com/odsdq)
-
-In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
-
-```js
-if (!module.parent) {
-    // ran with `node something.js`
-    app.listen(8088, function() {
-        console.log('app listening on port 8088');
-    })
-} else {
-    // used with `require('/.something.js')`
-    module.exports = app;
-}
-```
-
-See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.
 
 ## #15 - Even simpler way of using indexOf as a contains clause
 
