@@ -39,7 +39,7 @@ if (!module.parent) {
 See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.
 
 ## #16 - Passing arguments to callback functions
-> 2016-01-15 by [@minhazav](https://twitter.com/minhazav)
+> 2016-01-16 by [@minhazav](https://twitter.com/minhazav)
 
 By default you cannot pass arguments to a callback function. For example:
 ```js
