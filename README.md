@@ -25,12 +25,25 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 In node, you can detect a module before actually requiring it. Here is the simple helper function. This is useful in detecting global dependency or dynamic loading modules.
 
 ```js
-try {
-  require.resolve('name'); // .resolve will not load the module if not found.
-  return true;
-} catch(e) {
-  return false; 
+
+// define a simple helper function
+function hasModule(name) {
+  try {
+    // .resolve will not load the module if not found.
+    require.resolve(name);
+    return true;
+  } catch(e) {
+    return false;
+  }
 }
+
+if (hasModule('./foo')) {
+  var foo = require('./foo');
+  // do something.
+} else {
+  // do another thing.
+}
+
 ```
 
 ## #18 - Rounding the fast way
