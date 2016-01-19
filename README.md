@@ -337,7 +337,7 @@ getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
- `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
 
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
