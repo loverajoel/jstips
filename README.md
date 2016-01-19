@@ -293,7 +293,7 @@ More info:
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
 
-## #12 - Pseudomentatory parameters in ES6 functions #ES6
+## #12 - Pseudomandatory parameters in ES6 functions #ES6
 
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
