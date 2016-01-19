@@ -742,7 +742,7 @@ var colorObj = {
   'yellow': printYellowBackground
 };
 
-if (color && colorObj.hasOwnProperty(color)) {
+if (color in colorObj) {
   colorObj[color]();
 }
 ```
