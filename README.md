@@ -19,7 +19,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 # Tips list
 ## #19 - Safe string concatenation
 
-> 2016-01-19 by [@gogainda]
+> 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
 
 Suppose you have a couple of variables with unknown types and you want to concatenate them. To be sure that the arithmetical operation would not be applied during the concatenation:
 
