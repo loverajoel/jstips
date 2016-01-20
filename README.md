@@ -17,6 +17,38 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+
+## #01(number) - Creating immutable objects
+
+> yyyy-mm-dd(date) by @emars
+
+The `Object.freeze()` method can be used to create an immutable object. This means that it cannot be altered in any way (adding, removing or changing methods and properties).
+
+```js
+var obj = {
+  a: 'nice',
+  b: 'neat' 
+};
+
+Object.freeze(obj);
+
+obj.a = 'test';
+obj.c = 'test';
+delete obj.a;
+
+console.log(obj);
+// { a: 'nice', b: 'neat' }
+```
+
+This method is also useful in preventing unapply attacks which can be used to expose the scope of closures.
+
+You can read more about unapply attacks [here](https://glebbahmutov.com/blog/unapply-attack/).
+
+```
+Object.freeze(Array.prototype);
+Object.freeze(Function.prototype);
+```
+
 ## #20 - Return objects to enable chaining of functions
 
 > 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
