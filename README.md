@@ -56,7 +56,7 @@ var three = '3';
 var result = ''.concat(one, two, three); //"123"
 ```
 
-This way of concatention do exactly what you expect. On the contrary, concatenation with pluses might lead to unexpected results:
+This way of concatenation does exactly what you expect. On the contrary, concatenation with pluses might lead to unexpected results:
 ```javascript
 var one = 1;
 var two = 2;
