@@ -410,7 +410,7 @@ To make things easier to read, declare all of your variables at the top of your 
 
 > 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
 
-When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+When you have to check if a property is present on an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
 
 ```javascript
 var myObject = {
@@ -421,7 +421,7 @@ if (myObject.name) { ... }
 
 ```
 
-Thats ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has available both ways.
+That's ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has both ways available.
 
 ### See the big Difference
 
@@ -438,9 +438,9 @@ myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prot
 
 ```
 
-Both differs in the depth how check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+Both differ in the depth that they check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however the `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
 
-Here another example
+Here's another example
 
 ```javascript
 var myFunc = function() {
@@ -454,9 +454,9 @@ user.hasOwnProperty('name'); // true
 user.hasOwnProperty('age'); // false, because age is from the prototype chain
 ```
 
-Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+Check here for [live examples](https://jsbin.com/tecoqa/edit?js,console)!
 
-Also recommends read [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes at checking properties' existence in objects
+I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a properties' existence in objects.
 
 ## #09 - Template Strings
 
