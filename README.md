@@ -573,6 +573,84 @@ Strict mode is supported in:
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
+## #1(number) - Alternatives to classic `for` loops
+
+> yyyy/mm/dd(date) by [@chtefid](https://twitter.com/chtefid)
+
+Everybody knows the classic `for` loop :
+
+```javascript
+for (var i = 0; i < elements.length; i++) {
+  var element = elements[i];
+  doSomethingWith(element);
+}
+```
+
+But often, you don't need `i` anywhere else except to get the element at this index.
+You just want to loop over your elements to do something with them.
+An alternative is to use the ES5 Array functions, such as `forEach` :
+
+```javascript
+elements.forEach(doSomethingWith);
+```
+Each item from `elements` will be passed as argument one by one to `doSomethingWith`.
+
+Same idea when you want to filter some elements in an array, you can replace this kind of loop: 
+
+```javascript
+var validElements = [];
+for (var i = 0; i < elements.length; i++) {
+  var element = elements[i];
+  if (element.isValid) {
+    validElements.push(element);
+  }
+}
+```
+
+And use the `filter`'s Array function :
+
+```javascript
+var elements = [ { name: 'A', isValid: true }, { name: 'B', isValid: false } ];
+var validElements = elements.filter(function(element) { return element.isValid; });
+// validElements = [ { name: 'A', isValid: true } ]
+```
+
+Another useful function is `map`. When you want to extract a particular field (or severals) from an array of objects, or transform each element, it's the perfect candidate :
+
+```javascript
+var people = [ { name: 'John', age: 13 }, { name: 'Henry', age: 37 } ];
+var ages = people.map(function(person) { return person.age; });
+// ages = [ 13, 37 ]
+var uppercaseNames = people.map(function(person) { return person.name.toUpperCase(); });
+// uppercaseNames = [ "JOHN", "HENRY" ]
+```
+
+Because you are using a callback, the `this` inside does not reference the same `this` as the caller. If you don't use `.bind` to change its context, `this` will be equals to `window`, the global object (that's often lead to some bugs).
+But hopefully, those functions take a second parameter that will be passed as the `this` inside the callback :
+```javascript
+this.max = 20;
+people.filter(function(person) { return person.age < this.max; }, this);
+```
+
+Last but no least, the callback you pass to `forEach`, `filter`, `map` will get three arguments, not only one :
+
+```javascript
+elements.forEach/filter/map(function(item, index, array) {
+	// item : current item in the loop
+	// index : the current index, the `i` in the classic `for`
+	// array : the array you're looping through. It can come in handy when your program is quite dynamic.
+});
+```
+It's not mandatory to always add them to the function parameters, often only `item` is needed.
+
+
+Notice that `map` and `filter` don't modify your original array, they return a new one (but if you have objects inside, they are not cloned, they have the same reference).
+
+Consider using those functions when it's not perf-critical, they are a bit slower than the classic `for` : https://jsperf.com/for-vs-foreach/444
+
+Check out the [Mozilla documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array) to find out more about those functions.
+
+
 ## #06 - Writing a single method for arrays or single elements
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
