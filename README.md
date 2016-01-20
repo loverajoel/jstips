@@ -197,14 +197,14 @@ if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
 
 The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values."
 
-It transforms -1 into 0, and 0 is false in javascript, so:
+It transforms `-1` into `0`, and `0` evaluates to `false` in JavaScript:
 
 ```javascript
 var someText = 'text';
-!!~someText.indexOf('tex'); //sometext contains tex - true
-!~someText.indexOf('tex'); //sometext not contains tex - false
-~someText.indexOf('asd'); //sometext contains asd - false
-~someText.indexOf('ext'); //sometext contains ext - true
+!!~someText.indexOf('tex'); // someText contains "tex" - true
+!~someText.indexOf('tex'); // someText NOT contains "tex" - false
+~someText.indexOf('asd'); // someText doesn't contain "asd" - false
+~someText.indexOf('ext'); // someText contains "ext" - true
 ```
 
 ### String.prototype.includes()
