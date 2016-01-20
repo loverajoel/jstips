@@ -60,9 +60,9 @@ Another example, usually we don't want to expose all function of an object to us
     return $;
 })(myQuery)
 
-$.fun1(); // OK.
-$.fun2(); // undefined is not a function.
-$.fun3(); // OK.
+myQuery.fun1(); // OK.
+myQuery.fun2(); // undefined is not a function.
+myQuery.fun3(); // OK.
 ```
 
 ## #19 - Safe string concatenation
