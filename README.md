@@ -52,7 +52,7 @@ var three = '3';
 var result = ''.concat(one, two, three); //"123"
 ```
 
-This way of concatention do exactly what you expect. On the conteraty, concatenation with pluses might lead to unexpected results:
+This way of concatention do exactly what you expect. On the contrary, concatenation with pluses might lead to unexpected results:
 ```javascript
 var one = 1;
 var two = 2;
@@ -340,7 +340,7 @@ More info:
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
 
-## #12 - Pseudomentatory parameters in ES6 functions #ES6
+## #12 - Pseudomandatory parameters in ES6 functions #ES6
 
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
@@ -358,7 +358,7 @@ getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
- `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
 
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
@@ -782,24 +782,24 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 - Use an existing unique value of the object.
 - Define the keys in the parent components, not in child components
 
-  ```javascript
-  //bad
-  ...
-  render() {
-    <div key={{item.key}}>{{item.name}}</div>
-  }
-  ...
+	```javascript
+	//bad
+	...
+	render() {
+		<div key={{item.key}}>{{item.name}}</div>
+	}
+	...
 
-  //good
-  <MyComponent key={{item.key}}/>
-  ```
+	//good
+	<MyComponent key={{item.key}}/>
+	```
 - [Using array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` will not work
 
-  ```javascript
-  //bad
-  <MyComponent key={{Math.random()}}/>
-  ```
+	```javascript
+	//bad
+	<MyComponent key={{Math.random()}}/>
+	```
 
 - You can create your own unique id, be sure that the method be fast and attach it to your object.
 - When the amount of child are big or involve expensive components, use keys has performance improvements.
@@ -825,11 +825,11 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 - Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
 - Pass a function expression to `$apply`, this have a error handling mechanism and allow integrate changes in the digest cycle
 
-  ```javascript
-  $scope.$apply(() => {
-    $scope.tip = 'Javascript Tip';
-  });
-  ```
+	```javascript
+	$scope.$apply(() => {
+		$scope.tip = 'Javascript Tip';
+	});
+	```
 
 - If only needs update the current scope or its children use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit it's self evident
 - `$apply()` is hard process for the machine and can lead to performance issues when having a lot of binding.
