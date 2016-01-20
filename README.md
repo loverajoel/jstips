@@ -17,6 +17,26 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+## #(number) - Converting to number fast way
+
+> yyyy-mm-dd(date) by [@sonnyt](http://twitter.com/sonnyt)
+
+Converting strings to numbers is extremely common. The fastest way to achieve that would be using the `+` (plus) operator. 
+
+```javascript
+var one = '1';
+
+var numberOne = +one; // Number 1
+```
+
+You can also use the `-` (minus) operator which type-converts the value into a number but also negates it.
+
+```javascript
+var one = '1';
+
+var negativeNumberOne = -one; // Number -1
+```
+
 ## #19 - Safe string concatenation
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
