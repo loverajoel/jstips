@@ -17,6 +17,39 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+## # - Observe DOM changes in extensions
+
+> 2016-01- by [@beyondns](https://github.com/beyondns)
+
+When you develop extensions to existent sites it's not so easy to play with DOM
+'cause of modern dynamic javascript. MutationObserver is a solution to listen DOM changes and do what you whant to do with elements when they appear. Follow this example:
+
+```javascript
+const observeConfig = {
+        attributes: true,
+        childList: true,
+        characterData: true,
+        subtree: true
+};
+
+function initExtension(targetElement, subTargetSelector)
+{
+  var elementObserver = new MutationObserver(function(mutations) {
+      console.log("Inside observer");
+      subTargetElement = targetElement.querySelector(subTargetSelector);
+      if (subTargetElement){
+          elementObserver.disconnect();
+          var subElementObserver = new MutationObserver(function(mutations) {
+            subElementObserver.disconnect();
+            // continue observe elements till you find final target
+          }
+          subElementObserver.observe(subTargetElement, observeConfig);
+      }
+  }
+  elementObserver.observe(targetElement, observeConfig);   
+}
+```
+
 ## #19 - Safe string concatenation
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
