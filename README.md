@@ -60,7 +60,6 @@ function Person(name) {
 
 var person = new Person("John");
 person.sayName().changeName("Timmy").sayName();
->>>>>>> upstream/master
 ```
 
 ## #19 - Safe string concatenation
