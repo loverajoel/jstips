@@ -30,7 +30,7 @@ var one = '1';
 var numberOne = +one; // Number 1
 ```
 
-You can also use the `-` (minus) operator which type-converts the value into a number but also negates it.
+You can also use the `-` (minus) operator which type-converts the value into number but also negates it.
 
 ```javascript
 var one = '1';
