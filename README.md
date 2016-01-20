@@ -18,6 +18,50 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #(number) - Empty your Array/List
+
+> yyyy-mm-dd(date) by [microlv](https://github.com/microlv)
+
+Think about you define a Array and after sometime later, you want to clear the data.
+Normally, you will doing like this:
+```javascript
+// define Array
+var list = [1, 2, 3, 4];
+function empty() {
+    //empty your array
+    list = [];
+}
+empty();
+```
+But, there is another way to make array empty and more performance.
+You should use code like this:
+```javascript
+var list = [1, 2, 3, 4];
+function empty() {
+    //empty your array
+    list.length = 0;
+}
+empty();
+```
+* list = [] assigns a reference to a new array to a variable, while any other references are unaffected.
+
+* list.length = 0 deletes everything in the array, which does hit other references.
+
+If you have a copy Array(A and Copy-A), you just want to delete the data of A and keep data copy-A, Becareful not to use list.length = 0.
+
+Think about what will output:
+```js
+var foo = [1,2,3];
+var bar = [1,2,3];
+var foo2 = foo;
+var bar2 = bar;
+foo = [];
+bar.length = 0;
+console.log(foo, bar, foo2, bar2);
+```
+Stackoverflow more detail:
+[difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
+
 ## #18 - Rounding the fast way
 
 > 2016-01-18 by [pklinger](https://github.com/pklinger)
