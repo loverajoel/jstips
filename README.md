@@ -17,6 +17,27 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+## #20 - Use destructuring in function parameters
+
+> 2016-01-** by [dislick](https://github.com/dislick)
+
+I am sure many of you are already familiar with the [ES6 Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Did you know that you can also use it in function parameters? 
+
+```javascript
+var sayHello = function({ name, surname }) {
+  console.log(`Hello ${name} ${surname}! How are you?`);
+};
+
+sayHello({
+  name: 'John',
+  surname: 'Smith'
+});
+```
+
+This is great for functions which accept an options object.
+
+Please note that the Destructuring Assignment is not yet available in Node.js and almost all browsers. You can however use the `--harmony-destructuring` flag for Node.js if you'd like to try it for yourself now.
+
 ## #19 - Safe string concatenation
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
