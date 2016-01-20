@@ -36,6 +36,7 @@ You can also use the `-` (minus) operator which type-converts the value into num
 var one = '1';
 
 var negativeNumberOne = -one; // Number -1
+```
 
 ## #20 - Return objects to enable chaining of functions
 
