@@ -17,6 +17,52 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+
+## #(number) - Converting to number fast way
+
+> yyyy-mm-dd(date) by [@sonnyt](http://twitter.com/sonnyt)
+
+Converting strings to numbers is extremely common. The fastest way to achieve that would be using the `+` (plus) operator.
+
+```javascript
+var one = '1';
+
+var numberOne = +one; // Number 1
+```
+
+You can also use the `-` (minus) operator which type-converts the value into number but also negates it.
+
+```javascript
+var one = '1';
+
+var negativeNumberOne = -one; // Number -1
+```
+
+## #20 - Return objects to enable chaining of functions
+
+> 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+
+```js
+function Person(name) {
+  this.name = name;
+
+  this.sayName = function() {
+    console.log("Hello my name is: ", this.name);
+    return this;
+  };
+
+  this.changeName = function(name) {
+    this.name = name;
+    return this;
+  };
+}
+
+var person = new Person("John");
+person.sayName().changeName("Timmy").sayName();
+```
+
 ## #19 - Safe string concatenation
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
@@ -56,14 +102,14 @@ One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. T
 // single ~
 console.log(~1337)    // -1338
 
-// numeric input 
+// numeric input
 console.log(~~47.11)  // -> 47
 console.log(~~-12.88) // -> -12
 console.log(~~1.9999) // -> 1
 console.log(~~3)      // -> 3
 
 // on failure
-console.log(~~[]) // -> 0 
+console.log(~~[]) // -> 0
 console.log(~~NaN)  // -> 0
 console.log(~~null) // -> 0
 
@@ -71,32 +117,7 @@ console.log(~~null) // -> 0
 console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
-Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
-
-## #XX - Return objects to enable chaining of functions
-
-> yyyy - mm - dd by [@WakeskaterX](https://twitter.com/WakeStudio)
-
-When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
-
-```js
-function Person(name) {
-  this.name = name;
-
-  this.sayName = function() {
-    console.log("Hello my name is: ", this.name);
-    return this;
-  };
-
-  this.changeName = function(name) {
-    this.name = name;
-    return this;
-  };
-}
-
-var person = new Person("John");
-person.sayName().changeName("Timmy").sayName();
-```
+Although `~~` may perform better, for the sake of readability please use `Math.floor()`.
 
 ## #17 - Node.js: Run a module if it is not required
 
