@@ -17,6 +17,31 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+## #20 - Return objects to enable chaining of functions
+
+> 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+
+```js
+function Person(name) {
+  this.name = name;
+
+  this.sayName = function() {
+    console.log("Hello my name is: ", this.name);
+    return this;
+  };
+
+  this.changeName = function(name) {
+    this.name = name;
+    return this;
+  };
+}
+
+var person = new Person("John");
+person.sayName().changeName("Timmy").sayName();
+```
+
 ## #19 - Safe string concatenation
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
@@ -72,31 +97,6 @@ console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
-
-## #XX - Return objects to enable chaining of functions
-
-> yyyy - mm - dd by [@WakeskaterX](https://twitter.com/WakeStudio)
-
-When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
-
-```js
-function Person(name) {
-  this.name = name;
-
-  this.sayName = function() {
-    console.log("Hello my name is: ", this.name);
-    return this;
-  };
-
-  this.changeName = function(name) {
-    this.name = name;
-    return this;
-  };
-}
-
-var person = new Person("John");
-person.sayName().changeName("Timmy").sayName();
-```
 
 ## #17 - Node.js: Run a module if it is not required
 
