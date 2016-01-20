@@ -73,6 +73,31 @@ console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
 
+## #XX - Return objects to enable chaining of functions
+
+> yyyy - mm - dd by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+
+```js
+function Person(name) {
+  this.name = name;
+
+  this.sayName = function() {
+    console.log("Hello my name is: ", this.name);
+    return this;
+  };
+
+  this.changeName = function(name) {
+    this.name = name;
+    return this;
+  };
+}
+
+var person = new Person("John");
+person.sayName().changeName("Timmy").sayName();
+```
+
 ## #17 - Node.js: Run a module if it is not required
 
 > 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
