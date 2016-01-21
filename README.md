@@ -46,7 +46,7 @@ person.sayName().changeName("Timmy").sayName();
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
 
-Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use ```concat```:
+Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use `concat`:
 
 ```javascript
 var one = 1;
@@ -65,9 +65,9 @@ var three = '3';
 var result = one + two + three; //"33" instead of "123"
 ```
 
-Speaking about performance, compared to the ```join``` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of ```concat``` is pretty much the same.
+Speaking about performance, compared to the `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of `concat` is pretty much the same.
 
-You can read more about the ```concat``` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+You can read more about the `concat` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
 ## #18 - Rounding the fast way
 
@@ -324,7 +324,7 @@ Further information about fat arrow functions may be found at [MDN] (https://dev
 > 2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
 
 For quickly measuring performance of a javascript block, we can use the console functions like
-[```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+[`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
 
 ```javascript
 console.time("Array initialize");
@@ -845,7 +845,7 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 
 Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or to the middle using splice.
 
-But those are known methods... doesn't mean there isn't a more performant way. Here we go:
+Those are known methods, but it doesn't mean there isn't a more performant way. Here we go:
 
 Adding an element at the end of the array is easy with push(), but there is a more performant way.
 
