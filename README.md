@@ -573,6 +573,50 @@ Strict mode is supported in:
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
+## #01(number) - Shuffle an Array
+
+> yyyy-mm-dd(date) by [@0xmtn](https://github.com/0xmtn/)
+
+### This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+  
+```javascript
+function shuffle(arr){
+    var i,j,temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+}
+```
+An example:
+
+```javascript
+var a=[1,2,3,4,5,6,7,8];
+var b = shuffle(a);
+console.log(b);
+//[2, 7, 8, 6, 5, 3, 1, 4]
+```
+
+### Another way of shuffle by [@mvedie](https://github.com/mvedie)
+
+```javascript
+function shuffle() {
+    return this.slice(0).sort(function() {
+        return 0.5 - Math.random();
+    });
+};
+```
+
+An Example:
+```javascript
+var myArray = [1,2,3,3,4,5,6]
+shuffle(myArray)
+// [4, 3, 5, 1, 2, 3, 6]
+```
+
 ## #06 - Writing a single method for arrays or single elements
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
