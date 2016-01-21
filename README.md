@@ -48,8 +48,8 @@ console.log(b);
 ### Another way of shuffle by [@mvedie](https://github.com/mvedie)
 
 ```javascript
-function shuffle() {
-    return this.slice(0).sort(function() {
+function shuffle(array) {
+    return array.slice(0).sort(function() {
         return 0.5 - Math.random();
     });
 };
