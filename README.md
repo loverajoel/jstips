@@ -24,20 +24,26 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 The `Object.freeze()` method can be used to create an immutable object. This means that it cannot be altered in any way (adding, removing or changing methods and properties).
 
+Note: it will not recursively freeze objects in the main object. Objects within the main object will be mutable. 
+
 ```js
 var obj = {
   a: 'nice',
-  b: 'neat' 
+  b: 'neat',
+  c: {
+    e: 'foo'
+  }
 };
 
 Object.freeze(obj);
 
 obj.a = 'test';
-obj.c = 'test';
+obj.d = 'test';
+obj.c.e = 'test';
 delete obj.a;
 
 console.log(obj);
-// { a: 'nice', b: 'neat' }
+// { a: 'nice', b: 'neat', c: { e: 'test' } }
 ```
 
 This method is also useful in preventing unapply attacks which can be used to expose the scope of closures.
