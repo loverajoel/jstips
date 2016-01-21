@@ -60,7 +60,8 @@ function shuffle(array) {
 An Example:
 ```javascript
 var myArray = [1, 2, 3, 3, 4, 5, 6];
-shuffle(myArray);
+var resultArray = shuffle(myArray);
+console.log(resultArray);
 // [4, 3, 5, 1, 2, 3, 6]
 ```
 
