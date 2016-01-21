@@ -17,9 +17,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
-## #20 - Easy forEach operation
+## #XX - Easy forEach operation
 
-> 2016-01-20 by [@sekaiamber](https://github.com/sekaiamber)
+> yyyy-mm-dd by [@sekaiamber](https://github.com/sekaiamber)
 
 We can use a simple regular expression `/[^, ]+/g` to make an easy `forEach` operation.  
 For example, in jQuery, we can find a lot of DOM manipulations in pairs, like `append` and `appendTo`, they are just exchange the matched elements and target elements. So, we can code like this:
