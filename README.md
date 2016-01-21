@@ -47,22 +47,6 @@ console.log(b);
 // [2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
- Another way of shuffle by [@mvedie](https://github.com/mvedie)
-
-```javascript
-function shuffle(array) {
-    return array.slice(0).sort(function() {
-        return 0.5 - Math.random();
-    });
-};
-```
-
-An Example:
-```javascript
-var myArray = [1, 2, 3, 3, 4, 5, 6];
-shuffle(myArray);
-// [4, 3, 5, 1, 2, 3, 6]
-```
 
 ## #20 - Return objects to enable chaining of functions
 
