@@ -17,6 +17,60 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
+## #21 - Speed up recursive functions with memoization
+
+> 2016-01-21 by [@hingsir](https://github.com/hingsir)
+
+Fibonacci sequence is very familiar to everybody. we can write the following function in 20 seconds.
+```js
+var fibonacci = function(n){
+    return n < 2 ? n : fibonacci(n-1) + fibonacci(n-2);
+}
+```
+it works, but not efficient. it did lots of duplicate computing works, we can cache its previously computed results to speed up it.
+```js
+var fibonacci = (function(){
+    var cache = {
+    	0: 0,
+    	1: 1
+    };
+    return function(n){
+    	return n <= 1 ? cache[n] : (cache[n] = cache[n-1] + cache[n-2]);
+    }
+})()
+```
+Also, we can define a higher-order function that accepts a function as its argument and returns a memoized version of the function.
+```js
+var memoize = function(func){
+    var cache = {};
+    return function(){
+    	var key = Array.prototype.slice.call(arguments).toString();
+    	return key in cache ? cache[key] : (cache[key] = func.apply(this,arguments));
+    }
+}
+fibonacci = memoize(fibonacci);
+```
+we can use `memoize()` in many other situations
+* GCD(Greatest Common Divisor)
+
+```js
+var gcd = memoize(function(a,b){
+    var t;
+    if (a < b) t=b, b=a, a=t; 
+    while(b != 0) t=b, b = a%b, a=t;
+    return a;
+})
+gcd(27,183); //=> 3
+```
+* Factorial calculation
+
+```js
+var factorial = memoize(function(n) {
+    return (n <= 1) ? 1 : n * factorial(n-1); 
+})
+factorial(5); //=> 120
+```
+
 ## #20 - Return objects to enable chaining of functions
 
 > 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
