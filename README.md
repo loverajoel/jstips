@@ -112,14 +112,14 @@ One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. T
 // single ~
 console.log(~1337)    // -1338
 
-// numeric input 
+// numeric input
 console.log(~~47.11)  // -> 47
 console.log(~~-12.88) // -> -12
 console.log(~~1.9999) // -> 1
 console.log(~~3)      // -> 3
 
 // on failure
-console.log(~~[]) // -> 0 
+console.log(~~[]) // -> 0
 console.log(~~NaN)  // -> 0
 console.log(~~null) // -> 0
 
@@ -127,7 +127,7 @@ console.log(~~null) // -> 0
 console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
-Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
+Although `~~` may perform better, for the sake of readability please use `Math.floor()`.
 
 ## #17 - Node.js: Run a module if it is not required
 
@@ -172,7 +172,7 @@ var x = 1, y = 2;
 document.getElementById('someelem').addEventListener('click', callback(x, y));
 ```
 
-**What are closure?**
+**What are closures?**
 Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) to learn more.
 
 So this way the arguments `x` and `y` are in scope of the callback function when it is called.
@@ -256,20 +256,20 @@ With ECMAScript 2016 (ES7) is even possible uses with Arrays, like indexOf:
 **Unfortunately, It's got support only in Chrome, Firefox, Safari 9 or above and Edge. Not IE11 or less.**
 **It's better to using in controlled environments.**
 
-## #14 - Fat Arrow Functions #ES6
+## #14 - Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
 
-Introduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in less lines. The name comes from its syntax as `=>` is a 'fat arrow' compared to a thin arrow `->`. Some programmers might already know this type of functions from different languages such as Haskell as 'lambda expressions' respectively 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
+Introduced as a new feature in ES6, Arrow functions (also known as fat arrow function) may come as a handy tool to write more code in less lines. The name comes from its syntax as `=>` is a 'fat arrow' compared to a thin arrow `->`. Some programmers might already know this type of functions from different languages such as Haskell as 'lambda expressions' respectively 'anonymous functions'. Arrow functions are always anonymous. It is called anonymous, as these arrow functions do not have a descriptive function name.
 
 ### What are the benefits?
-* Syntax: less LOC; no more typing `function` keyword over and over again
-* Semantics: capturing the keyword `this` from the surrounding context
+* Syntax: Has a shorter syntax compared to function expressions. No more typing `function` keyword over and over again
+* Semantics: Capturing the keyword `this` from the surrounding context
 
 ### Simple syntax example
-Have a look at these two code snippets, which exactly do the same job. You will quickly understand what fat arrow functions do.
+Have a look at these two code snippets, which do exactly the same job. You will quickly understand what arrow functions do.
 
 ```javascript
-// general syntax for fat arrow functions
+// general syntax for arrow functions
 param => expression
 
 // may also be written with parentheses
@@ -284,17 +284,17 @@ var arrFunc = arr.map(function(x) {
 });
 console.log(arr)
 
-// using fat arrow
+// using arrow
 var arr = [5,3,2,9,1];
 var arrFunc = arr.map((x) => x*x);
 console.log(arr)
 ```
 
-As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability.
+As you may see, the arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability.
 
 ### Lexically binding `this`
 
-There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
+There is another good reason to use arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
 
 ```javascript
 
@@ -337,7 +337,7 @@ function CounterC() {
   }.bind(this), 500);
 }
 
-// fat arrow function
+// arrow function
 function CounterD() {
   this.i = 0;
   setInterval(() => {
@@ -347,7 +347,7 @@ function CounterD() {
 }
 ```
 
-Further information about fat arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
+Further information about arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
 
 
 ## #13 - Tip to measure performance of a javascript block
