@@ -22,7 +22,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > 2016-01-21 by [@0xmtn](https://github.com/0xmtn/)
 
-### This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+ This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
   
 ```javascript
 function shuffle(arr){
@@ -45,7 +45,7 @@ console.log(b);
 //[2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
-### Another way of shuffle by [@mvedie](https://github.com/mvedie)
+ Another way of shuffle by [@mvedie](https://github.com/mvedie)
 
 ```javascript
 function shuffle() {
