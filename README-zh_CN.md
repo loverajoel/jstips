@@ -1,4 +1,4 @@
-![header](https://raw.githubusercontent.com/sjfkai/jstips/master/resources/jstips-header-blog.gif)
+![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
 # 关于 JavaScript Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 > 新年, 新项目. **每天一条JS小知识!**
@@ -10,7 +10,7 @@
 ### 你能帮我们丰富它吗?
 
 请尽情将你们自己的JavaScript小知识向我们提交PR吧。我们欢迎任何意见和建议！
-[点这里查看操作说明](https://github.com/sjfkai/jstips/blob/master/CONTRIBUTING.md)
+[点这里查看操作说明](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### 让我们保持联系
 想要获取更新, watch 本仓库并关注[Twitter 账户](https://twitter.com/tips_js),每天只有一条推文发布，这永远不会变!
