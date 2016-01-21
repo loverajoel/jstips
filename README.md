@@ -96,6 +96,16 @@ var three = '3';
 var result = one + two + three; //"33" instead of "123"
 ```
 
+Another way of concatenation is to use [template strings](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/template_strings). 
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = `${one}${two}${three}` //"123"
+```
+Notice that you use back-ticks instead of quotes or double quotes.
+
 Speaking about performance, in comparison with ```join``` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of the ```concat``` type is pretty much the same.
 
 You can read more about ```concat``` method on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
