@@ -489,7 +489,7 @@ Check here for [live examples](https://jsbin.com/tecoqa/edit?js,console)!
 
 I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a properties' existence in objects.
 
-## #09 - Template Strings
+## #9 - Template Strings
 
 > 2016-01-09 by [@JakeRawr](https://github.com/JakeRawr)
 
@@ -518,7 +518,7 @@ You are also able to to modify the output of template strings using a function; 
 
 You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more
 
-## #08 - Converting a Node List to an Array
+## #8 - Converting a Node List to an Array
 
 > 2016-01-08 by [@Tevko](https://twitter.com/tevko)
 
@@ -553,7 +553,7 @@ nodelist.slice(...);
 //etc...
 ```
 
-## #07 - "use strict" and get lazy
+## #7 - "use strict" and get lazy
 
 > 2016-01-07 by [@nainslie](https://twitter.com/nat5an)
 
@@ -604,7 +604,7 @@ Strict mode is supported in:
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-## #06 - Writing a single method for arrays or single elements
+## #6 - Writing a single method for arrays or single elements
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
 
@@ -632,7 +632,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 //  POTATO
 ```
 
-## #05 - Differences between `undefined` and `null`
+## #5 - Differences between `undefined` and `null`
 
 > 2016-01-05 by [@loverajoel](https://twitter.com/loverajoel)
 
@@ -664,7 +664,7 @@ printUpperCase(["cactus", "bear", "potato"]);
   null === undefined // false
 ```
 
-## #04 - Sorting strings with accented characters
+## #4 - Sorting strings with accented characters
 
 > 2016-01-04 by [@loverajoel](https://twitter.com/loverajoel)
 
@@ -722,7 +722,7 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 
 So when you are working with arrays of strings in a language other than English, remember to use this method to avoid unexpected sorting.
 
-## #03 - Improve Nested Conditionals
+## #3 - Improve Nested Conditionals
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
 How can we improve and make more efficient nested `if` statement in javascript.
@@ -805,7 +805,7 @@ if (color in colorObj) {
 
 Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
 
-## #02 - ReactJs - Keys in children components are important
+## #2 - ReactJs - Keys in children components are important
 
 > 2016-01-02  by [@loverajoel](https://twitter.com/loverajoel)
 
