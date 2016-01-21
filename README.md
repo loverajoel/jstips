@@ -25,7 +25,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
  This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
   
 ```javascript
-function shuffle(arr){
+function shuffle(arr) {
     var i, 
         j,
         temp;
@@ -41,10 +41,10 @@ function shuffle(arr){
 An example:
 
 ```javascript
-var a = [1,2,3,4,5,6,7,8];
+var a = [1, 2, 3, 4, 5, 6, 7, 8];
 var b = shuffle(a);
 console.log(b);
-//[2, 7, 8, 6, 5, 3, 1, 4]
+// [2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
  Another way of shuffle by [@mvedie](https://github.com/mvedie)
@@ -59,7 +59,7 @@ function shuffle(array) {
 
 An Example:
 ```javascript
-var myArray = [1,2,3,3,4,5,6];
+var myArray = [1, 2, 3, 3, 4, 5, 6];
 shuffle(myArray);
 // [4, 3, 5, 1, 2, 3, 6]
 ```
