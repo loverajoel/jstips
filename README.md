@@ -13,7 +13,7 @@ Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Let’s keep in touch
-To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js). Only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
@@ -77,7 +77,7 @@ person.sayName().changeName("Timmy").sayName();
 
 > 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
 
-Suppose you have a couple of variables with unknown types and you want to concatenate them. To be sure that the arithmetical operation would not be applied during the concatenation:
+Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use `concat`:
 
 ```javascript
 var one = 1;
@@ -87,7 +87,7 @@ var three = '3';
 var result = ''.concat(one, two, three); //"123"
 ```
 
-This way of concatenation does exactly what you expect. On the contrary, concatenation with pluses might lead to unexpected results:
+This way of concatenting does exactly what you'd expect. In contrast, concatenation with pluses might lead to unexpected results:
 ```javascript
 var one = 1;
 var two = 2;
@@ -96,9 +96,9 @@ var three = '3';
 var result = one + two + three; //"33" instead of "123"
 ```
 
-Speaking about performance, in comparison with ```join``` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of the ```concat``` type is pretty much the same.
+Speaking about performance, compared to the `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of `concat` is pretty much the same.
 
-You can read more about ```concat``` method on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
+You can read more about the `concat` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
 ## #18 - Rounding the fast way
 
@@ -106,7 +106,7 @@ You can read more about ```concat``` method on MDN [page](https://developer.mozi
 
 Today's tip is about performance. [Ever came across the double tilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
 
-One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is being returned, which might come in handy sometimes instead of `Math.floor()` return value `NaN` on failure.
+One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is returned, which might come in handy sometimes instead of `Math.floor()`, which returns a value of `NaN` on failure.
 
 ```javascript
 // single ~
@@ -129,7 +129,7 @@ console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
 
-## #17 - Node.js: Run a module if it is not required
+## #17 - Node.js: Run a module if it is not "required"
 
 > 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
 
@@ -172,12 +172,12 @@ var x = 1, y = 2;
 document.getElementById('someelem').addEventListener('click', callback(x, y));
 ```
 
-**What are closure?**
+**What are closures?**
 Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) to learn more.
 
 So this way the arguments `x` and `y` are in scope of the callback function when it is called.
 
-Another method to do this is using `bind` method. For example:
+Another method to do this is using the `bind` method. For example:
 ```js
 var alertText = function(text) {
   alert(text);
@@ -190,7 +190,7 @@ There is a very slight difference in performance of both methods, checkout [jspe
 ## #15 - Even simpler way of using indexOf as a contains clause
 > 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
-JavaScript by default does not have a contains method. And for checking existence of a substring in string or item in array you may do this:
+JavaScript by default does not have a contains method. And for checking existence of a substring in a string or an item in an array you may do this:
 
 ```javascript
 var someText = 'javascript rules';
@@ -226,7 +226,7 @@ exports.normalizeType = function(type){
 if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
 ```
 
-The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values."
+The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on binary representations, but they return standard JavaScript numerical values."
 
 It transforms `-1` into `0`, and `0` evaluates to `false` in JavaScript:
 
@@ -240,33 +240,33 @@ var someText = 'text';
 
 ### String.prototype.includes()
 
-In ES6 was introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use to determine whether or not a string includes another string:
+ES6 introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use it to determine whether or not a string includes another string:
 
 ```javascript
 'something'.includes('thing'); // true
 ```
 
-With ECMAScript 2016 (ES7) is even possible uses with Arrays, like indexOf:
+With ECMAScript 2016 (ES7) it is even possible to use these techniques with Arrays:
 
 ```javascript
 !!~[1, 2, 3].indexOf(1); // true
 [1, 2, 3].includes(1); // true
 ```
 
-**Unfortunately, It's got support only in Chrome, Firefox, Safari 9 or above and Edge. Not IE11 or less.**
-**It's better to using in controlled environments.**
+**Unfortunately, it is only supported in Chrome, Firefox, Safari 9 or above and Edge; not IE11 or lower.**
+**It's better used in controlled environments.**
 
 ## #14 - Fat Arrow Functions #ES6
 > 2016-01-13 by [@pklinger](https://github.com/pklinger/)
 
-Introduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in less lines. The name comes from its syntax as `=>` is a 'fat arrow' compared to a thin arrow `->`. Some programmers might already know this type of functions from different languages such as Haskell as 'lambda expressions' respectively 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
+Introduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in fewer lines. The name comes from its syntax, `=>`, which is a 'fat arrow', as compared to a thin arrow `->`. Some programmers might already know this type of function from different languages such as Haskell, as 'lambda expressions', or as 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
 
 ### What are the benefits?
-* Syntax: less LOC; no more typing `function` keyword over and over again
+* Syntax: fewer LOC; no more typing `function` keyword over and over again
 * Semantics: capturing the keyword `this` from the surrounding context
 
 ### Simple syntax example
-Have a look at these two code snippets, which exactly do the same job. You will quickly understand what fat arrow functions do.
+Have a look at these two code snippets, which do the exact same job, and you will quickly understand what fat arrow functions do:
 
 ```javascript
 // general syntax for fat arrow functions
@@ -290,11 +290,11 @@ var arrFunc = arr.map((x) => x*x);
 console.log(arr)
 ```
 
-As you may see, the fat arrow function in this case may save you time typing out the parentheses as well as the function and return keywords. I would advice you to always write parentheses around the parameter inputs as the parentheses will be needed for multiple input parameters such as in `(x,y) => x+y` anyways. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far these are only syntactical improvements, which lead to less LOC and better readability.
+As you can see, the fat arrow function in this case can save you time typing out the parentheses as well as the function and return keywords. I would advise you to always write parentheses around the parameter inputs, as the parentheses will be needed for multiple input parameters, such as in `(x,y) => x+y`. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far, these are only syntactical improvements, which lead to fewer LOC and better readability.
 
 ### Lexically binding `this`
 
-There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you will not worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
+There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you don't need to worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
 
 ```javascript
 
@@ -355,7 +355,7 @@ Further information about fat arrow functions may be found at [MDN] (https://dev
 > 2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
 
 For quickly measuring performance of a javascript block, we can use the console functions like
-[```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+[`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
 
 ```javascript
 console.time("Array initialize");
@@ -380,7 +380,7 @@ Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/a
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
 
-In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+In many programming languages the parameters of a function are by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript, every parameter is optional, but we can enforce this behavior without messing with the actual body of a function, taking advantage of [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
 
 ```javascript
 const _err = function( message ){
@@ -393,12 +393,12 @@ getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
- `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is going to be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
 
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
 
-Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line. Also, variable **declaration** is letting the system know that the variable exists while **definition** is assigning it a value.
+Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declarations and function definitions are hoisted to the top. Variable definitions are not, even if you declare and define a variable on the same line. Also, a variable **declaration** lets the system know that the variable exists while **definition** assigns it a value.
 
 ```javascript
 function doTheThing() {
@@ -441,7 +441,7 @@ To make things easier to read, declare all of your variables at the top of your 
 
 > 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
 
-When you have to check if a property is present on an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+When you have to check if a property is present in an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
 
 ```javascript
 var myObject = {
@@ -452,7 +452,7 @@ if (myObject.name) { ... }
 
 ```
 
-That's ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has both ways available.
+That's ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty). Every object descended from `Object`, has both ways available.
 
 ### See the big Difference
 
@@ -469,9 +469,9 @@ myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prot
 
 ```
 
-Both differ in the depth that they check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however the `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+Both differ in the depth at which they check the properties. In other words, `hasOwnProperty` will only return true if key is available on that object directly. However, the `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
 
-Here's another example
+Here's another example:
 
 ```javascript
 var myFunc = function() {
@@ -485,9 +485,9 @@ user.hasOwnProperty('name'); // true
 user.hasOwnProperty('age'); // false, because age is from the prototype chain
 ```
 
-Check here for [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+Check the [live examples here](https://jsbin.com/tecoqa/edit?js,console)!
 
-I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a properties' existence in objects.
+I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a property's existence in objects.
 
 ## #09 - Template Strings
 
@@ -511,18 +511,18 @@ console.log(`My name is ${firstName} ${lastName}`);
 // My name is Jake Rawr
 ```
 
-You can do Multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in Template String.
+You can do multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in template strings.
 
-You are also able to to modify the output of template strings using a function; they are called [Tagged template strings]
+You are also able to to modify the output of template strings using a function; they are called [tagged template strings]
 (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings) for example usages of tagged template strings.
 
-You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more
+You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more.
 
 ## #08 - Converting a Node List to an Array
 
 > 2016-01-08 by [@Tevko](https://twitter.com/tevko)
 
-The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
+The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `forEach`. Here's a quick, safe, and reusable way to convert a node list into an array of DOM elements:
 
 ```javascript
 const nodelist = document.querySelectorAll('div');
@@ -537,12 +537,12 @@ nodelistToArray.slice(...);
 //etc...
 ```
 
-The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
+The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array-like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
 
 Or if you are using ES2015 you can use the [spread operator `...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
 ```js
-const nodelist = [...document.querySelectorAll('div')]; // returns a real Array
+const nodelist = [...document.querySelectorAll('div')]; // returns a real array
 
 //later on ..
 
@@ -586,7 +586,7 @@ function f2() { return "I'm not strict."; }
 
 By including this directive in a JavaScript file or function, we will direct the JavaScript engine to execute in strict mode which disables a bunch of behaviors that are usually undesirable in larger JavaScript projects.  Among other things, strict mode changes the following behaviors:
 * Variables can only be introduced when they are preceded with "var"
-* Attempting to write to readonly properties generates a noisy error
+* Attempting to write to read-only properties generates a noisy error
 * You have to call constructors with the "new" keyword
 * "this" is not implicitly bound to the global object
 * Very limited use of eval() allowed
@@ -604,7 +604,7 @@ Strict mode is supported in:
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-## #06 - Writing a single method for arrays or single elements
+## #06 - Writing a single method for arrays and a single element
 
 > 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
 
@@ -675,7 +675,7 @@ Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
 
-But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain a strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
+But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain a strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with the English language.
 
 See the next example:
 
@@ -725,7 +725,7 @@ So when you are working with arrays of strings in a language other than English,
 ## #03 - Improve Nested Conditionals
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
-How can we improve and make more efficient nested `if` statement in javascript.
+How can we improve and make a more efficient nested `if` statement in javascript?
 
 ```javascript
 if (color) {
@@ -743,7 +743,7 @@ if (color) {
 }
 ```
 
-One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, It's not recommended to use it because it's so difficult to debug errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
+One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, it's not recommended to use it because it's so difficult to debug errors. Here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
@@ -764,8 +764,8 @@ switch(color) {
 }
 ```
 
-But what if we have a conditional with several checks in each statement? In this case, if we like to do less verbose and more ordered, we can use the conditional `switch`.
-If we pass `true` as parameter to the `switch` statement, It allows us to put a conditional in each case.
+But what if we have a conditional with several checks in each statement? In this case, if we want it less verbose and more ordered, we can use the conditional `switch`.
+If we pass `true` as a parameter to the `switch` statement, it allows us to put a conditional in each case.
 
 ```javascript
 switch(true) {
@@ -787,7 +787,7 @@ switch(true) {
 }
 ```
 
-But we must always avoid having several checks in every condition, avoiding use of `switch` as far as possible and take into account that the most efficient way to do this is through an `object`.
+But we must always avoid having several checks in every condition and avoid using `switch` as much as possible. We also must take into account that the most efficient way to do this is through an `object`.
 
 ```javascript
 var colorObj = {
@@ -810,9 +810,9 @@ Here you can find more information about [this](http://www.nicoespeon.com/en/201
 > 2016-01-02  by [@loverajoel](https://twitter.com/loverajoel)
 
 
-The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) is an attribute that you must pass to all components created dynamically from an array. It's unique and constant id that React use for identify each component in the DOM and know that it's a different component and not the same one. Using keys will ensure that the child component is preserved and not recreated and prevent that weird things happens.
+The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) is an attribute that you must pass to all components created dynamically from an array. It's a unique and constant id that React uses to identify each component in the DOM and to know whether it's a different component or the same one. Using keys ensures that the child component is preserved and not recreated and prevents weird things from happening.
 
-> Key is not really about performance, it's more about identity (which in turn leads to better performance). randomly assigned and changing values are not identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
+> Key is not really about performance, it's more about identity (which in turn leads to better performance). Randomly assigned and changing values do not form an identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
 
 - Use an existing unique value of the object.
 - Define the keys in the parent components, not in child components
@@ -836,29 +836,29 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 	<MyComponent key={{Math.random()}}/>
 	```
 
-- You can create your own unique id, be sure that the method be fast and attach it to your object.
-- When the amount of child are big or involve expensive components, use keys has performance improvements.
+- You can create your own unique id. Be sure that the method is fast and attach it to your object.
+- When the number of children is large or contains expensive components, use keys to improve performance.
 - [You must provide the key attribute for all children of ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
 
 ## #1 - AngularJs: `$digest` vs `$apply`
 
 > 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
-One of the most appreciated features of AngularJs is the two way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
+One of the most appreciated features of AngularJs is the two-way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
 
-Angular evaluates each watcher whenever one event is fired, this is the known `$digest` cycle.
-Sometimes you have to force to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
+Angular evaluates each watcher whenever one event is fired. This is the known `$digest` cycle.
+Sometimes you have to force it to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
 
 ### `$apply`
-This core method lets you to start the digestion cycle explicitly, that means that all watchers are checked, the entire application starts the `$digest loop`. Internally after execute an optional function parameter, call internally to `$rootScope.$digest();`.
+This core method lets you to start the digestion cycle explicitly. That means that all watchers are checked; the entire application starts the `$digest loop`. Internally, after executing an optional function parameter, it calls `$rootScope.$digest();`.
 
 ### `$digest`
-In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parents scopes will not be checked
+In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parent's scopes will not be checked.
  and not be affected.
 
 ### Recommendations
 - Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
-- Pass a function expression to `$apply`, this have a error handling mechanism and allow integrate changes in the digest cycle
+- Pass a function expression to `$apply`, this has an error handling mechanism and allows integrating changes in the digest cycle.
 
 	```javascript
 	$scope.$apply(() => {
@@ -866,19 +866,19 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 	});
 	```
 
-- If only needs update the current scope or its children use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit it's self evident
-- `$apply()` is hard process for the machine and can lead to performance issues when having a lot of binding.
-- If you are using >AngularJS 1.2.X, use `$evalAsync` is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
+- If you only need to update the current scope or its children, use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit is self-evident.
+- `$apply()` is a hard process for the machine and can lead to performance issues when there is a lot of binding.
+- If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
 
 
 ## #0 - Insert item inside an Array
 > 2015-12-29
 
-Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
+Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or to the middle using splice.
 
-But those are known methods, doesn't mean there isn't a more performant way, here we go...
+Those are known methods, but it doesn't mean there isn't a more performant way. Here we go:
 
-Adding an element at the end of the array is easy with push(), but there is a way more performant.
+Adding an element at the end of the array is easy with push(), but there is a more performant way.
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -888,7 +888,7 @@ arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
 Both methods modify the original array. Don't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
 
-Now we are trying to add an item to the beginning of the array
+Now if we are trying to add an item to the beginning of the array:
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -896,9 +896,9 @@ var arr = [1,2,3,4,5];
 arr.unshift(0);
 [0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
 ```
-Here is a little bit detail, unshift edits the original array, concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
+Here is a little more detail: unshift edits the original array; concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-Adding items at the middle of an array is easy with splice and is the most performant way to do it.
+Adding items in the middle of an array is easy with splice, and it's the most performant way to do it.
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
