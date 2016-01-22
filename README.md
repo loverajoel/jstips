@@ -22,7 +22,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > yyyy-mm-dd(date) by [@sonnyt](http://twitter.com/sonnyt)
 
-Converting strings to numbers is extremely common. The fastest way to achieve that would be using the `+` (plus) operator.
+Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
 
 ```javascript
 var one = '1';
