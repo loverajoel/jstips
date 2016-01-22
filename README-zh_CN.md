@@ -1,5 +1,6 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 
+<<<<<<< HEAD
 # 关于 JavaScript Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 > 新年, 新项目. **每天一条JS小知识!**
 
@@ -358,6 +359,41 @@ function CounterD() {
 
 快速的测量javascript的性能，我们可以使用console的方法，例如
 [```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) 和 [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+=======
+<!--
+# Introducing Javascript Tips
+> New year, new project. **A JS tip per day!**
+-->
+
+# JavaScript 贴士介绍
+> 新年，新项目。**每天一个 JS 贴士！**
+
+With great excitement, I introduce these short and useful daily Javascript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+
+At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
+
+### Can you help us enrich it?
+Please feel free to send us a PR with your own Javascript tip to be published here.
+Any improvements or suggestions are more than welcome!
+[Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
+
+### Let’s keep in touch
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+> Don't forget to Star the repo, as this will help to promote the project!
+
+<!--
+# Tips list
+-->
+
+# 贴士列表
+
+## #13 - Tip to measure performance of a javascript block
+
+2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
+
+For quickly measuring performance of a javascript block, we can use the console functions like
+[```console.time(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [```console.timeEnd(label)```](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 console.time("Array initialize");
@@ -371,6 +407,7 @@ for (i = 0; i < len; i++) {
 console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
 ```
 
+<<<<<<< HEAD
 更多内容:
 [Console object](https://github.com/DeveloperToolsWG/console-object),
 [Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
@@ -379,11 +416,24 @@ Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/a
 
 
 ## #12 - ES6中的伪强制参数 #ES6([原文](https://github.com/loverajoel/jstips#12---pseudomandatory-parameters-in-es6-functions-es6))
+=======
+More info:
+[Console object](https://github.com/DeveloperToolsWG/console-object),
+[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
+
+Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
+
+## #12 - Pseudomentatory parameters in ES6 functions
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
 
+<<<<<<< HEAD
 在许多编程语言中，方法的参数时默认强制需要的，开发人员需要明确定义一个可选的参数。在Javascript中任何参数都是可选的，但是我们可以利用[**es6参数默认值**](http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values)特性的优点来实现强制要求这种表现而不污染本身的函数体。
+=======
+In many programming languages the parameters of a function is by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript every parameter is optional, but we can enforce this behavior without messing the actual body of a function taking advantage of the [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 const _err = function( message ){
@@ -396,6 +446,7 @@ getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
+<<<<<<< HEAD
 
  `_err`方法会立即抛出一个错误。如果没有传递值给参数，默认值将会被使用, `_err`方法将被调用而错误也将被抛出。你可以从[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)看到更多关于**默认参数特性**的例子。 
 
@@ -404,6 +455,14 @@ getSum( undefined, 10 ) // throws Error, a is not defined
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
 
 了解[变量提升](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)可以帮助你组织方法作用域。只要记住变量生命和方法生命都会被提升到顶部。变量的定义不会提升，即使你在同一行声明和定义一个变量。变量**声明**是让系统知道有这个变量存在而**定义**是给其赋值。
+=======
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+
+## #11 - Hoisting
+> 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
+
+Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declaration and function definition are hoisted to the top. Variable definition is not, even if you declare and define a variable on the same line. Also, variable **declaration** is letting the system know that the variable exists while **definition** is assigning it a value.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 function doTheThing() {
@@ -440,6 +499,7 @@ function doTheThing() {
 }
 ```
 
+<<<<<<< HEAD
 为了让你的代码更易读，将所有的变量声明在函数的顶端，这样可以更清楚的知道变量来自哪个作用域。在使用变量之前声明变量。将方法定义在函数的底部。
 
 ## #10 - 检查某对象是否有某属性([原文](https://github.com/loverajoel/jstips#10---check-if-a-property-is-in-a-object))
@@ -447,12 +507,22 @@ function doTheThing() {
 > 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
 
 当你需要检查某属性是否存在于一个[对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)，你可能会这样做：
+=======
+To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way.
+
+## #10 - Check if a property is in a Object
+
+> 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
+
+When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var myObject = {
   name: '@tips_js'
 };
 
+<<<<<<< HEAD
 if (myObject.name) { ... }
 
 ```
@@ -460,6 +530,15 @@ if (myObject.name) { ... }
 这是可以的，但是你需要知道有两种原生方法可以解决此类问题。[`in` 操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 和 [`Object.hasOwnProperty`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)，任何继承自`Object`的对象都可以使用这两种方法。
 
 ### 看一下较大的区别
+=======
+if (myObject['name']) { ... }
+
+```
+
+Thats ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has available both ways.
+
+### See the big Difference
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var myObject = {
@@ -469,14 +548,24 @@ var myObject = {
 myObject.hasOwnProperty('name'); // true
 'name' in myObject; // true
 
+<<<<<<< HEAD
 myObject.hasOwnProperty('valueOf'); // false, valueOf 继承自原型链
+=======
+myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prototype chain
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 'valueOf' in myObject; // true
 
 ```
 
+<<<<<<< HEAD
 两者检查属性的深度不同，换言之`hasOwnProperty`只在本身有此属性时返回true,而`in`操作符不区分属性来自于本身或继承自原型链。
 
 这是另一个例子
+=======
+Both differs in the depth how check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+
+Here another example
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var myFunc = function() {
@@ -487,6 +576,7 @@ myFunc.prototype.age = '10 days';
 var user = new myFunc();
 
 user.hasOwnProperty('name'); // true
+<<<<<<< HEAD
 user.hasOwnProperty('age'); // false, 因为age来自于原型链
 ```
 
@@ -502,13 +592,34 @@ ES6中，JS现在有了引号拼接字符串的替代品，模板字符串。
 
 示例:
 普通字符串
+=======
+user.hasOwnProperty('age'); // false, because age is from the prototype chain
+```
+
+Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+
+Also recommends read [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes at checking properties' existence in objects
+
+## #09 - Template Strings
+
+> 2016-01-09 by [@JakeRawr](https://github.com/JakeRawr)
+
+As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
+
+Ex:
+Normal string
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 ```javascript
 var firstName = 'Jake';
 var lastName = 'Rawr';
 console.log('My name is ' + firstName + ' ' + lastName);
 // My name is Jake Rawr
 ```
+<<<<<<< HEAD
 模板字符串
+=======
+Template String
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 ```javascript
 var firstName = 'Jake';
 var lastName = 'Rawr';
@@ -516,6 +627,7 @@ console.log(`My name is ${firstName} ${lastName}`);
 // My name is Jake Rawr
 ```
 
+<<<<<<< HEAD
 在模板字符串中，你可以不用`\n`来生成多行字符串还可以在`${}`里做简单的逻辑运算（例如 2+3）。
 
 你也可以使用方法修改模板字符串的输出内容；他们被称为[带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings)（其中有带标签的模板字符串的示例）
@@ -527,17 +639,36 @@ console.log(`My name is ${firstName} ${lastName}`);
 > 2016-01-08 by [@Tevko](https://twitter.com/tevko)
 
 `querySelectorAll`方法返回一个类数组对象称为node list。这些数据结构被称为“类数组”，因为他们看似数组却没有类似`map`、`foreach`这样的数组方法。这是一个快速、安全、可重用的方法将node list转换为DOM元素的数组：
+=======
+You can do Multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in Template String.
+
+You are also able to to modify the output of template strings using a function; they are called [Tagged template strings]
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings) for example usages of tagged template strings.
+
+You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more
+
+## #08 - Converting a Node List to an Array
+
+> 2016-01-08 by [@Tevko](https://twitter.com/tevko)
+
+The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `foreach`. Here's a quick, safe, and reusable way to convert a node list into an Array of DOM elements:
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 const nodelist = document.querySelectorAll('div');
 const nodelistToArray = Array.apply(null, nodelist);
 
+<<<<<<< HEAD
 //之后 ..
+=======
+//later on ..
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 nodelistToArray.forEach(...);
 nodelistToArray.map(...);
 nodelistToArray.slice(...);
 
+<<<<<<< HEAD
 //等...
 ```
 
@@ -549,11 +680,25 @@ nodelistToArray.slice(...);
 const nodelist = [...document.querySelectorAll('div')]; // 返回一个真正的数组
 
 //之后 ..
+=======
+//etc...
+```
+
+The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
+
+Or if you are using ES2015 you can use the [spread operator `...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+
+```js
+const nodelist = [...document.querySelectorAll('div')]; // returns a real Array
+
+//later on ..
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 nodelist.forEach(...);
 nodelist.map(...);
 nodelist.slice(...);
 
+<<<<<<< HEAD
 //等...
 ```
 
@@ -573,16 +718,43 @@ JavaScript的严格模式使开发者更容易写出“安全”的代码。
 
 ```javascript
 // 全脚本严格模式
+=======
+//etc...
+```
+
+## #07 - "use strict" and get lazy
+
+> 2016-01-07 by [@nainslie](https://twitter.com/nat5an)
+
+Strict-mode JavaScript makes it easier for the developer to write "secure" JavaScript.
+
+By default, JavaScript allows the programmer to be pretty careless, for example, by not requiring us to declare our variables with "var" when we first introduce them.  While this may seem like a convenience to the unseasoned developer, it's also the source of many errors when a variable name is misspelled or accidentally referred to out of its scope.
+
+Programmers like to make the computer do the boring stuff for us, and automatically check our work for mistakes. That's what the JavaScript "use strict" directive allows us to do, by turning our mistakes into JavaScript errors.
+
+We add this directive either by adding it at the top of a js file:
+
+```javascript
+// Whole-script strict mode syntax
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 "use strict";
 var v = "Hi!  I'm a strict mode script!";
 ```
 
+<<<<<<< HEAD
 或者放在一个方法内：
+=======
+or inside a function:
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 function f()
 {
+<<<<<<< HEAD
   // 方法级严格模式
+=======
+  // Function-level strict mode syntax
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
   'use strict';
   function nested() { return "And so am I!"; }
   return "Hi!  I'm a strict mode function!  " + nested();
@@ -590,6 +762,7 @@ function f()
 function f2() { return "I'm not strict."; }
 ```
 
+<<<<<<< HEAD
 通过在JavaScript文件或方法内引入此指令，使JavaScript引擎运行在严格模式下，这直接禁止了许多大项目中不受欢迎的操作。另外，严格模式也改变了以下行为：
 * 只有被"var"声明过的变量才可以引用。
 * 试图写只读变量时将会报错
@@ -602,12 +775,27 @@ function f2() { return "I'm not strict."; }
 
 It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
 严格模式的支持情况:
+=======
+By including this directive in a JavaScript file or function, we will direct the JavaScript engine to execute in strict mode which disables a bunch of behaviors that are usually undesirable in larger JavaScript projects.  Among other things, strict mode changes the following behaviors:
+* Variables can only be introduced when they are preceded with "var"
+* Attempting to write to readonly properties generates a noisy error
+* You have to call constructors with the "new" keyword
+* "this" is not implicitly bound to the global object
+* Very limited use of eval() allowed
+* Protects you from using reserved words or future reserved words as variable names
+
+Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
+
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+Strict mode is supported in:
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 * Internet Explorer from version 10.
 * Firefox from version 4.
 * Chrome from version 13.
 * Safari from version 5.1.
 * Opera from version 12.
 
+<<<<<<< HEAD
 [MDN对严格模式的全面介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 
 ## #06 - 可以接受单各参数和数组的方法
@@ -617,6 +805,17 @@ It is not a statement, but a literal expression, ignored by earlier versions of 
 写一个方法可以接受单个参数也可以接受一个数组，而不是分开写两个方法。这和jQuery的一些方法的工作原理很像(`css` 可以修改任何匹配到的选择器).
 
 你只要把任何东西连接到一个数组. `Array.concat`可以接受一个数组也可以接受单个参数。
+=======
+[See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+
+## #06 - Writing a single method for arrays or single elements
+
+> 2016-01-06 by [@mattfxyz](https://twitter.com/mattfxyz)
+
+Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
+
+You just have to concat everything into an array first. `Array.concat` will accept an array or a single element.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 function printUpperCase(words) {
@@ -627,7 +826,11 @@ function printUpperCase(words) {
 }
 ```
 
+<<<<<<< HEAD
 `printUpperCase`现在可以接受单个单词或多个单词的数组作为它的参数。
+=======
+`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 printUpperCase("cactus");
@@ -638,6 +841,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 //  POTATO
 ```
 
+<<<<<<< HEAD
 ## #05 - `undefined`与`null`的区别([原文](https://github.com/loverajoel/jstips#05---differences-between-undefined-and-null))
 
 > 2016-01-05 by [@loverajoel](https://twitter.com/loverajoel)
@@ -653,16 +857,41 @@ printUpperCase(["cactus", "bear", "potato"]);
 - 他们都是[falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
   (`Boolean(undefined) // false`, `Boolean(null) // false`)
 - 你可以这样判断一个变量是否是[undefined](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+=======
+## #05 - Differences between `undefined` and `null`
+
+> 2016-01-05 by [@loverajoel](https://twitter.com/loverajoel)
+
+- `undefined` means a variable has not been declared, or has been declared but has not yet been assigned a value
+- `null` is an assignment value that means "no value"
+- Javascript sets unassigned variables with a default value of `undefined`
+- Javascript never sets a value to `null`. It is used by programmers to indicate that a `var` has no value.
+- `undefined` is not valid in JSON while `null` is
+- `undefined` typeof is `undefined`
+- `null` typeof is an `object`
+- Both are primitives
+- Both are [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+  (`Boolean(undefined) // false`, `Boolean(null) // false`)
+- You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
   ```javascript
   typeof variable === "undefined"
 ```
+<<<<<<< HEAD
 - 你可以这样判断一个变量是否是[null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)
+=======
+- You can check if a variable is [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
   ```javascript
   variable === null
 ```
+<<<<<<< HEAD
 - **双等号**比较时它们相等，但**三等号**比较时不相等
+=======
+- The **equality** operator considers them equal, but the **identity** doesn't
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
   ```javascript
   null == undefined // true
@@ -670,17 +899,26 @@ printUpperCase(["cactus", "bear", "potato"]);
   null === undefined // false
 ```
 
+<<<<<<< HEAD
 ## #04 - 排列带音节字母的字符串([原文](https://github.com/loverajoel/jstips#04---sorting-strings-with-accented-characters))
 
 > 2016-01-04 by [@loverajoel](https://twitter.com/loverajoel)
 
 Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)**可以排列数组。一次简单的`array.sort()`将每一个数组元素视为字符串并按照字母表排列。你也可以提供[自定义排列方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
+=======
+## #04 - Sorting strings with accented characters
+
+> 2016-01-04 by [@loverajoel](https://twitter.com/loverajoel)
+
+Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. Also you can provide your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 ['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
 
+<<<<<<< HEAD
 但是当你试图整理一个如`['é', 'a', 'ú', 'c']`这样的非ASCII元素的数组时，你可能会得到一个奇怪的结果`['c', 'e', 'á', 'ú']`。这是因为排序方法只在英文下有用。
 
 看一下下一个例子:
@@ -691,15 +929,35 @@ Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs
 // ["cosas", "fútbol", "árbol", "único"] // bad order
 
 // 德语
+=======
+But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain a strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with english language.
+
+See the next example:
+
+```javascript
+// Spanish
+['único','árbol', 'cosas', 'fútbol'].sort();
+// ["cosas", "fútbol", "árbol", "único"] // bad order
+
+// German
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 ['Woche', 'wöchentlich', 'wäre', 'Wann'].sort();
 // ["Wann", "Woche", "wäre", "wöchentlich"] // bad order
 ```
 
+<<<<<<< HEAD
 幸运的是，有两种方法可以解决这个问题，由ECMAScript国际化API提供的[localeCompare](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)和[Intl.Collator](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator)。
 
 > 两个方法都有自定义配置参数可以使其更好用。
 
 ### 使用`localeCompare()`
+=======
+Fortunately, there are two ways to overcome this behavior [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
+
+> Both methods have their own custom parameters in order to configure it to work adequately.
+
+### Using `localeCompare()`
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 ['único','árbol', 'cosas', 'fútbol'].sort(function (a, b) {
@@ -713,7 +971,11 @@ Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs
 // ["Wann", "wäre", "Woche", "wöchentlich"]
 ```
 
+<<<<<<< HEAD
 ### 使用`Intl.Collator()`
+=======
+### Using `Intl.Collator()`
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 ['único','árbol', 'cosas', 'fútbol'].sort(Intl.Collator().compare);
@@ -723,6 +985,7 @@ Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs
 // ["Wann", "wäre", "Woche", "wöchentlich"]
 ```
 
+<<<<<<< HEAD
 - 两个方法都可以自定义区域位置。For each method you can customize the location.
 - 根据[Firefox](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance)，当比较大数量的字符串是Intl.Collator更快。
 
@@ -732,6 +995,17 @@ Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs
 > 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
 
 我们怎样来提高和优化javascript里嵌套的`if`语句呢？
+=======
+- For each method you can customize the location.
+- According to [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator is faster when comparing large numbers of strings.
+
+So when you are working with arrays of strings in a language other than English, remember to use this method to avoid unexpected sorting.
+
+## #03 - Improve Nested Conditionals
+> 2016-01-03 by [AlbertoFuente](https://github.com/AlbertoFuente)
+
+How can we improve and make more efficient nested `if` statement in javascript.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 if (color) {
@@ -749,7 +1023,11 @@ if (color) {
 }
 ```
 
+<<<<<<< HEAD
 一种方法来提高嵌套的`if`语句是用`switch`语句。虽然它不那么啰嗦而且排列整齐，但是并不建议使用它，因为这对于调试错误很困难。这告诉你[为什么](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
+=======
+One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, It's not recommended to use it because it's so difficult to debug errors, here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 switch(color) {
@@ -770,7 +1048,12 @@ switch(color) {
 }
 ```
 
+<<<<<<< HEAD
 但是如果在每个语句中都有很多条件检查时该怎么办呢？这种情况下，如果我们想要不罗嗦又整洁的话，我们可以用有条件的`switch`。如果我们传递`true`给`switch`语句，我没变可以在每个case中使用条件语句了。
+=======
+But what if we have a conditional with several checks in each statement? In this case, if we like to do less verbose and more ordered, we can use the conditional `switch`.
+If we pass `true` as parameter to the `switch` statement, It allows us to put a conditional in each case.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 switch(true) {
@@ -792,7 +1075,11 @@ switch(true) {
 }
 ```
 
+<<<<<<< HEAD
 但是我们应该时刻注意避免太多判断在一个条件里，尽量少的使用`switch`，考虑最有效率的方法：借助`object`。
+=======
+But we must always avoid having several checks in every condition, avoiding use of `switch` as far as possible and take into account that the most efficient way to do this is through an `object`.
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var colorObj = {
@@ -803,16 +1090,26 @@ var colorObj = {
   'yellow': printYellowBackground
 };
 
+<<<<<<< HEAD
 if (color in colorObj) {
+=======
+if (color && colorObj.hasOwnProperty(color)) {
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
   colorObj[color]();
 }
 ```
 
+<<<<<<< HEAD
 这里有更多相关的[内容](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
 
 ## #02 - ReactJs - Keys in children components are important([原文](https://github.com/loverajoel/jstips#02---reactjs---keys-in-children-components-are-important))
 
 （译者注：本人对ReactJs了解不多，就不翻译了，免得误导大家 欢迎PR）
+=======
+Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+
+## #02 - ReactJs - Keys in children components are important
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 > 2016-01-02  by [@loverajoel](https://twitter.com/loverajoel)
 
@@ -847,9 +1144,13 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 - When the amount of child are big or involve expensive components, use keys has performance improvements.
 - [You must provide the key attribute for all children of ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
 
+<<<<<<< HEAD
 ## #1 - AngularJs: `$digest` vs `$apply`([原文](https://github.com/loverajoel/jstips#1---angularjs-digest-vs-apply))
 
 （译者注：本人对AngularJs了解不多，就不翻译了，免得误导大家 欢迎PR）
+=======
+## #1 - AngularJs: `$digest` vs `$apply`
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 > 2016-01-01  by [@loverajoel](https://twitter.com/loverajoel)
 
@@ -880,6 +1181,7 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 - If you are using >AngularJS 1.2.X, use `$evalAsync` is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
 
 
+<<<<<<< HEAD
 ## #0 - 向数组中插入元素([原文](https://github.com/loverajoel/jstips#0---insert-item-inside-an-array))
 > 2015-12-29
 
@@ -888,33 +1190,97 @@ In this case the `$digest` method starts the `$digest` cycle for the current sco
 但是这些已知的方法，并不意味着没有更加高效的方法。让我们接着往下看……
 
 向数组结尾添加元素用push()很简单，但下面有一个更高效的方法
+=======
+<!--
+## #0 - Insert item inside an Array
+-->
+
+## #0 - 插入一项元素到数组中
+> 2015-12-29
+
+<!--
+Inserting an item into an existing array is a daily common task. You can add elements to the end of an array using push, to the beginning using unshift, or the middle using splice.
+
+But those are known methods, doesn't mean there isn't a more performant way, here we go...
+
+Adding an element at the end of the array is easy with push(), but there is a way more performant.
+-->
+
+在已存在的数组中插入一项元素是一件日常任务。你可以使用 `push`
+操作把元素添加到数组的末尾，使用 `unshift` 操作添加到开头，或者使用 `splice`
+添加到中间。
+
+但这些都是已知的方法，并不意味着没有性能更好的方式，我们开始吧……
+
+`push()` 可以很容易地把一个元素添加到数组的末尾，但这里有个更高效的方式。
+
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var arr = [1,2,3,4,5];
 
 arr.push(6);
+<<<<<<< HEAD
 arr[arr.length] = 6; // 在Mac OS X 10.11.1下的Chrome 47.0.2526.106中快43%
 ```
 两种方法都是修改原始数组。不信？看看[jsperf](http://jsperf.com/push-item-inside-an-array)
 
 现在我们试着向数组的头部添加元素：
+=======
+arr[arr.length] = 6; // 43% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
+```
+<!--
+Both methods modify the original array. Don't believe me? Check the [jsperf](http://jsperf.com/push-item-inside-an-array)
+
+Now we are trying to add an item to the beginning of the array
+-->
+
+这两个方法都修改了原始数组。不相信我？瞧这里 [jsperf](http://jsperf.com/push-item-inside-an-array)。
+
+现在，我们试着把元素添加到数组的开头。
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var arr = [1,2,3,4,5];
 
 arr.unshift(0);
+<<<<<<< HEAD
 [0].concat(arr); // 在Mac OS X 10.11.1下的Chrome 47.0.2526.106中快98%
 ```
 这里有一些小区别，unshift操作的是原始数组，concat返回一个新数组，参考[jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
 使用splice可以简单的向数组总监添加元素，这也是最高效的方法。
+=======
+[0].concat(arr); // 98% faster in Chrome 47.0.2526.106 on Mac OS X 10.11.1
+```
+<!--
+Here is a little bit detail, unshift edits the original array, concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
+
+Adding items at the middle of an array is easy with splice and is the most performant way to do it.
+-->
+
+这里有个小细节，`unshift` 对原始数组进行编辑，而 `concat` 返回一个新数组。[jsperf](http://jsperf.com/unshift-item-inside-an-array)
+
+使用 `splice` 可以很容易地把元素添加到数组的中间，而且这样做是最高效的。
+
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 
+<<<<<<< HEAD
 我在许多浏览器和系统中进行了测试，结果都是相似的。希望这条小知识可以帮到你，也欢迎大家自行测试。
+=======
+<!--
+I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
+-->
+
+我已经在许多浏览器和操作系统，试着去运行这些测试，并且它们的结果非常相似。
+
+我希望这些贴士（建议）对你有用，并鼓励进行自己的测试！
+>>>>>>> 10349441e922d485cef40970c3b92b717e2d0996
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
