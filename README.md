@@ -18,6 +18,25 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #01(number) - Converting truthy/falsy values to boolean
+
+> yyyy-mm-dd(date) by [hakhag](https://github.com/hakhag)
+
+You can convert a truthy or falsy value to true boolean with the `!!` operator.
+
+```javascript
+!!""        => false
+!!0         => false
+!!null      => false
+!!undefined => false
+!!NaN       => false
+
+!!"hello"   => true
+!!1         => true
+!!{}        => true
+!![]        => true
+```
+
 
 ## #22 - Empty an Array
 
