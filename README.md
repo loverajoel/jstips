@@ -22,8 +22,8 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > yyyy-mm-dd(date) by [microlv](https://github.com/microlv)
 
-Think about you define a Array and after sometime later, you want to clear the data.
-Normally, you will doing like this:
+You define an array and want to empty its contents.
+Usually, you would do it like this:
 ```javascript
 // define Array
 var list = [1, 2, 3, 4];
@@ -33,7 +33,7 @@ function empty() {
 }
 empty();
 ```
-But, there is another way to make array empty and more performance.
+But there is another way to empty an array that is more performant.
 You should use code like this:
 ```javascript
 var list = [1, 2, 3, 4];
@@ -44,10 +44,11 @@ function empty() {
 empty();
 ```
 * list = [] assigns a reference to a new array to a variable, while any other references are unaffected.
+which means that references to the contents of the previous array are still kept in memory, leading to memory leaks.
 
 * list.length = 0 deletes everything in the array, which does hit other references.
 
-If you have a copy Array(A and Copy-A), you just want to delete the data of A and keep data copy-A, Becareful not to use list.length = 0.
+However, if you have a copy of the array (A and Copy-A), if you delete its contents using list.length = 0, the copy will also lose its contents.
 
 Think about what will output:
 ```js
@@ -58,6 +59,8 @@ var bar2 = bar;
 foo = [];
 bar.length = 0;
 console.log(foo, bar, foo2, bar2);
+
+//[] [] [1, 2, 3] []
 ```
 Stackoverflow more detail:
 [difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
