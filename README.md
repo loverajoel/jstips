@@ -19,9 +19,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 # Tips list
 
 
-## #(number) - Empty your Array/List
+## #22 - Empty your Array/List
 
-> yyyy-mm-dd(date) by [microlv](https://github.com/microlv)
+> 2016-01-22 by [microlv](https://github.com/microlv)
 
 You define an array and want to empty its contents.
 Usually, you would do it like this:
