@@ -19,7 +19,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 # Tips list
 
 
-## #22 - Empty your Array/List
+## #22 - Empty an Array
 
 > 2016-01-22 by [microlv](https://github.com/microlv)
 
