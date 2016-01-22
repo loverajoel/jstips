@@ -46,12 +46,12 @@ function empty() {
 }
 empty();
 ```
-* list = [] assigns a reference to a new array to a variable, while any other references are unaffected.
+* `list = []` assigns a reference to a new array to a variable, while any other references are unaffected.
 which means that references to the contents of the previous array are still kept in memory, leading to memory leaks.
 
 * list.length = 0 deletes everything in the array, which does hit other references.
 
-However, if you have a copy of the array (A and Copy-A), if you delete its contents using list.length = 0, the copy will also lose its contents.
+However, if you have a copy of the array (A and Copy-A), if you delete its contents using `list.length = 0`, the copy will also lose its contents.
 
 Think about what will output:
 ```js
