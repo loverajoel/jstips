@@ -20,6 +20,37 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 [简体中文(simplified Chinese)](https://github.com/loverajoel/jstips/blob/master/README-zh_CN.md)
 
 # Tips list
+
+## #21 - Shuffle an Array
+
+> 2016-01-21 by [@0xmtn](https://github.com/0xmtn/)
+
+ This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+  
+```javascript
+function shuffle(arr) {
+    var i, 
+        j,
+        temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+};
+```
+An example:
+
+```javascript
+var a = [1, 2, 3, 4, 5, 6, 7, 8];
+var b = shuffle(a);
+console.log(b);
+// [2, 7, 8, 6, 5, 3, 1, 4]
+```
+
+
 ## #20 - Return objects to enable chaining of functions
 
 > 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
