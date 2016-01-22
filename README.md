@@ -18,52 +18,87 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #(number) - Empty your Array/List
+## #21 - Shuffle an Array
 
-> yyyy-mm-dd(date) by [microlv](https://github.com/microlv)
+> 2016-01-21 by [@0xmtn](https://github.com/0xmtn/)
 
-You define an array and want to empty its contents.
-Usually, you would do it like this:
+ This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+  
 ```javascript
-// define Array
-var list = [1, 2, 3, 4];
-function empty() {
-    //empty your array
-    list = [];
-}
-empty();
+function shuffle(arr) {
+    var i, 
+        j,
+        temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+};
 ```
-But there is another way to empty an array that is more performant.
-You should use code like this:
+An example:
+
 ```javascript
-var list = [1, 2, 3, 4];
-function empty() {
-    //empty your array
-    list.length = 0;
-}
-empty();
+var a = [1, 2, 3, 4, 5, 6, 7, 8];
+var b = shuffle(a);
+console.log(b);
+// [2, 7, 8, 6, 5, 3, 1, 4]
 ```
-* list = [] assigns a reference to a new array to a variable, while any other references are unaffected.
-which means that references to the contents of the previous array are still kept in memory, leading to memory leaks.
 
-* list.length = 0 deletes everything in the array, which does hit other references.
 
-However, if you have a copy of the array (A and Copy-A), if you delete its contents using list.length = 0, the copy will also lose its contents.
+## #20 - Return objects to enable chaining of functions
 
-Think about what will output:
+> 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+
 ```js
-var foo = [1,2,3];
-var bar = [1,2,3];
-var foo2 = foo;
-var bar2 = bar;
-foo = [];
-bar.length = 0;
-console.log(foo, bar, foo2, bar2);
+function Person(name) {
+  this.name = name;
 
-//[] [] [1, 2, 3] []
+  this.sayName = function() {
+    console.log("Hello my name is: ", this.name);
+    return this;
+  };
+
+  this.changeName = function(name) {
+    this.name = name;
+    return this;
+  };
+}
+
+var person = new Person("John");
+person.sayName().changeName("Timmy").sayName();
 ```
-Stackoverflow more detail:
-[difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
+
+## #19 - Safe string concatenation
+
+> 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
+
+Suppose you have a couple of variables with unknown types and you want to concatenate them. To be sure that the arithmetical operation would not be applied during the concatenation:
+
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = ''.concat(one, two, three); //"123"
+```
+
+This way of concatenation does exactly what you expect. On the contrary, concatenation with pluses might lead to unexpected results:
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = one + two + three; //"33" instead of "123"
+```
+
+Speaking about performance, in comparison with ```join``` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of the ```concat``` type is pretty much the same.
+
+You can read more about ```concat``` method on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
 
 ## #18 - Rounding the fast way
 
@@ -193,14 +228,14 @@ if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
 
 The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values."
 
-It transforms -1 into 0, and 0 is false in javascript, so:
+It transforms `-1` into `0`, and `0` evaluates to `false` in JavaScript:
 
 ```javascript
 var someText = 'text';
-!!~someText.indexOf('tex'); //sometext contains tex - true
-!~someText.indexOf('tex'); //sometext not contains tex - false
-~someText.indexOf('asd'); //sometext contains asd - false
-~someText.indexOf('ext'); //sometext contains ext - true
+!!~someText.indexOf('tex'); // someText contains "tex" - true
+!~someText.indexOf('tex'); // someText NOT contains "tex" - false
+~someText.indexOf('asd'); // someText doesn't contain "asd" - false
+~someText.indexOf('ext'); // someText contains "ext" - true
 ```
 
 ### String.prototype.includes()
@@ -340,7 +375,7 @@ More info:
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
 
-## #12 - Pseudomentatory parameters in ES6 functions #ES6
+## #12 - Pseudomandatory parameters in ES6 functions #ES6
 
 > 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
@@ -358,7 +393,7 @@ getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
- `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be throwed. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is gonna be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
 
 ## #11 - Hoisting
 > 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
@@ -406,7 +441,7 @@ To make things easier to read, declare all of your variables at the top of your 
 
 > 2016-01-10 by [@loverajoel](https://www.twitter.com/loverajoel)
 
-When you have to check if a property is present of an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+When you have to check if a property is present on an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
 
 ```javascript
 var myObject = {
@@ -417,7 +452,7 @@ if (myObject.name) { ... }
 
 ```
 
-Thats ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has available both ways.
+That's ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), every object descended from `Object`, has both ways available.
 
 ### See the big Difference
 
@@ -434,9 +469,9 @@ myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prot
 
 ```
 
-Both differs in the depth how check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
+Both differ in the depth that they check the properties, in other words `hasOwnProperty` will only return true if key is available on that object directly, however the `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
 
-Here another example
+Here's another example
 
 ```javascript
 var myFunc = function() {
@@ -450,9 +485,9 @@ user.hasOwnProperty('name'); // true
 user.hasOwnProperty('age'); // false, because age is from the prototype chain
 ```
 
-Check here the [live examples](https://jsbin.com/tecoqa/edit?js,console)!
+Check here for [live examples](https://jsbin.com/tecoqa/edit?js,console)!
 
-Also recommends read [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes at checking properties' existence in objects
+I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a properties' existence in objects.
 
 ## #09 - Template Strings
 
@@ -763,7 +798,7 @@ var colorObj = {
   'yellow': printYellowBackground
 };
 
-if (color && colorObj.hasOwnProperty(color)) {
+if (color in colorObj) {
   colorObj[color]();
 }
 ```
