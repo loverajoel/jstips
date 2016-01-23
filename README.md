@@ -16,6 +16,9 @@ Any improvements or suggestions are more than welcome!
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js). Only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
+### Hubot Integration
+To get the latest jstip from hubot in your chatrooms, checkout [hubot-jstips](https://github.com/dggriffin/hubot-jstips).
+
 # Tips list
 
 ## #23 - Converting to number fast way
