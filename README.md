@@ -18,9 +18,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #(number) - Converting to number fast way
+## #23 - Converting to number fast way
 
-> yyyy-mm-dd(date) by [@sonnyt](http://twitter.com/sonnyt)
+> 2016-01-23 by [@sonnyt](http://twitter.com/sonnyt)
 
 Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
 
