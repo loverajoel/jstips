@@ -18,6 +18,29 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #00 - Remove duplicate primitive values from an Array
+
+> yyyy-mm-dd(date) by [@danillouz](https://twitter.com/danillouz)
+
+ES5
+```javascript
+var elems = [ 1, 1, 'a', 'a' ];
+
+var dedup = elems.filter(function (el, i) {
+	return elems.indexOf(el) === i;
+});
+
+console.log(dedup); // [ 1, 'a' ]
+```
+
+ES2015
+```javascript
+var elems = [ 1, 1, 'a', 'a' ];
+var dedup = elems.filter( (el, i) => elems.indexOf(el) === i);
+
+console.log(dedup); // [ 1, 'a' ]
+```
+
 ## #23 - Converting to number fast way
 
 > 2016-01-23 by [@sonnyt](http://twitter.com/sonnyt)
