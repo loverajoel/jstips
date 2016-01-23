@@ -178,6 +178,8 @@ console.log(~~null) // -> 0
 console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
+[You can compare performance here](http://jsperf.com/math-round-vs). In the latest Chrome the difference is negligible and within the margin of error. 
+
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
 
 ## #17 - Node.js: Run a module if it is not "required"
