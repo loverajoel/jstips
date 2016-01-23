@@ -18,6 +18,25 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #(number) - Converting to number fast way
+
+> yyyy-mm-dd(date) by [@sonnyt](http://twitter.com/sonnyt)
+
+Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
+
+```javascript
+var one = '1';
+
+var numberOne = +one; // Number 1
+```
+
+You can also use the `-` (minus) operator which type-converts the value into number but also negates it.
+
+```javascript
+var one = '1';
+
+var negativeNumberOne = -one; // Number -1
+```
 
 ## #22 - Empty an Array
 
@@ -74,10 +93,10 @@ Stackoverflow more detail:
 > 2016-01-21 by [@0xmtn](https://github.com/0xmtn/)
 
  This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
-  
+
 ```javascript
 function shuffle(arr) {
-    var i, 
+    var i,
         j,
         temp;
     for (i = arr.length - 1; i > 0; i--) {
@@ -97,7 +116,6 @@ var b = shuffle(a);
 console.log(b);
 // [2, 7, 8, 6, 5, 3, 1, 4]
 ```
-
 
 ## #20 - Return objects to enable chaining of functions
 
@@ -163,14 +181,14 @@ One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. T
 // single ~
 console.log(~1337)    // -1338
 
-// numeric input 
+// numeric input
 console.log(~~47.11)  // -> 47
 console.log(~~-12.88) // -> -12
 console.log(~~1.9999) // -> 1
 console.log(~~3)      // -> 3
 
 // on failure
-console.log(~~[]) // -> 0 
+console.log(~~[]) // -> 0
 console.log(~~NaN)  // -> 0
 console.log(~~null) // -> 0
 
@@ -178,7 +196,7 @@ console.log(~~null) // -> 0
 console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
-Although `~~` may perform better, for the sake of readability please use `Math.floor()`. 
+Although `~~` may perform better, for the sake of readability please use `Math.floor()`.
 
 ## #17 - Node.js: Run a module if it is not "required"
 
