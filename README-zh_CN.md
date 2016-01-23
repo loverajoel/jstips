@@ -19,7 +19,7 @@
 
 # 小知识列表
 
-## #22 - 清空数组
+## #22 - 清空数组([原文](https://github.com/loverajoel/jstips#22---empty-an-array))
 
 > 2016-01-22 by [microlv](https://github.com/microlv)
 
@@ -68,7 +68,7 @@ console.log(foo, bar, foo2, bar2);
 [difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
 
 
-## #21 - 对数组洗牌
+## #21 - 对数组洗牌([原文](https://github.com/loverajoel/jstips#21---shuffle-an-array))
 
 > 2016-01-21 by [@0xmtn](https://github.com/0xmtn/)
 
