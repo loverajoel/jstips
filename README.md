@@ -121,9 +121,9 @@ console.log(b);
 
 ```javascript
 function shuffle(array) {
-        return array.slice(0).sort(function() {
-                    return 0.5 - Math.random();
-                        });
+    return array.slice(0).sort(function() {
+        return 0.5 - Math.random();
+    });
 };
 ```
 
