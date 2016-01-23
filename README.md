@@ -133,7 +133,7 @@ var myArray = [1,2,3,3,4,5,6]
 var shuffledArray = shuffle(myArray)
 console.log(shuffledArray)
 // [4, 3, 5, 1, 2, 3, 6]
-
+```
 
 ## #20 - Return objects to enable chaining of functions
 
