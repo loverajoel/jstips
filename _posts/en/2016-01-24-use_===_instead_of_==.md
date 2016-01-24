@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Use === instead of ==.
+title: Use === instead of ==
 tip-number: 24
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
@@ -12,7 +12,8 @@ categories:
 ---
 
 The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
-```
+
+```js
 [10] ==  10      // is true
 [10] === 10      // is false
 
