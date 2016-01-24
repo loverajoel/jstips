@@ -20,7 +20,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 ## #00 - Public, private, static variables and methods
 
-> yyyy-mm-dd by [bhaskarmelkani](https://github.com/bhaskarmelkani)
+> yyyy-mm-dd by [bhaskarmelkani](https://twitter.com/bhaskarmelkani)
 
 This shows how to create public, private, static variables and methods in "classes" in Javascript's classical OOP patern through the rather simple example of a person.
 
