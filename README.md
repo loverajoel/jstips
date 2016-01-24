@@ -16,6 +16,9 @@ Any improvements or suggestions are more than welcome!
 To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js). Only one tweet will be sent per day. It is a deal!
 > Don't forget to Star the repo, as this will help to promote the project!
 
+### Other language
+[简体中文(simplified Chinese)](https://github.com/loverajoel/jstips/blob/master/README-zh_CN.md)
+
 # Tips list
 
 ## #23 - Converting to number fast way
