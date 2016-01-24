@@ -11,7 +11,46 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
 
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="JS Tips">
+    <meta itemprop="description" content="This is about one JS tip every day!">
+    <meta itemprop="image" content="http://www.jstips.co/images/jstips-header-blog">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="http://www.jstips.co">
+    <meta name="twitter:title" content="JS Tips">
+    <meta name="twitter:description" content="This is about one JS tip every day!">
+    <meta name="twitter:creator" content="@tips_js">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="JS Tips" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.jstips.co" />
+    <meta property="og:image" content="http://www.jstips.co/images/jstips-header-blog" />
+    <meta property="og:description" content="This is about one JS tip every day!" />
+    <meta property="og:site_name" content="JS Tips" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"> -->
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,15 +85,6 @@
                 <img src="{{ site.baseurl }}/images/jstips.png" alt="Js Tips">
             </a>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="javascript:"><i class="fa fa-bars"></i></a></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="#">Subscribe</a></li>
-                <li><a href="https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md">Submit your tip!</a></li>
-            </ul>
-        </div>
     </div>
     {% endif %}
     <div id="main-header" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
@@ -66,16 +96,14 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About</a></li>
-                <li><a href="#">Subscribe</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
                 <li><a href="https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md">Submit your tip!</a></li>
             </ul>
             <hr/>
         </div>
     {% endif %}
     <div id="posts-wrapper">
-
         {{ content }}
-
         <div id="paginator-wrapper">
             <ul>
             {% for page in (1..paginator.total_pages) %}
@@ -94,19 +122,37 @@
             </ul>
         </div>
     </div>
-    <footer>
+    <footer class="{% if page.is_post %}is-post{% endif %}">
         <div class="email-suscribe">
             <div>
-                Email Suscribe
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="//jstips.us12.list-manage.com/subscribe/post?u=80795a6c077c65f1648c4dfe3&amp;id=1f7d557661" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <a href="#" name="subscribe"></a>
+                        <label for="mce-EMAIL">Subscribe to more awesome daily tips!</label>
+                        <div class="email-container">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                            <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">    
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80795a6c077c65f1648c4dfe3_1f7d557661" tabindex="-1" value=""></div>
+                    </div>
+                </form>
+            </div>
+            <!--End mc_embed_signup-->
             </div>
         </div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Submit your tip!</a></li>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Fork this repo</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md">Submit your tip!</a></li>
+            <li class="github"><a href="https://github.com/loverajoel/jstips"><img src="/images/github.svg"></a></li>
+            <li class="twitter">
+                <a href="https://twitter.com/tips_js" class="twitter-follow-button" data-show-count="false">Follow @tips_js</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </a>
+            </li>
         </ul>
     </footer>
 </div>

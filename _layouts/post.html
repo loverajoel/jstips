@@ -3,27 +3,32 @@ layout: default
 ---
 
 <article class="post single">
+    <div class="header-content">
         <h1 class="post-title">
-            <span class="tip-number">{{ page.tipNumber }}</span>
-            {{ page.title }}
+            <span class="tip-number">{{ page.tip-number }}</span>
+            <span class="title">{{ page.title | markdownify}}</span>
         </h1>
 
         <div class="tldt">
-            <p>{{ page.tipTlDt }}</p>
+            <p>{{ page.tip-tldr | markdownify}}</p>
         </div>
 
         <div class="meta-info">
             <time class="date meta-item" datetime="{{ page.date }}"><i class="fa fa-calendar"></i> {{ page.date | date_to_string }}</time>
 
-            <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ page.tipContributorUrl }}" target="_blank"> @{{ page.tipContributorUser }}</a></div>
+            <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ page.tip-username-profile }}" target="_blank"> @{{ page.tip-username }}</a></div>
 
-            <div class="share meta-item"><a href="javascript:"><i class="fa fa-share-alt"></i> Share tip</a></div>
-
+            <div class="share meta-item">
+                <a href="http://facebook.com/sharer.php?s=100&p[url]=http://www.jstips.co{{page.url}}" target="_blank"><img src="/images/facebook.svg"></a>
+                <a href="https://twitter.com/intent/tweet?text=JS Tips - {{page.tip-number}} - {{ page.title }}&url=http://www.jstips.co{{page.url}}&hashtags=javascript"><img src="/images/twitter.svg"></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.jstips.co{{page.url}}&title=JS Tips - {{page.tip-number}} - {{ page.title }}&summary={{ page.tip-tldr }}" target="_blank"><img src="/images/linkedin.svg"></a>
+            </div>
         </div>
+    </div>
 
-        <div class="entry">
-            {{ content }}
-        </div>
+    <div class="entry">
+        {{ content }}
+    </div>  
 
-        {% include disqus.html %}
+    {% include disqus.html %}
 </article>

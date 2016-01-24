@@ -28,6 +28,10 @@ body {
     color: $darkGray;
 }
 
+*:focus {
+    outline: none;
+}
+
 .container {
     margin: 0 auto;
     max-width: 740px;
@@ -52,6 +56,10 @@ h1 {
     a {
         color: inherit;
     }
+
+    code {
+        font-size: 25px;
+    }
 }
 
 h2 {
@@ -59,7 +67,8 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 30px;
+    margin: 20px auto 10px auto !important;
 }
 
 h4 {
@@ -163,12 +172,14 @@ img {
     background: {
         color: $color-yellow;
     }
-    border-bottom: 1px solid darken($color-yellow, 20%);
 
     height: 460px;
     z-index: 3;
     position: relative;
 
+    @media (max-width: 900px) {
+        height: 250px;
+    }
 
     .background {
         display: block;
@@ -176,7 +187,7 @@ img {
         height: 100%;
         max-width: 980px;
         margin: 0 auto;
-
+        
         background: {
             image: url(images/jstips-header-blog.gif);
             position: center center;
@@ -190,8 +201,15 @@ img {
     }
 
     &.is-post {
-        height: 250px;
-        background-size: cover;
+        height: 85px;
+
+        @media (max-width: 900px) {
+            border-bottom: 1px solid darken($color-yellow, 20%);
+        }
+
+        div {
+            background-image: none
+        }
     }
 
     h1 {
@@ -256,6 +274,12 @@ img {
     background: #fff;
     z-index: 10;
 
+    @media (max-width: 900px) {
+        position: absolute;
+        margin: 12px;
+        background: darken($color-yellow, 20%);
+    }
+
     p {
         margin: 0;
         padding: 0 0;
@@ -288,6 +312,10 @@ img {
         p {
             right: 60px;
             justify-content: flex-end;
+
+            @media (max-width: 900px) {
+                display: none;
+            }
         }
     }
 
@@ -298,6 +326,15 @@ img {
         p {
             left: 60px;
             justify-content: flex-start;
+
+            @media (max-width: 900px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            right: 60px;
+            left: initial;
         }
     }
 
@@ -332,10 +369,13 @@ img {
     position: fixed;
     display: flex;
     align-items: center;
-    transition: all .5s ease;
-    border-bottom: 1px solid darken($color-yellow, 20%);
     overflow: hidden;
     z-index: 10;
+
+    @media (max-width: 900px) {
+        margin: 0px;
+        position: absolute;
+    }
 
     &.visible,
     &.is-post {
@@ -348,14 +388,14 @@ img {
         }
     }
 
+
+
     &.is-post,
     &.not-first-page {
-        width: 110px;
-        border-bottom: 1px solid transparent;
+        width: 78px;
 
         &.visible {
             width: 100%;
-            border-bottom: 1px solid darken($color-yellow, 20%);
 
             .menu ul li:first-child a {
                 opacity: 0;
@@ -370,7 +410,7 @@ img {
     }
 
     &.is-post:hover {
-        width: 100%;
+        
     }
 
     &.not-first-page {
@@ -409,56 +449,6 @@ img {
             display: flex;
         }
     }
-
-    .menu {
-        height: 78px;
-
-        ul {
-            height: 78px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            li {
-                &:first-child {
-                    margin: 10px;
-
-                    a {
-                        padding: 0;
-                    }
-                }
-
-                a {
-                    color: $color-black;
-                    text-transform: uppercase;
-                    padding: 15px 25px;
-                    background: transparent;
-                    transition: all .3s ease;
-                    white-space: nowrap;
-
-                    &:hover {
-                        background: darken($color-yellow, 10%);
-                    }
-                }
-            }
-        }
-    }
-
-    &:hover {
-        background: $color-yellow;
-
-        .menu ul li:first-child a {
-            opacity: 0;
-
-            &:hover {
-                cursor: default;
-            }
-        }
-    }
-
 }
 
 #intro {
@@ -481,6 +471,11 @@ img {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 20px;
+
+    .entry {
+        padding: 0px;
+    }
 }
 
 #posts-wrapper {
@@ -504,6 +499,10 @@ img {
             display: flex;
             align-items: center;
 
+            @media (max-width: 900px) {
+                align-items: flex-start;
+            }
+
             &:hover {
                 color: $color-black;
 
@@ -526,15 +525,33 @@ img {
     text-align: center;
 }
 
+.post-title {
+    .title {
+        p {
+            display: inline;
+        }
+
+        @media (max-width: 900px) {
+            line-height: 1;
+            font-size: 26px;
+        }
+    }
+}
+
 .post {
     overflow: hidden;
 
     &.single {
         position: relative;
-        top: -190px;
         z-index: 5;
 
-        .post-title {
+        .header-content {
+            background: $color-yellow;
+            border-bottom: 1px solid darken($color-yellow, 20%);
+
+            @media (max-width: 900px) {
+                padding: 10px 20px 0 20px;
+            }
         }
 
         .tldt {
@@ -543,10 +560,6 @@ img {
             p {
                 font-size: 18px;
             }
-        }
-
-        .entry {
-            margin: 50px
         }
     }
 
@@ -561,7 +574,6 @@ img {
         padding: 0;
         position: relative;
         display: block;
-        height: 50px;
         overflow: hidden;
     }
 
@@ -598,7 +610,11 @@ img {
             margin-right: 0;
 
             a {
-                color: $color-black;
+                margin: 0 3px;
+
+                img {
+                    width: 20px;
+                }
             }
 
         }
@@ -614,7 +630,12 @@ img {
     }
 
     .comments {
-        margin-top: 10px;
+        max-width: 900px;
+        margin: 35px auto 0;
+
+        @media (max-width: 900px) {
+            padding: 0 20px 0 20px;
+        }
     }
 
     .read-more {
@@ -634,6 +655,7 @@ img {
 
     .entry {
         font-size: 17px;
+        padding: 50px 0 0 0;
 
         * {
             width: 100%;
@@ -643,6 +665,12 @@ img {
 
         .highlight {
             max-width: none;
+            margin: 50px 0;
+            overflow: hidden;
+        }
+
+        @media (max-width: 900px) {
+            padding: 50px 20px 0 20px;
         }
     }
 
@@ -655,13 +683,65 @@ img {
 
 .email-suscribe {
     width: 100%;
-    background: #000;
     position: relative;
 
-    div {
-        width: 900px;
+    > div {
+        max-width: 900px;
         height: 200px;
         margin: auto;
+
+        label {
+            font-size: 30px;
+            margin: 45px 0 0 0;
+            display: inline-block;
+        }
+
+        .email {
+            background: #E2C64A;
+            border: 0px;
+            font-size: 20px;
+            padding: 9px;
+            width: 100%;
+            float: left;
+        }
+
+        .email::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: #5f5f5f;
+        }
+        .email:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #5f5f5f;
+        }
+        .email::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #5f5f5f;
+        }
+        .email:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #5f5f5f;
+        }
+        .email:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+            color: #5f5f5f;
+        }
+
+        .button {
+            width: 41px;
+            height: 41px;
+            border: 0px;
+            background: url("/images/email.svg") no-repeat;
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+            background-size: 28px 28px;
+            background-color: #000;
+            background-position: 8px;
+        }
+
+        .email-container {
+            width: 310px;
+            margin: 10px auto 0;
+            position: relative;
+        }
+
+        .clear {
+        }
     }
 }
 
@@ -810,6 +890,7 @@ footer {
     text-align: center;
     background: $color-yellow;
     overflow: hidden;
+    padding: 0 0 5px 0;
 
     ul  {
         max-width: 900px;
@@ -825,7 +906,27 @@ footer {
 
             a {
                 color: #000;
-                font-size: 12px
+                font-size: 13px
+            }
+
+            a:hover {
+                color: #000;
+                text-decoration: underline; 
+            }
+        }
+
+        .twitter {
+            iframe {
+                margin: -4px
+            }
+        }
+
+        .github {
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin: -4px;
             }
         }
     }
