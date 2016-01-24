@@ -19,6 +19,26 @@
 
 # 小知识列表
 
+## #23 - 转换为数字的更快方法([原文](https://github.com/loverajoel/jstips#23---converting-to-number-fast-way))
+
+> 2016-01-23 by [@sonnyt](http://twitter.com/sonnyt)
+
+将字符串转换为数字是极为常见的。最简单和快速的方法([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29))`+`(加号) 来实现。
+
+```javascript
+var one = '1';
+
+var numberOne = +one; // Number 1
+```
+
+你也可以用`-`(减号)将其转化为负数值。
+
+```javascript
+var one = '1';
+
+var negativeNumberOne = -one; // Number -1
+```
+
 ## #22 - 清空数组([原文](https://github.com/loverajoel/jstips#22---empty-an-array))
 
 > 2016-01-22 by [microlv](https://github.com/microlv)
