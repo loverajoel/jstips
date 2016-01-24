@@ -1,0 +1,37 @@
+
+//
+// VARIABLES
+//
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500|Arvo:400,700|Cutive+Mono);
+
+// Colors
+$blue: #4183C4;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+$color-yellow: #F8DA59;
+$color-complement: #2470E0;
+$color-black: rgba(0, 0, 0, .85);
+$color-main-wrapper: #fff;
+
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+
+$mainFont: 'Roboto', Helvetica, Aria, sans-serif;
+$titleFont: 'Arvo', Georgia, serif;
+
+// Mobile breakpoints
+@mixin mobile {
+    @media screen and (max-width: 640px) {
+      @content;
+    }
+}
