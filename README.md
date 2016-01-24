@@ -37,7 +37,11 @@ var one = '1';
 
 var negativeNumberOne = -one; // Number -1
 ```
-**PS**: This is browser dependent. Above results hold true for Chrome [jsPref](https://www.dropbox.com/s/vqsyum02hmw3crh/Chrome.png?dl=0), in Safari parseInt with base argument is fastest ([jsPref](https://www.dropbox.com/home/Public?preview=Safari.png)).
+**PS**: This is browser dependent.
+* Chrome: `+'1'`, plus unary oprator is fastest. ([jsPref](https://www.dropbox.com/s/vqsyum02hmw3crh/Chrome.png?dl=0)).
+* Safari: `parseInt('1', 1)`, parseInt with base argument is fastest. ([jsPref](https://www.dropbox.com/s/gckly7oodhzymuc/Safari.png?dl=0))
+* Firefox: `'1' - 0`, minus 0 is fastest. ([jsPref](https://www.dropbox.com/s/y1wz1hqnc9igmfl/Firefox.png?dl=0))
+    
 
 ## #22 - Empty an Array
 
