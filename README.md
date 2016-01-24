@@ -27,6 +27,7 @@ There are a lot of way to get update, choose your own
 
 # Tips list
 
+- 24 - [Use === instead of ==](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-24-use_%3D%3D%3D_instead_of_%3D%3D.md)
 - 23 - [Converting to number fast way](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-23-converting-to-number-fast-way.md)
 - 22 - [Empty an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-22-two-ways-to-empty-an-array.md)
 - 21 - [Shuffle an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-21-shuffle-an-array.md)
