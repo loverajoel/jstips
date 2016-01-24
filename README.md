@@ -50,10 +50,10 @@ if(test){
 ```
 test = false;
 if(!test){
-  isFalse();    // Condition is false.
+  isFalse();    // Test is false.
 }
 
-( test || isFalse());
+( test || isFalse());  // Test is false.
 ```
 The logical OR could also be used to set a default value for function argument.
 ```
