@@ -24,8 +24,8 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster than `==`.
 ```
-[10] === 10      // is false
 [10] ==  10      // is true
+[10] === 10      // is false
 
 '10' ==  10      // is true
 '10' === 10      // is false
