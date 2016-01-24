@@ -1,0 +1,837 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: $color-main-wrapper;
+    font: {
+        family: $mainFont;
+        size: 16px;
+        weight: 300;
+    }
+    line-height: 1.6;
+    color: $darkGray;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 740px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $titleFont;
+    color: $darkerGray;
+    font-weight: 400;
+
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+h1 {
+    font-size: 30px;
+    a {
+        color: inherit;
+    }
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    color: $gray;
+}
+
+p {
+    margin: 15px 0;
+}
+
+a {
+    color: $color-complement;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover, &:active {
+        color: $color-complement;
+    }
+}
+
+ul, ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+    margin: 0;
+}
+
+ul ul, ol ul {
+    list-style-type: circle;
+}
+
+em, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+    max-width: none;
+}
+
+
+// Specify the color of the selection
+::-moz-selection {
+    color: $black;
+    background: $lightGray;
+}
+
+::selection {
+    color: $black;
+    background: $lightGray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+
+
+
+#main-wrapper {
+    width: 100%;
+    //max-width: 980px;
+    margin: 0 auto;
+    background: $color-main-wrapper;
+    position: relative;
+}
+
+#main-header {
+    width: 100%;
+    background: {
+        color: $color-yellow;
+    }
+    border-bottom: 1px solid darken($color-yellow, 20%);
+
+    height: 460px;
+    z-index: 3;
+    position: relative;
+
+
+    .background {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+
+        background: {
+            image: url(images/jstips-header-blog.gif);
+            position: center center;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+
+    &.not-first-page {
+        height: 80px;
+    }
+
+    &.is-post {
+        height: 250px;
+        background-size: cover;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+.menu-home {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto 0;
+    overflow: hidden;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+
+            a {
+                color: #000;
+                font-size: 21px;
+                font-weight: 300;
+                padding: 5px;
+                float: left;
+            }
+
+            a:hover {
+                background: #F8DA59;
+            }
+        }
+    }
+
+    hr {
+        height: 2px;
+        width: 20%;
+        border: 0;
+        background: #000;
+    }
+}
+
+.tips-nav {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+    color: $color-black;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all .05s ease;
+    background: #fff;
+    z-index: 10;
+
+    p {
+        margin: 0;
+        padding: 0 0;
+        font-size: 15px;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transition: all .5s ease;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        p {
+            opacity: 1;
+            padding: 0 10px;
+            width: 150px;
+        }
+    }
+
+    &.next-tip {
+        right: 0;
+        box-shadow: -5px 0 10px -2px rgba(0, 0, 0, 0.15);
+
+        p {
+            right: 60px;
+            justify-content: flex-end;
+        }
+    }
+
+    &.prev-tip {
+        left: 0;
+        box-shadow: 5px 0 10px -2px rgba(0, 0, 0, 0.15);
+
+        p {
+            left: 60px;
+            justify-content: flex-start;
+        }
+    }
+
+    &:hover {
+        background: darken($color-yellow, 10%);
+        transition: all .3s ease;
+        color: $color-black;
+    }
+
+
+}
+
+.twitter-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    color: transparentize($color-black, .15);
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fixed-bar {
+    top: 0;
+    left: 0;
+    height: 80px;
+    margin: 20px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;
+    border-bottom: 1px solid darken($color-yellow, 20%);
+    overflow: hidden;
+    z-index: 10;
+
+    &.visible,
+    &.is-post {
+        height: 80px;
+        width: 100%;
+
+        img {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &.is-post,
+    &.not-first-page {
+        width: 110px;
+        border-bottom: 1px solid transparent;
+
+        &.visible {
+            width: 100%;
+            border-bottom: 1px solid darken($color-yellow, 20%);
+
+            .menu ul li:first-child a {
+                opacity: 0;
+            }
+        }
+    }
+
+    &.visible {
+        .menu ul li:first-child a {
+            opacity: 0;
+        }
+    }
+
+    &.is-post:hover {
+        width: 100%;
+    }
+
+    &.not-first-page {
+        img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &:hover {
+            width: 100%;
+            background: $color-yellow;
+        }
+    }
+
+    img {
+        height: 78px;
+        opacity: 0;
+        transition: all .5s ease;
+        transform: scale(1.2);
+
+        //margin-left: 10px;
+        //box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    #background {
+        fill: $color-yellow;
+    }
+
+    .logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        a {
+            width: 78px;
+            display: flex;
+        }
+    }
+
+    .menu {
+        height: 78px;
+
+        ul {
+            height: 78px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            li {
+                &:first-child {
+                    margin: 10px;
+
+                    a {
+                        padding: 0;
+                    }
+                }
+
+                a {
+                    color: $color-black;
+                    text-transform: uppercase;
+                    padding: 15px 25px;
+                    background: transparent;
+                    transition: all .3s ease;
+                    white-space: nowrap;
+
+                    &:hover {
+                        background: darken($color-yellow, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background: $color-yellow;
+
+        .menu ul li:first-child a {
+            opacity: 0;
+
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+
+}
+
+#intro {
+    position: relative;
+    top: -108px;
+    z-index: 3;
+
+    h1 {
+        margin-bottom: 30px;
+        font-weight: bold;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+        font-size: 40px;
+        margin-top: 0;
+        line-height: initial;
+        padding: 3px 0 26px 0;
+    }
+}
+
+#posts-wrapper-home {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#posts-wrapper {
+    width: 100%;
+}
+
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+
+.posts {
+    > .post {
+    margin: 50px 0;
+
+    .post-title {
+        a {
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: $color-black;
+
+                .tip-number {
+                    color: $color-yellow;
+                }
+            }
+        }
+    }
+}
+
+}
+
+.the-tips {
+    font: {
+        weight: bold;
+        size: 40px;
+    }
+
+    text-align: center;
+}
+
+.post {
+    overflow: hidden;
+
+    &.single {
+        position: relative;
+        top: -190px;
+        z-index: 5;
+
+        .post-title {
+        }
+
+        .tldt {
+            margin: 23px auto;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .entry {
+            margin: 50px
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 40px;
+    }
+
+    .post-title {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        display: block;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .tip-number {
+        background: $color-black;
+        color: #fff;
+        padding: 0 10px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .meta-info {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+
+        .meta-item {
+            margin-right: 20px;
+            padding: 10px 0;
+            font-size: 12px;
+
+            i {
+                margin-right: 3px;
+            }
+        }
+
+        .share {
+            color: $color-black;
+            text-transform: uppercase;
+            text-align: right;
+            flex: 1;
+            margin-right: 0;
+
+            a {
+                color: $color-black;
+            }
+
+        }
+    }
+
+    blockquote {
+        margin: 1.8em .8em;
+        border-left: 2px solid $gray;
+        padding: 0.1em 1em;
+        color: $gray;
+        font-size: 22px;
+        font-style: italic;
+    }
+
+    .comments {
+        margin-top: 10px;
+    }
+
+    .read-more {
+        text-transform: uppercase;
+        font-size: 15px;
+        background: $color-yellow;
+        color: $color-black;
+        padding: 10px 17px;
+        display: inline-block;
+        float: right;
+        transition: all .05s ease;
+
+        &:hover {
+            background: darken($color-yellow, 10%);
+        }
+    }
+
+    .entry {
+        font-size: 17px;
+
+        * {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .highlight {
+            max-width: none;
+        }
+    }
+
+    .tldt {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+.email-suscribe {
+    width: 100%;
+    background: #000;
+    position: relative;
+
+    div {
+        width: 900px;
+        height: 200px;
+        margin: auto;
+    }
+}
+
+#paginator-wrapper {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        li {
+            display: block;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            line-height: 35px;
+            background: $color-yellow;
+            margin: 0 10px 0 0;
+
+            &.current {
+                transform: scale(1.2);
+            }
+
+            a {
+                background: $color-black;
+                color: #fff;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+    margin-bottom: 50px;
+}
+
+.masthead {
+    padding: 20px 0;
+    border-bottom: 1px solid $lightGray;
+
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.site-avatar {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+
+    @include mobile {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+.site-info {
+    float: left;
+
+    @include mobile {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.site-name {
+    margin: 0;
+    color: $darkGray;
+    cursor: pointer;
+    font-family: $titleFont;
+    font-weight: 300;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.site-description {
+    margin: -5px 0 0 0;
+    color: $gray;
+    font-size: 16px;
+
+    @include mobile {
+        margin: 3px 0;
+    }
+}
+
+nav {
+    float: right;
+    margin-top: 23px; // @TODO: Vertically middle align
+    font-family: $titleFont;
+    font-size: 18px;
+
+    @include mobile {
+        float: none;
+        margin-top: 9px;
+        display: block;
+        font-size: 16px;
+    }
+
+    a {
+        margin-left: 20px;
+        color: $darkGray;
+        text-align: right;
+        font-weight: 300;
+        letter-spacing: 1px;
+
+        @include mobile {
+            margin: 0 10px;
+            color: $blue;
+        }
+    }
+}
+
+//
+// .main
+//
+
+.wrapper-footer {
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: $lightGray;
+}
+
+footer {
+    margin: 50px 0 0 0;
+    text-align: center;
+    background: $color-yellow;
+    overflow: hidden;
+
+    ul  {
+        max-width: 900px;
+        width: 100%;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0px;
+        text-align: center;
+
+        li {
+            display: inline;
+            margin: 0 10px;
+
+            a {
+                color: #000;
+                font-size: 12px
+            }
+        }
+    }
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";

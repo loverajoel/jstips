@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="post single">
+        <h1 class="post-title">
+            <span class="tip-number">{{ page.tipNumber }}</span>
+            {{ page.title }}
+        </h1>
+
+        <div class="tldt">
+            <p>{{ page.tipTlDt }}</p>
+        </div>
+
+        <div class="meta-info">
+            <time class="date meta-item" datetime="{{ page.date }}"><i class="fa fa-calendar"></i> {{ page.date | date_to_string }}</time>
+
+            <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ page.tipContributorUrl }}" target="_blank"> @{{ page.tipContributorUser }}</a></div>
+
+            <div class="share meta-item"><a href="javascript:"><i class="fa fa-share-alt"></i> Share tip</a></div>
+
+        </div>
+
+        <div class="entry">
+            {{ content }}
+        </div>
+
+        {% include disqus.html %}
+</article>
