@@ -1,4 +1,4 @@
-![header](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
+![header](https://raw.githubusercontent.com/loverajoel/jstips/gh-pages/resources/jstips-header-blog.gif)
 
 # Introducing JavaScript Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 > New year, new project. **A JS tip per day!**
@@ -10,7 +10,7 @@ At midday, no matter if it is a weekend or a holiday, a tip will be posted and t
 ### Can you help us enrich it?
 Please feel free to send us a PR with your own JavaScript tip to be published here.
 Any improvements or suggestions are more than welcome!
-[Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
+[Click to see the instructions](https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md)
 
 ### Let’s keep in touch
 
