@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: *post
 
 title: Demo post
 tip-number: 01
