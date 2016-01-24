@@ -2,7 +2,7 @@
 layout: post
 
 title: AngularJs - `$digest` vs `$apply`
-tip-number: 02
+tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
