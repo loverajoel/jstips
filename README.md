@@ -58,13 +58,13 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 ## #04 - [Sorting strings with accented characters](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-04-sorting-strings-with-accented-characters.md)
 
-## #03 - [Improve Nested Conditionals](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-03-keys-in-children-components-are-important.md)
+## #03 - [Improve Nested Conditionals](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-03-improve-nested-conditionals.md)
 
-## #02 - [ReactJs - Keys in children components are important](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-02-angularjs-digest-vs-apply.md)
+## #02 - [ReactJs - Keys in children components are important](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-02-keys-in-children-components-are-important.md)
 
-## #1 - [AngularJs: `$digest` vs `$apply`](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-01-insert-item-inside-an-array.md)
+## #1 - [AngularJs: `$digest` vs `$apply`](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-01-01-angularjs-digest-vs-apply.md)
 
-## #0 - [Insert item inside an Array]()
+## #0 - [Insert item inside an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2014-12-29-insert-item-inside-an-array.md)
 
 ### License
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
