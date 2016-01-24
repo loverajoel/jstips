@@ -18,11 +18,11 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
-## #00 - [Short-circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) in JS.
+## #00 - Short-circuit evaluation in JS.
 
 > 2016-01-23 by [@bhaskarmelkani](http://twitter.com/bhaskarmelkani)
 
-It says, when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR(`||`) function evaluates to true, the overall value must be true.
+[Short-circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR(`||`) function evaluates to true, the overall value must be true.
 
 For the following `test` condition and `foo` function.
 ```
