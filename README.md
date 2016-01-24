@@ -22,9 +22,9 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > 2016-01-23 by [@bhaskarmelkani](http://twitter.com/bhaskarmelkani)
 
-[Short-circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR(`||`) function evaluates to true, the overall value must be true.
+[Short-circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR (`||`) function evaluates to true, the overall value must be true.
 
-For the following `test` condition and `foo` function.
+For the following `test` condition and `isTrue` and `isFalse` function.
 ```
 var test = true;
 var isTrue = function(){
@@ -59,10 +59,10 @@ The logical OR could also be used to set a default value for function argument.
 ```
 function theSameOldFoo(name){ 
     name = name || 'Bar' ;
-    console.log('My best friends name is ' + name);
+    console.log('My best friend's name is ' + name);
 }
-theSameOldFoo();  // My best friends name is Bar
-theSameOldFoo('Bhaskar');  // My best friends name is Bhaskar
+theSameOldFoo();  // My best friend's name is Bar
+theSameOldFoo('Bhaskar');  // My best friend's name is Bhaskar
 ```
 
 
