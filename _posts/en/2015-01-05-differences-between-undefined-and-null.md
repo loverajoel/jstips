@@ -5,7 +5,7 @@ title: Differences between `undefined` and `null`
 tip-number: 05
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: Understanding the differences between undefined and null.
+tip-tldr: Understanding the differences between `undefined` and `null`.
 
 categories:
     - en

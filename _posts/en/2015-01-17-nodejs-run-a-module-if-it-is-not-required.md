@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: Node.js - Run a module if it is not "required"
+title: Node.js - Run a module if it is not `required`
 tip-number: 17
 tip-username: odsdq
 tip-username-profile: https://twitter.com/odsdq
-tip-tldr: In node, you can tell your program to do two different things depending on whether the code is run from require('./something.js') or node something.js.  This is useful if you want to interact with one of your modules independently.
+tip-tldr: In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`. This is useful if you want to interact with one of your modules independently.
 
 categories:
     - en

@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Even simpler way of using indexOf as a contains clause
+title: Even simpler way of using `indexOf` as a contains clause
 tip-number: 15
 tip-username: jhogoforbroke
 tip-username-profile: https://twitter.com/jhogoforbroke

@@ -5,7 +5,7 @@ title: Rounding the fast way
 tip-number: 18
 tip-username: pklinger
 tip-username-profile: https://github.com/pklinger
-tip-tldr: Today's tip is about performance. Ever came across the double tilde ~~ operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for Math.floor(). Why is that?
+tip-tldr: Today's tip is about performance. Ever came across the double tilde `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
 
 categories:
     - en
