@@ -37,6 +37,7 @@ var one = '1';
 
 var negativeNumberOne = -one; // Number -1
 ```
+**PS**: This is browser dependent. Above results hold true for Chrome [jsPref](https://www.dropbox.com/s/vqsyum02hmw3crh/Chrome.png?dl=0), in Safari parseInt with base argument is fastest ([jsPref](https://www.dropbox.com/home/Public?preview=Safari.png)).
 
 ## #22 - Empty an Array
 
