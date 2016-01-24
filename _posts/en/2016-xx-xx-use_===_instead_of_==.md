@@ -5,7 +5,7 @@ title: Use === instead of ==.
 tip-number: xx
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: === strictil compares and checks type with value.
+tip-tldr: === comparision in safe and faster.
 
 categories:
     - en
