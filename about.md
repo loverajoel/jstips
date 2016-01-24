@@ -16,10 +16,19 @@ Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ### Let’s keep in touch
-To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js), only one tweet will be sent per day. It is a deal!
+
+There are a lot of way to get update, choose your own
+
+- [Officail Blog](http://www.jstips.co)
+- [Official Twitter Account](https://twitter.com/tips_js)
+- [Hubot](https://github.com/dggriffin/hubot-jstips)
+- [js2016.tips](http://js2016.tips/)
+- [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
+- [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
+
 > Don't forget to Star the repo, as this will help to promote the project!
 
-### 
+### Gratefulness
 
-- GIF's => Maxi Albella
-- Theme => Marcos Cosimi
+- GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
+- JS Tips Theme => [Marcos Cosimi](https://github.com/markoscc)
