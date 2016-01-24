@@ -18,6 +18,23 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 # Tips list
 
+## #00 - Use `===` instead of `==`.
+
+> yyy-mm-dd by [@bhaskarmelkani](http://twitter.com/bhaskarmelkani)
+
+The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster than `==`.
+```
+[10] === 10      // is false
+[10] ==  10      // is true
+'10' ==  10      // is true
+'10' === 10      // is false
+ []  ==  0       // is true
+ []  === 0       // is false
+ ''  ==  false   // is true but true == "a" is false
+ ''  === false   // is false 
+
+```
+
 ## #23 - Converting to number fast way
 
 > 2016-01-23 by [@sonnyt](http://twitter.com/sonnyt)
