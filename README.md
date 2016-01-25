@@ -21,8 +21,7 @@ To get updates, watch the repo and follow the [Twitter account](https://twitter.
 
 > 2016-01- by [@beyondns](https://github.com/beyondns)
 
-When you develop extensions to existent sites it's not so easy to play with DOM
-'cause of modern dynamic javascript. [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver) is a solution to listen DOM changes and do what you whant to do with elements when they changed (added new ones, etc.). Follow this example:
+When you develop extensions to existent sites it's not so easy to play with DOM 'cause of modern dynamic javascript. [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver) is a solution to listen DOM changes and do what you whant to do with elements when they changed (added new ones, etc.). Follow this example:
 
 ```javascript
 const observeConfig = {
