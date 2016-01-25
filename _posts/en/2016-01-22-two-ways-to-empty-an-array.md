@@ -41,7 +41,7 @@ which means that references to the contents of the previous array are still kept
 
 * `list.length = 0` deletes everything in the array, which does hit other references.
 
-However, if you have a copy of the array (A and Copy-A), if you delete its contents using `list.length = 0`, the copy will also lose its contents.
+However, if you have a copy of the array (e.g. `list` and `listCopy`), if you delete the `list`'s contents using `list.length = 0`, the copy is not affected and therefore still contains it's original values.
 
 Think about what will output:
 
