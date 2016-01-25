@@ -41,9 +41,9 @@ which means that references to the contents of the previous array are still kept
 
 * `list.length = 0` deletes everything in the array, which does hit other references.
 
-However, if you have a copy of the array (A and Copy-A), if you delete its contents using `list.length = 0`, the copy will also lose its contents.
+In other words, if you have two references to the same array (`a = [1,2,3]; a2 = a;`), and you delete the array's contents using `list.length = 0`, both references (a and a2) will now point to the same empty array. (So don't use this technique if you don't want a2 to hold an empty array!)
 
-Think about what will output:
+Think about what this will output:
 
 ```js
 var foo = [1,2,3];
