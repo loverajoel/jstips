@@ -4,7 +4,7 @@ layout: post
 title: Improve Nested Conditionals
 tip-number: 03
 tip-username: AlbertoFuente 
-tip-username-profile: https://github.com/AlbertoFuente)
+tip-username-profile: https://github.com/AlbertoFuente
 tip-tldr: How can we improve and make a more efficient nested `if` statement in javascript?
 
 categories:
