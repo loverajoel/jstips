@@ -38,3 +38,6 @@ someNamedFunction ("Javascript rocks !!"); // Output --> Javascript rocks !!
 someNamedFunction (); // Output --> Nothing for today !!​
 ```
 
+For more details, check the following URL's - 
+1. [Link 1](https://blog.mariusschulz.com/2016/01/13/disassembling-javascripts-iife-syntax) 
+2. [Link 2](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/) 
