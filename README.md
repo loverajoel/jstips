@@ -42,7 +42,7 @@ There are a lot of way to get update, choose your own
 - 13 - [Tip to measure performance of a javascript block](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-13-tip-to-measure-performance-of-a-javascript-block.md)
 - 12 - [Pseudomandatory parameters in ES6 functions #ES6](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-12-pseudomandatory-parameters-in-es6-functions.md)
 - 11 - [Hoisting](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-11-hoisting.md)
-- 10 - [Check if a property is in a Object](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-10-check-if-a-property-is-in-a-object.md)
+- 10 - [Check if a property is in an Object](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-10-check-if-a-property-is-in-a-object.md)
 - 09 - [Template Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-09-template-strings.md)
 - 08 - [Converting a Node List to an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-08-converting-a-node-list-to-an-array.md)
 - 07 - ["use strict" and get lazy](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-07-use-strict-and-get-lazy.md)
