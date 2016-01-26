@@ -21,7 +21,9 @@ function callback() {
 document.getElementById('someelem').addEventListener('click', callback);
 
 ```
+
 You can take advantage of the closure scope in Javascript to pass arguments to callback functions. Check this example:
+
 ```js
 function callback(a, b) {
   return function() {
@@ -31,6 +33,7 @@ function callback(a, b) {
 
 var x = 1, y = 2;
 document.getElementById('someelem').addEventListener('click', callback(x, y));
+
 ```
 
 ### What are closures?
