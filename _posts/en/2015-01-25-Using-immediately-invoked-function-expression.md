@@ -30,7 +30,7 @@ The pair of parenthesis surrounding the anonymous function turns the anonymous f
 Similarly, we can even create a named, immediately invoked function expression:
 
 ```javascript
-(someNamedFunction = function (msg) {
+(someNamedFunction= function (msg) {
 	console.log(msg || "Nothing for today !!")
 	}) (); // Output --> Nothing for today !!​
 ​
