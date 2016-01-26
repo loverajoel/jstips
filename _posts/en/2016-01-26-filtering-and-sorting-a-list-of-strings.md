@@ -2,7 +2,7 @@
 layout: post
 
 title: Filtering and Sorting a List of Strings
-tip-number: 25
+tip-number: 26
 tip-username: davegomez
 tip-username-profile: https://github.com/davegomez
 tip-tldr: You may have a big list of names you need to filter in order to remove duplicates and sort them alphabetically.
