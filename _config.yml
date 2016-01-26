@@ -114,14 +114,14 @@ transl:
         txt: Home
         link: /it
       about: 
-        txt: About
+        txt: Su di noi
         link: /it/about
       subscribe: 
-        txt: Subscribe
+        txt: Iscriviti
       submit_your_tip:
-        txt: Submit your tip
+        txt: Invia un tuo tip
         link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
-    footer_subscribe_message: Subscribe to more awesome daily tips!
-    footer_placeholder_subscribe: your@email.com
-    arrow_prev: Previous Tip
-    arrow_next: Next Tip
+    footer_subscribe_message: Iscriviti per ricevere giornalmente altri fantastici tips!
+    footer_placeholder_subscribe: vostraemail@email.it
+    arrow_prev: Tip Precedente
+    arrow_next: Prossimo Tip

@@ -1,36 +1,37 @@
 ---
 layout: page
-title: Introducing JavaScript Tips
+title: Introducendo JavaScript Tips
 permalink: it/about/
 lang: it
 ---
 
-> New year, new project. **A JS tip per day!**
+> Un nuovo anno, un nuovo progetto. **Un JS tip al giorno!**
 
-With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+Con grande entusiasmo, Vi introduco questi piccoli e utili JavaScript tips giornalieri che vi permetteranno di migliorare la vostra abilità nella scrivere codici.
+Con meno di 2 minuti al giorno, potrai leggere a riguardo di prestazioni, convenzioni, hacks, interviste e tutto il resto che questo fantastico linguaggio ha in serbo per noi.
 
-At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
+Non importa che sia un fine settimana o festa, a metà giornata un tip verrà postato e twittato.
 
-### Can you help us enrich it?
-Please feel free to send us a PR with your own JavaScript tip to be published here.
-Any improvements or suggestions are more than welcome!
-[Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
+### Volete aiutarci a migliorare?
+Sentitevi liberi di mandarci una PR (pull request) con il vostro personale JavaScript tip che volete pubblicare qui.
+Suggerimenti e miglioramenti sono ben accetti!
+[Clicca qui per vedere come fare](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
-### Let’s keep in touch
+### Restiamo in contatto
 
-There are a lot of way to get update, choose your own
+Abbiamo molti modi per rimanere in contatto, scegliete quello che preferite
 
-- [Officail Blog](http://www.jstips.co)
-- [Official Twitter Account](https://twitter.com/tips_js)
+- [Blog Ufficiale](http://www.jstips.co)
+- [Account Twitter Ufficiale](https://twitter.com/tips_js)
 - [Hubot](https://github.com/dggriffin/hubot-jstips)
 - [js2016.tips](http://js2016.tips/)
 - [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
 - [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
 
-> Don't forget to Star the repo, as this will help to promote the project!
+> Non dimenticatevi di inviare una Star al nostro repository, questo ci aiuterà a promuovere il progetto!
 
-### Gratefulness
+### Ringraziamenti
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Marcos Cosimi](https://github.com/markoscc)
-- Languages flags => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
+- Tema JS Tips => [Marcos Cosimi](https://github.com/markoscc)
+- Bandiere lingua => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
