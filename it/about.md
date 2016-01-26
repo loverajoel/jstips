@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Introducing JavaScript Tips
-permalink: /about/
-lang: en
+permalink: it/about/
+lang: it
 ---
 
 > New year, new project. **A JS tip per day!**

@@ -25,11 +25,11 @@ defaults:
       is_post: true
   -
     scope:
-      path: _posts/es
+      path: _posts/it
       type: posts
     values:
       layout: default
-      lang: es
+      lang: it
       is_post: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -80,3 +80,48 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
+
+# languages var
+languages:
+  - 
+    name: en
+    link: /
+  - 
+    name: it
+    link: /it
+
+transl:
+  en:
+    menu:
+      home: 
+        txt: Home
+        link: /
+      about: 
+        txt: About
+        link: /about
+      subscribe: 
+        txt: Subscribe
+      submit_your_tip:
+        txt: Submit your tip
+        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+    footer_subscribe_message: Subscribe to more awesome daily tips!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: Previous Tip
+    arrow_next: Next Tip
+  it:
+    menu:
+      home: 
+        txt: Home
+        link: /it
+      about: 
+        txt: About
+        link: /it/about
+      subscribe: 
+        txt: Subscribe
+      submit_your_tip:
+        txt: Submit your tip
+        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+    footer_subscribe_message: Subscribe to more awesome daily tips!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: Previous Tip
+    arrow_next: Next Tip
