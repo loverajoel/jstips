@@ -1,19 +1,3 @@
----
-layout: post
-
-title: Assignment Shorthands
-tip-number: 25
-tip-username: hsleonis
-tip-username-profile: https://github.com/hsleonis
-tip-tldr: Simple shorthands to make code cleaner and simpler.
-
-categories:
-    - en
----
-
-## Assignment Shorthands
-## Simple shorthands to make code cleaner and simpler.
-
 #### Assignment Operators ####
 Assigning is very common. Sometimes typing becomes time consuming for us 'Lazy programmers'.
 So, we can use some tricks to help us and make our code cleaner and simpler.
@@ -94,8 +78,3 @@ var skillSet = {
     'Styling language' : 'CSS3'
 };
 ````
-
-## Username
-Here I am: [@hsleonis](https://github.com/hsleonis)]
-## Website
-You can see a cool animation by me: [ThemeAxe.com](http://www.themeaxe.com)]
