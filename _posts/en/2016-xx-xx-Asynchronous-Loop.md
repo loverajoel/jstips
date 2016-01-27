@@ -1,0 +1,77 @@
+---
+layout: post
+
+title: Implementing asynchronous loop
+tip-number: xx
+tip-username: madmantalking
+tip-username-profile: https://github.com/madmantalking
+tip-tldr: You may run into problems while implementing asynchronus loops. 
+
+categories:
+    - en
+---
+
+Let's try out writing an asynchronus function which prints the value of loop index every second.
+
+```js
+for (var i=0; i<5; i++) {
+	setTimeout(function(){
+		console.log(i); 
+	}, 1000);
+}  
+```
+The output for the above programs turns out to be
+```js
+> 5
+> 5
+> 5
+> 5
+> 5
+```
+So this definately does't work.
+
+**Reason**
+
+Each timeout refers to the original *i*, not a copy. So the for loop increments *i* until it gets to 5, then the timeouts run and use the current value of *i* (which is 5).
+
+Well this problem seems easy. An immediate solution that strikes is to cache the loop index in a temprory variable.
+
+```js
+for (var i=0; i<5; i++) {
+	var temp = i;
+ 	setTimeout(function(){
+		console.log(i); 
+	}, 1000);
+}  
+```
+But again the output for the above programs turns out to be
+```js
+> 5
+> 5
+> 5
+> 5
+> 5
+```
+But that doesn't work either ,ecause blocks don't create a scope and variables initializers are hoisted to the top of the scope. In fact, the previous block is the same as:
+```js
+var temp;
+for (var i=0; i<5; i++) {
+ 	temp = i;
+	setTimeout(function(){
+		console.log(i); 
+  	}, 1000);
+}  
+```
+**Solution**
+
+There are a few different ways to copy *i*. The most common way is creating a closure by declaring a function and passing *i* as an argument. Here we do this as a self-calling function.
+```js
+for (var i=0; i<5; i++) {
+	(function(num){
+		setTimeout(function(){
+			console.log(num); 
+		}, 1000); 
+	})(i);  
+}  
+```
+In JavaScript, arguments are passed by value to a function. So primitive types like numbers, dates, and strings are basically copied. If you change them inside the function, it does not affect the outside scope. Objects are special: if the inside function changes a property, the change is reflected in all scopes.
