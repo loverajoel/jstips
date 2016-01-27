@@ -5,13 +5,13 @@ title: Implementing asynchronous loop
 tip-number: xx
 tip-username: madmantalking
 tip-username-profile: https://github.com/madmantalking
-tip-tldr: You may run into problems while implementing asynchronus loops. 
+tip-tldr: You may run into problems while implementing asynchronous loops. 
 
 categories:
     - en
 ---
 
-Let's try out writing an asynchronus function which prints the value of loop index every second.
+Let's try out writing an asynchronous function which prints the value of loop index every second.
 
 ```js
 for (var i=0; i<5; i++) {
