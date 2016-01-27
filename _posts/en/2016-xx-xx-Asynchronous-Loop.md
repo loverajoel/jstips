@@ -52,7 +52,7 @@ But again the output for the above programs turns out to be
 > 5
 > 5
 ```
-But that doesn't work either ,ecause blocks don't create a scope and variables initializers are hoisted to the top of the scope. In fact, the previous block is the same as:
+But that doesn't work either ,because blocks don't create a scope and variables initializers are hoisted to the top of the scope. In fact, the previous block is the same as:
 ```js
 var temp;
 for (var i=0; i<5; i++) {
