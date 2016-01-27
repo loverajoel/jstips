@@ -2,7 +2,7 @@
 layout: post
 
 title: Short circuit evaluation in JS.
-tip-number: xx
+tip-number: 27
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
 tip-tldr: Use logical AND (&&), OR (||) for conditions.
