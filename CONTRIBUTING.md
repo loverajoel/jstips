@@ -1,6 +1,6 @@
 # How to submit your tip
 
-To submit a tip to the list, fork the repository and add your tip to a new file in the correct folder (according lenguage).  The name of the file should be `2015-xx-xx-name-of-your-tip`.
+To submit a tip to the list, fork the repository and add your tip to a new file in the correct folder (according language).  The name of the file should be `2016-xx-xx-name-of-your-tip`.
 
 Use [this format](https://github.com/loverajoel/jstips/blob/gh-pages/POST_TEMPLATE.md) when writing your tip. Your tip should be readable in less than two minutes. You may add links to other sites or videos that give more insight if you wish.
 
