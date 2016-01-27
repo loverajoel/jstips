@@ -17,11 +17,11 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 defaults:
   -
     scope:
-      path: _posts/zh_CN
+      path: _posts/en
       type: posts
     values:
       layout: default
-      lang: zh_CN
+      lang: en
       is_post: true
   -
     scope:
@@ -30,6 +30,14 @@ defaults:
     values:
       layout: default
       lang: it
+      is_post: true
+  -
+    scope:
+      path: _posts/zh_CN
+      type: posts
+    values:
+      layout: default
+      lang: zh_CN
       is_post: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -90,8 +98,9 @@ languages:
     name: it
     link: /it
   - 
-    name: 中文
+    name: zh_CN
     link: /zh_CN
+    
 transl:
   en:
     menu:
