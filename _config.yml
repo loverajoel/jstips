@@ -17,11 +17,11 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 defaults:
   -
     scope:
-      path: _posts/en
+      path: _posts/zh_CN
       type: posts
     values:
       layout: default
-      lang: en
+      lang: zh_CN
       is_post: true
   -
     scope:
@@ -89,7 +89,9 @@ languages:
   - 
     name: it
     link: /it
-
+  - 
+    name: 中文
+    link: /zh_CN
 transl:
   en:
     menu:
@@ -125,3 +127,20 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: Previous Tip
     arrow_next: Next Tip
+  zh_CN:
+    menu:
+      home: 
+        txt: 主页
+        link: /zh_CN
+      about: 
+        txt: 关于
+        link: /zh_CN/about
+      subscribe: 
+        txt: 订阅
+      submit_your_tip:
+        txt: 提交小知识
+        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+    footer_subscribe_message: 订阅，每条获取一条小知识!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: 上一条
+    arrow_next: 下一条
