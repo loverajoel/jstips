@@ -5,7 +5,7 @@ title: Short circuit evaluation in JS.
 tip-number: 27
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: Use logical AND (&&), OR (||) for conditions.
+tip-tldr: Short-circuit evaluation says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR (`||`) function evaluates to true, the overall value must be true.
 
 categories:
     - en
@@ -14,7 +14,8 @@ categories:
 [Short-circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR (`||`) function evaluates to true, the overall value must be true.
 
 For the following `test` condition and `isTrue` and `isFalse` function.
-```
+
+```js
 var test = true;
 var isTrue = function(){
   console.log('Test is true.');
@@ -25,7 +26,8 @@ var isFalse = function(){
 
 ```
 * Using logical AND - `&&`.
-```
+
+```js
 // A normal if statement.
 if(test){
   isTrue();    // Test is true
@@ -36,7 +38,8 @@ if(test){
 ( test && isTrue() );  // Test is true
 ```
 * Using logical OR - `||`.
-```
+
+```js
 test = false;
 if(!test){
   isFalse();    // Test is false.
@@ -45,7 +48,8 @@ if(!test){
 ( test || isFalse());  // Test is false.
 ```
 The logical OR could also be used to set a default value for function argument.
-```
+
+```js
 function theSameOldFoo(name){ 
     name = name || 'Bar' ;
     console.log('My best friend's name is ' + name);
@@ -55,7 +59,8 @@ theSameOldFoo('Bhaskar');  // My best friend's name is Bhaskar
 ```
 The logical AND could be used to avoid exceptions when using properties of undefined.
 Example:-
-```
+
+```js
 var dog = { 
   bark: function(){
      console.log('Woof Woof');
