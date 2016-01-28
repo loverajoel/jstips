@@ -25,28 +25,35 @@ There are a lot of way to get update, choose your own
 
 > Don't forget to Star the repo, as this will help to promote the project!
 
-# Tips list
+# Tips List
 
 - [27-Short circuit evaluation in JS.](#27-short-circuit-evaluation-in-js)
 - [26-Filtering and Sorting a List of Strings](#26-filtering-and-sorting-a-list-of-strings)
 - [25-Using immediately invoked function expression](#25-using-immediately-invoked-function-expression)
-- [24-Use === instead of ==](#24-use--instead-of-)
+- [24-Use === instead of ==](#24-use-instead-of)
 - [23-Converting to number fast way](#23-converting-to-number-fast-way)
 - [22-Two ways to empty an array](#22-two-ways-to-empty-an-array)
 - [21-Shuffle an Array](#21-shuffle-an-array)
 - [20-Return objects to enable chaining of functions](#20-return-objects-to-enable-chaining-of-functions)
 - [19-Safe string concatenation](#19-safe-string-concatenation)
 - [18-Rounding the fast way](#18-rounding-the-fast-way)
-- [17-Node.js - Run a module if it is not `required`](#17-nodejs---run-a-module-if-it-is-not-required)
+- [17-Node.js - Run a module if it is not `required`](#17-nodejs-run-a-module-if-it-is-not-required)
 - [16-Passing arguments to callback functions](#16-passing-arguments-to-callback-functions)
 - [15-Even simpler way of using `indexOf` as a contains clause](#15-even-simpler-way-of-using-indexof-as-a-contains-clause)
 - [14-Fat Arrow Functions](#14-fat-arrow-functions)
 - [13-Tip to measure performance of a javascript block](#13-tip-to-measure-performance-of-a-javascript-block)
 - [12-Pseudomandatory parameters in ES6 functions](#12-pseudomandatory-parameters-in-es6-functions)
+- [11-Hoisting](#11-hoisting)
+- [10-Check if a property is in a Object](#10-check-if-a-property-is-in-a-object)
+- [09-Template Strings](#09-template-strings)
+- [08-Converting a Node List to an Array](#08-converting-a-node-list-to-an-array)
+- [07-use strict and get lazy](#07-use-strict-and-get-lazy)
+- [06-Writing a single method for arrays and a single element](#06-writing-a-single-method-for-arrays-and-a-single-element)
+- [05-Differences between `undefined` and `null`](#05-differences-between-undefined-and-null)
 - [04-Sorting strings with accented characters](#04-sorting-strings-with-accented-characters)
 - [03-Improve Nested Conditionals](#03-improve-nested-conditionals)
 - [02-Keys in children components are important](#02-keys-in-children-components-are-important)
-- [01-AngularJs - `$digest` vs `$apply`](#01-angularjs---digest-vs-apply)
+- [01-AngularJs - `$digest` vs `$apply`](#01-angularjs-digest-vs-apply)
 - [00-Insert item inside an Array](#00-insert-item-inside-an-array)
 
 ### 27-Short circuit evaluation in JS.
@@ -815,8 +822,7 @@ You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-templ
 
 [⬆ To The Top](#tips-list)
 
-### Day-08
-**Converting a Node List to an Array**
+### 08-Converting a Node List to an Array
 
 The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `forEach`. Here's a quick, safe, and reusable way to convert a node list into an array of DOM elements:
 
