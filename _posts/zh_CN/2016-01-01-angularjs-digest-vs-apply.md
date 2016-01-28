@@ -8,24 +8,22 @@ tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
 
 categories:
-    - en
+    - zh_CN
 ---
 
-One of the most appreciated features of AngularJs is the two-way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
+AngularJs最令人欣赏的特性之一就是双向数据绑定。AngularJs通过循环(`$digest`)检查model和view的变化实现此功能。想要理解框架底层的运行机制你需要理解这个概念。
 
-Angular evaluates each watcher whenever one event is fired. This is the known `$digest` cycle.
-Sometimes you have to force it to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
+当一个事件被触发时，Angular触发每个watcher. 这是我们已知的`$digest`循环。有时你需要强制它首都内运行一个新的循环，而且因为这是最影响性能的一方面，你必须选择一个正确的选项。
 
 ### `$apply`
-This core method lets you to start the digestion cycle explicitly. That means that all watchers are checked; the entire application starts the `$digest loop`. Internally, after executing an optional function parameter, it calls `$rootScope.$digest();`.
+这个核心方法可以让你显示的启动`digest`循环。这意味着所有的watcher将会被检测；整个应用启动`$digest loop`在内部, 之后会执行一个可选的方法，之后会调用`$rootScope.$digest();`.
 
 ### `$digest`
-In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parent's scopes will not be checked.
- and not be affected.
+这种情况下`$digest`方法在当前作用域和它的子项启动`$digest`循环。你需要注意他的父作用域将不会被检测也不会被影响。
 
-### Recommendations
-- Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
-- Pass a function expression to `$apply`, this has an error handling mechanism and allows integrating changes in the digest cycle.
+### 推荐
+- 仅当浏览器DOM事件在AngularJS之外被出发时使用`$apply`或`$digest`。
+- 给`$apply`传递方法，它将包含错误处理机制而且允许整合在`digest`循环里的变化。
 
 ```javascript
 $scope.$apply(() => {
@@ -33,6 +31,6 @@ $scope.$apply(() => {
 });
 ```
 
-- If you only need to update the current scope or its children, use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit is self-evident.
-- `$apply()` is a hard process for the machine and can lead to performance issues when there is a lot of binding.
-- If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
+- 如果你急需要更新当前的作用域或者它的子项的话，使用`$digest`，而且要防止在整个应用里运行新的`digest`循环。这在性能上的好处是显而易见的。
+- `$apply()`对机器来说是一个困难的处理过程，在绑定过多的时候可能会引发性能问题。
+- 如果你正使用`>AngularJS 1.2.X`版本，使用`$evalAsync`, 这个方法将在当前循环或下一个循环执行表达式，这能提高你的应用的性能。
