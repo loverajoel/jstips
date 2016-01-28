@@ -37,7 +37,7 @@ There are a lot of way to get update, choose your own
 - [20-Return objects to enable chaining of functions](#20-return-objects-to-enable-chaining-of-functions)
 - [19-Safe string concatenation](#19-safe-string-concatenation)
 - [18-Rounding the fast way](#18-rounding-the-fast-way)
-- [17-Node.js - Run a module if it is not `required`](#17-nodejs-run-a-module-if-it-is-not-required)
+- [17-Node.js - Run a module if it is not `required`](#17-nodejs---run-a-module-if-it-is-not-required)
 - [16-Passing arguments to callback functions](#16-passing-arguments-to-callback-functions)
 - [15-Even simpler way of using `indexOf` as a contains clause](#15-even-simpler-way-of-using-indexof-as-a-contains-clause)
 - [14-Fat Arrow Functions](#14-fat-arrow-functions)
@@ -53,7 +53,7 @@ There are a lot of way to get update, choose your own
 - [04-Sorting strings with accented characters](#04-sorting-strings-with-accented-characters)
 - [03-Improve Nested Conditionals](#03-improve-nested-conditionals)
 - [02-Keys in children components are important](#02-keys-in-children-components-are-important)
-- [01-AngularJs - `$digest` vs `$apply`](#01-angularjs-digest-vs-apply)
+- [01-AngularJs - `$digest` vs `$apply`](#01-angularjs---digest-vs-apply)
 - [00-Insert item inside an Array](#00-insert-item-inside-an-array)
 
 ### 27-Short circuit evaluation in JS.
