@@ -30,7 +30,7 @@ There are a lot of way to get update, choose your own
 - [27-Short circuit evaluation in JS.](#27-short-circuit-evaluation-in-js)
 - [26-Filtering and Sorting a List of Strings](#26-filtering-and-sorting-a-list-of-strings)
 - [25-Using immediately invoked function expression](#25-using-immediately-invoked-function-expression)
-- [24-Use === instead of ==](#24-use-instead-of)
+- [24-Use === instead of ==](#24-use--instead-of-)
 - [23-Converting to number fast way](#23-converting-to-number-fast-way)
 - [22-Two ways to empty an array](#22-two-ways-to-empty-an-array)
 - [21-Shuffle an Array](#21-shuffle-an-array)
