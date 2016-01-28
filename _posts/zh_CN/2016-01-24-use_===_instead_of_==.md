@@ -1,29 +1,29 @@
 ---
 layout: post
 
-title: Use === instead of ==
+title: 使用 === 而不是 ==
 tip-number: 24
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
+tip-tldr: `==` (或者 `!=`) 操作在需要的情况下自动进行了类型转换。`===` (或 `!==`)操作不会执行任何转换。`===`在比较值和类型时，可以说比`==`更快([jsPref](http://jsperf.com/strictcompare))。
 
 categories:
     - en
 ---
 
-The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
+`==` (或者 `!=`) 操作在需要的情况下自动进行了类型转换。`===` (或 `!==`)操作不会执行任何转换。`===`在比较值和类型时，可以说比`==`更快([jsPref](http://jsperf.com/strictcompare))。 
 
 ```js
-[10] ==  10      // is true
-[10] === 10      // is false
+[10] ==  10      // 为 true
+[10] === 10      // 为 false
 
-'10' ==  10      // is true
-'10' === 10      // is false
+'10' ==  10      // 为 true
+'10' === 10      // 为 false
 
- []  ==  0       // is true
- []  === 0       // is false
+ []  ==  0       // 为 true
+ []  === 0       // 为 false
 
- ''  ==  false   // is true but true == "a" is false
- ''  === false   // is false 
+ ''  ==  false   // 为 true 但 true == "a" 为false
+ ''  === false   // 为 false 
 
 ```

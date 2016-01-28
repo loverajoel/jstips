@@ -1,18 +1,18 @@
 ---
 layout: post
 
-title: Using immediately invoked function expression
+title: 使用立即执行函数表达式
 tip-number: 25
 tip-username: rishantagarwal 
 tip-username-profile: https://github.com/rishantagarwal
-tip-tldr: Called as "Iffy" ( IIFE - immediately invoked function expression) is an anonymous function expression that is immediately invoked and has some important uses in Javascript.
+tip-tldr: 立即执行函数表达式( IIFE - immediately invoked function expression)是一个立即执行的匿名函数表达式，它在Javascript中有一些很重要的用途。
 
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Called as "Iffy" ( IIFE - immediately invoked function expression) is an anonymous function expression that is immediately invoked and has some important uses in Javascript.
+立即执行函数表达式( IIFE - immediately invoked function expression)是一个立即执行的匿名函数表达式，它在Javascript中有一些很重要的用途。
 
 ```javascript
 
@@ -23,24 +23,24 @@ Called as "Iffy" ( IIFE - immediately invoked function expression) is an anonymo
 
 ```
 
-It is an anonymous function expression that is immediately invoked, and it has some particularly important uses in JavaScript.
+这是一个立即执行的匿名函数表达式，它在有JavaScript一些特别重要的用途。
 
-The pair of parenthesis surrounding the anonymous function turns the anonymous function into a function expression or variable expression. So instead of a simple anonymous function in the global scope, or wherever it was defined, we now have an unnamed function expression.
+两对括号包裹着一个匿名函数，使匿名函数变成了一个函数表达式。于是，我们现在拥有了一个未命名的函数表达式，而不是一个全局作用域下或在任何地方定义的的简单函数。
 
-Similarly, we can even create a named, immediately invoked function expression:
+类似地，我们也可以创建一个命名过的立即执行函数表达式：
 
 ```javascript
 (someNamedFunction = function(msg) {
 	console.log(msg || "Nothing for today !!")
-	}) (); // Output --> Nothing for today !!​
+	}) (); // 输出 --> Nothing for today !!​
 ​
-someNamedFunction("Javascript rocks !!"); // Output --> Javascript rocks !!
-someNamedFunction(); // Output --> Nothing for today !!​
+someNamedFunction("Javascript rocks !!"); // 输出 --> Javascript rocks !!
+someNamedFunction(); // 输出 --> Nothing for today !!​
 ```
 
-For more details, check the following URL's - 
-1. [Link 1](https://blog.mariusschulz.com/2016/01/13/disassembling-javascripts-iife-syntax) 
-2. [Link 2](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/) 
+更多内容, 请参考下面链接 - 
+1. [链接 1](https://blog.mariusschulz.com/2016/01/13/disassembling-javascripts-iife-syntax) 
+2. [链接 2](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/) 
 
-Performance:
+效率:
 [jsPerf](http://jsperf.com/iife-with-call)

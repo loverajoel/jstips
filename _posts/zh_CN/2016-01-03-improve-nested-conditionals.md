@@ -1,17 +1,18 @@
 ---
 layout: post
 
-title: Improve Nested Conditionals
+title: 优化嵌套的条件语句
 tip-number: 03
 tip-username: AlbertoFuente 
 tip-username-profile: https://github.com/AlbertoFuente
-tip-tldr: How can we improve and make a more efficient nested `if` statement in javascript?
+tip-tldr: 我们怎样来提高和优化javascript里嵌套的`if`语句呢？
 
 categories:
-    - en
+    - zh_CN
 ---
 
-How can we improve and make a more efficient nested `if` statement in javascript?
+
+我们怎样来提高和优化javascript里嵌套的`if`语句呢？
 
 ```javascript
 if (color) {
@@ -29,7 +30,8 @@ if (color) {
 }
 ```
 
-One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, it's not recommended to use it because it's so difficult to debug errors. Here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
+
+一种方法来提高嵌套的`if`语句是用`switch`语句。虽然它不那么啰嗦而且排列整齐，但是并不建议使用它，因为这对于调试错误很困难。这告诉你[为什么](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
@@ -50,8 +52,8 @@ switch(color) {
 }
 ```
 
-But what if we have a conditional with several checks in each statement? In this case, if we want it less verbose and more ordered, we can use the conditional `switch`.
-If we pass `true` as a parameter to the `switch` statement, it allows us to put a conditional in each case.
+
+但是如果在每个语句中都有很多条件检查时该怎么办呢？这种情况下，如果我们想要不罗嗦又整洁的话，我们可以用有条件的`switch`。如果我们传递`true`给`switch`语句，我没变可以在每个case中使用条件语句了。
 
 ```javascript
 switch(true) {
@@ -73,7 +75,8 @@ switch(true) {
 }
 ```
 
-But we must always avoid having several checks in every condition and avoid using `switch` as much as possible. We also must take into account that the most efficient way to do this is through an `object`.
+
+但是我们应该时刻注意避免太多判断在一个条件里，尽量少的使用`switch`，考虑最有效率的方法：借助`object`。
 
 ```javascript
 var colorObj = {
@@ -84,9 +87,12 @@ var colorObj = {
   'yellow': printYellowBackground
 };
 
+
 if (color in colorObj) {
   colorObj[color]();
 }
 ```
 
-Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+
+这里有更多相关的[内容](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+

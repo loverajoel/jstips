@@ -1,21 +1,22 @@
 ---
 layout: post
 
-title: Shuffle an Array
+title: 对数组洗牌
 tip-number: 21
 tip-username: 0xmtn
 tip-username-profile: https://github.com/0xmtn/
-tip-tldr: Fisher-Yates Shuffling it's an algorithm to shuffle an array.
+tip-tldr: `Fisher-Yates Shuffling`算法对数组进行洗牌
 
 categories:
-    - en
+    - zh_CN
 ---
 
- This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
-
+ 
+ 这段代码运用了[Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle)算法对数组进行洗牌。
+  
 ```javascript
 function shuffle(arr) {
-    var i,
+    var i, 
         j,
         temp;
     for (i = arr.length - 1; i > 0; i--) {
@@ -27,7 +28,7 @@ function shuffle(arr) {
     return arr;    
 };
 ```
-An example:
+调用示例:
 
 ```javascript
 var a = [1, 2, 3, 4, 5, 6, 7, 8];

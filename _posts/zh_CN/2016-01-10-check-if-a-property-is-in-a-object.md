@@ -1,30 +1,31 @@
 ---
 layout: post
 
-title: Check if a property is in a Object
+title: 检查某对象是否有某属性
 tip-number: 10
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: These are ways to check if a property is present in an object.
+tip-tldr: 这是一些检查某对象是否有某属性的方法。
 
 categories:
-    - en
+    - zh_CN
 ---
 
-When you have to check if a property is present in an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), you probably are doing something like this:
+当你需要检查某属性是否存在于一个[对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)，你可能会这样做：
 
 ```javascript
 var myObject = {
   name: '@tips_js'
 };
 
+
 if (myObject.name) { ... }
 
 ```
 
-That's ok, but you have to know that there are two native ways for this kind of thing, the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) and [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty). Every object descended from `Object`, has both ways available.
+这是可以的，但是你需要知道有两种原生方法可以解决此类问题。[`in` 操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 和 [`Object.hasOwnProperty`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)，任何继承自`Object`的对象都可以使用这两种方法。
 
-### See the big Difference
+### 看一下较大的区别
 
 ```javascript
 var myObject = {
@@ -34,14 +35,16 @@ var myObject = {
 myObject.hasOwnProperty('name'); // true
 'name' in myObject; // true
 
-myObject.hasOwnProperty('valueOf'); // false, valueOf is inherited from the prototype chain
+
+myObject.hasOwnProperty('valueOf'); // false, valueOf 继承自原型链
 'valueOf' in myObject; // true
 
 ```
 
-Both differ in the depth at which they check the properties. In other words, `hasOwnProperty` will only return true if key is available on that object directly. However, the `in` operator doesn't discriminate between properties created on an object and properties inherited from the prototype chain.
 
-Here's another example:
+两者检查属性的深度不同，换言之`hasOwnProperty`只在本身有此属性时返回true,而`in`操作符不区分属性来自于本身或继承自原型链。
+
+这是另一个例子
 
 ```javascript
 var myFunc = function() {
@@ -52,9 +55,10 @@ myFunc.prototype.age = '10 days';
 var user = new myFunc();
 
 user.hasOwnProperty('name'); // true
-user.hasOwnProperty('age'); // false, because age is from the prototype chain
+
+user.hasOwnProperty('age'); // false, 因为age来自于原型链
 ```
 
-Check the [live examples here](https://jsbin.com/tecoqa/edit?js,console)!
+[在线示例](https://jsbin.com/tecoqa/edit?js,console)!
 
-I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a property's existence in objects.
+同样建议阅读关于检查对象是否包含属性时常见错误的[讨论](https://github.com/loverajoel/jstips/issues/62)。

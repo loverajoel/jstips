@@ -1,36 +1,40 @@
 ---
 layout: post
 
-title: use strict and get lazy
+title: 使用"use strict" 变得懒惰
 tip-number: 07
 tip-username: nainslie
 tip-username-profile: https://twitter.com/nat5an
-tip-tldr: Strict-mode JavaScript makes it easier for the developer to write "secure" JavaScript.
+tip-tldr: JavaScript的严格模式使开发者更容易写出“安全”的代码。
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Strict-mode JavaScript makes it easier for the developer to write "secure" JavaScript.
+（译者注：此片翻译较渣，欢迎指正，建议大家[阅读原文](https://github.com/loverajoel/jstips#07---use-strict-and-get-lazy)或直接阅读[MDN对严格模式的中文介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 并欢迎PR）
 
-By default, JavaScript allows the programmer to be pretty careless, for example, by not requiring us to declare our variables with "var" when we first introduce them.  While this may seem like a convenience to the unseasoned developer, it's also the source of many errors when a variable name is misspelled or accidentally referred to out of its scope.
+JavaScript的严格模式使开发者更容易写出“安全”的代码。
 
-Programmers like to make the computer do the boring stuff for us, and automatically check our work for mistakes. That's what the JavaScript "use strict" directive allows us to do, by turning our mistakes into JavaScript errors.
+通常情况下，JavaScript允许程序员相当粗心，比如你可以引用一个从未用"var"声明的变量。或许对于一个刚入门的开发者来说这看起来很方便，但这也是变量拼写错误或者从作用域外引用变量时引发的一系列错误的原因。
 
-We add this directive either by adding it at the top of a js file:
+程序员喜欢电脑帮我们做一些无聊的工作，喜欢它自动的检查我们工作上的错误。这就是"use strict"帮我们做的，它把我们的错误转变为了JavaScript错误。
+
+我们把这个指令放在js文件顶端来使用它:
 
 ```javascript
-// Whole-script strict mode syntax
+// 全脚本严格模式
 "use strict";
 var v = "Hi!  I'm a strict mode script!";
 ```
 
-or inside a function:
+
+或者放在一个方法内：
 
 ```javascript
 function f()
 {
-  // Function-level strict mode syntax
+
+  // 方法级严格模式
   'use strict';
   function nested() { return "And so am I!"; }
   return "Hi!  I'm a strict mode function!  " + nested();
@@ -38,24 +42,24 @@ function f()
 function f2() { return "I'm not strict."; }
 ```
 
-By including this directive in a JavaScript file or function, we will direct the JavaScript engine to execute in strict mode which disables a bunch of behaviors that are usually undesirable in larger JavaScript projects.  Among other things, strict mode changes the following behaviors:
 
-* Variables can only be introduced when they are preceded with "var"
-* Attempting to write to read-only properties generates a noisy error
-* You have to call constructors with the "new" keyword
-* "this" is not implicitly bound to the global object
-* Very limited use of eval() allowed
-* Protects you from using reserved words or future reserved words as variable names
+通过在JavaScript文件或方法内引入此指令，使JavaScript引擎运行在严格模式下，这直接禁止了许多大项目中不受欢迎的操作。另外，严格模式也改变了以下行为：
+* 只有被"var"声明过的变量才可以引用。
+* 试图写只读变量时将会报错
+* 只能通过"new"关键字调用构造方法
+* "this"不再隐式的指向全局变量
+* 对eval()有更严格的限制
+* 防止你使用预保留关键字命名变量
 
-Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
+严格模式对于新项目来说是很棒的，但对于一些并没有使用它的老项目来说，引入它也是很有挑战性的。如果你把所有js文件都连接到一个大文件中的话，可能导致所有文件都运行在严格模式下，这可能也会有一些问题。
 
 It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
-Strict mode is supported in:
-
+严格模式的支持情况:
 * Internet Explorer from version 10.
 * Firefox from version 4.
 * Chrome from version 13.
 * Safari from version 5.1.
 * Opera from version 12.
 
-[See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+
+[MDN对严格模式的全面介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)

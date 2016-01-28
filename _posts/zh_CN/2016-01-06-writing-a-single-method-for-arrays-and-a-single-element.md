@@ -1,19 +1,19 @@
 ---
 layout: post
 
-title: Writing a single method for arrays and a single element
+title: 可以接受单参数与数组的方法
 tip-number: 06
 tip-username: mattfxyz
 tip-username-profile: https://twitter.com/mattfxyz
-tip-tldr: Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
+tip-tldr: 写一个方法可以接受单个参数也可以接受一个数组，而不是分开写两个方法。这和jQuery的一些方法的工作原理很像(`css` 可以修改任何匹配到的选择器).
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
+写一个方法可以接受单个参数也可以接受一个数组，而不是分开写两个方法。这和jQuery的一些方法的工作原理很像(`css` 可以修改任何匹配到的选择器).
 
-You just have to concat everything into an array first. `Array.concat` will accept an array or a single element.
+你只要把任何东西连接到一个数组. `Array.concat`可以接受一个数组也可以接受单个参数。
 
 ```javascript
 function printUpperCase(words) {
@@ -24,7 +24,8 @@ function printUpperCase(words) {
 }
 ```
 
-`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
+
+`printUpperCase`现在可以接受单个单词或多个单词的数组作为它的参数。
 
 ```javascript
 printUpperCase("cactus");
@@ -34,3 +35,4 @@ printUpperCase(["cactus", "bear", "potato"]);
 //  BEAR
 //  POTATO
 ```
+

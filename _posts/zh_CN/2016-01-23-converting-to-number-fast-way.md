@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Converting to number fast way
+title: 转换为数字的更快方法
 tip-number: 23
 tip-username: sonnyt
 tip-username-profile: http://twitter.com/sonnyt
-tip-tldr: Converting strings to numbers is extremely common. The easiest and fastest way to achieve that would be using the + operator.
+tip-tldr: 将字符串转换为数字是极为常见的。最简单和快速的方法是使用`+`(加号) 来实现。
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
+将字符串转换为数字是极为常见的。最简单和快速的方法([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29))`+`(加号) 来实现。
 
 ```javascript
 var one = '1';
@@ -19,7 +19,7 @@ var one = '1';
 var numberOne = +one; // Number 1
 ```
 
-You can also use the `-` (minus) operator which type-converts the value into number but also negates it.
+你也可以用`-`(减号)将其转化为负数值。
 
 ```javascript
 var one = '1';

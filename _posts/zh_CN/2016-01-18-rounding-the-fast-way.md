@@ -1,37 +1,37 @@
 ---
 layout: post
 
-title: Rounding the fast way
+title: 更快的取整
 tip-number: 18
 tip-username: pklinger
 tip-username-profile: https://github.com/pklinger
-tip-tldr: Today's tip is about performance. Ever came across the double tilde `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
+tip-tldr: 今天的小知识有关性能表现。曾经用过双波浪`~~` 操作符吗? 有时候也称为双非(NOT)位操作. 你可以用它作为`Math.floor()`的替代方法。为什么会这样呢?
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Today's tip is about performance. [Ever came across the double tilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
+今天的小知识有关性能表现。[曾经用过双波浪](http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` 操作符吗? 有时候也称为双非(NOT)位操作. 你可以用它作为`Math.floor()`的替代方法。为什么会这样呢?
 
-One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is returned, which might come in handy sometimes instead of `Math.floor()`, which returns a value of `NaN` on failure.
+一个位操作符 `~` 将输入的32位的数字(input)转换为 `-(input+1)`. 两个位操作符将输入(input)转变为 `-(-(input + 1)+1)` 是一个使结果趋向于0的取整好工具. 对于数字, 负数就像使用`Math.ceil()`方法而正数就像使用`Math.floor()`方法. 转换失败时,返回`0`,这在`Math.floor()`方法转换失败返回`NaN`时或许会派上用场。
 
 ```javascript
-// single ~
+// 单个 ~
 console.log(~1337)    // -1338
 
-// numeric input
+// 数字输入
 console.log(~~47.11)  // -> 47
 console.log(~~-12.88) // -> -12
 console.log(~~1.9999) // -> 1
 console.log(~~3)      // -> 3
 
-// on failure
+// 转换失败
 console.log(~~[]) // -> 0
 console.log(~~NaN)  // -> 0
 console.log(~~null) // -> 0
 
-// greater than 32 bit integer fails
+// 大于32位整数时转换失败
 console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 ```
 
-Although `~~` may perform better, for the sake of readability please use `Math.floor()`.
+虽然`~~`的性能更好,为了代码的可读性请用`Math.floor()`.

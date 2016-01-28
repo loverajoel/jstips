@@ -1,17 +1,18 @@
 ---
 layout: post
 
-title: Safe string concatenation
+title: 安全的字符串拼接
 tip-number: 19
 tip-username: gogainda
 tip-username-profile: https://twitter.com/gogainda
-tip-tldr: Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use concat
+tip-tldr: 
+假如你需要拼接一些不确定类型的变量为字符串，你需要确保算术运算符在你拼接时不会起作用。使用concat
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use `concat`:
+假如你需要拼接一些不确定类型的变量为字符串，你需要确保算术运算符在你拼接时不会起作用。使用concat：
 
 ```javascript
 var one = 1;
@@ -21,7 +22,7 @@ var three = '3';
 var result = ''.concat(one, two, three); //"123"
 ```
 
-This way of concatenting does exactly what you'd expect. In contrast, concatenation with pluses might lead to unexpected results:
+这应该就是你所期望的拼接结果。如果不这样，拼接时加号可能会导致你意想不到的结果：
 
 ```javascript
 var one = 1;
@@ -31,6 +32,6 @@ var three = '3';
 var result = one + two + three; //"33" instead of "123"
 ```
 
-Speaking about performance, compared to the `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of `concat` is pretty much the same.
+关于性能,与用[```join```](http://www.sitepoint.com/javascript-fast-string-concatenation/)来拼接字符串相比 ```concat```的效率是几乎一样的。
 
-You can read more about the `concat` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+你可以在[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)了解更多关于```concat```方法的内容。

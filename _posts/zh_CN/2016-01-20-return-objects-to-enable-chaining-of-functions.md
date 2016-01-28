@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Return objects to enable chaining of functions
+title: 返回对象，使方法可以链式调用
 tip-number: 20
 tip-username: WakeskaterX
 tip-username-profile: https://twitter.com/WakeStudio
-tip-tldr: When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+tip-tldr: 在面向对象的Javascript中为对象建立一个方法时，返回当前对象可以让你在一条链上调用方法。
 
 categories:
-    - en
+    - zh_CN
 ---
 
-When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+在面向对象的Javascript中为对象建立一个方法时，返回当前对象可以让你在一条链上调用方法。
 
 ```js
 function Person(name) {
