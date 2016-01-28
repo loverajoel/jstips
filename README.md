@@ -117,6 +117,8 @@ dog&&dog.bark();   // This will only call dog.bark(), if dog is defined.
 
 ```
 
+[⬆ To The Top](#tips-list)
+
 ### 26-Filtering and Sorting a List of Strings
 
 You may have a big list of names you need to filter in order to remove duplicates and sort them alphabetically.
@@ -163,6 +165,8 @@ console.log(filteredAndSortedKeywords);
 // ['abstract', 'arguments', 'await', 'boolean', 'break', 'byte', 'case', 'catch', 'char', 'class', 'const', 'continue', 'debugger', 'default', 'delete', 'do', 'double', 'else', 'enum', 'eval', 'export', 'extends', 'false', 'final', 'finally', 'float', 'for', 'function', 'goto', 'if', 'implements', 'import', 'in', 'instanceof', 'int', 'interface', 'let', 'long', 'native', 'new', 'null', 'package', 'private', 'protected', 'public', 'return', 'short', 'static', 'super', 'switch', 'synchronized', 'this', 'throw', 'throws', 'transient', 'true', 'try', 'typeof', 'var', 'void', 'volatile', 'while', 'with', 'yield']
 ```
 
+[⬆ To The Top](#tips-list)
+
 ### 25-Using immediately invoked function expression
 
 Called as "Iffy" ( IIFE - immediately invoked function expression) is an anonymous function expression that is immediately invoked and has some important uses in Javascript.
@@ -198,6 +202,8 @@ For more details, check the following URL's -
 Performance:
 [jsPerf](http://jsperf.com/iife-with-call)
 
+[⬆ To The Top](#tips-list)
+
 ### 24-Use === instead of ==
 
 The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
@@ -217,6 +223,8 @@ The `==` (or `!=`) operator performs an automatic type conversion if needed. The
 
 ```
 
+[⬆ To The Top](#tips-list)
+
 ### 23-Converting to number fast way
 
 Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
@@ -234,6 +242,8 @@ var one = '1';
 
 var negativeNumberOne = -one; // Number -1
 ```
+
+[⬆ To The Top](#tips-list)
 
 ### 22-Two ways to empty an array
 
@@ -286,6 +296,8 @@ console.log(foo, bar, foo2, bar2);
 Stackoverflow more detail:
 [difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
 
+[⬆ To The Top](#tips-list)
+
 ### 21-Shuffle an Array
 
 This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
@@ -313,6 +325,8 @@ console.log(b);
 // [2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
+[⬆ To The Top](#tips-list)
+
 ### 20-Return objects to enable chaining of functions
 
 When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
@@ -335,6 +349,8 @@ function Person(name) {
 var person = new Person("John");
 person.sayName().changeName("Timmy").sayName();
 ```
+
+[⬆ To The Top](#tips-list)
 
 ### 19-Safe string concatenation
 
@@ -361,6 +377,8 @@ var result = one + two + three; //"33" instead of "123"
 Speaking about performance, compared to the `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of `concat` is pretty much the same.
 
 You can read more about the `concat` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+
+[⬆ To The Top](#tips-list)
 
 ### 18-Rounding the fast way
 
@@ -389,6 +407,8 @@ console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
 
 Although `~~` may perform better, for the sake of readability please use `Math.floor()`.
 
+[⬆ To The Top](#tips-list)
+
 ### 17-Node.js - Run a module if it is not `required`
 
 In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
@@ -406,6 +426,8 @@ if (!module.parent) {
 ```
 
 See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.
+
+[⬆ To The Top](#tips-list)
 
 ### 16-Passing arguments to callback functions
 
@@ -450,6 +472,8 @@ var alertText = function(text) {
 document.getElementById('someelem').addEventListener('click', alertText.bind(this, 'hello'));
 ```
 There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
+
+[⬆ To The Top](#tips-list)
 
 ### 15-Even simpler way of using `indexOf` as a contains clause
 
@@ -524,6 +548,8 @@ With ECMAScript 2016 (ES7) it is even possible to use these techniques with Arra
 
 **Unfortunately, it is only supported in Chrome, Firefox, Safari 9 or above and Edge; not IE11 or lower.**
 **It's better used in controlled environments.**
+
+[⬆ To The Top](#tips-list)
 
 ### 14-Fat Arrow Functions
 
@@ -617,6 +643,8 @@ function CounterD() {
 
 Further information about fat arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
 
+[⬆ To The Top](#tips-list)
+
 ### 13-Tip to measure performance of a javascript block
 
 For quickly measuring performance of a javascript block, we can use the console functions like
@@ -640,6 +668,8 @@ More info:
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
 
+[⬆ To The Top](#tips-list)
+
 ### 12-Pseudomandatory parameters in ES6 functions
 
 In many programming languages the parameters of a function are by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript, every parameter is optional, but we can enforce this behavior without messing with the actual body of a function, taking advantage of [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
@@ -656,6 +686,8 @@ getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
  `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is going to be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+
+[⬆ To The Top](#tips-list)
 
 ### 11-Hoisting
 
@@ -697,6 +729,8 @@ function doTheThing() {
 ```
 
 To make things easier to read, declare all of your variables at the top of your function scope so it is clear which scope the variables are coming from. Define your variables before you need to use them. Define your functions at the bottom of your scope to keep them out of your way.
+
+[⬆ To The Top](#tips-list)
 
 ### 10-Check if a property is in a Object
 
@@ -748,6 +782,8 @@ Check the [live examples here](https://jsbin.com/tecoqa/edit?js,console)!
 
 I also recommend reading [this discussion](https://github.com/loverajoel/jstips/issues/62) about common mistakes made when checking a property's existence in objects.
 
+[⬆ To The Top](#tips-list)
+
 ### 09-Template Strings
 
 As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
@@ -776,6 +812,8 @@ You are also able to to modify the output of template strings using a function; 
 (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings) for example usages of tagged template strings.
 
 You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more.
+
+[⬆ To The Top](#tips-list)
 
 ### Day-08
 **Converting a Node List to an Array**
@@ -810,6 +848,8 @@ nodelist.slice(...);
 
 //etc...
 ```
+
+[⬆ To The Top](#tips-list)
 
 ### 07-use strict and get lazy
 
@@ -862,6 +902,8 @@ Strict mode is supported in:
 
 [See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
+[⬆ To The Top](#tips-list)
+
 ### 06-Writing a single method for arrays and a single element
 
 Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
@@ -887,6 +929,8 @@ printUpperCase(["cactus", "bear", "potato"]);
 //  BEAR
 //  POTATO
 ```
+
+[⬆ To The Top](#tips-list)
 
 ### 05-Differences between `undefined` and `null`
 
@@ -917,6 +961,8 @@ printUpperCase(["cactus", "bear", "potato"]);
 
   null === undefined // false
 ```
+
+[⬆ To The Top](#tips-list)
 
 ### 04-Sorting strings with accented characters
 
@@ -959,6 +1005,8 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 // ["Wann", "wäre", "Woche", "wöchentlich"]
 ```
 
+[⬆ To The Top](#tips-list)
+
 ### 03-Improve Nested Conditionals
 
 How can we improve and make a more efficient nested `if` statement in javascript?
@@ -1000,6 +1048,8 @@ switch(color) {
 }
 ```
 
+[⬆ To The Top](#tips-list)
+
 ### 02-Keys in children components are important
 
 The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) is an attribute that you must pass to all components created dynamically from an array. It's a unique and constant id that React uses to identify each component in the DOM and to know whether it's a different component or the same one. Using keys ensures that the child component is preserved and not recreated and prevents weird things from happening.
@@ -1032,6 +1082,7 @@ render() {
 - When the number of children is large or contains expensive components, use keys to improve performance.
 - [You must provide the key attribute for all children of ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
 
+[⬆ To The Top](#tips-list)
 
 ### 01-AngularJs - `$digest` vs `$apply`
 
@@ -1060,6 +1111,8 @@ $scope.$apply(() => {
 - If you only need to update the current scope or its children, use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit is self-evident.
 - `$apply()` is a hard process for the machine and can lead to performance issues when there is a lot of binding.
 - If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
+
+[⬆ To The Top](#tips-list)
 
 ### 00-Insert item inside an Array
 
@@ -1095,3 +1148,5 @@ items.splice(items.length / 2, 0, 'hello');
 ```
 
 I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
+
+[⬆ To The Top](#tips-list)
