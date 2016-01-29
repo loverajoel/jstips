@@ -2,7 +2,7 @@
 layout: post
 
 title: Speed up recursive functions with memoization
-tip-number: xx
+tip-number: 29
 tip-username: hingsir
 tip-username-profile: https://github.com/hingsir
 tip-tldr: Fibonacci sequence is very familiar to everybody. we can write the following function in 20 seconds.it works, but not efficient. it did lots of duplicate computing works, we can cache its previously computed results to speed it up.
@@ -13,12 +13,14 @@ categories:
 ---
 
 Fibonacci sequence is very familiar to everybody. we can write the following function in 20 seconds.
+
 ```js
 var fibonacci = function(n){
     return n < 2 ? n : fibonacci(n-1) + fibonacci(n-2);
 }
 ```
 it works, but not efficient. it did lots of duplicate computing works, we can cache its previously computed results to speed it up.
+
 ```js
 var fibonacci = (function(){
     var cache = {
@@ -31,6 +33,7 @@ var fibonacci = (function(){
 })()
 ```
 Also, we can define a higher-order function that accepts a function as its argument and returns a memoized version of the function.
+
 ```js
 var memoize = function(func){
     var cache = {};
