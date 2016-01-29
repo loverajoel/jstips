@@ -28,7 +28,7 @@ nodelistToArray.slice(...);
 //等...
 ```
 
-`apply`方法可以在指定`this`时以数组形式向方法传递参数。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)规定`apply`可以接受类数组对象,恰巧就是`querySelectorAll`方法所返回的内容。如果我们不需要指定方法内`this`的值传`null`或`0`即可。返回的结果即包含所有数组方法的DOM元素数组。
+`apply`方法可以在指定`this`时以数组形式向方法传递参数。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)规定`apply`可以接受类数组对象,恰巧就是`querySelectorAll`方法所返回的内容。如果我们不需要指定方法内`this`的值时传`null`或`0`即可。返回的结果即包含所有数组方法的DOM元素数组。
 
 如果你正在用ES2015你可以使用[展开运算符 `...`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 

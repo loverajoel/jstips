@@ -38,7 +38,7 @@ arr.unshift(0);
 ```
 这里有一些小区别，unshift操作的是原始数组，concat返回一个新数组，参考[jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-使用splice可以简单的向数组总监添加元素，这也是最高效的方法。
+使用splice可以简单的向数组中间添加元素，这也是最高效的方法。
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];

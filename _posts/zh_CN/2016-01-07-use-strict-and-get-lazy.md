@@ -11,7 +11,7 @@ categories:
     - zh_CN
 ---
 
-（译者注：此片翻译较渣，欢迎指正，建议大家[阅读原文](https://github.com/loverajoel/jstips#07---use-strict-and-get-lazy)或直接阅读[MDN对严格模式的中文介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 并欢迎PR）
+（译者注：此片翻译较渣，欢迎指正，建议大家[阅读原文](http://www.jstips.co/en/use-strict-and-get-lazy/)或直接阅读[MDN对严格模式的中文介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 并欢迎PR）
 
 JavaScript的严格模式使开发者更容易写出“安全”的代码。
 

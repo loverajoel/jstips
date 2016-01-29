@@ -11,7 +11,7 @@ categories:
     - zh_CN
 ---
 
-Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)**可以排列数组。一次简单的`array.sort()`将每一个数组元素视为字符串并按照字母表排列。你也可以提供[自定义排列方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
+Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)**可以排列数组。一次简单的`array.sort()`将每一个数组元素视为字符串并按照字母表排列。你也可以提供[自定义排列方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters)。
 
 ```javascript
 ['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
@@ -64,7 +64,7 @@ Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs
 ```
 
 
-- 两个方法都可以自定义区域位置。For each method you can customize the location.
-- 根据[Firefox](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance)，当比较大数量的字符串是Intl.Collator更快。
+- 两个方法都可以自定义区域位置。
+- 根据[Firefox](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance)，当比较大数量的字符串时，使用`Intl.Collator`更快。
 
 所以当你处理一个由非英语组成的字符串数组时，记得使用此方法来避免排序出现意外。
