@@ -27,6 +27,7 @@ There are a lot of way to get update, choose your own
 
 # Tips list
 
+- 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
 - 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
 - 27 - [Short circuit evaluation in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)
 - 26 - [Filtering and Sorting a List of Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-26-filtering-and-sorting-a-list-of-strings.md)
