@@ -27,6 +27,7 @@ There are a lot of way to get update, choose your own
 
 # Tips list
 
+- 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
 - 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
 - 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
 - 27 - [Short circuit evaluation in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)
