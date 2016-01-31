@@ -26,12 +26,10 @@ Finally we are going to sort the filtered list using the [`sort`](https://develo
 ```js
 var filteredAndSortedKeywords = keywords
   .filter(function (keyword, index) {
-      return keywords.indexOf(keyword) === index;
+      return keywords.lastIndexOf(keyword) === index;
     })
   .sort(function (a, b) {
-      if (a < b) return -1;
-      else if (a > b) return 1;
-      return 0;
+      return a < b ? -1 : 1;
     });
 ```
 
@@ -39,12 +37,8 @@ The **ES6** (ECMAScript 2015) version using [arrow functions](https://developer.
 
 ```js
 const filteredAndSortedKeywords = keywords
-  .filter((keyword, index) => keywords.indexOf(keyword) === index)
-  .sort((a, b) => {
-      if (a < b) return -1;
-      else if (a > b) return 1;
-      return 0;
-    });
+  .filter((keyword, index) => keywords.lastIndexOf(keyword) === index)
+  .sort((a, b) => a < b ? -1 : 1);
 ```
 
 And this is the final filtered and sorted list of JavaScript reserved keywords:
