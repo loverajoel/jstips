@@ -219,7 +219,6 @@ img {
     width: 100%;
     max-width: 900px;
     margin: 10px auto 0;
-    overflow: hidden;
 
     ul {
         margin: 0px;
@@ -242,7 +241,55 @@ img {
             a:hover {
                 background: #F8DA59;
             }
+
+            a:hover .sub-menu ul {
+                display: block;
+            }
         }
+
+        .sub-menu:hover ul {
+            display: block;
+        }
+
+        .sub-menu {
+                position: relative;
+
+                a {
+                    padding: 12px 0 13px 2px;
+                    font-size: 0px;
+                }
+
+                a:hover {
+                    background: none;
+                }
+
+                ul {
+                    width: 30px;
+                    position: absolute;
+                    z-index: 2;
+                    display: none;
+                    top: 39px;
+                    left: 2px;
+
+                    li {
+                        margin: 0px;
+
+                        a {
+                            padding: 0px;
+                            float: none;
+                            font-size: 0px;
+
+                            &:hover {
+                                background-color: none;
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    width: 30px;
+                }
+            }
     }
 
     hr {

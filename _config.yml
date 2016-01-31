@@ -9,7 +9,9 @@ name: JS Tips
 description: A JS tip per day!
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: http://www.jstips.co/images/jstips.png
+
+url: http://jstips.co
 
 #
 # Flags below are optional
@@ -25,11 +27,11 @@ defaults:
       is_post: true
   -
     scope:
-      path: _posts/es
+      path: _posts/zh_CN
       type: posts
     values:
       layout: default
-      lang: es
+      lang: zh_CN
       is_post: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -70,7 +72,7 @@ sass:
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  # - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-paginate
 
 # Exclude these files from your production _site
@@ -80,3 +82,48 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
+
+# languages var
+languages:
+  - 
+    name: en
+    link: /
+  - 
+    name: zh_CN
+    link: /zh_CN
+    
+transl:
+  en:
+    menu:
+      home: 
+        txt: Home
+        link: /
+      about: 
+        txt: About
+        link: /about
+      subscribe: 
+        txt: Subscribe
+      submit_your_tip:
+        txt: Submit your tip
+        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+    footer_subscribe_message: Subscribe to more awesome daily tips!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: Previous Tip
+    arrow_next: Next Tip
+  zh_CN:
+    menu:
+      home: 
+        txt: 主页
+        link: /zh_CN
+      about: 
+        txt: 关于
+        link: /zh_CN/about
+      subscribe: 
+        txt: 订阅
+      submit_your_tip:
+        txt: 提交小知识
+        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+    footer_subscribe_message: 订阅，每天获取一条小知识!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: 上一条
+    arrow_next: 下一条
