@@ -5,7 +5,7 @@ title: 对数组洗牌
 tip-number: 21
 tip-username: 0xmtn
 tip-username-profile: https://github.com/0xmtn/
-tip-tldr: `Fisher-Yates Shuffling`算法对数组进行洗牌
+tip-tldr: Fisher-Yates Shuffling 算法对数组进行洗牌
 
 categories:
     - zh_CN

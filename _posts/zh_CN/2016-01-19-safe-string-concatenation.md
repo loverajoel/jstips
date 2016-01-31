@@ -5,8 +5,7 @@ title: 安全的字符串拼接
 tip-number: 19
 tip-username: gogainda
 tip-username-profile: https://twitter.com/gogainda
-tip-tldr: 
-假如你需要拼接一些不确定类型的变量为字符串，你需要确保算术运算符在你拼接时不会起作用。使用concat
+tip-tldr: 假如你需要拼接一些不确定类型的变量为字符串，你需要确保算术运算符在你拼接时不会起作用。使用concat
 
 categories:
     - zh_CN
