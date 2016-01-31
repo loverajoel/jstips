@@ -27,8 +27,8 @@ var fibonacci = (function(){
         0: 0,
         1: 1
     };
-    return function(n){
-        return n <= 1 ? cache[n] : (cache[n] = cache[n-1] + cache[n-2]);
+    return function self(n){
+        return n <= 1 ? cache[n] : (cache[n] = self(n-1) + self(n-2));
     }
 })()
 ```
