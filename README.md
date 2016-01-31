@@ -14,7 +14,7 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 
-There are a lot of way to get update, choose your own
+There are a lot of ways to get update, choose your own
 
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
