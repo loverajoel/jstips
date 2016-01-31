@@ -49,4 +49,4 @@ console.log(filteredAndSortedKeywords);
 // ['abstract', 'arguments', 'await', 'boolean', 'break', 'byte', 'case', 'catch', 'char', 'class', 'const', 'continue', 'debugger', 'default', 'delete', 'do', 'double', 'else', 'enum', 'eval', 'export', 'extends', 'false', 'final', 'finally', 'float', 'for', 'function', 'goto', 'if', 'implements', 'import', 'in', 'instanceof', 'int', 'interface', 'let', 'long', 'native', 'new', 'null', 'package', 'private', 'protected', 'public', 'return', 'short', 'static', 'super', 'switch', 'synchronized', 'this', 'throw', 'throws', 'transient', 'true', 'try', 'typeof', 'var', 'void', 'volatile', 'while', 'with', 'yield']
 ```
 
-*Thanks to everyone for the comments and suggestions!*
+*Thanks to [@nikshulipa](https://github.com/nikshulipa), [@kirilloid](https://twitter.com/kirilloid), [@lesterzone](https://twitter.com/lesterzone), [@tracker1](https://twitter.com/tracker1), [@manuel_del_pozo](https://twitter.com/manuel_del_pozo) for all the comments and suggestions!*
