@@ -27,6 +27,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-31-avoid-modifying-or-passing-arguments-into-other-functions%E2%80%94it-kills-optimization.md)
 - 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
 - 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
 - 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
