@@ -14,7 +14,7 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 
-There are a lot of way to get update, choose your own
+There are a lot of ways to get update, choose your own
 
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
@@ -27,6 +27,9 @@ There are a lot of way to get update, choose your own
 
 # Tips list
 
+- 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-31-avoid-modifying-or-passing-arguments-into-other-functions%E2%80%94it-kills-optimization.md)
+- 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
+- 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
 - 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
 - 27 - [Short circuit evaluation in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)
 - 26 - [Filtering and Sorting a List of Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-26-filtering-and-sorting-a-list-of-strings.md)

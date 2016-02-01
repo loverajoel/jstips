@@ -5,23 +5,21 @@ type: posts
 
 <div id="posts-wrapper-home">
     <div class="posts">
-        <!-- {% assign posts=site.categories | where:"lang", "en" %} -->
-        {% assign posts=paginator.posts | where:"lang", "es" %}
-        <!-- {{site | jsonify}} -->
+        {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
         {% for post in posts %}
         <article class="post">
             <h1 class="post-title">
                 <a href="{{ site.baseurl }}{{ post.url }}">
-                    <span class="tip-number">{{ post.tipNumber }}</span>
-                    {{ post.title }}
+                    <span class="tip-number">{{ post.tip-number }}</span>
+                    <span class="title">{{ post.title | markdownify}}</span>
                 </a>
             </h1>
             <div class="meta-info">
                 <time class="date meta-item" datetime="{{ post.date }}"><i class="fa fa-calendar"></i> {{ post.date | date_to_string }}</time>
-                <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ post.tipContributorUrl }}" target="_blank"> @{{ post.tipContributorUser }}</a></div>
+                <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ post.tip-username-profile }}" target="_blank"> @{{ post.tip-username }}</a></div>
             </div>
             <div class="entry">
-                {{ post.tipTlDt }}
+                {{ post.tip-tldr | markdownify }}
             </div>
         </article>
         {% endfor %}
