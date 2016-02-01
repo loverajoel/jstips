@@ -63,7 +63,7 @@ Mozilla suggest:
 ```js
 // Using two separate arrays
 var objectKeys = [z, @, b, 1, 5];
-for (item in myObject) {
+for (item in objectKeys) {
 	myObject[item]
 ...
 
