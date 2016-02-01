@@ -667,7 +667,7 @@ img {
     }
 
     blockquote {
-        margin: 1.8em .8em;
+        margin: 1.8em auto !important;
         border-left: 2px solid $gray;
         padding: 0.1em 1em;
         color: $gray;
