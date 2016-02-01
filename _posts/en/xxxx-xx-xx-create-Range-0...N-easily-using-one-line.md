@@ -2,7 +2,7 @@
 layout: post
 
 title: Create Range 0...N easily using one line
-tip-number: 34
+tip-number: xx
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
 tip-tldr: We can create range function which will give 0...N range using one line only
