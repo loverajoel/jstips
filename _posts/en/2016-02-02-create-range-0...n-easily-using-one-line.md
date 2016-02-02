@@ -7,7 +7,6 @@ tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
 tip-tldr: We can create range function which will give 0...N range using one line only
 
-
 categories:
     - en
 ---
