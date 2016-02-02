@@ -105,7 +105,7 @@ transl:
         txt: Subscribe
       submit_your_tip:
         txt: Submit your tip
-        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+        link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
     footer_subscribe_message: Subscribe to more awesome daily tips!
     footer_placeholder_subscribe: your@email.com
     arrow_prev: Previous Tip
@@ -122,7 +122,7 @@ transl:
         txt: 订阅
       submit_your_tip:
         txt: 提交小知识
-        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+        link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_zh_CN.md
     footer_subscribe_message: 订阅，每天获取一条小知识!
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一条
