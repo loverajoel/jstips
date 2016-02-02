@@ -120,6 +120,24 @@ console.log(b);
 // [2, 7, 8, 6, 5, 3, 1, 4]
 ```
 
+### Another way of shuffle by [@mvedie](https://github.com/mvedie)
+
+```javascript
+function shuffle(array) {
+    return array.slice(0).sort(function() {
+        return 0.5 - Math.random();
+    });
+};
+```
+
+An Example:
+```javascript
+var myArray = [1,2,3,3,4,5,6]
+var shuffledArray = shuffle(myArray)
+console.log(shuffledArray)
+// [4, 3, 5, 1, 2, 3, 6]
+```
+
 ## #20 - Return objects to enable chaining of functions
 
 > 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
@@ -321,8 +339,15 @@ ES6 introduced the [includes() method](https://developer.mozilla.org/en-US/docs/
 With ECMAScript 2016 (ES7) it is even possible to use these techniques with Arrays:
 
 ```javascript
+<<<<<<< d5840b8e0bbd664aa60726ae506cd0f2d26bf9e1
 !!~[1, 2, 3].indexOf(1); // true
 [1, 2, 3].includes(1); // true
+=======
+var myArray = [1,2,3,3,4,5,6]
+var shuffledArray = shuffle(myArray)
+console.log(shuffledArray)
+// [4, 3, 5, 1, 2, 3, 6]
+>>>>>>> shuffledArray var declr.
 ```
 
 **Unfortunately, it is only supported in Chrome, Firefox, Safari 9 or above and Edge; not IE11 or lower.**
