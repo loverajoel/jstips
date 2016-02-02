@@ -61,7 +61,7 @@
 <body>
 <div id="main-wrapper">
 
-    {% if page.is_post%}
+    {% if layout.is_post%}
         {% if page.previous.url and page.previous.lang == page.lang %}
             <a class="tips-nav prev-tip" href="{{ page.previous.url }}">
                 <i class="fa fa-angle-left"></i>
@@ -77,8 +77,8 @@
         {% endif %}
     {% endif %}
 
-    {% if page.is_post %}
-    <div id="fixed-bar" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
+    {% if layout.is_post %}
+    <div id="fixed-bar" class="{% if layout.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
         <div class="logo">
             <a href="{{site.transl[page.lang].menu.home.link}}">
                 <img src="{{ site.baseurl }}/images/jstips.png" alt="Js Tips">
@@ -86,10 +86,10 @@
         </div>
     </div>
     {% endif %}
-    <div id="main-header" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
+    <div id="main-header" class="{% if layout.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
         <div class="background"></div>
     </div>
-    {% if page.is_post %}
+    {% if layout.is_post %}
     {% else %}
         <div class="menu-home">
             <ul>
@@ -131,7 +131,7 @@
             </ul>
         </div>
     </div>
-    <footer class="{% if page.is_post %}is-post{% endif %}">
+    <footer class="{% if layout.is_post %}is-post{% endif %}">
         <div class="github-fork-ribbon-wrapper right-bottom">
             <div class="github-fork-ribbon">
                 <a href="https://github.com/loverajoel/jstips">Fork me on GitHub</a>
@@ -171,6 +171,5 @@
     </footer>
 </div>
 {% include analytics.html %}
-<div>{{page.is_post}}</div>
 </body>
 </html>
