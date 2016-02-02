@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Map()营救；是对象属性有顺序
+title: Map()的营救；使对象属性有顺序
 tip-number: 32
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
