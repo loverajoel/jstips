@@ -1,46 +1,42 @@
 ---
 layout: post
 
-title: Inserir item em um array
-tip-number: 00
+title: Keys são importantes em componentes filhos
+tip-number: 02
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: Inserir um item em um array existente é muito comum diariamente. Você pode adicionar elementos no final de um array usando push, no começo usando unshift ou no meio usando splice.
-
+tip-tldr: Key é um atributo que você deve passar para todos os componentes criados dinamicamente a partir de um array. É um id único e constante que o React usa para identificar cada componente no DOM e saber quando é diferente ou o mesmo componente. Usar keys garante que o componente filho é preservado e não recriado prevenindo comportamentos não esperados.
 
 categories:
     - pt_br
 ---
 
-Inserir um item em um array existente é muito comum diariamente. Você pode adicionar elementos no final de um array usando push, no começo usando unshift ou no meio usando splice.
+The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) é um atributo que você deve passar para todos os componentes criados dinamicamente a partir de um array. É um id único e constante que o React usa para identificar cada componente no DOM e saber quando é diferente ou o mesmo componente. Usar keys garante que o componente filho é preservado e não recriado prevenindo comportamentos não esperados.
 
-Estes são métodos conhecidos, mas não significa que não exista uma forma mais performática. Vamos lá:
+> Key realmente não é sobre performance, é mais sobre identificar (que por sua vez leva a um melhor desempenho). Atribuição aleatória e mudança de valores não formam uma identidade [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939) (tradução literal)
 
-Adicionar um elemento no final de um array é fácil com push(), mas há uma forma com melhor performance.
-
-```javascript
-var arr = [1,2,3,4,5];
-
-arr.push(6);
-arr[arr.length] = 6; // 43% mais rápido no Chrome 47.0.2526.106 no Mac OS X 10.11.1
-```
-Ambos os métodos modificam o array original. Não acredita? Veja o [jsperf](http://jsperf.com/push-item-inside-an-array)
-
-Agora se estivermos tentando adicionar um item no começo do array:
+- Use um valor único existente no objeto.
+- Defina as keys no componente pai, não nos componentes filhos.
 
 ```javascript
-var arr = [1,2,3,4,5];
+//bad
+...
+render() {
+	<div key={{item.key}}>{{item.name}}</div>
+}
+...
 
-arr.unshift(0);
-[0].concat(arr); // 98% mais rápido no Chrome 47.0.2526.106 no Mac OS X 10.11.1
+//good
+<MyComponent key={{item.key}}/>
 ```
-Mais um detalhe: unshift edita o array original; concat retorna um novo array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
-
-Adicionar itens na metade do array é simples com splice, e há uma maneira mais performática de fazer isto.
+- [Usar índice de array é uma prática ruim.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
+- `random()` não irá funcionar
 
 ```javascript
-var items = ['one', 'two', 'three', 'four'];
-items.splice(items.length / 2, 0, 'hello');
+//bad
+<MyComponent key={{Math.random()}}/>
 ```
 
-Eu tentei executar estes testes em vários Browsers e SO e o resultado foi similar. Espero que estas dicas sejam úteis para você e o encoraje a realizar seus próprios testes de performance!
+- Você pode criar seu próprio id único. Tenha certeza que o método é rápido e anexe ao seu objeto.
+- Quando o número de filhos for grande ou conter uma quantidade expressiva de componentes, use keys para melhorar o desempenho.
+- [Você deve fornecer o atributo key para todos os filhos de ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
