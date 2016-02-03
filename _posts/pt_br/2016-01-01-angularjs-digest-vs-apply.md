@@ -1,42 +1,36 @@
 ---
 layout: post
 
-title: Keys são importantes em componentes filhos
-tip-number: 02
+title: AngularJs - `$digest` vs `$apply`
+tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: Key é um atributo que você deve passar para todos os componentes criados dinamicamente a partir de um array. É um id único e constante que o React usa para identificar cada componente no DOM e saber quando é diferente ou o mesmo componente. Usar keys garante que o componente filho é preservado e não recriado prevenindo comportamentos não esperados.
+tip-tldr: JavaScript modules e build steps estão ficando numerosos e complicados, mas e boilerplate e novos frameworks?
 
 categories:
     - pt_br
 ---
 
-The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) é um atributo que você deve passar para todos os componentes criados dinamicamente a partir de um array. É um id único e constante que o React usa para identificar cada componente no DOM e saber quando é diferente ou o mesmo componente. Usar keys garante que o componente filho é preservado e não recriado prevenindo comportamentos não esperados.
+Uma das características mais apreciadas do AngularJs é o two-way data binding. Para fazer este trabalho o AngularJs avalia as mudanças entre o model e a view através de ciclos ( $digest ). Você precisa entender esse conceito para entender como o framework funciona debaixo do capô.
 
-> Key realmente não é sobre performance, é mais sobre identificar (que por sua vez leva a um melhor desempenho). Atribuição aleatória e mudança de valores não formam uma identidade [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939) (tradução literal)
+Angular avalia cada observador quando um evento é disparado. Esse é o ciclo conhecido como `$digest`. Algumas vezes você precisa forçar a execução de um novo ciclo manualmente e deve escolher a opção correta pois esta fase é uma das que mais influencia em termos de performance.
 
-- Use um valor único existente no objeto.
-- Defina as keys no componente pai, não nos componentes filhos.
+### `$apply`
+Este método do core permite você iniciar o ciclo digestion explicitamente. Isso significa que todos os observadores são verificados; toda a aplicação inicia o `$digest loop`. Internamente, depois de executar um parâmetro de função opcional, ele chama `$rootScope.$digest();`.
 
-```javascript
-//bad
-...
-render() {
-	<div key={{item.key}}>{{item.name}}</div>
-}
-...
+### `$digest`
+Nesse caso o  método `$digest` inicia o ciclo `$digest` para o escopo atual e seu filhos. Você deve notar que os escopos pais não serão verificados e afetados.
 
-//good
-<MyComponent key={{item.key}}/>
-```
-- [Usar índice de array é uma prática ruim.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
-- `random()` não irá funcionar
+### Recomendações
+- Use `$apply` ou `$digest` somente quando os eventos DOM do navegador forem provocados fora do AngularJs.
+- Passe uma expressão de função para `$apply`, ele tem um mecanismo de tratamento de erros e permite integrar as mudanças no ciclo digest.
 
 ```javascript
-//bad
-<MyComponent key={{Math.random()}}/>
+$scope.$apply(() => {
+	$scope.tip = 'Javascript Tip';
+});
 ```
 
-- Você pode criar seu próprio id único. Tenha certeza que o método é rápido e anexe ao seu objeto.
-- Quando o número de filhos for grande ou conter uma quantidade expressiva de componentes, use keys para melhorar o desempenho.
-- [Você deve fornecer o atributo key para todos os filhos de ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
+- Se você só precisa atualizar o escopo atual ou seus filhos, use `$digest`, previnindo um novo ciclo digest para toda a aplicação. O benefício em performance é evidente.
+- `$apply()` é um processo difícil para a máquina e pode causar problemas de performance quando se tem muito binding.
+- Se você está usando >AngularJS 1.2.X, use `$evalAsync`, um método do core que irá avaliar a expressão durante o ciclo atual ou o próximo. Isto pode melhorar a performance da aplicação.
