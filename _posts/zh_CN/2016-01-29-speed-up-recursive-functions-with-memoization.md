@@ -1,25 +1,25 @@
 ---
 layout: post
 
-title: Speed up recursive functions with memoization
+title: 运用存储加速递归 Speed up recursive functions with memoization
 tip-number: 29
 tip-username: hingsir
 tip-username-profile: https://github.com/hingsir
-tip-tldr: Fibonacci sequence is very familiar to everybody. we can write the following function in 20 seconds.it works, but not efficient. it did lots of duplicate computing works, we can cache its previously computed results to speed it up.
+tip-tldr: 大家对斐波那契(Fibonacci)数列都很熟悉。我们可以再20秒内写出下面这样一个方法，它可以运行，但并不高效。它做了太多重复的运算，我们可以通过存储这些运算结果来使其加速。
 
 
 categories:
-    - en
+    - zh_CN
 ---
 
-Fibonacci sequence is very familiar to everybody. we can write the following function in 20 seconds.
+大家对斐波那契(Fibonacci)数列都很熟悉。我们可以再20秒内写出下面这样一个方法。
 
 ```js
 var fibonacci = function(n){
     return n < 2 ? n : fibonacci(n-1) + fibonacci(n-2);
 }
 ```
-it works, but not efficient. it did lots of duplicate computing works, we can cache its previously computed results to speed it up.
+它可以运行，但并不高效。它做了太多重复的运算，我们可以通过存储这些运算结果来使其加速。
 
 ```js
 var fibonacci = (function(){
@@ -32,7 +32,7 @@ var fibonacci = (function(){
     }
 })()
 ```
-Also, we can define a higher-order function that accepts a function as its argument and returns a memoized version of the function.
+我们也可以定义一个高阶函数，它接收一个方法作为参数，返回一个该方法运用存储后的新方法。
 
 ```js
 var memoize = function(func){
@@ -44,8 +44,9 @@ var memoize = function(func){
 }
 fibonacci = memoize(fibonacci);
 ```
-we can use `memoize()` in many other situations
-* GCD(Greatest Common Divisor)
+我们可以将`memoize()`用在很多其他地方
+
+* GCD(最大公约数)
 
 ```js
 var gcd = memoize(function(a,b){
@@ -56,7 +57,7 @@ var gcd = memoize(function(a,b){
 })
 gcd(27,183); //=> 3
 ```
-* Factorial calculation
+* 阶乘运算
 
 ```js
 var factorial = memoize(function(n) {
