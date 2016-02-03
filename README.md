@@ -29,6 +29,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 33 - [Create Range 0...N easily using one line](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-02-create-range-0...n-easily-using-one-line.md)
 - 32 - [Map() to the rescue: adding order to Object properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-01-map-to-the-rescue-adding-order-to-object-properties.md)
 - 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-31-avoid-modifying-or-passing-arguments-into-other-functions%E2%80%94it-kills-optimization.md)
 - 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
