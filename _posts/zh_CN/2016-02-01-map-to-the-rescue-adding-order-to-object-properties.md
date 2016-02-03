@@ -63,7 +63,7 @@ Mozilla 建议:
 ```js
 // 使用分开的数组
 var objectKeys = [z, @, b, 1, 5];
-for (item in myObject) {
+for (item in objectKeys) {
 	myObject[item]
 ...
 
