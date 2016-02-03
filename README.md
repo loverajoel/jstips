@@ -14,7 +14,7 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 
-There are a lot of way to get update, choose your own
+There are a lot of ways to get update, choose your own
 
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
@@ -22,11 +22,21 @@ There are a lot of way to get update, choose your own
 - [js2016.tips](http://js2016.tips/)
 - [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
 - [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
+- [iOs App](https://goo.gl/Y9WiBc)
+- [Android App](https://goo.gl/lYorrU)
 
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
 
+- 33 - [Create Range 0...N easily using one line](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-02-create-range-0...n-easily-using-one-line.md)
+- 32 - [Map() to the rescue: adding order to Object properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-01-map-to-the-rescue-adding-order-to-object-properties.md)
+- 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-31-avoid-modifying-or-passing-arguments-into-other-functions%E2%80%94it-kills-optimization.md)
+- 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
+- 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
+- 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
+- 27 - [Short circuit evaluation in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)
+- 26 - [Filtering and Sorting a List of Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-26-filtering-and-sorting-a-list-of-strings.md)
 - 25 - [Using immediately invoked function expression](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-25-Using-immediately-invoked-function-expression.md)
 - 24 - [Use === instead of ==](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-24-use_%3D%3D%3D_instead_of_%3D%3D.md)
 - 23 - [Converting to number fast way](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-23-converting-to-number-fast-way.md)
@@ -42,7 +52,7 @@ There are a lot of way to get update, choose your own
 - 13 - [Tip to measure performance of a javascript block](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-13-tip-to-measure-performance-of-a-javascript-block.md)
 - 12 - [Pseudomandatory parameters in ES6 functions #ES6](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-12-pseudomandatory-parameters-in-es6-functions.md)
 - 11 - [Hoisting](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-11-hoisting.md)
-- 10 - [Check if a property is in a Object](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-10-check-if-a-property-is-in-a-object.md)
+- 10 - [Check if a property is in an Object](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-10-check-if-a-property-is-in-a-object.md)
 - 09 - [Template Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-09-template-strings.md)
 - 08 - [Converting a Node List to an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-08-converting-a-node-list-to-an-array.md)
 - 07 - ["use strict" and get lazy](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-07-use-strict-and-get-lazy.md)

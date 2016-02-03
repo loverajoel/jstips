@@ -1,0 +1,87 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+{% if site.url %}
+  {% assign url_base = site.url | append: site.baseurl %}
+{% else %}
+  {% assign url_base = site.github.url %}
+{% endif %}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="{{ jekyll.version }}">Jekyll</generator>
+  <link href="{{ page.url | prepend: url_base }}" rel="self" type="application/atom+xml" />
+  <link href="{{ url_base }}/" rel="alternate" type="text/html" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ url_base | xml_escape }}/</id>
+
+  {% if site.title %}
+    <title>{{ site.title | xml_escape }}</title>
+  {% elsif site.name %}
+    <title>{{ site.name | xml_escape }}</title>
+  {% endif %}
+
+  {% if site.description %}
+    <subtitle>{{ site.description | xml_escape }}</subtitle>
+  {% endif %}
+
+  {% if site.author %}
+    <author>
+      {% if site.author.name %}
+        <name>{{ site.author.name | xml_escape }}</name>
+      {% else %}
+        <name>{{ site.author | xml_escape }}</name>
+      {% endif %}
+      {% if site.author.email %}
+        <email>{{ site.author.email | xml_escape }}</email>
+      {% endif %}
+      {% if site.author.uri %}
+        <uri>{{ site.author.uri | xml_escape }}</uri>
+      {% endif %}
+    </author>
+  {% endif %}
+
+  {% assign posts=site.posts | where:"lang", "en" | where:"type", posts %}
+  {% for post in posts limit: 10 %}
+    <entry>
+      <title>{{ post.title | markdownify | strip_html | replace: '\n', ' ' | strip | xml_escape }}</title>
+      <link href="{{ post.url | prepend: url_base }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}" />
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      {% if post.last_modified_at %}
+        <updated>{{ post.last_modified_at | date_to_xmlschema }}</updated>
+      {% else %}
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+      {% endif %}
+
+      <id>{{ post.id | prepend: url_base | xml_escape }}</id>
+      <content type="html" xml:base="{{ post.url | prepend: url_base | xml_escape }}">{{ post.content | strip | xml_escape }}</content>
+
+      {% if post.author %}
+        <author>
+          {% if post.author.name %}
+            <name>{{ post.author.name | xml_escape }}</name>
+          {% else %}
+            <name>{{ post.author | xml_escape }}</name>
+          {% endif %}
+          {% if post.author.email %}
+            <email>{{ post.author.email | xml_escape }}</email>
+          {% endif %}
+          {% if post.author.uri %}
+            <uri>{{ post.author.uri | xml_escape }}</uri>
+          {% endif %}
+        </author>
+      {% endif %}
+
+      {% if post.category %}
+        <category term="{{ post.category | xml_escape }}" />
+      {% endif %}
+
+      {% for tag in post.tags %}
+        <category term="{{ tag | xml_escape }}" />
+      {% endfor %}
+
+      {% if post.excerpt and post.excerpt != empty %}
+        <summary>{{ post.excerpt | strip_html | replace: '\n', ' ' | strip | xml_escape }}</summary>
+      {% endif %}
+    </entry>
+  {% endfor %}
+</feed>
