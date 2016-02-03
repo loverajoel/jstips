@@ -2,7 +2,7 @@
 layout: post
 
 title: Implementing asynchronous loop
-tip-number: xx
+tip-number: 34
 tip-username: madmantalking
 tip-username-profile: https://github.com/madmantalking
 tip-tldr: You may run into problems while implementing asynchronous loops. 
@@ -21,6 +21,7 @@ for (var i=0; i<5; i++) {
 }  
 ```
 The output of the above programs turns out to be
+
 ```js
 > 5
 > 5
@@ -34,7 +35,7 @@ So this definitely doesn't work.
 
 Each timeout refers to the original `i`, not a copy. So the for loop increments `i` until it gets to 5, then the timeouts run and use the current value of `i` (which is 5).
 
-Well , this problem seems easy. An immediate solution that strikes is to cache the loop index in a temporary variable.
+Well, this problem seems easy. An immediate solution that strikes is to cache the loop index in a temporary variable.
 
 ```js
 for (var i=0; i<5; i++) {
@@ -45,6 +46,7 @@ for (var i=0; i<5; i++) {
 }  
 ```
 But again the output of the above programs turns out to be
+
 ```js
 > 5
 > 5
@@ -52,7 +54,8 @@ But again the output of the above programs turns out to be
 > 5
 > 5
 ```
-So , that doesn't work either , because blocks don't create a scope and variables initializers are hoisted to the top of the scope. In fact, the previous block is the same as:
+So, that doesn't work either, because blocks don't create a scope and variables initializers are hoisted to the top of the scope. In fact, the previous block is the same as:
+
 ```js
 var temp;
 for (var i=0; i<5; i++) {
@@ -65,6 +68,7 @@ for (var i=0; i<5; i++) {
 **Solution**
 
 There are a few different ways to copy `i`. The most common way is creating a closure by declaring a function and passing `i` as an argument. Here we do this as a self-calling function.
+
 ```js
 for (var i=0; i<5; i++) {
 	(function(num){
