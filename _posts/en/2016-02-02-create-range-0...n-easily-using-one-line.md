@@ -18,22 +18,22 @@ Below is the line with which we can create 0...N range.
 Array.apply(null, {length: N}).map(Number.call, Number);
 ```
 
-Lets break down this line into parts.We know how "call" function works in javascript.So in "call" first argument will be context and from second arguments, it will be list of arguments of function on which we are calling "call" function.
+Lets break down this line into parts. We know how `call()` function works in javascript. So in `call()` first argument will be context and from second arguments, it will be list of arguments of function on which we are calling `call()` function.
 
 ```js
-function add(a,b){
+function add(a, b){
     return (a+b);
 }
-add.call(null,5,6);
+add.call(null, 5, 6);
 ```
 This will return a sum of 5 and 6.
 
-Map of array in javascript takes two arguments, first callback and second thisArg(context).Callback is taking three arguments, value, index and whole array on which we are iterating.so common syntax is like : 
+`map()` of array in javascript takes two arguments, first `callback` and second `thisArg(context)`. `callback` is taking three arguments, `value`, `index` and whole array on which we are iterating. So common syntax is like: 
 
 ```js
-[1,2,3].map(function(val,index,arr){
+[1, 2, 3].map(function(value, index, arr){
     //Code
-},this);
+}, this);
 ```
 Below line create array of given length.
 
@@ -49,7 +49,7 @@ Array.apply(null, {length: N}).map(Number.call, Number);
 If you want range 1...N, it will be like this.
 
 ```js
-Array.apply(null, {length: N}).map(function(val,index){
+Array.apply(null, {length: N}).map(function(value, index){
   return index+1;  
 });
 ```
