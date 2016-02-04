@@ -14,18 +14,6 @@ categories:
 Assigning is very common. Sometimes typing becomes time consuming for us 'Lazy programmers'.
 So, we can use some tricks to help us and make our code cleaner and simpler.
 
-Instead of using:
-
-````javascript
-a = true;
-b = false;
-````
-We can use:
-
-````javascript
-a |= 1;
-b &= 0;
-````
 This is the similiar use of
 
 ````javascript
