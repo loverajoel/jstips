@@ -44,6 +44,20 @@ var memoize = function(func){
 }
 fibonacci = memoize(fibonacci);
 ```
+
+ES6版本的memoize函数如下：
+
+```js
+var memoize = function(func){
+    const cache = {};
+    return (...args) => {
+        const key = [...args].toString();
+        return key in cache ? cache[key] : (cache[key] = func(...args));
+    }
+}
+fibonacci = memoize(fibonacci);
+```
+
 我们可以将`memoize()`用在很多其他地方
 
 * GCD(最大公约数)
