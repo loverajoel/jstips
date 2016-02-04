@@ -21,6 +21,7 @@ for (var i=0; i<5; i++) {
 }  
 ```
 The output of the above programs turns out to be
+
 ```js
 > 5
 > 5
@@ -45,6 +46,7 @@ for (var i=0; i<5; i++) {
 }  
 ```
 But again the output of the above programs turns out to be
+
 ```js
 > 4
 > 4
@@ -52,7 +54,9 @@ But again the output of the above programs turns out to be
 > 4
 > 4
 ```
+
 So , that doesn't work either , because blocks don't create a scope and variables initializers are hoisted to the top of the scope. In fact, the previous block is the same as:
+
 ```js
 var temp;
 for (var i=0; i<5; i++) {
