@@ -21,6 +21,7 @@ a = true;
 b = false;
 ````
 We can use:
+
 ````javascript
 a |= 1;
 b &= 0;
@@ -41,7 +42,7 @@ n --; n = n - 1;
 
 ````
 
-#### If-else (Using ternary operator) ####
+### If-else (Using ternary operator)
 
 This is what we write on regular basis.
 
@@ -59,7 +60,7 @@ We can user ternary operator to make it awesome:
 var newValue = (value > 10) ? 5 : 2;
 ````
 
-#### Null, Undefined, Empty Checks ####
+### Null, Undefined, Empty Checks
 
 ````javascript
 if (variable1 !== null || variable1 !== undefined || variable1 !== '') {
@@ -74,7 +75,7 @@ var variable2 = variable1  || '';
 ````
 P.S.: If variable1 is a number, then first check if it is 0.
 
-#### Object Array Notation ####
+### Object Array Notation
 
 Instead of using:
 
@@ -89,7 +90,7 @@ Use this:
 var a = ["myString1", "myString2"];
 ````
 
-#### Associative array ####
+### Associative array
 
 Instead of using:
 
