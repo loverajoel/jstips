@@ -44,18 +44,6 @@ var memoize = function(func){
 }
 fibonacci = memoize(fibonacci);
 ```
-And there is a ES6 version of the memoize function.
-
-```js
-var memoize = function(func){
-    const cache = {};
-    return (...args) => {
-        const key = [...args].toString();
-        return key in cache ? cache[key] : (cache[key] = func(...args));
-    }
-}
-fibonacci = memoize(fibonacci);
-```
 we can use `memoize()` in many other situations
 * GCD(Greatest Common Divisor)
 
