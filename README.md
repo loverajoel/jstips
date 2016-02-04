@@ -14,7 +14,7 @@ Any improvements or suggestions are more than welcome!
 
 ### Let’s keep in touch
 
-There are a lot of ways to get update, choose your own
+There are a lot of way to get update, choose your own
 
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
@@ -22,18 +22,11 @@ There are a lot of ways to get update, choose your own
 - [js2016.tips](http://js2016.tips/)
 - [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
 - [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
-- [iOs App](https://goo.gl/Y9WiBc)
-- [Android App](https://goo.gl/lYorrU)
 
 > Don't forget to Star the repo, as this will help to promote the project!
 
 # Tips list
 
-- 34 - [Implementing asynchronous loop](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-03-implementing-asynchronous-loops.md)
-- 33 - [Create Range 0...N easily using one line](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-02-create-range-0...n-easily-using-one-line.md)
-- 32 - [Map() to the rescue: adding order to Object properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-01-map-to-the-rescue-adding-order-to-object-properties.md)
-- 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-31-avoid-modifying-or-passing-arguments-into-other-functions%E2%80%94it-kills-optimization.md)
-- 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
 - 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
 - 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
 - 27 - [Short circuit evaluation in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)

@@ -1,7 +1,5 @@
 ---
 layout: default
-is_post: true
-joel: hola
 ---
 
 <article class="post single">
@@ -20,8 +18,10 @@ joel: hola
 
             <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ page.tip-username-profile }}" target="_blank"> @{{ page.tip-username }}</a></div>
 
-            <div id="social" class="share meta-item social-sharer minimalism">
-                
+            <div class="share meta-item">
+                <a href="http://facebook.com/sharer.php?s=100&p[url]=http://www.jstips.co{{page.url}}" target="_blank"><img src="/images/facebook.svg"></a>
+                <a href="https://twitter.com/intent/tweet?text=JS Tips - {{page.tip-number}} - {{ page.title }}&url=http://www.jstips.co{{page.url}}&hashtags=javascript"><img src="/images/twitter.svg"></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.jstips.co{{page.url}}&title=JS Tips - {{page.tip-number}} - {{ page.title }}&summary={{ page.tip-tldr }}" target="_blank"><img src="/images/linkedin.svg"></a>
             </div>
         </div>
     </div>
@@ -29,17 +29,6 @@ joel: hola
     <div class="entry">
         {{ content }}
     </div>  
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            Share(
-              document.getElementById('social'),
-              {
-                url: 'http://www.jstips.co{{page.url}}',
-                title: 'joel',
-                networks: ['in', 'fb', 'tw']
-              }
-            ); 
-        });
-    </script>
+
     {% include disqus.html %}
 </article>

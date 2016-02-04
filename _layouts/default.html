@@ -50,6 +50,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"> -->
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -61,52 +62,42 @@
 <body>
 <div id="main-wrapper">
 
-    {% if layout.is_post%}
-        {% if page.previous.url and page.previous.lang == 'en' %}
+    {% if page.is_post %}
+        {% if page.previous.url %}
             <a class="tips-nav prev-tip" href="{{ page.previous.url }}">
                 <i class="fa fa-angle-left"></i>
-                <p>{{site.transl[en].arrow_prev}}</p>
+                <p>Previous Tip</p>
             </a>
         {% endif %}
 
-        {% if page.next.url and page.next.lang == 'en' %}
+        {% if page.next.url %}
             <a class="tips-nav next-tip" href="{{ page.next.url }}">
                 <i class="fa fa-angle-right"></i>
-                <p>{{site.transl[en].arrow_next}}</p>
+                <p>Next Tip</p>
             </a>
         {% endif %}
     {% endif %}
 
-    {% if layout.is_post %}
-    <div id="fixed-bar" class="{% if layout.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
+    {% if page.is_post %}
+    <div id="fixed-bar" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
         <div class="logo">
-            <a href="{{site.transl['en'].menu.home.link}}">
+            <a href="/">
                 <img src="{{ site.baseurl }}/images/jstips.png" alt="Js Tips">
             </a>
         </div>
     </div>
     {% endif %}
-    <div id="main-header" class="{% if layout.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
+    <div id="main-header" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
         <div class="background"></div>
     </div>
-    {% if layout.is_post %}
+    {% if page.is_post %}
     {% else %}
         <div class="menu-home">
             <ul>
-                <li><a href="{{site.transl[page.lang].menu.home.link}}">{{site.transl[page.lang].menu.home.txt}}</a></li>
-                <li><a href="{{site.transl[page.lang].menu.about.link}}">{{site.transl[page.lang].menu.about.txt}}</a></li>
-                <li><a href="#subscribe">{{site.transl[page.lang].menu.subscribe.txt}}</a></li>
-                <li><a href="{{site.transl[page.lang].menu.submit_your_tip.link}}">{{site.transl[page.lang].menu.submit_your_tip.txt}}</a></li>
-                <li class="sub-menu">
-                    <a href="#"><img src="/images/flags/{{page.lang}}.png"></a>
-                    <ul>
-                        {% for lang in site.languages %}
-                            {% if lang.name != page.lang %}
-                                <li><a href="{{lang.link}}"><img src="/images/flags/{{lang.name}}.png"></a></li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li><a href="https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md">Submit your tip!</a></li>
             </ul>
             <hr/>
         </div>
@@ -131,12 +122,7 @@
             </ul>
         </div>
     </div>
-    <footer class="{% if layout.is_post %}is-post{% endif %}">
-        <div class="github-fork-ribbon-wrapper right-bottom">
-            <div class="github-fork-ribbon">
-                <a href="https://github.com/loverajoel/jstips">Fork me on GitHub</a>
-            </div>
-        </div>
+    <footer class="{% if page.is_post %}is-post{% endif %}">
         <div class="email-suscribe">
             <div>
             <!-- Begin MailChimp Signup Form -->
@@ -144,9 +130,9 @@
                 <form action="//jstips.us12.list-manage.com/subscribe/post?u=80795a6c077c65f1648c4dfe3&amp;id=1f7d557661" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <a href="#" name="subscribe"></a>
-                        <label for="mce-EMAIL">{{site.transl['en'].footer_subscribe_message}}</label>
+                        <label for="mce-EMAIL">Subscribe to more awesome daily tips!</label>
                         <div class="email-container">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="{{site.transl['en'].footer_placeholder_subscribe}}" required>
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                             <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">    
                         </div>
                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -158,9 +144,9 @@
             </div>
         </div>
         <ul>
-            <li><a href="{{site.transl['en'].menu.home.link}}">{{site.transl['en'].menu.home.txt}}</a></li>
-            <li><a href="{{site.transl['en'].menu.about.link}}">{{site.transl['en'].menu.about.txt}}</a></li>
-            <li><a href="{{site.transl['en'].menu.submit_your_tip.link}}">{{site.transl['en'].menu.submit_your_tip.txt}}</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md">Submit your tip!</a></li>
             <li class="github"><a href="https://github.com/loverajoel/jstips"><img src="/images/github.svg"></a></li>
             <li class="twitter">
                 <a href="https://twitter.com/tips_js" class="twitter-follow-button" data-show-count="false">Follow @tips_js</a>
@@ -170,7 +156,6 @@
         </ul>
     </footer>
 </div>
-<script type="text/javascript" src="/js/share.min.js"></script>
 {% include analytics.html %}
 </body>
 </html>

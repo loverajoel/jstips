@@ -2,7 +2,6 @@
 layout: page
 title: Introducing JavaScript Tips
 permalink: /about/
-lang: en
 ---
 
 > New year, new project. **A JS tip per day!**
@@ -33,4 +32,3 @@ There are a lot of way to get update, choose your own
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
 - JS Tips Theme => [Marcos Cosimi](https://github.com/markoscc)
-- Languages flags => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)

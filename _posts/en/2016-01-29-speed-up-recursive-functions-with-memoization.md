@@ -27,8 +27,8 @@ var fibonacci = (function(){
         0: 0,
         1: 1
     };
-    return function self(n){
-        return n <= 1 ? cache[n] : (cache[n] = self(n-1) + self(n-2));
+    return function(n){
+        return n <= 1 ? cache[n] : (cache[n] = cache[n-1] + cache[n-2]);
     }
 })()
 ```
@@ -40,18 +40,6 @@ var memoize = function(func){
     return function(){
         var key = Array.prototype.slice.call(arguments).toString();
         return key in cache ? cache[key] : (cache[key] = func.apply(this,arguments));
-    }
-}
-fibonacci = memoize(fibonacci);
-```
-And there is a ES6 version of the memoize function.
-
-```js
-var memoize = function(func){
-    const cache = {};
-    return (...args) => {
-        const key = [...args].toString();
-        return key in cache ? cache[key] : (cache[key] = func(...args));
     }
 }
 fibonacci = memoize(fibonacci);
