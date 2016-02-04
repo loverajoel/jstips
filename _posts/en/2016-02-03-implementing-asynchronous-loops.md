@@ -65,6 +65,7 @@ for (var i=0; i<5; i++) {
 **Solution**
 
 There are a few different ways to copy `i`. The most common way is creating a closure by declaring a function and passing `i` as an argument. Here we do this as a self-calling function.
+
 ```js
 for (var i=0; i<5; i++) {
 	(function(num){
