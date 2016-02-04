@@ -1,18 +1,18 @@
 ---
 layout: post
 
-title: Create Range 0...N-1 easily using one line
+title: Create Range 0...N easily using one line
 tip-number: 33
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
-tip-tldr: We can create range function which will give 0...N-1 range using one line only
+tip-tldr: We can create range function which will give 0...N range using one line only
 
 
 categories:
     - en
 ---
 
-Below is the line with which we can create 0...N-1 range.
+Below is the line with which we can create 0...N range.
 
 ```js
 Array.apply(null, {length: N}).map(Number.call, Number);
