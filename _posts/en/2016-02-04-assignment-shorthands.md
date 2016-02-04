@@ -5,8 +5,7 @@ title: Assignment Operators
 tip-number: 35
 tip-username: hsleonis
 tip-username-profile: https://github.com/hsleonis
-tip-tldr: Assigning is very common. Sometimes typing becomes time consuming for us 'Lazy programmers'.
-So, we can use some tricks to help us and make our code cleaner and simpler.
+tip-tldr: Assigning is very common. Sometimes typing becomes time consuming for us 'Lazy programmers'. So, we can use some tricks to help us and make our code cleaner and simpler.
 
 categories:
     - en
