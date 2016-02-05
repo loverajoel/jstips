@@ -85,7 +85,7 @@ Another approach for this would be with using `let`. With ES6 the `let` keyword 
 
 ```js
 for (let i=0; i<5; i++) {
-	var temp = i;
+	const temp = i;
  	setTimeout(function(){
 		console.log(temp); 
 	}, 1000);
