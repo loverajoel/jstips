@@ -5,14 +5,14 @@ title: Inserir item em um array
 tip-number: 00
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: Inserir um item em um array existente é muito comum diariamente. Você pode adicionar elementos no final de um array usando push, no começo usando unshift ou no meio usando splice.
+tip-tldr: Inserir um item em um array existente é uma tarefa muito comum. Você pode adicionar elementos no final de um array usando push, no começo usando unshift ou no meio usando splice.
 
 
 categories:
-    - pt_br
+    - pt_BR
 ---
 
-Inserir um item em um array existente é muito comum diariamente. Você pode adicionar elementos no final de um array usando push, no começo usando unshift ou no meio usando splice.
+Inserir um item em um array existente é uma tarefa muito comum. Você pode adicionar elementos no final de um array usando push, no começo usando unshift ou no meio usando splice.
 
 Estes são métodos conhecidos, mas não significa que não exista uma forma mais performática. Vamos lá:
 

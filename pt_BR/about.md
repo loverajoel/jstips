@@ -7,7 +7,7 @@ lang: pt_BR
 
 > Ano novo, projeto novo. **Uma dica de JS por dia!**
 
-Com grande entusiasmo, apresento estas dicas diárias de JavaScript curtas e úteis que lhe permitirá melhorar a sua escrita de código. Com menos de 2 minutos a cada dia, você será capaz de ler sobre desempenho, convenções, hacks, questões e todos os itens que o futuro desta linguagem impressionante tem para nós.
+Com grande entusiasmo, apresento diariamente estas dicas curtas e úteis sobre JavaScript que lhe permitirão melhorar a escrita do seu código. Com menos de 2 minutos a cada dia, você será capaz de ler sobre desempenho, convenções, hacks e todos os itens que o futuro desta linguagem impressionante tem para nós.
 
 Ao meio-dia, não importa se é fim de semana ou feriado, uma dica será postada e tuitada.
 
