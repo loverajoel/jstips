@@ -25,13 +25,11 @@ Finally we are going to sort the filtered list using the [`sort`](https://develo
 
 ```js
 var filteredAndSortedKeywords = keywords
-  .filter(function (keyword, index) {
-      return keywords.indexOf(keyword) === index;
+  .filter(function (keyword, index, self) {
+      return self.lastIndexOf(keyword) === index;
     })
   .sort(function (a, b) {
-      if (a < b) return -1;
-      else if (a > b) return 1;
-      return 0;
+      return a < b ? -1 : (a > b ? 1 : 0);
     });
 ```
 
@@ -39,11 +37,9 @@ The **ES6** (ECMAScript 2015) version using [arrow functions](https://developer.
 
 ```js
 const filteredAndSortedKeywords = keywords
-  .filter((keyword, index) => keywords.indexOf(keyword) === index)
+  .filter((keyword, index, self) => self.indexOf(keyword) === index)
   .sort((a, b) => {
-      if (a < b) return -1;
-      else if (a > b) return 1;
-      return 0;
+      return a < b ? -1 : (a > b ? 1 : 0);
     });
 ```
 
