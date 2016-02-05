@@ -29,6 +29,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 36 - [Observe DOM changes in extensions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-05-observe-dom-changes.md)
 - 35 - [Assignment Operators](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-04-assignment-shorthands.md)
 - 34 - [Implementing asynchronous loop](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-03-implementing-asynchronous-loops.md)
 - 33 - [Create Range 0...N easily using one line](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-02-create-range-0...n-easily-using-one-line.md)
