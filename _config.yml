@@ -151,7 +151,7 @@ transl:
       submit_your_tip:
         txt: Envie sua dica
         link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_pt_BR.md
-    footer_subscribe_message: Subscribe to more awesome daily tips!
+    footer_subscribe_message: Inscreva-se para mais incríveis dicas diárias!
     footer_placeholder_subscribe: seu@email.com
     arrow_prev: Dica anterior
     arrow_next: Próxima dica
