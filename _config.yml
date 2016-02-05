@@ -39,6 +39,14 @@ defaults:
       layout: default
       lang: zh_CN
       is_post: true
+  -
+    scope:
+      path: _posts/ko_KR
+      type: posts
+    values:
+      layout: default
+      lang: ko_KR
+      is_post: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -100,6 +108,9 @@ languages:
   - 
     name: zh_CN
     link: /zh_CN
+  - 
+    name: ko_KR
+    link: /ko_KR
     
 transl:
   en:
@@ -153,3 +164,20 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一条
     arrow_next: 下一条
+  ko_KR:
+    menu:
+      home: 
+        txt: 홈
+        link: /ko_KR
+      about: 
+        txt: 소개
+        link: /ko_KR/about
+      subscribe: 
+        txt: 가입
+      submit_your_tip:
+        txt: 팁 제출
+        link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
+    footer_subscribe_message: 더 많은 하루한팁을 위해 가입하세요!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: 이전 팁
+    arrow_next: 다음 팁
