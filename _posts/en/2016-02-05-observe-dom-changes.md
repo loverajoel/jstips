@@ -2,7 +2,7 @@
 layout: post
 
 title: Observe DOM changes in extensions
-tip-number: xx
+tip-number: 36
 tip-username: beyondns
 tip-username-profile: https://github.com/beyondns
 tip-tldr: When you develop extensions to existent sites it's not so easy to play with DOM 'cause of modern dynamic javascript.
