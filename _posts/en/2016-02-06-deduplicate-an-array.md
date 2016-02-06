@@ -12,7 +12,7 @@ categories:
     - en
 ---
 
-# primitives
+## primitives
 If an Array only contains primitive values, we can deduplicate it by
 only using the [`filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and [`indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) methods.
 
@@ -24,7 +24,7 @@ var deduped = [ 1, 1, 'a', 'a' ].filter(function (el, i, arr) {
 console.log(deduped); // [ 1, 'a' ]
 ```
 
-## ES2015
+### ES2015
 We can write this in a more compact way using an [arrow function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ```javascript
@@ -42,7 +42,7 @@ var deduped = Array.from( new Set([ 1, 1, 'a', 'a' ]) );
 console.log(deduped); // [ 1, 'a' ]
 ```
 
-# objects
+## objects
 We can't use the same approach when the elements are Objects,
 because Objects are stored by reference and primitives are stored
 by value.
@@ -124,16 +124,16 @@ var deduped = dedup([
 console.log(deduped); // [ {a: 1}, [1, 2], 1, '1' ]
 ```
 
-# resources
-## methods
+## resources
+### methods
 * [`filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 * [`indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 * [`from`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 * [`JSON.stringify`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-## ES2015
+### ES2015
 * [arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 * [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
-## stack overflow
+### stack overflow
 * [remove duplicates from array](http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array/9229821#9229821)
