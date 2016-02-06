@@ -2,7 +2,7 @@
 layout: post
 
 title: Deduplicate an Array
-tip-number: xx
+tip-number: 37
 tip-username: danillouz
 tip-username-profile: https://www.twitter.com/danillouz
 tip-tldr: How to remove duplicate elements, of different data types, from an Array.
