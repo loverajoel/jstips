@@ -33,7 +33,7 @@ console.log(`My name is ${firstName} ${lastName}`);
 
 You can do multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in template strings.
 
-You are also able to to modify the output of template strings using a function; they are called [tagged template strings]
+You are also able to modify the output of template strings using a function; they are called [tagged template strings]
 (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings) for example usages of tagged template strings.
 
 You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more.
