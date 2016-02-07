@@ -19,6 +19,7 @@ There are a lot of ways to get update, choose your own
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
 - [Hubot](https://github.com/dggriffin/hubot-jstips)
+- [Slackbot](https://github.com/radibit/js-tips-slack-bot)
 - [js2016.tips](http://js2016.tips/)
 - [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
 - [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
