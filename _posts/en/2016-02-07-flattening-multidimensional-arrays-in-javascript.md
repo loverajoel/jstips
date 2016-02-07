@@ -17,20 +17,20 @@ These are the three known ways to merge multidimensional array into a single arr
 Given this array:
 
 ```js
-var myArray = [[1, 2],[3, 4, 5], [6, 8, 9]];
+var myArray = [[1, 2],[3, 4, 5], [6, 7, 8, 9]];
 ```
 
 We wanna have this result:
 
 ```js
-[1, 2, 3, 4, 5, 6, 8, 9]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### Solution 1: Using [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) and [`apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
 ```js
 var myNewArray = [].concat.apply([], myArray);
-// [1, 2, 3, 4, 5, 6, 8, 9]
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### Solution 2: Using [`reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#Flatten_an_array_of_arrays)
@@ -39,7 +39,7 @@ var myNewArray = [].concat.apply([], myArray);
 var myNewArray = myArray.reduce(function(prev, curr) {
   return prev.concat(curr);
 });
-// [1, 2, 3, 4, 5, 6, 8, 9]
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### Solution 3:
@@ -51,7 +51,7 @@ for (var i = 0; i < myArray.length; ++i) {
     myNewArray3.push(myArray[i][j]);
 }
 console.log(myNewArray3);
-// [1, 2, 3, 4, 5, 6, 8, 9]
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 Take a look [here](https://jsbin.com/qeqicu/edit?js,console) these 3 algorithms in action.
 

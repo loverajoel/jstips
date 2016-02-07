@@ -29,6 +29,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 38 - [Flattening multidimensional Arrays in JavaScript](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-07-flattening-multidimensional-arrays-in-javascript.md)
 - 37 - [Deduplicate an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-06-deduplicate-an-array.md)
 - 36 - [Observe DOM changes in extensions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-05-observe-dom-changes.md)
 - 35 - [Assignment Operators](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-04-assignment-shorthands.md)
