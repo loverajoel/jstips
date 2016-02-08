@@ -30,6 +30,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 39 - [Advanced Javascript Properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-08-advanced-properties.md)
 - 38 - [Flattening multidimensional Arrays in JavaScript](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-07-flattening-multidimensional-arrays-in-javascript.md)
 - 37 - [Deduplicate an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-06-deduplicate-an-array.md)
 - 36 - [Observe DOM changes in extensions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-05-observe-dom-changes.md)
