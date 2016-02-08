@@ -103,8 +103,10 @@ Object.defineProperty(obj, 'firstD', {
 console.log(obj.firstD) // 10
 ```
 
-*Note*: If you define a getter without a setter and still try to set a value, you will get an error! This is particularly important when using helper functions such as `$.extend` or `_.merge`. Be careful!
+### Note
+If you define a getter without a setter and still try to set a value, you will get an error! This is particularly important when using helper functions such as `$.extend` or `_.merge`. Be careful!
 
-*Links:*
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-- http://bdadam.com/blog/defining-properties-in-javascript.html
+### Links
+
+- [defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+- [Defining properties in JavaScript](http://bdadam.com/blog/defining-properties-in-javascript.html)
