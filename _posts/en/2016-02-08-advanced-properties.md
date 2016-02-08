@@ -2,7 +2,7 @@
 layout: post
 
 title: Advanced Javascript Properties
-tip-number: 38
+tip-number: 39
 tip-username: mallowigi
 tip-username-profile: https://github.com/mallowigi
 tip-tldr: How to add private properties, getters and setters to objects.
