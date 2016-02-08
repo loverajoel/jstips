@@ -20,7 +20,7 @@ To do so, you need to use the method `defineProperty` of the `Object` prototype 
 var a = {};
 Object.defineProperty(a, 'readonly', {
   value: 15,
-  writable: true
+  writable: false
 });
 
 a.readonly = 20;
