@@ -2,7 +2,7 @@
 layout: post
 
 title: Array average and median
-tip-number: 40
+tip-number: 41
 tip-username: soyuka
 tip-username-profile: https://github.com/soyuka
 tip-tldr: Calculate the average and median from array values
