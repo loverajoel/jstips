@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Safe string concatenation
+title: Concatenación de Strings segura
 tip-number: 19
 tip-username: gogainda
 tip-username-profile: https://twitter.com/gogainda
-tip-tldr: Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use concat
+tip-tldr: Suponga que tiene un par de variables con tipos desconocidos y desea concatenar en una cadena. Para asegurarse de que la operación aritmética no se puede aplicar durante la concatenación, utilizar concat
 
 categories:
-    - en
+    - es_ES
 ---
 
-Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use `concat`:
+Suponga que tiene un par de variables con tipos desconocidos y desea concatenar en una cadena. Para asegurarse de que la operación aritmética no se puede aplicar durante la concatenación, utilizar 'concat':
 
 ```javascript
 var one = 1;
@@ -21,7 +21,7 @@ var three = '3';
 var result = ''.concat(one, two, three); //"123"
 ```
 
-This way of concatenting does exactly what you'd expect. In contrast, concatenation with pluses might lead to unexpected results:
+Esta forma de concatenación hace exactamente lo que se espera. Por el contrario, la concatenación con ventajas podría conducir a resultados inesperados:
 
 ```javascript
 var one = 1;
@@ -31,6 +31,6 @@ var three = '3';
 var result = one + two + three; //"33" instead of "123"
 ```
 
-Speaking about performance, compared to the `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of `concat` is pretty much the same.
+Hablando de rendimiento, en comparación con el `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) de concatenación, la velocidad de` concat` es más o menos lo mismo.
 
-You can read more about the `concat` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+Puede leer mas sobre `concat` en MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).

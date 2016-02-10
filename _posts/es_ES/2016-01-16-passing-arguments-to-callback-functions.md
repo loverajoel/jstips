@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Passing arguments to callback functions
+title: Paso de argumentos a las funciones de callback.
 tip-number: 16
 tip-username: minhazav
 tip-username-profile: https://twitter.com/minhazav
-tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
+tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks? Modulos JavaScript y construir pasos son cada vez más numerosos y complicados, pero ¿qué pasa en nuevos frameworks?
 
 categories:
-    - en
+    - es_ES
 ---
 
-By default you cannot pass arguments to a callback function. For example:
+Por defecto no se puede pasar argumentos a una función de callback. Por ejemplo:
 
 ```js
 function callback() {
@@ -23,6 +23,7 @@ document.getElementById('someelem').addEventListener('click', callback);
 ```
 
 You can take advantage of the closure scope in Javascript to pass arguments to callback functions. Check this example:
+Puede aprovechar el closure scope en Javascript para pasar argumentos a funciones de callback. Compruebe este ejemplo:
 
 ```js
 function callback(a, b) {
@@ -36,13 +37,14 @@ document.getElementById('someelem').addEventListener('click', callback(x, y));
 
 ```
 
-### What are closures?
+### Que son closures?
 
-Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) to learn more.
+Closures son funciones que hacen referencia a las variables independientes (gratis). En otras palabras, la función definida en el closure "recuerda" el scope en el que se creó. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) para conocer mas.
 
-So this way the arguments `x` and `y` are in scope of the callback function when it is called.
 
-Another method to do this is using the `bind` method. For example:
+Así de esta manera los argumentos `x` y `y` están en el scope de la función de callback cuando se le llama.
+
+Otro método para hacerlo es usando el método `bind`. Por ejemplo:
 
 ```js
 var alertText = function(text) {
@@ -51,4 +53,4 @@ var alertText = function(text) {
 
 document.getElementById('someelem').addEventListener('click', alertText.bind(this, 'hello'));
 ```
-There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
+Hay una ligera diferencia en el rendimiento de ambos métodos, ver [jsperf](http://jsperf.com/bind-vs-closure-23).

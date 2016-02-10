@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Even simpler way of using `indexOf` as a contains clause
+title: Manera aún más sencilla de contener la cláusula al usar `indexOf`
 tip-number: 15
 tip-username: jhogoforbroke
 tip-username-profile: https://twitter.com/jhogoforbroke
-tip-tldr: JavaScript by default does not have a contains method. And for checking existence of a substring in a string or an item in an array you may do this.
+tip-tldr: JavaScript por defecto no tiene un método contains. Y para comprobar la existencia de una subcadena en una cadena o un elemento de un array puede hacer esto.
 
 categories:
-    - en
+    - es_ES	
 ---
 
-JavaScript by default does not have a contains method. And for checking existence of a substring in a string or an item in an array you may do this:
+JavaScript por defecto no tiene un método contains. Y para comprobar la existencia de una subcadena en una cadena o un elemento de un array puede hacer esto:
 
 ```javascript
 var someText = 'javascript rules';
@@ -23,7 +23,7 @@ if (someText.indexOf('javascript') >= 0) {
 }
 ```
 
-But let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
+Pero vea esto [Expressjs](https://github.com/strongloop/express) code snippets.
 
 [examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
 
@@ -53,9 +53,9 @@ exports.normalizeType = function(type){
 if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
 ```
 
-The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on binary representations, but they return standard JavaScript numerical values."
+El gotcha es el [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Operadores bit a bit realizan sus operaciones en representaciones binarias, sino que devuelven valores numéricos estándar de JavaScript."
 
-It transforms `-1` into `0`, and `0` evaluates to `false` in JavaScript:
+Transforma `-1` en `0`, and `0` evalúa como false JavaScript:
 
 ```javascript
 var someText = 'text';
@@ -67,18 +67,18 @@ var someText = 'text';
 
 ### String.prototype.includes()
 
-ES6 introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use it to determine whether or not a string includes another string:
+ES6 introdujo [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) y se puede usar para determinar si o no una cadena incluye otra cadena:
 
 ```javascript
 'something'.includes('thing'); // true
 ```
 
-With ECMAScript 2016 (ES7) it is even possible to use these techniques with Arrays:
+Con ECMAScript 2016 (ES7) incluso es posible utilizar estas técnicas con Arrays:
 
 ```javascript
 !!~[1, 2, 3].indexOf(1); // true
 [1, 2, 3].includes(1); // true
 ```
 
-**Unfortunately, it is only supported in Chrome, Firefox, Safari 9 or above and Edge; not IE11 or lower.**
-**It's better used in controlled environments.**
+**Sólo se admite en Chrome, Firefox, Safari 9 o superior y Edge; No EI11 o inferior.**
+**Es mejor utilizados en ambientes controlados.**
