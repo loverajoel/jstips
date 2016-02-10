@@ -30,6 +30,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 41 - [Array average and median](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-10-array-average-and-median.md)
 - 40 - [Using JSON.Stringify](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-09-using-json-stringify.md)
 - 39 - [Advanced Javascript Properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-08-advanced-properties.md)
 - 38 - [Flattening multidimensional Arrays in JavaScript](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-07-flattening-multidimensional-arrays-in-javascript.md)
