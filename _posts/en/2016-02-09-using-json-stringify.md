@@ -2,7 +2,7 @@
 layout: post
 
 title: Using JSON.Stringify
-tip-number: XX
+tip-number: 40
 tip-username: vamshisuram
 tip-username-profile: https://github.com/vamshisuram
 tip-tldr: Create string from selected properties of JSON object.
