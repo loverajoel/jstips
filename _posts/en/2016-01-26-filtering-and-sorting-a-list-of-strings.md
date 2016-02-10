@@ -26,12 +26,10 @@ Finally we are going to sort the filtered list using the [`sort`](https://develo
 ```js
 var filteredAndSortedKeywords = keywords
   .filter(function (keyword, index) {
-      return keywords.indexOf(keyword) === index;
+      return keywords.lastIndexOf(keyword) === index;
     })
   .sort(function (a, b) {
-      if (a < b) return -1;
-      else if (a > b) return 1;
-      return 0;
+      return a < b ? -1 : 1;
     });
 ```
 
@@ -39,12 +37,8 @@ The **ES6** (ECMAScript 2015) version using [arrow functions](https://developer.
 
 ```js
 const filteredAndSortedKeywords = keywords
-  .filter((keyword, index) => keywords.indexOf(keyword) === index)
-  .sort((a, b) => {
-      if (a < b) return -1;
-      else if (a > b) return 1;
-      return 0;
-    });
+  .filter((keyword, index) => keywords.lastIndexOf(keyword) === index)
+  .sort((a, b) => a < b ? -1 : 1);
 ```
 
 And this is the final filtered and sorted list of JavaScript reserved keywords:
@@ -54,3 +48,5 @@ console.log(filteredAndSortedKeywords);
 
 // ['abstract', 'arguments', 'await', 'boolean', 'break', 'byte', 'case', 'catch', 'char', 'class', 'const', 'continue', 'debugger', 'default', 'delete', 'do', 'double', 'else', 'enum', 'eval', 'export', 'extends', 'false', 'final', 'finally', 'float', 'for', 'function', 'goto', 'if', 'implements', 'import', 'in', 'instanceof', 'int', 'interface', 'let', 'long', 'native', 'new', 'null', 'package', 'private', 'protected', 'public', 'return', 'short', 'static', 'super', 'switch', 'synchronized', 'this', 'throw', 'throws', 'transient', 'true', 'try', 'typeof', 'var', 'void', 'volatile', 'while', 'with', 'yield']
 ```
+
+*Thanks to [@nikshulipa](https://github.com/nikshulipa), [@kirilloid](https://twitter.com/kirilloid), [@lesterzone](https://twitter.com/lesterzone), [@tracker1](https://twitter.com/tracker1), [@manuel_del_pozo](https://twitter.com/manuel_del_pozo) for all the comments and suggestions!*

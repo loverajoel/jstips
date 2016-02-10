@@ -19,6 +19,7 @@ There are a lot of ways to get update, choose your own
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
 - [Hubot](https://github.com/dggriffin/hubot-jstips)
+- [Slackbot](https://github.com/radibit/js-tips-slack-bot)
 - [js2016.tips](http://js2016.tips/)
 - [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
 - [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
@@ -29,6 +30,11 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 40 - [Using JSON.Stringify](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-09-using-json-stringify.md)
+- 39 - [Advanced Javascript Properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-08-advanced-properties.md)
+- 38 - [Flattening multidimensional Arrays in JavaScript](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-07-flattening-multidimensional-arrays-in-javascript.md)
+- 37 - [Deduplicate an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-06-deduplicate-an-array.md)
+- 36 - [Observe DOM changes in extensions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-05-observe-dom-changes.md)
 - 35 - [Assignment Operators](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-04-assignment-shorthands.md)
 - 34 - [Implementing asynchronous loop](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-03-implementing-asynchronous-loops.md)
 - 33 - [Create Range 0...N easily using one line](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-02-create-range-0...n-easily-using-one-line.md)

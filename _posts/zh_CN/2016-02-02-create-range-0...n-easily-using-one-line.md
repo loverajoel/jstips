@@ -1,18 +1,18 @@
 ---
 layout: post
 
-title: 仅用一行生成0...N的数列
+title: 仅用一行生成0...(N-1)的数列
 tip-number: 33
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
-tip-tldr: 我们可以创建一个函数，它可以仅用一行代码生成0...N数列。
+tip-tldr: 我们可以创建一个函数，它可以仅用一行代码生成0...(N-1)数列。
 
 
 categories:
     - zh_CN
 ---
 
-使用下面一行代码，我们就可以生成0...N数列。
+使用下面一行代码，我们就可以生成0...(N-1)数列。
 
 ```js
 Array.apply(null, {length: N}).map(Number.call, Number);

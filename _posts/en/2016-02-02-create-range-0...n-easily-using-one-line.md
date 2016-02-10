@@ -14,9 +14,14 @@ categories:
 
 Below is the line with which we can create 0...(N-1) range.
 
+### Solution 1
 ```js
 Array.apply(null, {length: N}).map(Number.call, Number);
 ```
+### Solution 2 
+```js
+ Array.from(new Array(N),(val,index)=>index);
+ ```
 
 Lets break down this line into parts. We know how `call()` function works in javascript. So in `call()` first argument will be context and from second arguments, it will be list of arguments of function on which we are calling `call()` function.
 
