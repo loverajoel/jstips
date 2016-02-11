@@ -14,9 +14,18 @@ categories:
 
 使用下面一行代码，我们就可以生成0...(N-1)数列。
 
+### 方法1
+
 ```js
 Array.apply(null, {length: N}).map(Number.call, Number);
 ```
+
+### 方法2 
+
+```js
+ Array.from(new Array(N),(val,index)=>index);
+ ```
+
 
 让我们把这一行拆分一下。我们知道`call()`方法在Javascript中的作用。`call()`方法的第一个参数是上下文，从第二个参数开始是调用`call()`方法的函数所需要的参数。
 
