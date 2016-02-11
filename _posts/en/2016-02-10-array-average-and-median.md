@@ -42,21 +42,22 @@ values /= count;
 
 Now, to get the median steps are:
 - sort the array
-- get the middle value
+- get the arethmic mean of the middle values
 
 ```javascript
 let values = [2, 56, 3, 41, 0, 4, 100, 23];
 values.sort((a, b) => a - b);
-let middle = Math.floor(values.length / 2);
-let median = values[middle];
-// median = 23
+let lowMiddle = Math.floor((values.length - 1) / 2);
+let highMiddle = Math.ceil((values.length - 1) / 2);
+let median = (values[lowMiddle] + values[highMiddle]) / 2;
+// median = 13,5
 ```
 
-Or with a [right shift](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Right_shift) operator:
+With a bitwise operator:
 
 ```javascript
 let values = [2, 56, 3, 41, 0, 4, 100, 23];
 values.sort((a, b) => a - b);
-let median = values[values.length >> 1];
-// median = 23
+let median = (values[(values.length - 1) >> 1] + values[values.length >> 1]) / 2
+// median = 13,5
 ```
