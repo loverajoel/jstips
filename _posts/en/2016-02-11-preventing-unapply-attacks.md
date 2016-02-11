@@ -2,7 +2,7 @@
 layout: post
 
 title: Preventing Unapply Attacks
-tip-number: xx
+tip-number: 42
 tip-username: emars 
 tip-username-profile: https://twitter.com/marseltov
 tip-tldr: Freeze the builtin prototypes.
@@ -13,7 +13,7 @@ categories:
 
 By overriding the builtin prototypes, attackers can rewrite code to expose and change bound arguments. This can be a serious security hole that works by exploting a polyfill es5 methods.
 
-```
+```js
 // example bind polyfill
 function bind(fn) {
   var prev = Array.prototype.slice.call(arguments, 1);
