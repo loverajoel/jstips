@@ -1,17 +1,18 @@
 ---
 layout: post
 
-title: Improve Nested Conditionals
+title: 향상된 Nested Conditionals(중첩조건문)
 tip-number: 03
 tip-username: AlbertoFuente 
 tip-username-profile: https://github.com/AlbertoFuente
-tip-tldr: How can we improve and make a more efficient nested `if` statement in javascript?
+tip-tldr: 어떻게 해야 자바스크립트에서 더 향상되고 효율적인 `if` 선언문을 만들 수 있을까?
 
 categories:
-    - en
+    - ko
 ---
+<translator: https://github.com/tisohjung>
 
-How can we improve and make a more efficient nested `if` statement in javascript?
+어떻게 해야 자바스크립트에서 더 향상되고 효율적인 `if` 선언문을 만들 수 있을까?
 
 ```javascript
 if (color) {
@@ -29,7 +30,7 @@ if (color) {
 }
 ```
 
-One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, it's not recommended to use it because it's so difficult to debug errors. Here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals).
+`if`문을 향상시키는 방법중 하나는 `switch`문을 사용하는 것이다. 더 간결하고 순차적으로 보이지만 디버깅과 에러를 찾는데 있어서 어렵기 때문에 권장하진 않았다. [그 이유는 여기에 나와있다](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
@@ -50,8 +51,8 @@ switch(color) {
 }
 ```
 
-But what if we have a conditional with several checks in each statement? In this case, if we want it less verbose and more ordered, we can use the conditional `switch`.
-If we pass `true` as a parameter to the `switch` statement, it allows us to put a conditional in each case.
+하지만 각각의 조건에 몇가지 검사가있다면? 여기서 덜 간결하지만 순차적인 표현을 원한다면 조건적 `switch`문을 사용하면된다.
+`switch`문에 `true`값만 넘기면 각각의 케이스에 조건문을 넣을 수 있다.
 
 ```javascript
 switch(true) {
@@ -73,7 +74,7 @@ switch(true) {
 }
 ```
 
-But we must always avoid having several checks in every condition and avoid using `switch` as much as possible. We also must take into account that the most efficient way to do this is through an `object`.
+그래도 역시 최대한 각각의 조건문의 검사와 `switch`문 사용을 자제 해야한다. 그리고 가장 좋은 방법은 `object`를 사용하는 것임을 고려해야한다.
 
 ```javascript
 var colorObj = {
@@ -89,4 +90,4 @@ if (color in colorObj) {
 }
 ```
 
-Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+[이것에 대한 정보는 여기서 더 찾을 수 있다.](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/)
