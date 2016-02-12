@@ -14,17 +14,17 @@ categories:
 Como podemos melhorar e tornar mais eficiente a declaração de `if` aninhados em javascript?
 
 ```javascript
-if (color) {
-  if (color === 'black') {
-    printBlackBackground();
-  } else if (color === 'red') {
-    printRedBackground();
-  } else if (color === 'blue') {
-    printBlueBackground();
-  } else if (color === 'green') {
-    printGreenBackground();
+if (cor) {
+  if (cor === 'preto') {
+    imprimirPreto();
+  } else if (cor === 'vermelho') {
+    imprimirVermelho();
+  } else if (cor === 'azul') {
+    imprimirAzul();
+  } else if (cor === 'verde') {
+    imprimirVerde();
   } else {
-    printYellowBackground();
+    imprimirAmarelo();
   }
 }
 ```
@@ -32,21 +32,21 @@ if (color) {
 Uma forma de melhorar declarações de `if` aninhados seria usar `switch`. Embora seja menos verboso e mais ordenado, o uso não é recomendado porque seu debug é muito difícil. [Aqui](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals) o porquê.
 
 ```javascript
-switch(color) {
-  case 'black':
-    printBlackBackground();
+switch(cor) {
+  case 'preto':
+    imprimirPreto();
     break;
-  case 'red':
-    printRedBackground();
+  case 'vermelho':
+    imprimirVermelho();
     break;
-  case 'blue':
-    printBlueBackground();
+  case 'azul':
+    imprimirAzul();
     break;
-  case 'green':
-    printGreenBackground();
+  case 'verde':
+    imprimirVerde();
     break;
   default:
-    printYellowBackground();
+    imprimirAmarelo();
 }
 ```
 
@@ -55,20 +55,20 @@ Se passarmos `true` como um parâmetro para o `switch`, ele nos permitirá usar 
 
 ```javascript
 switch(true) {
-  case (typeof color === 'string' && color === 'black'):
-    printBlackBackground();
+  case (typeof cor === 'string' && cor === 'preto'):
+    imprimirPreto();
     break;
-  case (typeof color === 'string' && color === 'red'):
-    printRedBackground();
+  case (typeof cor === 'string' && cor === 'vermelho'):
+    imprimirVermelho();
     break;
-  case (typeof color === 'string' && color === 'blue'):
-    printBlueBackground();
+  case (typeof cor === 'string' && cor === 'azul'):
+    imprimirAzul();
     break;
-  case (typeof color === 'string' && color === 'green'):
-    printGreenBackground();
+  case (typeof cor === 'string' && cor === 'verde'):
+    imprimirVerde();
     break;
-  case (typeof color === 'string' && color === 'yellow'):
-    printYellowBackground();
+  case (typeof cor === 'string' && cor === 'amarelo'):
+    imprimirAmarelo();
     break;
 }
 ```
@@ -76,16 +76,16 @@ switch(true) {
 Mas devemos sempre evitar muitas verificações em cada condição e evitar `switch` sempre que possível. Também devemos levar em conta que a forma mais eficiente de fazer isto é usando um `object`.
 
 ```javascript
-var colorObj = {
-  'black': printBlackBackground,
-  'red': printRedBackground,
-  'blue': printBlueBackground,
-  'green': printGreenBackground,
-  'yellow': printYellowBackground
+var corObj = {
+  'preto': imprimirPreto,
+  'vermelho': imprimirVermelho,
+  'azul': imprimirAzul,
+  'verde': imprimirVerde,
+  'amarelo': imprimirAmarelo
 };
 
-if (color in colorObj) {
-  colorObj[color]();
+if (cor in corObj) {
+  corObj[cor]();
 }
 ```
 

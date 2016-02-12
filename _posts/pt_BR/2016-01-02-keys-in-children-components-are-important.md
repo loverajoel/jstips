@@ -19,24 +19,24 @@ categories:
 - Defina as keys no componente pai, não nos componentes filhos.
 
 ```javascript
-//bad
+//ruim
 ...
 render() {
 	<div key={{item.key}}>{{item.name}}</div>
 }
 ...
 
-//good
+//bom
 <MyComponent key={{item.key}}/>
 ```
 - [Usar índice de array é uma prática ruim.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` não irá funcionar
 
 ```javascript
-//bad
+//ruim
 <MyComponent key={{Math.random()}}/>
 ```
 
 - Você pode criar seu próprio id único. Tenha certeza que o método é rápido e anexe ao seu objeto.
-- Quando o número de filhos for grande ou conter uma quantidade expressiva de componentes, use keys para melhorar o desempenho.
+- Quando o número de filhos for grande ou conter muitos componentes, use keys para melhorar o desempenho.
 - [Você deve fornecer o atributo key para todos os filhos de ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
