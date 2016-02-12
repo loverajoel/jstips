@@ -30,6 +30,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 43 - [Use destructuring in function parameters](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-12-use-destructuring-in-function-parameters.md)
 - 42 - [Preventing Unapply Attacks](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-11-preventing-unapply-attacks.md)
 - 41 - [Array average and median](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-10-array-average-and-median.md)
 - 40 - [Using JSON.Stringify](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-09-using-json-stringify.md)
