@@ -30,6 +30,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 44 - [Know the passing mechanism](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-13-know-the-passing-mechanism.md)
 - 43 - [Use destructuring in function parameters](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-12-use-destructuring-in-function-parameters.md)
 - 42 - [Preventing Unapply Attacks](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-11-preventing-unapply-attacks.md)
 - 41 - [Array average and median](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-10-array-average-and-median.md)
