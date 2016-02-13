@@ -47,7 +47,7 @@ When we assigned a new object at #`3`, we are changing this reference value enti
 	}; 
 	
 	function myGroup(me) { 		// 2
-		me.partOf = 'A Group'; // 3
+		me.partOf = 'A Group';  // 3
 	} 
 	
 	myGroup(me);
