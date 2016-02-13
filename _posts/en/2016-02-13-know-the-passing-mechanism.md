@@ -1,5 +1,5 @@
 ---
-layout: *post
+layout: post
 
 title: Know the passing mechanism
 tip-number: 44
