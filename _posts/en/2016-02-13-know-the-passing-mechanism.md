@@ -13,7 +13,7 @@ categories:
 
 JavaScript is pass-by-value, technically. It is neither pass-by-value nor pass-by-reference, going by the truest sense of these terms. To understand this passing mechanism, take a look at the following two example code snippets and the explanations.
 
-###### Example 1
+### Example 1
 
 ```js
 
@@ -38,7 +38,7 @@ In above example, when the `myTeam` gets invoked, JavaScript is *passing the ref
 When we assigned a new object at #`3`, we are changing this reference value entirely within the `myTeam` function, and it will not have any impact on the original object outside this function scope, from where it was passed and the reference in the outside scope is going to retain the original object and hence the output from #`4`. 
 
 
-###### Example 2
+### Example 2
 
 ```js
 
