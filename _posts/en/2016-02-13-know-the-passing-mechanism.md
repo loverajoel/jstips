@@ -60,4 +60,4 @@ In the case of `myGroup` invocation, we are passing the object `me`. But unlike 
 So does this later case not prove that javascript is pass-by-reference? No, it does not. Remember, *JavaScript passes the reference as value, in case of objects*. The confusion arises as we tend not to understand fully what pass by reference is. This is the exact reason, some prefer to call this as *call-by-sharing*.
 
 
-*Initially posted on [js-by-examples](https://github.com/bmkmanoj/js-by-examples/blob/master/examples/js_pass_by_value_or_reference.md)*
+*Initially posted by the author on [js-by-examples](https://github.com/bmkmanoj/js-by-examples/blob/master/examples/js_pass_by_value_or_reference.md)*
