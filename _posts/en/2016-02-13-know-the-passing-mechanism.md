@@ -17,19 +17,19 @@ JavaScript is pass-by-value, technically. It is neither pass-by-value nor pass-b
 
 ```js
 
-	var me = {					// 1
-		'partOf' : 'A Team'
+var me = {					// 1
+	'partOf' : 'A Team'
+}; 
+
+function myTeam(me) {		// 2
+
+	me = {					// 3
+		'belongsTo' : 'A Group'
 	}; 
+} 	
 
-	function myTeam(me) {		// 2
-
-		me = {					// 3
-			'belongsTo' : 'A Group'
-		}; 
-	} 	
-	
-	myTeam(me);		
-	console.log(me);			// 4  : {'partOf' : 'A Team'}
+myTeam(me);		
+console.log(me);			// 4  : {'partOf' : 'A Team'}
 
 ```
 
@@ -42,16 +42,16 @@ When we assigned a new object at #`3`, we are changing this reference value enti
 
 ```js
 
-	var me = {					// 1
-		'partOf' : 'A Team'
-	}; 
-	
-	function myGroup(me) { 		// 2
-		me.partOf = 'A Group';  // 3
-	} 
-	
-	myGroup(me);
-	console.log(me);			// 4  : {'partOf' : 'A Group'}
+var me = {					// 1
+	'partOf' : 'A Team'
+}; 
+
+function myGroup(me) { 		// 2
+	me.partOf = 'A Group';  // 3
+} 
+
+myGroup(me);
+console.log(me);			// 4  : {'partOf' : 'A Group'}
 	
 ```
 
