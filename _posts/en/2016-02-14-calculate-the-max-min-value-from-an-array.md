@@ -32,7 +32,7 @@ Another way more easier is with the new [spread operator](https://developer.mozi
 
 ```js
 var numbers = [1, 2, 3, 4];
-Math.max(numbers...) // 4
-Math.min(numbers...) // 1
+Math.max(...numbers) // 4
+Math.min(...numbers) // 1
 ```
 
