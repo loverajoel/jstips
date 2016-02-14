@@ -5,7 +5,7 @@ title: 数组平均值与中值
 tip-number: 41
 tip-username: soyuka
 tip-username-profile: https://github.com/soyuka
-tip-tldr: 计算数组的平均值与中值
+tip-tldr: 计算数组的平均值与中位数
 
 
 categories:
@@ -42,14 +42,15 @@ values /= count;
 
 取得中值的步骤是：
 - 将数组排序
-- 取得中间的值
+- 取得中位数
 
 ```javascript
 let values = [2, 56, 3, 41, 0, 4, 100, 23];
 values.sort((a, b) => a - b);
-let middle = Math.floor(values.length / 2);
-let median = values[middle];
-// median = 23
+let lowMiddle = Math.floor((values.length - 1) / 2);
+let highMiddle = Math.ceil((values.length - 1) / 2);
+let median = (values[lowMiddle] + values[highMiddle]) / 2;
+// median = 13,5
 ```
 
 或者使用[无符号右移](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Right_shift)操作符：
@@ -57,6 +58,6 @@ let median = values[middle];
 ```javascript
 let values = [2, 56, 3, 41, 0, 4, 100, 23];
 values.sort((a, b) => a - b);
-let median = values[values.length >> 1];
+let median = (values[(values.length - 1) >> 1] + values[values.length >> 1]) / 2
 // median = 23
 ```

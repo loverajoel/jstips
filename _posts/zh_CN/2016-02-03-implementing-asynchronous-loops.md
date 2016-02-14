@@ -92,7 +92,7 @@ for (var i=0; i<5; i++) {
 for (let i=0; i<5; i++) {
 	var temp = i;
  	setTimeout(function(){
-		console.log(temp); 
+		console.log(i); 
 	}, 1000);
 }  
 ```
