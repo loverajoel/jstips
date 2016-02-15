@@ -19,7 +19,7 @@ if (document.readyState === 'complete') {
 }
 ```
 
-You can detect when the docuemnt it's ready...
+You can detect when the document it's ready...
 
 
 ```js
