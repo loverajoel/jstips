@@ -20,7 +20,7 @@ Math.min(1, 2, 3, 4); // 1
 
 These functions will not work as-is with arrays of numbers. However, there are some ways around this.
 
-[`Function.prototype.apply()`]((https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) allows you to call a function with a given `this` value and an _array_ of arguments.
+[`Function.prototype.apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) allows you to call a function with a given `this` value and an _array_ of arguments.
 
 ```js
 var numbers = [1, 2, 3, 4];
