@@ -12,8 +12,8 @@ categories:
     - zh_CN
 ---
 
-# Primitives
-如果一个数组至包含原始变量，我们可以使用[`filter`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)和[`indexOf`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)方法将其去重：
+# 原始变量
+如果一个数组只包含原始变量，我们可以使用[`filter`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)和[`indexOf`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)方法将其去重：
 
 ```javascript
 var deduped = [ 1, 1, 'a', 'a' ].filter(function (el, i, arr) {
