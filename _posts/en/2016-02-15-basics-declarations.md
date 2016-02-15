@@ -50,7 +50,7 @@ console.log('--> 3.1:', `x = ${x}, y = ${y}`)
 //--> 3.1: x = 1, y = 2
 ```
 
-Now we declare both variables through var. Meaning they only live in the context of the closure
+Now we declare both variables through var. Meaning they only live in the context of the closure.
 
 ```js
 ;(() => { 
