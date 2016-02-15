@@ -30,6 +30,7 @@ There are a lot of ways to get update, choose your own
 
 # Tips list
 
+- 46 - [Detect document ready in pure JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-15-detect-document-ready-in-pure-js.md)
 - 45 - [Calculate the Max/Min value from an array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-14-calculate-the-max-min-value-from-an-array.md)
 - 44 - [Know the passing mechanism](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-13-know-the-passing-mechanism.md)
 - 43 - [Use destructuring in function parameters](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-12-use-destructuring-in-function-parameters.md)
