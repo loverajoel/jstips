@@ -8,4 +8,4 @@ Once your tip is ready, [issue a pull request](https://help.github.com/articles/
 
 # Notes
 
-Leave the date and the tip number with **xx**. When we decide merge the pull request you will add them and squash your commits.
+Leave the date and the tip number with **xx**. When we decide to merge the pull request, you will add them and squash your commits.
