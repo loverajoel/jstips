@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Keys in children components are important
+title: Keys em componentes filhos são importantes
 tip-number: 02
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
