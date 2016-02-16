@@ -11,7 +11,7 @@ categories:
     - en
 ---
 
-Below, different ways to declare variables in javascript. 
+Below, different ways to declare variables in JavaScript. 
 Comments and console.log should be enough to explain what's happening here:
 
 ```js
