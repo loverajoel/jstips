@@ -80,3 +80,4 @@ You can test this and see the result [thanks to babel](https://babeljs.io/repl/#
 
 More informations available on the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
+Special thanks to @kurtextrem for his collaboration :)!
