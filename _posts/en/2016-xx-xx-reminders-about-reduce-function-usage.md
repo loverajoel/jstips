@@ -85,14 +85,14 @@ Then, we create a new swiss knife function
 - that will return a new callback reducer function
 
 ```javascript
-var combineTotalPriceReducers = function(reducers, initialState) {
+var combineTotalPriceReducers = function(reducers) {
   return function(state, item) {
     return Object.keys(reducers).reduce(
       function(nextState, key) {
-        reducers[key](nextState, item);
-        return nextState;
+        reducers[key](state, item);
+        return state;
       },
-      initialState
+      {}      
     );
   }
 };
@@ -101,13 +101,11 @@ var combineTotalPriceReducers = function(reducers, initialState) {
 Now let's see how using it.
 
 ```javascript
-var firstPrice = items[0].price;
+var bigTotalPriceReducer = combineTotalPriceReducers(reducers);
 
-var initialState = {dollars: firstPrice, euros:firstPrice, yens: firstPrice, pounds: firstPrice};
+var initialState = {dollars: 0, euros:0, yens: 0, pounds: 0};
 
-var bigTotalPriceReducer = combineTotalPriceReducers(reducers, initialState);
-
-var totals = items.reduce(bigTotalPriceReducer);
+var totals = items.reduce(bigTotalPriceReducer, initialState);
 
 console.log(totals);
 
