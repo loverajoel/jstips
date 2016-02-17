@@ -1,18 +1,17 @@
 ---
-layout: *post
+layout: post
 
 title: Reduce builtin function usage
 tip-number: xx
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
-tip-tldr: some reminders about using the reduce function
+tip-tldr: Some reminders about using the reduce function
 
 categories:
     - en
 ---
 
-As written in documentation the reduce() method applies a function against an accumulator and each value of the array (from left-to-right) 
-to reduce it to a single value.
+As written in documentation the reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
 reduce() function accepts 2 parameters (M: mandatory, O: optional):
 
