@@ -5,7 +5,7 @@ title: Reduce usage
 tip-number: xx
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
-tip-tldr: reduce function is part of js swiss knife, use it for accumalation, concatenation or as a reducer powerful function
+tip-tldr: some recaps about reduce builtin function usage
 
 categories:
     - en
