@@ -101,14 +101,18 @@ var combineTotalPriceReducers = function(reducers, initialState) {
 Now let's see how using it.
 
 ```javascript
-var bigTotalPriceReducer = combineTotalPriceReducers(reducers, {dollars: 0, euros:0, yens: 0, pounds: 0});
+var firstPrice = items[0].price;
+
+var initialState = {dollars: firstPrice, euros:firstPrice, yens: firstPrice, pounds: firstPrice};
+
+var bigTotalPriceReducer = combineTotalPriceReducers(reducers, initialState);
 
 var totals = items.reduce(bigTotalPriceReducer);
 
 console.log(totals);
 
 /*
-Object {dollars: 1005.11531904, euros: 1005.11531904, yens: 127514.24, pounds: 775.81131152}
+Object {dollars: 1130, euros: 1015.11531904, yens: 127524.24, pounds: 785.81131152}
 */
 ```
 
@@ -117,7 +121,3 @@ I hope this approach can give you another idea of using reduce() function for yo
 Your reduce function could handle an history of each computation by instance as it is done in Ramdajs with [scan](http://ramdajs.com/docs/#scan) function
 
 [JSFiddle to play with](https://jsfiddle.net/darul75/81tgt0cd/)
-
-
-
-
