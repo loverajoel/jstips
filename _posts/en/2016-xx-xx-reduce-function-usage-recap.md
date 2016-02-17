@@ -1,11 +1,11 @@
 ---
 layout: *post
 
-title: Reduce usage
+title: Reduce builtin function usage
 tip-number: xx
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
-tip-tldr: some recaps about reduce builtin function usage
+tip-tldr: some reminders about using the reduce function
 
 categories:
     - en
@@ -112,9 +112,9 @@ Object {dollars: 1005.11531904, euros: 1005.11531904, yens: 127514.24, pounds: 7
 */
 ```
 
-I hope this approach can give you another approach of using reduce() function for your own needs.
+I hope this approach can give you another idea of using reduce() function for your own needs.
 
-You reduce function could handle an history of each computation by instance as it is done in Ramdajs with [scan](http://ramdajs.com/docs/#scan) function
+Your reduce function could handle an history of each computation by instance as it is done in Ramdajs with [scan](http://ramdajs.com/docs/#scan) function
 
 [JSFiddle to play with](https://jsfiddle.net/darul75/81tgt0cd/)
 
