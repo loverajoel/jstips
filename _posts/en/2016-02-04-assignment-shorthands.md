@@ -14,7 +14,7 @@ categories:
 Assigning is very common. Sometimes typing becomes time consuming for us 'Lazy programmers'.
 So, we can use some tricks to help us and make our code cleaner and simpler.
 
-This is the similiar use of
+This is the similar use of
 
 ````javascript
 x += 23; // x = x + 23;
