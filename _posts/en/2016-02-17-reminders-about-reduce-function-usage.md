@@ -11,9 +11,11 @@ categories:
     - en
 ---
 
-As written in documentation the reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+As written in documentation the `reduce()` method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
-reduce() function accepts 2 parameters (M: mandatory, O: optional):
+### `reduce()`
+
+[reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) function accepts 2 parameters (M: mandatory, O: optional):
 
 - (M) a callback **reducer function** to be applied that deals with a pair of previous (result of previous computation) and next element until end of the list.
 - (O) an **initial value** to be used as the first argument to the first call of the callback.
