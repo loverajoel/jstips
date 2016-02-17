@@ -2,7 +2,7 @@
 layout: post
 
 title: Reduce builtin function usage
-tip-number: xx
+tip-number: 48
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
 tip-tldr: Some reminders about using the reduce function
