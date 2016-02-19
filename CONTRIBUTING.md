@@ -14,5 +14,5 @@ Leave the date and the tip number with **xx**. When we decide to merge the pull 
 
 **Tip sended** -> **Tip in review** -> **Tip Approved**
 
-When you send a tip, this has to pass the review process, while, the tip is in review status will have `under review` label.
-When 3 persons made the review and give his :shipit:`:shipit:` the tip is `ready to merge`.
+- When you send a tip, it now has to pass the review process and while that happens, it status will be `under-review`.
+- After the tip is reviewed by 3 people and they gave their :shipit:, then the tip will be `ready to merge`
