@@ -9,3 +9,10 @@ Once your tip is ready, [issue a pull request](https://help.github.com/articles/
 # Notes
 
 Leave the date and the tip number with **xx**. When we decide to merge the pull request, you will add them and squash your commits.
+
+# Tip flow
+
+**Tip sended** -> **Tip in review** -> **Tip Approved**
+
+When you send a tip, this has to pass the review process, while, the tip is in review status will have `under review` label.
+When X persons made the review and give his :shipit:`:shipit:` the tip is `ready to merge`.
