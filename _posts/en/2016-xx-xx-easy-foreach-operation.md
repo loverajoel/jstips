@@ -2,7 +2,7 @@
 layout: post
 
 title: Easy forEach operation
-tip-number: 49
+tip-number: xx
 tip-username: sekaiamber
 tip-username-profile: https://github.com/sekaiamber
 tip-tldr: Make an easy `forEach` operation by using a simple regular expression.
