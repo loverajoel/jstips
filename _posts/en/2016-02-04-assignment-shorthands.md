@@ -30,6 +30,32 @@ n --; n = n - 1;
 
 ````
 
+### `++` and `--` operators
+
+There is a special `++` operator. It's best to explain it with an example:
+
+````javascript
+var a = 2;
+var b = a++;
+// Now a is 3 and b is 2
+````
+
+The `a++` statement does this:
+  1. return the value of `a`
+  2. increment `a` by 1
+
+But what if we wanted to increment the value first? It's simple:
+
+````javascript
+var a = 2;
+var b = ++a;
+// Now both a and b are 3
+````
+
+See? I put the operator _before_ the variable.
+
+**Exercise:** find out what the `--` operator does!
+
 ### If-else (Using ternary operator)
 
 This is what we write on regular basis.
