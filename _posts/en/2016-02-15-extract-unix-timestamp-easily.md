@@ -35,9 +35,8 @@ or for specific date
 ```js
 const timestamp = +new Date('2012-06-08')
 ```
-Under the hood the runtime calls `valueOf` method of the Date object. Then the unary `+` operator calls `toNumber()` with that returned value. For detailed explanation please check the following links
+Under the hood the runtime calls `valueOf` method of the `Date` object. Then the unary `+` operator calls `toNumber()` with that returned value. For detailed explanation please check the following links
 
-[Date.prototype.valueOf](http://es5.github.io/#x15.9.5.8)
-[Unary + operator](http://es5.github.io/#x11.4.6)
-[toNumber()](http://es5.github.io/#x9.3)
-
+* [Date.prototype.valueOf](http://es5.github.io/#x15.9.5.8)
+* [Unary + operator](http://es5.github.io/#x11.4.6)
+* [toNumber()](http://es5.github.io/#x9.3)
