@@ -16,6 +16,7 @@ We frequently need to calculate with unix timestamp. There are several ways to g
 const timestamp = Date.now();
 ```
 or
+
 ```js
 const timestamp = new Date().getTime();
 ```
@@ -24,8 +25,7 @@ To get unix timestamp of a specific date pass `yyyy-mm-dd` as a parameter of `Da
 ```js
 const timestamp = new Date('2012-06-08').getTime()
 ```
-
-If you like magic, just add a `+` sign when declaring a `Date` object like below
+You can just add a `+` sign also when declaring a `Date` object like below
 
 ```js
 const timestamp = +new Date()
@@ -35,3 +35,9 @@ or for specific date
 ```js
 const timestamp = +new Date('2012-06-08')
 ```
+Under the hood the runtime calls `valueOf` method of the Date object. Then the unary `+` operator calls `toNumber()` with that returned value. For detailed explanation please check the following links
+
+[Date.prototype.valueOf](http://es5.github.io/#x15.9.5.8)
+[Unary + operator](http://es5.github.io/#x11.4.6)
+[toNumber()](http://es5.github.io/#x9.3)
+
