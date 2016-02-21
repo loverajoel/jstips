@@ -54,7 +54,7 @@ var b = ++a;
 
 See? I put the operator _before_ the variable.
 
-**Exercise:** find out what the `--` operator does!
+The `--` operator is similar, except it decrements the value.
 
 ### If-else (Using ternary operator)
 
