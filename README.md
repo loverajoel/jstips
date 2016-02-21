@@ -1,9 +1,9 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/gh-pages/resources/jstips-header-blog.gif)
 
 # JS Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-> A useful Js tip 
+> A useful JS tips
 
-This is an awesome project about shorts and useful JavaScript tips that will allow you to improve your code writing. With less than 2 minutes, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+This is an awesome project about short and useful JavaScript tips that will allow you to improve your code writing. With less than 2 minutes, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 Frequently, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
@@ -81,4 +81,4 @@ There are a lot of ways to get update, choose your own
 - 00 - [Insert item inside an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-12-29-insert-item-inside-an-array.md)
 
 ### License
-[GNU GENERAL PUBLIC LICENSE](https://github.com/loverajoel/jstips/blob/gh-pages/LICENCE.md)
+[GNU GENERAL PUBLIC LICENSE](https://github.com/loverajoel/jstips/blob/gh-pages/LICENSE.md)
