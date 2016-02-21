@@ -33,6 +33,14 @@ defaults:
       layout: default
       lang: zh_CN
       is_post: true
+  -
+    scope:
+      path: _posts/zh_TW
+      type: posts
+    values:
+      layout: default
+      lang: zh_TW
+      is_post: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -85,23 +93,26 @@ exclude:
 
 # languages var
 languages:
-  - 
+  -
     name: en
     link: /
-  - 
+  -
     name: zh_CN
     link: /zh_CN
-    
+  -
+    name: zh_TW
+    link: /zh_TW
+
 transl:
   en:
     menu:
-      home: 
+      home:
         txt: Home
         link: /
-      about: 
+      about:
         txt: About
         link: /about
-      subscribe: 
+      subscribe:
         txt: Subscribe
       submit_your_tip:
         txt: Submit your tip
@@ -112,13 +123,13 @@ transl:
     arrow_next: Next Tip
   zh_CN:
     menu:
-      home: 
+      home:
         txt: 主页
         link: /zh_CN
-      about: 
+      about:
         txt: 关于
         link: /zh_CN/about
-      subscribe: 
+      subscribe:
         txt: 订阅
       submit_your_tip:
         txt: 提交小知识
@@ -127,3 +138,20 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一条
     arrow_next: 下一条
+  zh_TW:
+    menu:
+      home:
+        txt: 首頁
+        link: /
+      about:
+        txt: 關於
+        link: /about
+      subscribe:
+        txt: 訂閱
+      submit_your_tip:
+        txt: 提交你的小知識
+        link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_zh_TW.md
+    footer_subscribe_message: 訂閱更多更棒的每日小知識！
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: 上一篇小知識
+    arrow_next: 下一篇小知識
