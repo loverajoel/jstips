@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: `undefined` 和 `null` 的差別
+title: undefined 和 null 的差別
 tip-number: 05
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel

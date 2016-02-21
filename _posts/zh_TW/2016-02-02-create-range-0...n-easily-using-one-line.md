@@ -1,7 +1,7 @@
 ---
 layout: post
-使用一行程式碼簡單建立一個 0...(N - 1) 的陣列
-title: Create Range 0...(N-1) easily using one line
+
+title: 使用一行程式碼簡單建立一個 0...(N - 1) 的陣列
 tip-number: 33
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya

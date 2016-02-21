@@ -5,7 +5,7 @@ title: 使用 === 來替代 ==
 tip-number: 24
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: `==`（或 `!=`）運算符如果在執行上需要的話，會自動將類型轉換。 `===`（或 `!==`）運算符則不會執行轉換。`===`（或 `!==`）用來比較數值和類型，相較於 `==` 更來的快速。
+tip-tldr: ==（或 !=）運算符如果在執行上需要的話，會自動將類型轉換。 `===`（或 `!==`）運算符則不會執行轉換。`===`（或 `!==`）用來比較數值和類型，相較於 `==` 更來的快速。
 
 categories:
     - zh_TW
