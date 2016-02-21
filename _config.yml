@@ -33,6 +33,14 @@ defaults:
       layout: default
       lang: zh_CN
       is_post: true
+  -
+    scope:
+      path: _posts/pt_BR
+      type: posts
+    values:
+      layout: default
+      lang: pt_BR
+      is_post: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -91,6 +99,9 @@ languages:
   - 
     name: zh_CN
     link: /zh_CN
+  - 
+    name: pt_BR
+    link: /pt_BR
     
 transl:
   en:
@@ -127,3 +138,20 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一条
     arrow_next: 下一条
+  pt_BR:
+    menu:
+      home: 
+        txt: Home
+        link: /pt_BR
+      about: 
+        txt: Sobre
+        link: /pt_BR/about
+      subscribe: 
+        txt: Inscreva-se
+      submit_your_tip:
+        txt: Envie sua dica
+        link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_pt_BR.md
+    footer_subscribe_message: Inscreva-se para mais incríveis dicas diárias!
+    footer_placeholder_subscribe: seu@email.com
+    arrow_prev: Dica anterior
+    arrow_next: Próxima dica
