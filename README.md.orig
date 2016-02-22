@@ -1,0 +1,574 @@
+![header](https://raw.githubusercontent.com/loverajoel/jstips/gh-pages/resources/jstips-header-blog.gif)
+
+# Introducing JavaScript Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+> New year, new project. **A JS tip per day!**
+
+With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+
+At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
+
+### Can you help us enrich it?
+Please feel free to send us a PR with your own JavaScript tip to be published here.
+Any improvements or suggestions are more than welcome!
+[Click to see the instructions](https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md)
+
+### Let’s keep in touch
+<<<<<<< HEAD
+=======
+To get updates, watch the repo and follow the [Twitter account](https://twitter.com/tips_js). Only one tweet will be sent per day. It is a deal!
+> Don't forget to Star the repo, as this will help to promote the project!
+
+### Other language
+[简体中文(simplified Chinese)](https://github.com/loverajoel/jstips/blob/master/README-zh_CN.md)
+
+# Tips list
+
+## #23 - Converting to number fast way
+
+> 2016-01-23 by [@sonnyt](http://twitter.com/sonnyt)
+
+Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
+
+```javascript
+var one = '1';
+
+var numberOne = +one; // Number 1
+```
+
+You can also use the `-` (minus) operator which type-converts the value into number but also negates it.
+
+```javascript
+var one = '1';
+
+var negativeNumberOne = -one; // Number -1
+```
+
+## #22 - Empty an Array
+
+> 2016-01-22 by [microlv](https://github.com/microlv)
+
+You define an array and want to empty its contents.
+Usually, you would do it like this:
+
+```javascript
+// define Array
+var list = [1, 2, 3, 4];
+function empty() {
+    //empty your array
+    list = [];
+}
+empty();
+```
+But there is another way to empty an array that is more performant.
+
+You should use code like this:
+```javascript
+var list = [1, 2, 3, 4];
+function empty() {
+    //empty your array
+    list.length = 0;
+}
+empty();
+```
+* `list = []` assigns a reference to a new array to a variable, while any other references are unaffected.
+which means that references to the contents of the previous array are still kept in memory, leading to memory leaks.
+
+* `list.length = 0` deletes everything in the array, which does hit other references.
+
+However, if you have a copy of the array (A and Copy-A), if you delete its contents using `list.length = 0`, the copy will also lose its contents.
+
+Think about what will output:
+```js
+var foo = [1,2,3];
+var bar = [1,2,3];
+var foo2 = foo;
+var bar2 = bar;
+foo = [];
+bar.length = 0;
+console.log(foo, bar, foo2, bar2);
+
+//[] [] [1, 2, 3] []
+```
+Stackoverflow more detail:
+[difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
+
+
+## #21 - Shuffle an Array
+
+> 2016-01-21 by [@0xmtn](https://github.com/0xmtn/)
+
+ This snippet here uses [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algorithm to shuffle a given array.
+
+```javascript
+function shuffle(arr) {
+    var i,
+        j,
+        temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+};
+```
+An example:
+
+```javascript
+var a = [1, 2, 3, 4, 5, 6, 7, 8];
+var b = shuffle(a);
+console.log(b);
+// [2, 7, 8, 6, 5, 3, 1, 4]
+```
+
+## #20 - Return objects to enable chaining of functions
+
+> 2016-01-20 by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
+
+```js
+function Person(name) {
+  this.name = name;
+
+  this.sayName = function() {
+    console.log("Hello my name is: ", this.name);
+    return this;
+  };
+
+  this.changeName = function(name) {
+    this.name = name;
+    return this;
+  };
+}
+
+var person = new Person("John");
+person.sayName().changeName("Timmy").sayName();
+```
+
+## #19 - Safe string concatenation
+
+> 2016-01-19 by [@gogainda](https://twitter.com/gogainda)
+
+Suppose you have a couple of variables with unknown types and you want to concatenate them in a string. To be sure that the arithmetical operation is not be applied during concatenation, use `concat`:
+
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = ''.concat(one, two, three); //"123"
+```
+
+This way of concatenting does exactly what you'd expect. In contrast, concatenation with pluses might lead to unexpected results:
+```javascript
+var one = 1;
+var two = 2;
+var three = '3';
+
+var result = one + two + three; //"33" instead of "123"
+```
+
+Speaking about performance, compared to the `join` [type](http://www.sitepoint.com/javascript-fast-string-concatenation/) of concatenation, the speed of `concat` is pretty much the same.
+
+You can read more about the `concat` function on MDN [page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+
+## #18 - Rounding the fast way
+
+> 2016-01-18 by [pklinger](https://github.com/pklinger)
+
+Today's tip is about performance. [Ever came across the double tilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~` operator? It is sometimes also called the double NOT bitwise operator. You can use it as a faster substitute for `Math.floor()`. Why is that?
+
+One bitwise shift `~` transforms the 32 bit converted input into `-(input+1)`. The double bitwise shift therefore transforms the input into `-(-(input + 1)+1)` making it a great tool to round towards 0. For numeric input, it therefore mimics the `Math.ceil()` for negative and `Math.floor()` for positive input. On failure, `0` is returned, which might come in handy sometimes instead of `Math.floor()`, which returns a value of `NaN` on failure.
+
+```javascript
+// single ~
+console.log(~1337)    // -1338
+
+// numeric input
+console.log(~~47.11)  // -> 47
+console.log(~~-12.88) // -> -12
+console.log(~~1.9999) // -> 1
+console.log(~~3)      // -> 3
+
+// on failure
+console.log(~~[]) // -> 0
+console.log(~~NaN)  // -> 0
+console.log(~~null) // -> 0
+
+// greater than 32 bit integer fails
+console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
+```
+
+Although `~~` may perform better, for the sake of readability please use `Math.floor()`.
+
+## #17 - Node.js: Run a module if it is not "required"
+
+> 2016-01-17 by [@odsdq](https://twitter.com/odsdq)
+
+In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
+
+```js
+if (!module.parent) {
+    // ran with `node something.js`
+    app.listen(8088, function() {
+        console.log('app listening on port 8088');
+    })
+} else {
+    // used with `require('/.something.js')`
+    module.exports = app;
+}
+```
+
+See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.
+
+## #16 - Passing arguments to callback functions
+> 2016-01-16 by [@minhazav](https://twitter.com/minhazav)
+
+By default you cannot pass arguments to a callback function. For example:
+```js
+function callback() {
+  console.log('Hi human');
+}
+
+document.getElementById('someelem').addEventListener('click', callback);
+```
+You can take advantage of the closure scope in Javascript to pass arguments to callback functions. Check this example:
+```js
+function callback(a, b) {
+  return function() {
+    console.log('sum = ', (a+b));
+  }
+}
+
+var x = 1, y = 2;
+document.getElementById('someelem').addEventListener('click', callback(x, y));
+```
+
+**What are closures?**
+Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created. [Check MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) to learn more.
+
+So this way the arguments `x` and `y` are in scope of the callback function when it is called.
+
+Another method to do this is using the `bind` method. For example:
+```js
+var alertText = function(text) {
+  alert(text);
+};
+
+document.getElementById('someelem').addEventListener('click', alertText.bind(this, 'hello'));
+```
+There is a very slight difference in performance of both methods, checkout [jsperf](http://jsperf.com/bind-vs-closure-23).
+
+## #15 - Even simpler way of using indexOf as a contains clause
+> 2016-01-15 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
+
+JavaScript by default does not have a contains method. And for checking existence of a substring in a string or an item in an array you may do this:
+
+```javascript
+var someText = 'javascript rules';
+if (someText.indexOf('javascript') !== -1) {
+}
+
+// or
+if (someText.indexOf('javascript') >= 0) {
+}
+```
+
+But let's look at these [Expressjs](https://github.com/strongloop/express) code snippets.
+
+[examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
+```javascript
+for (var key in obj) {
+  // "reserved" exports
+  if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) continue;
+```
+
+[lib/utils.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/lib/utils.js#L93)
+```javascript
+exports.normalizeType = function(type){
+  return ~type.indexOf('/')
+    ? acceptParams(type)
+    : { value: mime.lookup(type), params: {} };
+};
+```
+
+[examples/web-service/index.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/web-service/index.js#L35)
+```javascript
+// key is invalid
+if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
+```
+
+The gotcha is the [bitwise operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) **~**, "Bitwise operators perform their operations on binary representations, but they return standard JavaScript numerical values."
+
+It transforms `-1` into `0`, and `0` evaluates to `false` in JavaScript:
+
+```javascript
+var someText = 'text';
+!!~someText.indexOf('tex'); // someText contains "tex" - true
+!~someText.indexOf('tex'); // someText NOT contains "tex" - false
+~someText.indexOf('asd'); // someText doesn't contain "asd" - false
+~someText.indexOf('ext'); // someText contains "ext" - true
+```
+
+### String.prototype.includes()
+
+ES6 introduced the [includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and you can use it to determine whether or not a string includes another string:
+
+```javascript
+'something'.includes('thing'); // true
+```
+
+With ECMAScript 2016 (ES7) it is even possible to use these techniques with Arrays:
+
+```javascript
+!!~[1, 2, 3].indexOf(1); // true
+[1, 2, 3].includes(1); // true
+```
+
+**Unfortunately, it is only supported in Chrome, Firefox, Safari 9 or above and Edge; not IE11 or lower.**
+**It's better used in controlled environments.**
+
+## #14 - Fat Arrow Functions #ES6
+> 2016-01-13 by [@pklinger](https://github.com/pklinger/)
+
+Introduced as a new feature in ES6, fat arrow functions may come as a handy tool to write more code in fewer lines. The name comes from its syntax, `=>`, which is a 'fat arrow', as compared to a thin arrow `->`. Some programmers might already know this type of function from different languages such as Haskell, as 'lambda expressions', or as 'anonymous functions'. It is called anonymous, as these arrow functions do not have a descriptive function name.
+
+### What are the benefits?
+* Syntax: fewer LOC; no more typing `function` keyword over and over again
+* Semantics: capturing the keyword `this` from the surrounding context
+
+### Simple syntax example
+Have a look at these two code snippets, which do the exact same job, and you will quickly understand what fat arrow functions do:
+
+```javascript
+// general syntax for fat arrow functions
+param => expression
+
+// may also be written with parentheses
+// parentheses are required on multiple params
+(param1 [, param2]) => expression
+
+
+// using functions
+var arr = [5,3,2,9,1];
+var arrFunc = arr.map(function(x) {
+  return x * x;
+});
+console.log(arr)
+
+// using fat arrow
+var arr = [5,3,2,9,1];
+var arrFunc = arr.map((x) => x*x);
+console.log(arr)
+```
+
+As you can see, the fat arrow function in this case can save you time typing out the parentheses as well as the function and return keywords. I would advise you to always write parentheses around the parameter inputs, as the parentheses will be needed for multiple input parameters, such as in `(x,y) => x+y`. It is just a way to cope with forgetting them in different use cases. But the code above would also work like this: `x => x*x`. So far, these are only syntactical improvements, which lead to fewer LOC and better readability.
+
+### Lexically binding `this`
+
+There is another good reason to use fat arrow functions. There is the issue with the context of `this`. With arrow functions, you don't need to worry about `.bind(this)` or setting `that = this` anymore, as fat arrow functions pick the context of `this` from the lexical surrounding. Have a look at the next [example] (https://jsfiddle.net/pklinger/rw94oc11/):
+
+```javascript
+
+// globally defined this.i
+this.i = 100;
+
+var counterA = new CounterA();
+var counterB = new CounterB();
+var counterC = new CounterC();
+var counterD = new CounterD();
+
+// bad example
+function CounterA() {
+  // CounterA's `this` instance (!! gets ignored here)
+  this.i = 0;
+  setInterval(function () {
+    // `this` refers to global object, not to CounterA's `this`
+    // therefore starts counting with 100, not with 0 (local this.i)
+    this.i++;
+    document.getElementById("counterA").innerHTML = this.i;
+  }, 500);
+}
+
+// manually binding that = this
+function CounterB() {
+  this.i = 0;
+  var that = this;
+  setInterval(function() {
+    that.i++;
+    document.getElementById("counterB").innerHTML = that.i;
+  }, 500);
+}
+
+// using .bind(this)
+function CounterC() {
+  this.i = 0;
+  setInterval(function() {
+    this.i++;
+    document.getElementById("counterC").innerHTML = this.i;
+  }.bind(this), 500);
+}
+
+// fat arrow function
+function CounterD() {
+  this.i = 0;
+  setInterval(() => {
+    this.i++;
+    document.getElementById("counterD").innerHTML = this.i;
+  }, 500);
+}
+```
+
+Further information about fat arrow functions may be found at [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). To see different syntax options visit [this site] (http://jsrocks.org/2014/10/arrow-functions-and-their-scope/).
+
+
+## #13 - Tip to measure performance of a javascript block
+
+> 2016-01-13 by [@manmadareddy](https://twitter.com/manmadareddy)
+
+For quickly measuring performance of a javascript block, we can use the console functions like
+[`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+
+```javascript
+console.time("Array initialize");
+var arr = new Array(100),
+    len = arr.length,
+    i;
+
+for (i = 0; i < len; i++) {
+    arr[i] = new Object();
+};
+console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
+```
+
+More info:
+[Console object](https://github.com/DeveloperToolsWG/console-object),
+[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
+
+Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
+
+## #12 - Pseudomandatory parameters in ES6 functions #ES6
+
+> 2016-01-12 by [Avraam Mavridis](https://github.com/AvraamMavridis)
+
+
+In many programming languages the parameters of a function are by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript, every parameter is optional, but we can enforce this behavior without messing with the actual body of a function, taking advantage of [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+
+```javascript
+const _err = function( message ){
+  throw new Error( message );
+}
+
+const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a + b
+
+getSum( 10 ) // throws Error, b is not defined
+getSum( undefined, 10 ) // throws Error, a is not defined
+ ```
+
+ `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is going to be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+
+## #11 - Hoisting
+> 2016-01-11 by [@squizzleflip](https://twitter.com/squizzleflip)
+
+Understanding [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) will help you organize your function scope. Just remember, variable declarations and function definitions are hoisted to the top. Variable definitions are not, even if you declare and define a variable on the same line. Also, a variable **declaration** lets the system know that the variable exists while **definition** assigns it a value.
+
+```javascript
+function doTheThing() {
+  // ReferenceError: notDeclared is not defined
+  console.log(notDeclared);
+
+  // Outputs: undefined
+  console.log(definedLater);
+  var definedLater;
+
+  definedLater = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedLater)
+
+  // Outputs: undefined
+  console.log(definedSimulateneously);
+  var definedSimulateneously = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedSimulateneously)
+
+  // Outputs: 'I did it!'
+  doSomethingElse();
+
+  function doSomethingElse(){
+    console.log('I did it!');
+  }
+
+  // TypeError: undefined is not a function
+  functionVar();
+>>>>>>> upstream/master
+
+There are a lot of ways to get update, choose your own
+
+- [Official Blog](http://www.jstips.co)
+- [Official Twitter Account](https://twitter.com/tips_js)
+- [Hubot](https://github.com/dggriffin/hubot-jstips)
+- [Slackbot](https://github.com/radibit/js-tips-slack-bot)
+- [js2016.tips](http://js2016.tips/)
+- [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
+- [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
+- [iOS App](https://goo.gl/Y9WiBc)
+- [Android App](https://goo.gl/lYorrU)
+
+> Don't forget to Star the repo, as this will help to promote the project!
+
+# Tips list
+
+- 48 - [Reduce builtin function usage](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-17-reminders-about-reduce-function-usage.md)
+- 47 - [Basics : declarations](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-16-basics-declarations.md)
+- 46 - [Detect document ready in pure JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-15-detect-document-ready-in-pure-js.md)
+- 45 - [Calculate the Max/Min value from an array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-14-calculate-the-max-min-value-from-an-array.md)
+- 44 - [Know the passing mechanism](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-13-know-the-passing-mechanism.md)
+- 43 - [Use destructuring in function parameters](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-12-use-destructuring-in-function-parameters.md)
+- 42 - [Preventing Unapply Attacks](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-11-preventing-unapply-attacks.md)
+- 41 - [Array average and median](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-10-array-average-and-median.md)
+- 40 - [Using JSON.Stringify](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-09-using-json-stringify.md)
+- 39 - [Advanced Javascript Properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-08-advanced-properties.md)
+- 38 - [Flattening multidimensional Arrays in JavaScript](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-07-flattening-multidimensional-arrays-in-javascript.md)
+- 37 - [Deduplicate an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-06-deduplicate-an-array.md)
+- 36 - [Observe DOM changes in extensions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-05-observe-dom-changes.md)
+- 35 - [Assignment Operators](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-04-assignment-shorthands.md)
+- 34 - [Implementing asynchronous loop](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-03-implementing-asynchronous-loops.md)
+- 33 - [Create Range 0...N easily using one line](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-02-create-range-0...n-easily-using-one-line.md)
+- 32 - [Map() to the rescue: adding order to Object properties](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-01-map-to-the-rescue-adding-order-to-object-properties.md)
+- 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-31-avoid-modifying-or-passing-arguments-into-other-functions%E2%80%94it-kills-optimization.md)
+- 30 - [Converting truthy/falsy values to boolean](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-30-converting-truthy-falsy-values-to-boolean.md)
+- 29 - [Speed up recursive functions with memoization](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-29-speed-up-recursive-functions-with-memoization.md)
+- 28 - [Currying vs partial application](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-28-curry-vs-partial-application.md)
+- 27 - [Short circuit evaluation in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-27-short-circuit-evaluation-in-js.md)
+- 26 - [Filtering and Sorting a List of Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-26-filtering-and-sorting-a-list-of-strings.md)
+- 25 - [Using immediately invoked function expression](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-25-Using-immediately-invoked-function-expression.md)
+- 24 - [Use === instead of ==](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-24-use_%3D%3D%3D_instead_of_%3D%3D.md)
+- 23 - [Converting to number fast way](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-23-converting-to-number-fast-way.md)
+- 22 - [Empty an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-22-two-ways-to-empty-an-array.md)
+- 21 - [Shuffle an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-21-shuffle-an-array.md)
+- 20 - [Return objects to enable chaining of functions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-20-return-objects-to-enable-chaining-of-functions.md)
+- 19 - [Safe string concatenation](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-19-safe-string-concatenation.md)
+- 18 - [Rounding the fast way](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-18-rounding-the-fast-way.md)
+- 17 - [Node.js: Run a module if it is not "required"](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-17-nodejs-run-a-module-if-it-is-not-required.md)
+- 16 - [Passing arguments to callback functions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-16-passing-arguments-to-callback-functions.md)
+- 15 - [Even simpler way of using indexOf as a contains clause](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-15-even-simpler-way-of-using-indexof-as-a-contains-clause.md)
+- 14 - [Fat Arrow Functions #ES6](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-14-fat-arrow-functions.md)
+- 13 - [Tip to measure performance of a javascript block](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-13-tip-to-measure-performance-of-a-javascript-block.md)
+- 12 - [Pseudomandatory parameters in ES6 functions #ES6](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-12-pseudomandatory-parameters-in-es6-functions.md)
+- 11 - [Hoisting](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-11-hoisting.md)
+- 10 - [Check if a property is in an Object](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-10-check-if-a-property-is-in-a-object.md)
+- 09 - [Template Strings](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-09-template-strings.md)
+- 08 - [Converting a Node List to an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-08-converting-a-node-list-to-an-array.md)
+- 07 - ["use strict" and get lazy](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-07-use-strict-and-get-lazy.md)
+- 06 - [Writing a single method for arrays and a single element](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-06-writing-a-single-method-for-arrays-and-a-single-element.md)
+- 05 - [Differences between `undefined` and `null`](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-05-differences-between-undefined-and-null.md)
+- 04 - [Sorting strings with accented characters](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-04-sorting-strings-with-accented-characters.md)
+- 03 - [Improve Nested Conditionals](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-03-improve-nested-conditionals.md)
+- 02 - [ReactJs - Keys in children components are important](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-02-keys-in-children-components-are-important.md)
+- 01 - [AngularJs: `$digest` vs `$apply`](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-01-angularjs-digest-vs-apply.md)
+- 00 - [Insert item inside an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-12-29-insert-item-inside-an-array.md)
+
+### License
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
