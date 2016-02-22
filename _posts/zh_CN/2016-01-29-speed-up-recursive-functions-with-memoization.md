@@ -22,14 +22,16 @@ var fibonacci = function(n){
 它可以运行，但并不高效。它做了太多重复的运算，我们可以通过存储这些运算结果来使其加速。
 
 ```js
-var fibonacci = (function(){
-    var cache = {
-        0: 0,
-        1: 1
-    };
-    return function self(n){
-        return n in cache  ? cache[n] : (cache[n] = self(n-1) + self(n-2));
+var fibonacci = (function() {
+  var cache = [0, 1]; // cache the value at the n index
+  return function(n) {
+    if (cache[n] === undefined) {
+      for (var i = cache.length; i <= n; ++i) {
+        cache[i] = cache[i-1] + cache[i-2];
+      }
     }
+    return cache[n];
+  }
 })()
 ```
 我们也可以定义一个高阶函数，它接收一个方法作为参数，返回一个该方法运用存储后的新方法。
