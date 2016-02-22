@@ -1,18 +1,19 @@
 ---
 layout: post
 
-title: Tip to measure performance of a javascript block
+title: Tip para medir el rendimiento de un bloque de Javascript
+
 tip-number: 13
 tip-username: manmadareddy
 tip-username-profile: https://twitter.com/manmadareddy
-tip-tldr: For quickly measuring performance of a javascript block, we can use the console functions like `console.time(label)` and `console.timeEnd(label)`
+tip-tldr: Para medir rápidamente el rendimiento de un bloque de Javascript, podemos utilizar las funciones de la consola como `console.time(label)` y `console.timeEnd(label)`
 
 categories:
-    - en
+    - es_ES
 ---
 
-For quickly measuring performance of a javascript block, we can use the console functions like
-[`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) and [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
+Para medir rápidamente el rendimiento de un bloque de Javascript, podemos utilizar las funciones de la consola como
+[`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) y [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)
 
 ```javascript
 console.time("Array initialize");
@@ -26,7 +27,7 @@ for (i = 0; i < len; i++) {
 console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
 ```
 
-More info:
+Más informacion:
 [Console object](https://github.com/DeveloperToolsWG/console-object),
 [Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
 
