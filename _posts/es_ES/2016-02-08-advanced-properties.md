@@ -12,7 +12,6 @@ categories:
     - es_ES
 ---
 
-It is possible to configure object properties in Javascript for example to set properties to be pseudo-private or readonly. This feature is available since ECMAScript 5.1, therefore supported by all recent browsers.
 Es posible configurar las propiedades del objeto en Javascript, por ejemplo, para establecer las propiedades de ser pseudo-privada o de sólo lectura. Esta característica está disponible desde ECMAScript 5.1, por lo tanto, es soportado por todos los navegadores recientes.
 
 Para ello, es necesario utilizar el método `defineProperty` del `Object` prototype de este modo:
@@ -53,7 +52,6 @@ Así que con el fin de crear una propiedad privada constante, se puede definir a
 Object.defineProperty(obj, 'myPrivateProp', {value: val, enumerable: false, writable: false, configurable: false});
 ```
 
-Besides configuring properties, `defineProperty` allows us to define *dynamic properties*, thanks to the second parameter being a string. For instance, let's say that I want to create properties according to some external configuration:
 Además de la configuración de propiedades, `defineProperty` nos permite definir *propiedades dinámicas*, gracias al segundo parámetro que es una cadena. Por ejemplo, digamos que quiero crear propiedades de acuerdo con alguna configuración externa:
 
 ```js
@@ -88,15 +86,12 @@ foobar.foo; // 15
 foobar.foo = 20; // _foo = 20
 ```
 
-Aside for the obvious advantage of encapsulation and advanced accessors, you will notice that we didn't "call" the getter, instead we just "get" the property without parentheses! This is awesome! For instance, let's imagine that we have an object with long nested properties, like so:
-
 Aparte de la ventaja obvia de encapsulación y metodos de acceso avanzados, se dará cuenta de que no teníamos "call" de getter, en cambio, sólo la propiedad "get" sin paréntesis! ¡Esto es increíble! Por ejemplo, imaginemos que tenemos un objeto con propiedades anidadas largas, así:
 
 ```js
 var obj = {a: {b: {c: [{d: 10}, {d: 20}] } } };
 ```
 
-Now instead of doing `a.b.c[0].d` (where one of the properties can resolve to `undefined` and throw an error), we can instead create an alias:
 Ahora, en lugar de hacer `a.b.c[0].d` (donde una de las propiedades se pueden resolver como `undefined` y lanzar un error), que en su lugar puede crear un alias:
 
 ```js
@@ -108,7 +103,6 @@ console.log(obj.firstD) // 10
 ```
 
 ### Nota
-If you define a getter without a setter and still try to set a value, you will get an error! This is particularly important when using helper functions such as `$.extend` or `_.merge`. Be careful!
 Si se define un getter sin un setter y todavía intenta establecer un valor, obtendrá un error! Esto es particularmente importante cuando se utilizan funciones auxiliares tales como `$.extend` o `_.merge`. ¡Ten cuidado!
 
 ### Links
