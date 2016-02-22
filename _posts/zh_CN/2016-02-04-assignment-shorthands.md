@@ -61,7 +61,7 @@ if (variable1 !== null || variable1 !== undefined || variable1 !== '') {
 ````javascript
 var variable2 = variable1  || '';
 ````
-P.S.：如果`variable1`是一个数组，则先检查他是否为0。
+P.S.：如果`variable1`是一个数字，则先检查他是否为0。
 
 ### 对象数组表示法
 
