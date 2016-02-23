@@ -22,14 +22,16 @@ var fibonacci = function(n){
 它可以執行，但是效率不高。它做了大量的重複計算，我們可以快取先前的計算結果來加快計算速度。
 
 ```js
-var fibonacci = (function(){
-    var cache = {
-        0: 0,
-        1: 1
-    };
-    return function self(n){
-        return n in cache ? cache[n] : (cache[n] = self(n - 1) + self(n - 2));
+var fibonacci = (function() {
+  var cache = [0, 1]; // cache the value at the n index
+  return function(n) {
+    if (cache[n] === undefined) {
+      for (var i = cache.length; i <= n; ++i) {
+        cache[i] = cache[i-1] + cache[i-2];
+      }
     }
+    return cache[n];
+  }
 })()
 ```
 也許，我們可以定義高階函式，來接受一個函式作為參數，並回傳一個函式回傳的暫存值。
