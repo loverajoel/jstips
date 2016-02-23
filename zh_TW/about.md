@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 關於 JavaScript tip
-permalink: /about/
+permalink: zh_TW/about/
 lang: zh_TW
 ---
 
@@ -16,7 +16,7 @@ lang: zh_TW
 任何改進或建議我們都很歡迎！
 [點擊查看說明](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)。
 
-### 讓我們保持聯絡聯繫
+### 讓我們保持聯繫
 
 這裡有很多方式來取得更新，選擇你自己喜歡的
 
