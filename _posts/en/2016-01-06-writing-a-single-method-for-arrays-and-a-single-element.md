@@ -17,14 +17,14 @@ You just have to concat everything into an array first. `Array.concat` will acce
 
 ```javascript
 function printUpperCase(words) {
-  var elements = [].concat(words);
+  var elements = [].concat(words || []);
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i].toUpperCase());
   }
 }
 ```
 
-`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
+`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.  It also avoids the potential `TypeError` that would be thrown if no parameter was passed.
 
 ```javascript
 printUpperCase("cactus");
