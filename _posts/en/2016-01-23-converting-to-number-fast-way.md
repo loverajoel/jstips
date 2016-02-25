@@ -11,7 +11,7 @@ categories:
     - en
 ---
 
-Converting strings to numbers is extremely common. The easiest and fastest ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
+Converting strings to numbers is extremely common. The easiest and fastest ([jsPerf](https://jsperf.com/number-vs-parseint-vs-plus/29)) way to achieve that would be using the `+` (plus) operator.
 
 ```javascript
 var one = '1';

@@ -17,7 +17,7 @@ Let's try out writing an asynchronous function which prints the value of the loo
 for (var i=0; i<5; i++) {
 	setTimeout(function(){
 		console.log(i); 
-	}, 1000);
+	}, 1000 * (i+1));
 }  
 ```
 The output of the above programs turns out to be
@@ -42,7 +42,7 @@ for (var i=0; i<5; i++) {
 	var temp = i;
  	setTimeout(function(){
 		console.log(temp); 
-	}, 1000);
+	}, 1000 * (i+1));
 }  
 ```
 But again the output of the above programs turns out to be
@@ -63,7 +63,7 @@ for (var i=0; i<5; i++) {
  	temp = i;
 	setTimeout(function(){
 		console.log(temp); 
-  	}, 1000);
+  	}, 1000 * (i+1));
 }  
 ```
 **Solution**
@@ -75,7 +75,7 @@ for (var i=0; i<5; i++) {
 	(function(num){
 		setTimeout(function(){
 			console.log(num); 
-		}, 1000); 
+		}, 1000 * (i+1)); 
 	})(i);  
 }  
 ```
@@ -87,6 +87,6 @@ Another approach for this would be with using `let`. With ES6 the `let` keyword 
 for (let i=0; i<5; i++) {
  	setTimeout(function(){
 		console.log(i); 
-	}, 1000);
+	}, 1000 * (i+1));
 }  
 ```
