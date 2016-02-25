@@ -13,7 +13,7 @@ categories:
 
 As written in documentation the `reduce()` method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
-### `reduce()`
+### Signature
 
 [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) function accepts 2 parameters (M: mandatory, O: optional):
 
@@ -31,7 +31,7 @@ We are on Amazon website (prices in $) and our caddy is quite full, let's comput
 var items = [{price: 10}, {price: 120}, {price: 1000}];
 
 // our reducer function
-var reducer = function add(sumSoFar, nextPrice) { return sumSoFar + nextPrice.price; };
+var reducer = function add(sumSoFar, item) { return sumSoFar + item.price; };
 
 // do the job
 var total = items.reduce(reducer, 0);
@@ -61,20 +61,17 @@ To illustrate this, let's create a single object literal with some reducers func
 ```javascript
 var reducers = {
   totalInDollar: function(state, item) {
-    state.dollars += item.price;
-    return state;
+    // specific statements...
+    return state.dollars += item.price;
   },
   totalInEuros : function(state, item) {
-    state.euros += item.price * 0.897424392;
-    return state;
+    return state.euros += item.price * 0.897424392;
   },
   totalInPounds : function(state, item) {
-    state.pounds += item.price * 0.692688671;
-    return state;
+    return state.pounds += item.price * 0.692688671;
   },
   totalInYen : function(state, item) {
-    state.yens += item.price * 113.852;
-    return state;
+    return state.yens += item.price * 113.852;
   }
   // more...
 };
