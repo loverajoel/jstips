@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: 在純 JavaScript 檢查文件是否準備
+title: 在 pure JavaScript 檢查文件是否準備
 tip-number: 46
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: 跨瀏覽器且使用純 JavaScript 來確認文件是否已經載入完成。
+tip-tldr: 可以跨瀏覽器，而且使用 pure JavaScript 來確認文件是否已經載入完成。
 
 categories:
     - zh_TW
 ---
 
-跨瀏覽器且使用純 JavaScript 來確認文件是否已經載入完成的方式是使用 [`readyState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState)。
+可以跨瀏覽器，而且使用 pure JavaScript 來確認文件是否已經載入完成的方式是使用 [`readyState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState)。
 
 ```js
 if (document.readyState === 'complete') {

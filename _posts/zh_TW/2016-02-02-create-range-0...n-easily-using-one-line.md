@@ -18,7 +18,7 @@ categories:
 Array.apply(null, {length: N}).map(Number.call, Number);
 ```
 
-讓我們來拆解這行程式碼。我們知道 `call` 函式可以在 JavaScript 執行，所以，在 `call` 第一個參數是上下文（context），而第二個參數開始則是呼叫 `call` 函式所需要用到的參數。
+讓我們來拆解這行程式碼。我們知道 `call` 函式可以在 JavaScript 執行。所以，在 `call` 第一個參數是上下文（context），而第二個參數開始則是呼叫 `call` 函式所需要用到的參數。
 
 ```js
 function add(a, b){
@@ -28,7 +28,7 @@ add.call(null, 5, 6);
 ```
 回傳 5 和 6 的總和。
 
-在 JavaScript 陣列的 `map()` 帶有兩個參數，第一個是 `callback`，第二個則是 `thisArg(context)`。`callback` 中帶有三個參數，`value`、`index` 以及整個要被迭代的陣列。一般語法像是這樣：
+在 JavaScript 陣列的 `map()` 帶有兩個參數，第一個是 `callback`，第二個則是 `thisArg(context)`。`callback` 中帶有三個參數，`value`、`index` 以及整個要被迭代的陣列。常見的語法像是這樣：
 
 ```js
 [1, 2, 3].map(function(value, index, arr){
@@ -50,6 +50,6 @@ Array.apply(null, {length: N}).map(Number.call, Number);
 
 ```js
 Array.apply(null, {length: N}).map(function(value, index){
-  return index + 1;  
+  return index + 1;
 });
 ```

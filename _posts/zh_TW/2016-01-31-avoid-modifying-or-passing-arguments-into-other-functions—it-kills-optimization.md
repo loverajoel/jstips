@@ -19,7 +19,7 @@ categories:
 ```js
 var args = Array.prototype.slice.call(arguments);
 ```
-將 `arguments` 傳送到 `Array` 原型的上的 `slice` 方法；`slice` 方法回傳淺拷貝的 `arguments` 當作新的陣列物件。這共同簡寫的是：
+將 `arguments` 傳送到 `Array` 原型的上的 `slice` 方法；`slice` 方法回傳淺拷貝的 `arguments` 當作新的陣列物件。一般常見的簡寫方法：
 
 ```js
 var args = [].slice.call(arguments);
@@ -28,7 +28,7 @@ var args = [].slice.call(arguments);
 
 ### 優化
 
-不幸的是，傳送 `arguments` 到任何函式做呼叫，造成在 Chrome 和 Node 跳過 JavaScript V8 引擎的優化功能，這可能會導致性能降低。參考這篇 [optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) 文章。傳送 `arguments` 到函式稱為 *leaking `arguments`*。
+不幸的是，傳送到任何函式呼叫的 `arguments`，造成在 Chrome 和 Node 跳過 JavaScript V8 引擎的優化功能，這可能會導致性能降低。參考這篇 [optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) 文章。傳送 `arguments` 到函式稱為 *leaking `arguments`*。
 
 相反的，假設你需要包含參數的陣列，你可以藉助這個方法：
 

@@ -13,9 +13,9 @@ categories:
 
 JavaScript 嚴格模式讓開發者可以寫出更「安全」的 JavaScript 程式碼。
 
-預設情況下，JavaScript 允許開發者的粗心行為，例如，當我們引用一個沒有要求我們由「var」宣告的變數。或許這個對於一個剛入門的開發者相當方便，當變數名稱拼寫錯誤或者是不小心參考到其他的範圍（scope），這些都是許多錯誤的來源。
+預設情況下，JavaScript 允許開發者的粗心行為，例如，當我們引用一個沒有要求我們由「var」宣告的變數。或許這個對於一個剛入門的開發者相當方便，當變數名稱拼寫錯誤或者是不小心參考到其他的 scope，這些都是許多錯誤的來源。
 
-開發者喜歡讓電腦幫我們做一些無聊的工作，然後自動地幫我們確認工作上的錯誤。這就是 JavaScript 的 「嚴格模式」（use strict）幫我們做的，將錯誤轉換成 JavaScript 錯誤。
+開發者喜歡讓電腦幫我們做一些無聊的工作，然後自動幫我們確認工作上的錯誤。這就是 JavaScript 的 「嚴格模式」（use strict）幫我們做的，將錯誤轉換成 JavaScript 錯誤。
 
 我們把這個指令放在 js 檔案的頂端：
 
@@ -25,12 +25,12 @@ JavaScript 嚴格模式讓開發者可以寫出更「安全」的 JavaScript 程
 var v = "Hi!  I'm a strict mode script!";
 ```
 
-或是在 function 內：
+或是在函式內：
 
 ```javascript
 function f()
 {
-  // Function 內使用嚴格模式
+  // 函式內使用嚴格模式
   'use strict';
   function nested() { return "And so am I!"; }
   return "Hi!  I'm a strict mode function!  " + nested();
@@ -38,11 +38,11 @@ function f()
 function f2() { return "I'm not strict."; }
 ```
 
-透過 JavaScript 檔案或 function 內引入這個指令，我們直接讓 JavaScript 引擎執行嚴格模式來禁止一些在大型 JavaScript 專案不良的行為。除了其他之外，嚴格模式改變了以下的行為：
+透過 JavaScript 檔案或函式內引入這個指令，我們直接讓 JavaScript 引擎執行嚴格模式來禁止一些在大型 JavaScript 專案不良的行為。除了其他之外，嚴格模式改變了以下的行為：
 
 * 只有被宣告的「var」變數才可以被引用。
 * 嘗試寫入唯讀的變數會造成錯誤。
-* 你只能透過「new」關鍵字才可以呼叫建構子。
+* 你只能透過「new」keyword 才可以呼叫建構子。
 * 「this」不再隱式的綁定到全域的物件。
 * 對 eval() 有嚴格的限制。
 * 防止你使用保留字元或特殊字元當作變數名稱。

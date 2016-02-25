@@ -13,7 +13,7 @@ categories:
 ---
 
 假設有一個物件有「prop1」、「prop2」、「prop3」屬性。
-我們傳送__附加參數__到 __JSON.stringify__ 將物件的屬性變成字串，像是：
+我們傳送__額外的參數__到 __JSON.stringify__ 將物件的屬性變成字串，像是：
 
 ```javascript
 var obj = {

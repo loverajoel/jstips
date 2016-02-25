@@ -30,7 +30,7 @@ Math.min.apply(null, numbers) // 1
 
 傳送 `numbers` 陣列當作 `apply()` 的第二個參數，函式會呼叫陣列內所有的值當作函式的參數。
 
-更簡單的方式，透過 ES2015 的[展開運算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)來完成。
+更簡單的方式，透過 ES2015 的[展開運算子](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)來完成。
 
 ```js
 var numbers = [1, 2, 3, 4];
@@ -38,4 +38,4 @@ Math.max(...numbers) // 4
 Math.min(...numbers) // 1
 ```
 
-這個操作符可以在函式的參數中把陣列內的數值「展開」。
+這個運算子可以在函式的參數中把陣列內的數值「展開」。

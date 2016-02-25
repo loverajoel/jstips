@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: JS 中的短路求值
+title: JavaScript 中的捷徑計算
 tip-number: 27
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: 短路求值意思是說，假設第一個參數不足以確定表達式的值，第二個參數才會被執行，當 AND（&&）函數的第一個參數計算結果為 false，則所有結果則為 false；當 OR（||）函數的第一個參數計算結果為 true，則所有結果為 true。
+tip-tldr: 捷徑計算意思是說，假設第一個參數不足以確定表達式的值，第二個參數才會被執行，當 AND（&&）函數的第一個參數計算結果為 false，則所有結果則為 false；當 OR（||）函數的第一個參數計算結果為 true，則所有結果為 true。
 
 categories:
     - zh_TW
 ---
 
-[短路求值](https://en.wikipedia.org/wiki/Short-circuit_evaluation)意思是說，假設第一個參數不足以確定表達式的值，第二個參數才會被執行，當 AND（&&）函數的第一個參數計算結果為 false，則所有結果則為 false；當 OR（||）函數的第一個參數計算結果為 true，則所有結果為 true。
+[捷徑計算](https://en.wikipedia.org/wiki/Short-circuit_evaluation)意思是說，假設第一個參數不足以確定表達式的值，第二個參數才會被執行，當 AND（&&）函數的第一個參數計算結果為 false，則所有結果則為 false；當 OR（||）函數的第一個參數計算結果為 true，則所有結果為 true。
 
 對於以下的 `test` 條件和 `isTrue` 以及 `isFalse` 函式。
 
@@ -73,6 +73,6 @@ dog.bark(); // Woof Woof.
 // 但是如果 dog 尚未被定義，dog.bark() 將會發生「無法讀取尚未定義的屬性 'bark'」的錯誤。
 // 為了防止這個問題，我們使用 &&。
 
-dog&&dog.bark(); // 如果 dog 被定義了，那我們就可以呼叫 dog.bark()。
+dog && dog.bark(); // 如果 dog 被定義了，那我們就可以呼叫 dog.bark()。
 
 ```
