@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Detect document ready in pure JS
+title: Detectar cuando DOM esta listo en JS puro
 tip-number: 46
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: The cross-browser way to check if the document has loaded in pure JavaScript
+tip-tldr: La forma cross-browser para comprobar si el DOM se ha cargado en JavaScript puro.
 
 categories:
-    - en
+    - es_ES
 ---
 
-The cross-browser way to check if the document has loaded in pure JavaScript is using [`readyState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState).
+La forma cross-browser para comprobar si el documento se ha cargado en JavaScript puro utiliza [`readyState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState).
 
 ```js
 if (document.readyState === 'complete') {
@@ -19,7 +19,7 @@ if (document.readyState === 'complete') {
 }
 ```
 
-You can detect when the document it's ready...
+Como detectar cuando el document esta listo...
 
 
 ```js
@@ -31,7 +31,7 @@ let stateCheck = setInterval(() => {
 }, 100);
 ```
 
-or with [onreadystatechange](https://developer.mozilla.org/en-US/docs/Web/Events/readystatechange)...
+o con [onreadystatechange](https://developer.mozilla.org/en-US/docs/Web/Events/readystatechange)...
 
 
 ```js
@@ -42,4 +42,4 @@ document.onreadystatechange = () => {
 };
 ```
 
-Use `document.readyState === 'interactive'` to detect when the DOM is ready.
+Use `document.readyState === 'interactive'` para detectar cuando el DOM esta listo.
