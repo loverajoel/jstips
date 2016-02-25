@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Preventing Unapply Attacks
+title: La prevención de ataques de cancelar la aplicación
 tip-number: 42
 tip-username: emars 
 tip-username-profile: https://twitter.com/marseltov
-tip-tldr: Freeze the builtin prototypes.
+tip-tldr: Congelar la construcción en los prototypes.
 
 categories:
-    - en
+    - es_ES
 ---
 
-By overriding the builtin prototypes, external code can cause code to break by rewriting code to expose and change bound arguments. This can be an issue that seriously breaks applications that works by using polyfill es5 methods.
+Reemplazando el constructor de prototypes, código externo puede ocasionar que el código roto sea reescribiendo código para exponer y cambiar los argumentos ligados. Esto puede ser un problema serio que rompe las aplicaciones que funciona mediante el uso de métodos polyfill ES5.
 
 ```js
 // example bind polyfill
@@ -37,9 +37,9 @@ function unapplyAttack() {
 }
 ```
 
-The above function discards the `prev` array from the bind meaning that any `.concat` the first concat call following using the unapply attack will throw an error.
+La función anterior descarta el array `prev` desde el enlace que significa que cualquier `.concat`, la primera llamada concat siguiente utilizando el ataque cancelar la aplicación generará un error.
 
-By using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze), making an object immutable, you prevent any overriding of the builtin object prototypes. 
+Usando [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze), haciendo un objeto inmutable, se impide que cualquier sobreescritura de los objetos prototype.
 
 
 ```js
@@ -53,5 +53,5 @@ By using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript
 }());
 ```
 
-You can read more about unapply attacks [here](https://glebbahmutov.com/blog/unapply-attack/).
-Although this concept is called an 'unapply attack' due to some code being able to access closures that normally wouldn't be in scope, it is mostly wrong to consider this a security feature due to it not preventing an attacker with code execution from extending prototypes before the freezing happens and also still having the potential to read all scopes using various language features. ECMA modules would give realm based isolation which is much stronger than this solution however still doesn't fix the issues of third party scripts.
+Puede leer mas [here](https://glebbahmutov.com/blog/unapply-attack/).
+Aunque este concepto se llama 'ataque de cancelar la aplicación' debido a algún código de poder acceder a los closures que normalmente no estarían en su scope, es sobre todo un error considerar esto una característica de seguridad, debido a que no impedir que un atacante la ejecución de código con el que se extiende desde prototipos antes de la congelación ocurre, y también sigue teniendo el potencial para leer todos los scopes que utilizan diversas características del lenguaje. ECMA módulos darían aislamiento, que es mucho más fuerte que esta solución sin embargo sigue sin solucionar los problemas de los scripts de terceros.

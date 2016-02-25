@@ -1,19 +1,19 @@
 ---
 layout: post
 
-title: Know the passing mechanism
+title: Conocer el mecanismo de paso
 tip-number: 44
 tip-username: bmkmanoj
 tip-username-profile: https://github.com/bmkmanoj
-tip-tldr: JavaScript technically only passes by value for both primitives and object (or reference) types. In case of reference types the reference value itself is passed by value.
+tip-tldr: JavaScript solamente pasa por valor para ambos tipos primitiva y objeto (o referencia). En el caso de referencia el valor de referencia en sí se pasa por valor.
 
 categories:
-    - en
+    - es_ES
 ---
 
-JavaScript is pass-by-value, technically. It is neither pass-by-value nor pass-by-reference, going by the truest sense of these terms. To understand this passing mechanism, take a look at the following two example code snippets and the explanations.
+JavaScript es pass-by-value, técnicamente. No es ni pass-by-value, ni pass-by-reference, pasando por el verdadero sentido de estos términos. Para entender este mecanismo de paso, echar un vistazo a los siguientes dos fragmentos de código de ejemplo y las explicaciones.
 
-### Example 1
+### Ejemplo 1
 
 ```js
 
@@ -33,12 +33,12 @@ console.log(me);			// 4  : {'partOf' : 'A Team'}
 
 ```
 
-In above example, when the `myTeam` gets invoked, JavaScript is *passing the reference to* `me` *object as value, as it is an object* and invocation itself creates two independent references to the same object, (though the name being same here i.e. `me`, is misleading and gives us an impression that it is the single reference) and hence, the reference variable themselves are independent.
+En el ejemplo anterior, cuando `myTeam` se invoca, JavaScript es *pasar la referencia a* `me` *objeto como valor, ya que es un objeto* y la invocación de sí mismo crea dos referencias independientes para el mismo objeto, (aunque el nombre siendo el mismo aquí `me`, es engañosa y nos da la impresión de que es el único de referencia) y por lo tanto, la variable de referencia a sí mismos son independientes.
 
-When we assigned a new object at #`3`, we are changing this reference value entirely within the `myTeam` function, and it will not have any impact on the original object outside this function scope, from where it was passed and the reference in the outside scope is going to retain the original object and hence the output from #`4`. 
+Cuando asignamos un nuevo objeto en la posición #`3`, estamos cambiando el valor de referencia en su totalidad dentro de la función `myTeam`, y no va a tener ningún impacto en el objeto original fuera de este scope de la función, desde donde fue aprobada y la referencia en el scope exterior se va a conservar el objeto original y por lo tanto la salida de `# 4'.
 
 
-### Example 2
+### Ejemplo 2
 
 ```js
 
@@ -55,9 +55,9 @@ console.log(me);			// 4  : {'partOf' : 'A Group'}
 	
 ```
 
-In the case of `myGroup` invocation, we are passing the object `me`. But unlike the example 1 scenario, we are not assigning this `me` variable to any new object, effectively meaning the object reference value within the `myGroup` function scope still is the original object's reference value and when we are modifying the property within this scope, it is effectively modifying the original object's property. Hence, you get the output from #`7`.
+En el caso de invocar `myGroup`, estamos pasando el objeto `me`. Pero a diferencia del escenario de ejemplo 1, nosotros no estamos asignando esta variable `me` a cualquier nuevo objeto, lo que significa efectivamente el valor de referencia de objeto dentro del scope de la funcion `myGroup` todavía es el valor de referencia del objeto original y cuando estamos modificando la propiedad dentro de este scope, que está modificando de manera efectiva la propiedad del objeto original. Por lo tanto, se obtiene la salida de #`7`.
 
-So does this later case not prove that javascript is pass-by-reference? No, it does not. Remember, *JavaScript passes the reference as value, in case of objects*. The confusion arises as we tend not to understand fully what pass by reference is. This is the exact reason, some prefer to call this as *call-by-sharing*.
+Lo mismo ocurre si esto no prueba que Javascript es pass-by-reference? No, no lo es. Recuerde, *JavaScript pasa la referencia como valor, en el caso de objetos*. La confusión surge ya que se tiende a no entender completamente lo que pase por referencia. Esta es la razón exacta, algunos prefieren llamar a esto como *Call-by-sharing*.
 
 
-*Initially posted by the author on [js-by-examples](https://github.com/bmkmanoj/js-by-examples/blob/master/examples/js_pass_by_value_or_reference.md)*
+*Publicacion del autor [js-by-examples](https://github.com/bmkmanoj/js-by-examples/blob/master/examples/js_pass_by_value_or_reference.md)*
