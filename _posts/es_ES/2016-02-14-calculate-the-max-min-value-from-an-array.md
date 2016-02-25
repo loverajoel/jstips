@@ -1,26 +1,26 @@
 ---
 layout: post
 
-title: Calculate the Max/Min value from an array
+title: Calcular el valor Max/Min de un array
 tip-number: 45
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: Ways to use the built-in functions Math.max() and Math.min() with arrays of numbers
+tip-tldr: Formas de utilizar las funciones Math.max() y Math.min() con array de números
 
 categories:
-    - en
+    - es_ES
 ---
 
-The built-in functions [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) and [Math.min()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min) find the maximum and minimum value of the arguments, respectively.
+Las funciones [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) and [Math.min()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min) encontrar el valor máximo y mínimo de los argumentos, respectivamente.
 
 ```js
 Math.max(1, 2, 3, 4); // 4
 Math.min(1, 2, 3, 4); // 1
 ```
 
-These functions will not work as-is with arrays of numbers. However, there are some ways around this.
+Estas funciones no funcionarán como tal con arrays de números. Sin embargo, hay algunas maneras de evitar esto.
 
-[`Function.prototype.apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) allows you to call a function with a given `this` value and an _array_ of arguments.
+[`Function.prototype.apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) le permite llamar a una función con un determinado valor de `this` y un _array_ de argumentos.
 
 ```js
 var numbers = [1, 2, 3, 4];
@@ -28,9 +28,9 @@ Math.max.apply(null, numbers) // 4
 Math.min.apply(null, numbers) // 1
 ```
 
-Passing the `numbers` array as the second argument of `apply()` results in the function being called with all values in the array as parameters.
+Pasando el array `numbers` como el segundo argumento de `apply()` resulta en la función invocados con todos los valores en le array como parámetros.
 
-A simpler, ES2015 way of accomplishing this is with the new [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
+Una manera sencilla con ES2015 de conseguir esto [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
 
 ```js
 var numbers = [1, 2, 3, 4];
@@ -38,4 +38,4 @@ Math.max(...numbers) // 4
 Math.min(...numbers) // 1
 ```
 
-This operator causes the values in the array to be expanded, or "spread", into the function's arguments.
+Este operador hace que los valores del array a ser ampliado, o "spread", dentro de argumentos de la función.

@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Use destructuring in function parameters
+title: Utilice la desestructuración de los parámetros de función
 tip-number: 43
 tip-username: dislick 
 tip-username-profile: https://github.com/dislick
-tip-tldr: Did you know that you can use destructuring in function parameters?
+tip-tldr: ¿Sabías que se puede utilizar una funcion de desestructuración de parametro parámetros?
 
 categories:
-    - en
+    - es_ES
 ---
 
-I am sure many of you are already familiar with the [ES6 Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Did you know that you can also use it in function parameters? 
+Estoy seguro que muchos de ustedes ya están familiarizados con el [ES6 Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). ¿Sabías que también se puede utilizar en los parámetros de una función?
 
 ```javascript
 var sayHello = function({ name, surname }) {
@@ -24,6 +24,6 @@ sayHello({
 });
 ```
 
-This is great for functions which accept an options object.
+Esto es grande para las funciones que aceptan un objeto de opciones.
 
-> Please note that the Destructuring Assignment is not yet available in Node.js and almost all browsers. You can however use the `--harmony-destructuring` flag for Node.js if you'd like to try it for yourself now.
+> Tenga en cuenta que la asignación desestructurada aún no está disponible en Node.js y casi todos los navegadores. Sin embargo, puede usar `--harmony-destructuring` para Node.js si desea intentarlo por sí mismo ahora.
