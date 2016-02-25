@@ -1,39 +1,38 @@
 ---
 layout: post
 
-title: Flattening multidimensional Arrays in JavaScript
+title: Arrays multidimensionales en JavaScript
 tip-number: 38
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: Three different solutions to merge multidimensional array into a single array.
-
+tip-tldr: Tres soluciones diferentes para combinar arrays multidimensional en un sola arrays.
 
 categories:
-    - en
+    - es_ES
 ---
 
-These are the three known ways to merge multidimensional array into a single array.
+Estas son las tres formas conocidas para fusionar arrays multidimensional en una sola arrays.
 
-Given this array:
+Dado el array:
 
 ```js
 var myArray = [[1, 2],[3, 4, 5], [6, 7, 8, 9]];
 ```
 
-We wanna have this result:
+Queremos tener este resultado:
 
 ```js
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Solution 1: Using [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) and [`apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+### Solucion 1: usando [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) y [`apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
 ```js
 var myNewArray = [].concat.apply([], myArray);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Solution 2: Using [`reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#Flatten_an_array_of_arrays)
+### Solucion 2: usando [`reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#Flatten_an_array_of_arrays)
 
 ```js
 var myNewArray = myArray.reduce(function(prev, curr) {
@@ -42,7 +41,7 @@ var myNewArray = myArray.reduce(function(prev, curr) {
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Solution 3:
+### Solucion 3:
 
 ```js
 var myNewArray3 = [];
@@ -53,8 +52,8 @@ for (var i = 0; i < myArray.length; ++i) {
 console.log(myNewArray3);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-Take a look [here](https://jsbin.com/qeqicu/edit?js,console) these 3 algorithms in action.
+Echar un vistazo [here](https://jsbin.com/qeqicu/edit?js,console) estos 3 algoritmos en accion.
 
-For infinitely nested array try Underscore [flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501).
+Para array infinitamente anidado probar Underscore [flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501).
 
-If you are curious about performance, [here](http://jsperf.com/flatten-an-array-loop-vs-reduce/6) a test for check how it works.
+Si tiene curiosidad por la performance, [here](http://jsperf.com/flatten-an-array-loop-vs-reduce/6).
