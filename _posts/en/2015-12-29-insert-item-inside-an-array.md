@@ -34,18 +34,18 @@ Both first methods modify the original array. Don't believe me? Check the [jsper
 
 ### Performance on mobile :
 
-#### Android
+#### Android (v4.2.2)
 
 1. _arr.push(6);_ and _arr[arr.length] = 6;_ have the same performance // 3 319 694 ops/sec
 3. _arr2 = arr.concat([6]);_ 50.61 % slower than the other two methods
 
-#### Chrome Mobile
+#### Chrome Mobile (v33.0.0)
 
 1. _arr[arr.length] = 6;_ // 6 125 975 ops/sec
 2. _arr.push(6);_ 66.74 % slower
 3. _arr2 = arr.concat([6]);_ 87.63 % slower
 
-#### Safari Mobile
+#### Safari Mobile (v9)
 
 1. _arr[arr.length] = 6;_ // 7 452 898 ops/sec
 2. _arr.push(6);_ 40.19 % slower
@@ -61,31 +61,31 @@ Final victor
 
 ### Performance on desktop
 
-#### Chrome
+#### Chrome (v48.0.2564)
 
-1. _arr[arr.length] = 6;_ // 24 919 581 ops/sec
-2. _arr.push(6);_ 65.56 % slower
-3. _arr2 = arr.concat([6]);_ 88.39 % slower
+1. _arr[arr.length] = 6;_ // 21 602 722 ops/sec
+2. _arr.push(6);_ 61.94 % slower
+3. _arr2 = arr.concat([6]);_ 87.45 % slower
 
-#### Firefox
+#### Firefox (v44)
 
 1. _arr.push(6);_ // 56 032 805 ops/sec
 2. _arr[arr.length] = 6;_ 0.52 % slower
 3. _arr2 = arr.concat([6]);_ 87.36 % slower
 
-#### IE
+#### IE (v11)
 
-1. _arr[arr.length] = 6;_ // 57 617 515 ops/sec
-2. _arr.push(6);_ 35.34 % slower
+1. _arr[arr.length] = 6;_ // 67 197 046 ops/sec
+2. _arr.push(6);_ 39.61 % slower
 3. _arr2 = arr.concat([6]);_ 93.41 % slower
 
-#### Opera
+#### Opera (v35.0.2066.68)
 
 1. _arr[arr.length] = 6;_ // 30 775 071 ops/sec
 2. _arr.push(6);_ 71.60 % slower
 3. _arr2 = arr.concat([6]);_ 83.70 % slower
 
-#### Safari
+#### Safari (v9.0.3)
 
 1. _arr.push(6);_ // 42 670 978 ops/sec
 2. _arr[arr.length] = 6;_ 0.80 % slower
@@ -113,17 +113,17 @@ Here is a little more detail: unshift edits the original array; concat returns a
 
 ### Performance on mobile :
 
-#### Android
+#### Android (v4.2.2)
 
 1. _[0].concat(arr);_ // 1 808 717 ops/sec
 2. _arr.unshift(0);_ 97.85 % slower
 
-#### Chrome Mobile
+#### Chrome Mobile (v33.0.0)
 
-1. _[0].concat(arr);_ // 1 008 058 ops/sec
-2. _arr.unshift(0);_ 96.25 % slower
+1. _[0].concat(arr);_ // 1 269 498 ops/sec
+2. _arr.unshift(0);_ 99.86 % slower
 
-#### Safari Mobile
+#### Safari Mobile (v9)
 
 1. _arr.unshift(0);_ // 3 250 184 ops/sec
 2. _[0].concat(arr);_ 33.67 % slower
@@ -137,27 +137,27 @@ Final victor
 
 ### Performance on desktop
 
-#### Chrome
+#### Chrome (v48.0.2564)
 
-1. _[0].concat(arr);_ // 3 931 754 ops/sec
-2. _arr.unshift(0);_ 97.77 % slower
+1. _[0].concat(arr);_ // 2 656 685 ops/sec
+2. _arr.unshift(0);_ 96.77 % slower
 
-#### Firefox
+#### Firefox (v44)
 
 1. _[0].concat(arr);_ // 8 039 759 ops/sec
 2. _arr.unshift(0);_ 99.72 % slower
 
-#### IE
+#### IE (v11)
 
 1. _[0].concat(arr);_ // 3 604 226 ops/sec
 2. _arr.unshift(0);_ 98.31 % slower
 
-#### Opera
+#### Opera (v35.0.2066.68)
 
 1. _[0].concat(arr);_ // 4 102 128 ops/sec
 2. _arr.unshift(0);_ 97.44 % slower
 
-#### Safari
+#### Safari (v9.0.3)
 
 1. _arr.unshift(0);_ // 12 356 477 ops/sec
 2. _[0].concat(arr);_ 15.17 % slower
