@@ -30,6 +30,7 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 49 - [Easiest way to extract unix timestamp in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-26-extract-unix-timestamp-easily.md)
 - 48 - [Reduce builtin function usage](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-17-reminders-about-reduce-function-usage.md)
 - 47 - [Basics : declarations](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-16-basics-declarations.md)
 - 46 - [Detect document ready in pure JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-15-detect-document-ready-in-pure-js.md)
