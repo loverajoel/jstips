@@ -26,7 +26,7 @@ First, we just set two variables. Nothing much here.
 
 ```js
 ;(() => { 
-  var x = y = 2 // == var x; y = 2;
+  var x = y = 2 // == var x; x = y = 2;
   console.log('2.0:', `x = ${x}, y = ${y}`)
 })()
 console.log('--> 2.1:', `x = ${x}, y = ${y}`)

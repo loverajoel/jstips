@@ -14,7 +14,7 @@ categories:
 Assigning is very common. Sometimes typing becomes time consuming for us 'Lazy programmers'.
 So, we can use some tricks to help us and make our code cleaner and simpler.
 
-This is the similiar use of
+This is the similar use of
 
 ````javascript
 x += 23; // x = x + 23;
@@ -29,6 +29,32 @@ n ++; // n = n + 1;
 n --; n = n - 1;
 
 ````
+
+### `++` and `--` operators
+
+There is a special `++` operator. It's best to explain it with an example:
+
+````javascript
+var a = 2;
+var b = a++;
+// Now a is 3 and b is 2
+````
+
+The `a++` statement does this:
+  1. return the value of `a`
+  2. increment `a` by 1
+
+But what if we wanted to increment the value first? It's simple:
+
+````javascript
+var a = 2;
+var b = ++a;
+// Now both a and b are 3
+````
+
+See? I put the operator _before_ the variable.
+
+The `--` operator is similar, except it decrements the value.
 
 ### If-else (Using ternary operator)
 

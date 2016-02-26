@@ -9,3 +9,10 @@
 # 提示
 
 将时间和小知识number保留为**xx**。当我们决定merge此pull request时你可以修改它们并合并commits。
+
+# 工作流程
+
+**Tip 提交** -> **Tip 审查** -> **Tip 通过并发布**
+
+- 当你提交 tip 时，如果 tip 正在通过审查，此时 tip 状态为 `under-review`。
+- 如果 tip 经过5个人的审查，而且他們都给了 :shipit:，tip 将会被合并（`merge`）到 tip 列表中。

@@ -20,7 +20,7 @@ Any improvements or suggestions are more than welcome!
 
 There are a lot of way to get update, choose your own
 
-- [Officail Blog](http://www.jstips.co)
+- [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
 - [Hubot](https://github.com/dggriffin/hubot-jstips)
 - [js2016.tips](http://js2016.tips/)

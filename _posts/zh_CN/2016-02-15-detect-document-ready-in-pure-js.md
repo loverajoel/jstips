@@ -15,7 +15,7 @@ categories:
 
 ```js
 if (document.readyState === 'complete') {
-	// 页面已完全加载
+  // 页面已完全加载
 }
 ```
 
@@ -24,9 +24,9 @@ if (document.readyState === 'complete') {
 
 ```js
 let stateCheck = setInterval(() => {
-	if (document.readyState === 'complete') {
-    clearInterval(stateCheck);
-	 // document ready
+  if (document.readyState === 'complete') {
+	clearInterval(stateCheck);
+	// document ready
   }
 }, 100);
 ```
@@ -37,7 +37,7 @@ let stateCheck = setInterval(() => {
 ```js
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
-   // document ready
+	// document ready
   }
 };
 ```

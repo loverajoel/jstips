@@ -17,7 +17,7 @@ categories:
 for (var i=0; i<5; i++) {
 	setTimeout(function(){
 		console.log(i); 
-	}, 1000);
+	}, 1000 * (i+1));
 }  
 ```
 
@@ -44,7 +44,7 @@ for (var i=0; i<5; i++) {
 	var temp = i;
  	setTimeout(function(){
 		console.log(temp); 
-	}, 1000);
+	}, 1000 * (i+1));
 }  
 ```
 
@@ -66,7 +66,7 @@ for (var i=0; i<5; i++) {
  	temp = i;
 	setTimeout(function(){
 		console.log(temp); 
-  	}, 1000);
+  	}, 1000 * (i+1));
 }  
 ```
 
@@ -79,7 +79,7 @@ for (var i=0; i<5; i++) {
 	(function(num){
 		setTimeout(function(){
 			console.log(num); 
-		}, 1000); 
+		}, 1000 * (i+1)); 
 	})(i);  
 }  
 ```
@@ -93,6 +93,6 @@ for (let i=0; i<5; i++) {
 	var temp = i;
  	setTimeout(function(){
 		console.log(i); 
-	}, 1000);
+	}, 1000 * (i+1));
 }  
 ```
