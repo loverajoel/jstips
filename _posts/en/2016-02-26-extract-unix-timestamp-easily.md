@@ -12,6 +12,7 @@ categories:
 ---
 
 We frequently need to calculate with unix timestamp. There are several ways to grab the timestamp. For current unix timestamp easiest and fastest way is
+
 ```js
 const timestamp = Date.now();
 ```
@@ -22,6 +23,7 @@ const timestamp = new Date().getTime();
 ```
 
 To get unix timestamp of a specific date pass `yyyy-mm-dd` as a parameter of `Date` constructor. For example
+
 ```js
 const timestamp = new Date('2012-06-08').getTime()
 ```
