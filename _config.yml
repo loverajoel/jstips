@@ -33,6 +33,7 @@ defaults:
       layout: default
       lang: zh_CN
       is_post: true
+<<<<<<< HEAD
   -
     scope:
       path: _posts/es_ES
@@ -51,6 +52,8 @@ defaults:
       lang: zh_TW
       is_post: true
 
+=======
+>>>>>>> parent of 8e7596f... Translate tips and other files
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -109,6 +112,7 @@ languages:
   -
     name: zh_CN
     link: /zh_CN
+<<<<<<< HEAD
   - 
     name: es_ES
     link: /es_ES
@@ -116,6 +120,9 @@ languages:
     name: zh_TW
     link: /zh_TW
 
+=======
+    
+>>>>>>> parent of 8e7596f... Translate tips and other files
 transl:
   en:
     menu:
@@ -151,6 +158,7 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一条
     arrow_next: 下一条
+<<<<<<< HEAD
   es_ES:
     menu:
       home: 
@@ -185,3 +193,5 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一篇小知識
     arrow_next: 下一篇小知識
+=======
+>>>>>>> parent of 8e7596f... Translate tips and other files
