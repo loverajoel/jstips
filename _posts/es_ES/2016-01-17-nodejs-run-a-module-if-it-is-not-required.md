@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Node.js - ejecutar un módulo si no es `required`
+title: Node.js - Run a module if it is not `required`
 tip-number: 17
 tip-username: odsdq
 tip-username-profile: https://twitter.com/odsdq
-tip-tldr: En Node, puede decir que su programa va a hacer dos cosas diferentes dependiendo de si se ejecuta el código `require('./something.js')` o `node something.js`. Esto es útil si desea interactuar con uno de sus módulos de forma independiente.
+tip-tldr: In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`. This is useful if you want to interact with one of your modules independently.
 
 categories:
-    - es_ES
+    - en
 ---
 
-En Node, puede decir que su programa va a hacer dos cosas diferentes dependiendo de si se ejecuta el código `require('./something.js')` o `node something.js`. Esto es útil si desea interactuar con uno de sus módulos de forma independiente.
+In node, you can tell your program to do two different things depending on whether the code is run from `require('./something.js')` or `node something.js`.  This is useful if you want to interact with one of your modules independently.
 
 ```js
 if (!module.parent) {
@@ -25,4 +25,4 @@ if (!module.parent) {
 }
 ```
 
-Ver [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) para mas informacion.
+See [the documentation for modules](https://nodejs.org/api/modules.html#modules_module_parent) for more info.

@@ -1,18 +1,18 @@
 ---
 layout: post
 
-title: Invocar una funcion inmediatamente
+title: Using immediately invoked function expression
 tip-number: 25
 tip-username: rishantagarwal 
 tip-username-profile: https://github.com/rishantagarwal
-tip-tldr: Denominado como "Iffy" >dudoso< (IIFE - expresión de la función invocada inmediatamente) es una expresión de la función anónima que se invoca inmediatamente y tiene algunos usos importantes en Javascript.
+tip-tldr: Called as "Iffy" ( IIFE - immediately invoked function expression) is an anonymous function expression that is immediately invoked and has some important uses in Javascript.
 
 
 categories:
-    - es_ES
+    - en
 ---
 
-Denominado como "Iffy" >dudoso< (IIFE - expresión de la función invocada inmediatamente) es una expresión de la función anónima que se invoca inmediatamente y tiene algunos usos importantes en Javascript.
+Called as "Iffy" ( IIFE - immediately invoked function expression) is an anonymous function expression that is immediately invoked and has some important uses in Javascript.
 
 ```javascript
 
@@ -23,12 +23,11 @@ Denominado como "Iffy" >dudoso< (IIFE - expresión de la función invocada inmed
 
 ```
 
-Es una expresión de función anónima que se invoca de inmediato, y tiene algunos usos particularmente importantes en JavaScript.
+It is an anonymous function expression that is immediately invoked, and it has some particularly important uses in JavaScript.
 
-El par de paréntesis que rodean la función anónima convierte la función anónima en una expresión de función o expresión variable. Así que en lugar de una simple función anónima en el scope global, o donde quiera que se definió, ahora tenemos una expresión de función sin nombre.
+The pair of parenthesis surrounding the anonymous function turns the anonymous function into a function expression or variable expression. So instead of a simple anonymous function in the global scope, or wherever it was defined, we now have an unnamed function expression.
 
 Similarly, we can even create a named, immediately invoked function expression:
-Del mismo modo, podemos incluso crear una llamada expresión de función, inmediatamente invocado:
 
 ```javascript
 (someNamedFunction = function(msg) {
@@ -39,7 +38,7 @@ someNamedFunction("Javascript rocks !!"); // Output --> Javascript rocks !!
 someNamedFunction(); // Output --> Nothing for today !!​
 ```
 
-Mas detalles URL's - 
+For more details, check the following URL's - 
 1. [Link 1](https://blog.mariusschulz.com/2016/01/13/disassembling-javascripts-iife-syntax) 
 2. [Link 2](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/) 
 

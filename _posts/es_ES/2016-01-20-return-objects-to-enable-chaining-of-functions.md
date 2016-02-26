@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Devolver los objetos que permiten el encadenamiento de las funciones
+title: Return objects to enable chaining of functions
 tip-number: 20
 tip-username: WakeskaterX
 tip-username-profile: https://twitter.com/WakeStudio
-tip-tldr: Al crear funciones en un objeto en Javascript orientado a objetos, devolver el objeto a la función le permitirá encadenar funciones.
+tip-tldr: When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
 
 categories:
-    - es_ES
+    - en
 ---
 
-Al crear funciones en un objeto en Javascript orientado a objetos, devolver el objeto a la función le permitirá encadenar funciones.
+When creating functions on an object in Object Oriented Javascript, returning the object in the function will enable you to chain functions together.
 
 ```js
 function Person(name) {
