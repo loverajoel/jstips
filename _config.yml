@@ -175,7 +175,7 @@ transl:
         link: /
       about:
         txt: 關於
-        link: /about
+        link: /zh_TW/about
       subscribe:
         txt: 訂閱
       submit_your_tip:

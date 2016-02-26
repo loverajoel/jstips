@@ -70,8 +70,8 @@ var dog = {
 // Calling dog.bark();
 dog.bark(); // Woof Woof.
 
-//But if dog is not defined, dog.bark() will raise an error "Cannot read property 'bark' of undefined."
-// To prevent this, we can you &&.
+// But if dog is not defined, dog.bark() will raise an error "Cannot read property 'bark' of undefined."
+// To prevent this, we can use &&.
 
 dog&&dog.bark();   // This will only call dog.bark(), if dog is defined.
 

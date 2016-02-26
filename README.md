@@ -1,20 +1,23 @@
 ![header](https://raw.githubusercontent.com/loverajoel/jstips/gh-pages/resources/jstips-header-blog.gif)
 
-# Introducing JavaScript Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-> New year, new project. **A JS tip per day!**
+# JS Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+> Useful JS tips
 
-With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+This is an awesome project about short and useful JavaScript tips that will allow you to improve your code writing. With less than 2 minutes, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
-At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
+Frequently, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
 ### Can you help us enrich it?
-Please feel free to send us a PR with your own JavaScript tip to be published here.
+Sure, you can help the project in two ways, sending your tip or reviewing future tips.
 Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md)
 
 ### Let’s keep in touch
+### Other language
+[简体中文(simplified Chinese)](https://github.com/loverajoel/jstips/blob/master/README-zh_CN.md)
 
-There are a lot of ways to get update, choose your own
+
+There are a lot of ways to get updates, choose your own
 
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
@@ -65,7 +68,7 @@ There are a lot of ways to get update, choose your own
 - 16 - [Passing arguments to callback functions](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-16-passing-arguments-to-callback-functions.md)
 - 15 - [Even simpler way of using indexOf as a contains clause](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-15-even-simpler-way-of-using-indexof-as-a-contains-clause.md)
 - 14 - [Fat Arrow Functions #ES6](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-14-fat-arrow-functions.md)
-- 13 - [Tip to measure performance of a javascript block](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-13-tip-to-measure-performance-of-a-javascript-block.md)
+- 13 - [Measure performance of a javascript block](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-13-tip-to-measure-performance-of-a-javascript-block.md)
 - 12 - [Pseudomandatory parameters in ES6 functions #ES6](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-12-pseudomandatory-parameters-in-es6-functions.md)
 - 11 - [Hoisting](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-11-hoisting.md)
 - 10 - [Check if a property is in an Object](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-01-10-check-if-a-property-is-in-a-object.md)
@@ -81,4 +84,4 @@ There are a lot of ways to get update, choose your own
 - 00 - [Insert item inside an Array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2015-12-29-insert-item-inside-an-array.md)
 
 ### License
-[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+[GNU GENERAL PUBLIC LICENSE](https://github.com/loverajoel/jstips/blob/gh-pages/LICENSE.md)
