@@ -1,8 +1,8 @@
 ---
-layout: *post
+layout: post
 
 title: Easiest way to extract unix timestamp in JS
-tip-number: 15
+tip-number: 49
 tip-username: nmrony
 tip-username-profile: https://github.com/nmrony
 tip-tldr: In Javascript you can easily get the unix timestamp
