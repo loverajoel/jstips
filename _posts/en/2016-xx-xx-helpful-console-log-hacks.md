@@ -1,0 +1,30 @@
+---
+layout: *post
+
+title: Helpful Console Logging Tricks
+tip-number: xx
+tip-username: zackhall
+tip-username-profile: https://twitter.com/zthall
+tip-tldr: Helpful logging techniques using coercion and conditonal breakpoints.
+
+categories:
+    - en
+---
+
+## Using conditional breakpoints to log data
+
+If you wanted to log to the console a value each time a function is called, you can use conditional break points to do this. Open up your dev tools, find the function where you'd like to log data to the console and set a breakpoint with the following condition:
+
+```
+console.log(data.value) && false
+```
+
+This always evaluates to false, so it will not pause the page thread when it's hit, but it will log data to the console. This can also be used to count how many times a function or callback is called.
+
+## Printing a function variable to console
+
+Have you ever logged a function variable to the console and weren't able to just view the function's code? The quickest way to see the function's code is to coerce it to a string using concatenation with an empty string.
+
+```
+console.log(funcVariable + '');
+```
