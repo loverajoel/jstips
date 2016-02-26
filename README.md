@@ -13,6 +13,9 @@ Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md)
 
 ### Let’s keep in touch
+### Other language
+[简体中文(simplified Chinese)](https://github.com/loverajoel/jstips/blob/master/README-zh_CN.md)
+
 
 There are a lot of ways to get updates, choose your own
 
