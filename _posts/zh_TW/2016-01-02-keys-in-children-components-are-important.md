@@ -5,15 +5,15 @@ title: 在子元件 Keys 是很重要的
 tip-number: 02
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: 從陣列中動態建立所有元件時，你必須傳送 key 屬性。它是一個唯一以及固定的 id，React 用來識別 DOM 裡面的每個元件，並區別它是否為同一個元件。使用 keys 可以確保子元件不會被重覆建立，也可以防止奇怪的事件發生。
+tip-tldr: 你可以從陣列動態建立 key 屬性並傳送到所有的元件（component）。它是一個唯一以及固定的 id，React 用來識別 DOM 裡面的每個元件，並區別它是否為同一個元件。使用 keys 可以確保子元件被保護而不會被重覆建立，也可以防止奇怪的事件發生。
 
 categories:
     - zh_TW
 ---
 
-從陣列中動態建立所有元件時，你必須傳送 [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) 屬性。它是一個唯一以及固定的 id，React 用來識別 DOM 裡面的每個元件，並區別它是否為同一個元件。使用 keys 可以確保子元件不會被重覆建立，也可以防止奇怪的事件發生。
+你可以從陣列動態建立 [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) 屬性並傳送到所有的元件（component）。它是一個唯一以及固定的 id，React 用來識別 DOM 裡面的每個元件，並區別它是否為同一個元件。使用 keys 可以確保子元件被保護而不會被重覆建立，也可以防止奇怪的事件發生。
 
-> Key 跟效能不太相關，它跟元件識別有關係（反之，它間接提升了效能）。隨機賦值和改變數值將無法識別。[Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
+> Key 跟效能不太相關，它跟元件識別較有關係（反之，它間接提升了效能）。隨機賦值和改變數值將無法識別。[Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
 
 - 使用物件內存在的唯一值。
 - 在你的父元件定義 keys，而不是子元件。

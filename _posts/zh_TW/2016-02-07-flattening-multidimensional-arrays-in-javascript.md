@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 在 JavaScript 中扁平化多維陣列
+title: 在 JavaScript 中將多維陣列扁平化
 tip-number: 38
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
@@ -55,6 +55,6 @@ console.log(myNewArray3);
 ```
 在[這裡](https://jsbin.com/qeqicu/edit?js,console)觀察三種方式的實際應用。
 
-對於無限嵌套陣列嘗試一下 Underscore 的 [flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501)。
+對於較大的巢狀陣列可以嘗試使用 Underscore 的 [flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501)。
 
-如果你好奇效能方面表現, [這裡](http://jsperf.com/flatten-an-array-loop-vs-reduce/6)有相關的測試。
+如果你好奇效能方面的表現, [這裡](http://jsperf.com/flatten-an-array-loop-vs-reduce/6)有相關的測試。

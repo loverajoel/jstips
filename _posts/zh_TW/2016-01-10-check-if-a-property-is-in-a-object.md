@@ -24,7 +24,7 @@ if (myObject.name) { ... }
 
 以上的方法是沒問題的，但是你必須知道對於這個問題有兩個原生的方法，[`in` 運算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)和 [`Object.hasOwnProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)。任何繼承 `Object` 的都可以使用這兩種方法。
 
-### 觀察較大的差別
+### 觀察之間較大的差別
 
 ```javascript
 var myObject = {

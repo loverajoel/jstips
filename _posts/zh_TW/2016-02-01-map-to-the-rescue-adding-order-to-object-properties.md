@@ -5,7 +5,7 @@ title: 透過 Map() 在你的物件屬性加入排序
 tip-number: 32
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
-tip-tldr: 物件是一個沒有排序的屬性集合...意思說，假設你想嘗試在你的物件內將資料做排序，你需要要重新做排序，因為屬性在物件不保證是有排序的。
+tip-tldr: 物件是一個沒有排序的屬性集合...意思說，如果你想嘗試在你的物件儲存已排序的資料，你需要重新檢查，因為屬性在物件不保證是有排序的。
 
 categories:
     - zh_TW
@@ -34,13 +34,13 @@ for (item in myObject) {...
 // @
 // b
 ```
-因為技術關係，每個瀏覽器有自己排序物件的規則，所以順序是不確定的。
+因為每個瀏覽器有自己排序物件的規則，所以順序是不確定的。
 
 ## 要如何解決這個問題？
 
 ### Map
 
-使用 ES6 的新特性 - Map。 [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) 物件迭代元素插入的順序。`for...of` 迴圈每次迭代回傳一個 [key, value] 的陣列。
+使用 ES6 的新特性 - Map。[Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) 物件迭代元素插入的順序。`for...of` 迴圈每次迭代回傳一個 [key, value] 的陣列。
 
 ```js
 var myObject = new Map();

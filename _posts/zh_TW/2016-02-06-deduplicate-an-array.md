@@ -11,9 +11,9 @@ tip-tldr: 如何從陣列中移除不同資料類型重複的元素。
 categories:
     - zh_TW
 ---
-如果陣列只有包含基本數值，我們可以透過
+
 # 原始函數
-如果陣列只有包含基本數值，我們可以透過 [`filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 和 [`indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法來刪除重複的元素。
+如果陣列只有包含原始數值，我們可以透過 [`filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 和 [`indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法來刪除重複的元素。
 
 ```javascript
 var deduped = [ 1, 1, 'a', 'a' ].filter(function (el, i, arr) {
