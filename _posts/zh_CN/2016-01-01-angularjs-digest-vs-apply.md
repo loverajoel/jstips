@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: AngularJs - `$digest` vs `$apply`
+title: AngularJs - $digest vs $apply
 tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel

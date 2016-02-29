@@ -15,7 +15,7 @@ The cross-browser way to check if the document has loaded in pure JavaScript is 
 
 ```js
 if (document.readyState === 'complete') {
-	// The page is fully loaded
+  // The page is fully loaded
 }
 ```
 
@@ -24,9 +24,9 @@ You can detect when the document it's ready...
 
 ```js
 let stateCheck = setInterval(() => {
-	if (document.readyState === 'complete') {
+  if (document.readyState === 'complete') {
     clearInterval(stateCheck);
-	 // document ready
+    // document ready
   }
 }, 100);
 ```
@@ -37,7 +37,7 @@ or with [onreadystatechange](https://developer.mozilla.org/en-US/docs/Web/Events
 ```js
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
-   // document ready
+    // document ready
   }
 };
 ```

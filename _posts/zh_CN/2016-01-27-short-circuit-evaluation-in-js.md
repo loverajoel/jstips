@@ -50,7 +50,7 @@ if(!test){
 逻辑或可以用来给参数设置默认值。
 
 ```js
-function theSameOldFoo(name){ 
+function theSameOldFoo(name){
     name = name || 'Bar' ;
     console.log("My best friend's name is " + name);
 }
@@ -61,7 +61,7 @@ theSameOldFoo('Bhaskar');  // My best friend's name is Bhaskar
 例如:-
 
 ```js
-var dog = { 
+var dog = {
   bark: function(){
      console.log('Woof Woof');
    }

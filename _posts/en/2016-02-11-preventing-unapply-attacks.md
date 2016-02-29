@@ -11,7 +11,7 @@ categories:
     - en
 ---
 
-By overriding the builtin prototypes, attackers can rewrite code to expose and change bound arguments. This can be a serious security hole that works by exploting a polyfill es5 methods.
+By overriding the builtin prototypes, external code can cause code to break by rewriting code to expose and change bound arguments. This can be an issue that seriously breaks applications that works by using polyfill es5 methods.
 
 ```js
 // example bind polyfill
@@ -54,3 +54,4 @@ By using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript
 ```
 
 You can read more about unapply attacks [here](https://glebbahmutov.com/blog/unapply-attack/).
+Although this concept is called an 'unapply attack' due to some code being able to access closures that normally wouldn't be in scope, it is mostly wrong to consider this a security feature due to it not preventing an attacker with code execution from extending prototypes before the freezing happens and also still having the potential to read all scopes using various language features. ECMA modules would give realm based isolation which is much stronger than this solution however still doesn't fix the issues of third party scripts.
