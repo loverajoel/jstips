@@ -65,6 +65,8 @@ baseurl: ""
 
 permalink: /:categories/:title/
 
+markdown: kramdown
+highlighter: pygments
 paginate: 10
 paginate_path: "/:num/"
 
