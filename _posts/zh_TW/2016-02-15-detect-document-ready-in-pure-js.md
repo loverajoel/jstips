@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 在 pure JavaScript 檢查文件是否準備
+title: 使用 pure JavaScript 檢查文件是否準備
 tip-number: 46
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
