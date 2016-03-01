@@ -1,6 +1,8 @@
 .highlighter-rouge {
-  max-width: none;
+  max-width: none !important;
   background-color: #F9F9F9;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .highlight {
