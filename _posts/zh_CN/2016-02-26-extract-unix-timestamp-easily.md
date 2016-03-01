@@ -37,7 +37,7 @@ const timestamp = +new Date()
 ```js
 const timestamp = +new Date('2012-06-08')
 ```
-在底层，运行时调用了`Date`对象的`valueOf`方法。然后一元操作符`+`调用了之前返回值的`toNumber()`方法。想要来接更多内容请参考下面链接
+在底层，运行时调用了`Date`对象的`valueOf`方法。然后一元操作符`+`调用了之前返回值的`toNumber()`方法。想要了解更多内容请参考下面链接
 
 * [Date.prototype.valueOf](http://es5.github.io/#x15.9.5.8)
 * [Unary + operator](http://es5.github.io/#x11.4.6)
