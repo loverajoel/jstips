@@ -10,49 +10,41 @@ tip-tldr: An elegant and easy way to handle DOM events
 categories:
     - en
 ---
+Many of us are still doing these things:
 
-Unless you have addressed your handler in a way you can remove it later on, otherwise you might do is wrong already (arrow function, binding, anonymous function,...).
+- `element.addEventListener('type', obj.method.bind(obj))`
+- `element.addEventListener('type', function (event) {})`
+- `element.addEventListener('type', (event) => {})`
 
+You’ll never be able to remove those listeners. Unless you have addressed your handler in a way you can remove it later on. otherwise you might do is wrong already.
+
+There must be the correct ways:
 ```js
-function match (element, selector) {
-  const html = document.documentElement
-  const matchesSelector = html.matchesSelector || html.webkitMatchesSelector || html.msMatchesSelector || html.mozMatchesSelector
-  return matchesSelector.call(element, selector)
+const handler = function () {
+  console.log("Tada!")
 }
+element.addEventListener("click", handler)
+// Later on
+element.removeEventListener("click", handler)
+```
 
-function elementMatchesSelector (element, selector) {
-  if (element && element.nodeType === 1) {
-    return match(element, selector)
+Named function that removes itself:
+```js
+element.addEventListener('click', function click(e) {
+  if (someCondition) {
+    return e.currentTarget.removeEventListener('click', click);
   }
-}
+});
+```
 
-function findClosestElementFromNode (node, {matchingSelector} = {}) {
-  while (node && node.nodeType !== Node.ELEMENT_NODE) {
-    node = node.parentNode
-  }
-  if (matchingSelector) {
-    while (node) {
-      if (elementMatchesSelector(node, matchingSelector)) {
-        return node
-      }
-      node = node.parentNode
-    }
-  }
-  return node
-}
-
-function handleEvent (eventName, {onElement, matchingSelector, withCallback, useCapture = false, times} = {}) {
+And a better approach:
+```js
+function handleEvent (eventName, {onElement, withCallback, useCapture = false} = {}, thisArg) {
   const element = onElement || document.documentElement
 
   function handler (event) {
-    if (times && --times === 0) {
-      handler.destroy()
-    }
-    const target = findClosestElementFromNode(event.target, {matchingSelector})
-    if (!matchingSelector || target) {
-      if (typeof withCallback === 'function') {
-        withCallback.call(null, event, target)
-      }
+    if (typeof withCallback === 'function') {
+      withCallback.call(thisArg, event)
     }
   }
 
@@ -63,34 +55,15 @@ function handleEvent (eventName, {onElement, matchingSelector, withCallback, use
   element.addEventListener(eventName, handler, useCapture)
   return handler
 }
-```
-
-And somewhere in your application:
-
-```js
-const element = document.getElementById('id')
 
 // Anytime you need
-// Handle 'click' on #id
 const handleClick = handleEvent('click', {
   onElement: element,
-  matchSelector: '.foo',
-  withCallback: (event, target) => {
-    // Only get called when click on .foo inside element
-    // Good for event delegation
+  withCallback: (event) => {
     console.log('Clicked on', target)
   }
 })
 
 // And anytime you want to remove it
 handleClick.destroy()
-
-// Handle 'click' only one time
-const handleClick = handleEvent('click', {
-  times: 1,
-  onElement: element,
-  withCallback: (event, target) => {
-    console.log('Clicked on', target)
-  }
-})
 ```
