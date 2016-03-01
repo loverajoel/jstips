@@ -19,7 +19,7 @@ If you wanted to log to the console a value each time a function is called, you 
 console.log(data.value) && false
 ```
 
-This always evaluates to false, so it will not pause the page thread when it's hit, but it will log data to the console. This can also be used to count how many times a function or callback is called.
+A conditional breakpoint pauses the page thread only if the condition for the breakpoint evaluates to true. So by using a condition like console.log('foo') && false it's guaranteed to evaluate to false since you're putting the literal false in the AND condition. So this will not pause the page thread when it's hit, but it will log data to the console. This can also be used to count how many times a function or callback is called.
 
 ## Printing a function variable to console
 
