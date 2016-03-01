@@ -3,18 +3,16 @@
   background-color: #F9F9F9;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+
+  @media (max-width: 900px) {
+    margin: 0 10px
+  }
 }
 
 .highlight {
-    padding: 20px 0;
     overflow: scroll;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
     line-height: 1.2;
-
-    @media (max-width: 900px) {
-        padding: 0 10px
-    }
 }
 
 code {
