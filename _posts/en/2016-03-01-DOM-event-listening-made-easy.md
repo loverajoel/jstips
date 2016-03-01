@@ -4,7 +4,7 @@ layout: *post
 title: DOM event listening made easy
 tip-number: 50
 tip-username: octopitus
-tip-username-profile: https://twitter.com/LuyOctopitus
+tip-username-profile: https://github.com/octopitus
 tip-tldr: Do you believe many of us are doing it wrong?
 
 categories:
