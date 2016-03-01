@@ -13,7 +13,7 @@ categories:
 
 正如官方文件所寫的，`reduce()` 方法接收一個函式做為累加器（accumulator），陣列中的每個值（由左到右）將會合併，最後只得到一個值。
 
-### `reduce()`
+### 署名
 
 [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) 函式接受 2 個參數（M：強制的，O：可選的）：
 
@@ -22,7 +22,7 @@ categories:
 
 所以讓我們來看一下普遍的用法，之後再看更多的複雜的用法。
 
-### 普遍用法（累加，關聯）
+### 普遍用法（累加、關聯）
 
 我們在逛 Amazon 網站（價格為美元），但是我們的 caddy 太滿了，所以讓我們計算總價。
 
@@ -31,7 +31,7 @@ categories:
 var items = [{price: 10}, {price: 120}, {price: 1000}];
 
 // 我們的 reducer 函式
-var reducer = function add(sumSoFar, nextPrice) { return sumSoFar + nextPrice.price; };
+var reducer = function add(sumSoFar, item) { return sumSoFar + item.price; };
 
 // 計算結果
 var total = items.reduce(reducer, 0);
@@ -60,8 +60,8 @@ console.log(total); // 1110
 ```javascript
 var reducers = {
   totalInDollar: function(state, item) {
-    state.dollars += item.price;
-    return state;
+    // 具體宣告...
+    return state.dollars += item.price;
   },
   totalInEuros : function(state, item) {
     state.euros += item.price * 0.897424392;
@@ -92,7 +92,7 @@ var combineTotalPriceReducers = function(reducers) {
         reducers[key](state, item);
         return state;
       },
-      {}      
+      {}
     );
   }
 };

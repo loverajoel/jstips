@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 測量 JavaScript 程式碼區塊性能的小知識
+title: 測量 JavaScript 程式碼區塊性能的 tip
 tip-number: 13
 tip-username: manmadareddy
 tip-username-profile: https://twitter.com/manmadareddy

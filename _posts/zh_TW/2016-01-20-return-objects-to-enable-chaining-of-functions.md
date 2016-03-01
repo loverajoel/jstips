@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Return objects to enable chaining of functions回傳物件並使用函式鏈結
+title: 回傳物件並使用函式鏈結
 tip-number: 20
 tip-username: WakeskaterX
 tip-username-profile: https://twitter.com/WakeStudio
-tip-tldr: 在 JavaScript 物件導向中，當函數回傳的物件中，讓你可以將函式鏈結在一起。
+tip-tldr: 在 JavaScript 物件導向中，我們在物件上建立函式，函式回傳的物件讓你可以將函式鏈結在一起。
 
 categories:
     - zh_TW
 ---
 
-在 JavaScript 物件導向中，當函數回傳的物件中，讓你可以將函式鏈結在一起。
+在 JavaScript 物件導向中，我們在物件上建立函式，函式回傳的物件讓你可以將函式鏈結在一起。
 
 ```js
 function Person(name) {

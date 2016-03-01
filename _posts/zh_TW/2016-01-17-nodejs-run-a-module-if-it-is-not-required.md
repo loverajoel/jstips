@@ -5,13 +5,13 @@ title: Node.js - 執行尚未被 `required` 的模組
 tip-number: 17
 tip-username: odsdq
 tip-username-profile: https://twitter.com/odsdq
-tip-tldr: 在 nodejs，你可以讓你的程式取決於 `require('./something.js')` 或 `node something.js` 這兩種不同的方式來執行你的程式碼。如果你想要在獨立的模組內使用，這是非常有用的。
+tip-tldr: 在 nodejs，你可以讓你的程式取決於 `require('./something.js')` 或 `node something.js` 這兩種不同的方式來執行你的程式碼。如果你想要將你的獨立模組交互使用是非常有用的。
 
 categories:
     - zh_TW
 ---
 
-在 nodejs，你可以讓你的程式取決於 `require('./something.js')` 或 `node something.js` 這兩種不同的方式來執行你的程式碼。如果你想要在獨立的模組內使用，這是非常有用的。
+在 nodejs，你可以讓你的程式取決於 `require('./something.js')` 或 `node something.js` 這兩種不同的方式來執行你的程式碼。如果你想要將你的獨立模組交互使用是非常有用的。
 
 ```js
 if (!module.parent) {

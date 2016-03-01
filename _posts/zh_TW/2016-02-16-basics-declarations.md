@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 基礎宣告
+title: 宣告的基本知識
 tip-number: 47
 tip-username: adaniloff
 tip-username-profile: https://github.com/adaniloff

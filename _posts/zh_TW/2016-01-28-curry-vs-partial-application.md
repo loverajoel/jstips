@@ -5,7 +5,7 @@ title: 柯里化（currying）和部分應用程式
 tip-number: 28
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: 柯里化（currying）和部分應用程式（partial application）兩種方式是將函式轉換變成其他更小參數的函式。
+tip-tldr: 柯里化（currying）和部分應用程式（partial application）是將函式轉換成一般較小的 arity 和另一個函式的兩種方式。
 
 
 categories:
@@ -26,7 +26,7 @@ categories:
 
 因此，未使用柯里化的函式 `f` 像這樣調用：
 
-`f(3,5)`
+`f(3, 5)`
 
 如果使用柯里化後的函式 `f'` 像這樣調用：
 

@@ -5,7 +5,7 @@ title: 箭頭函式
 tip-number: 14
 tip-username: pklinger
 tip-username-profile: https://github.com/pklinger/
-tip-tldr: 介紹一個 ES6 的新特性，箭頭函式是一個方便的語法讓你用更少的程式碼做更多事。
+tip-tldr: 介紹一個 ES6 的新特性 - 箭頭函式是一個方便的語法讓你用更少的程式碼做更多事。
 
 categories:
     - zh_TW
@@ -42,11 +42,11 @@ var arrFunc = arr.map((x) => x*x);
 console.log(arr)
 ```
 
-正如你所見的，在這個範例箭頭函式省去了打出函式的括號和 return。我建議你在參數周圍寫出小括號，如果你需要多個輸入參數，像是 `(x,y) => x+y`。這是一個用來應付在不同情況下忘記使用小括號的方法。上面的程式碼也是這樣執行的：`x => x*x`。到目前為止，這些只是語法上的改進，減少的程式碼以及提高可讀性。
+正如你所見的，在這個範例箭頭函式省去了打出函式的括號和 return。我建議你在參數周圍寫出小括號，如果你需要多個輸入參數，像是 `(x, y) => x + y`。這是一個用來應付在不同情況下忘記使用小括號的方法。上面的程式碼也是這樣執行的：`x => x * x`。到目前為止，這些只是語法上的改進，減少的程式碼以及提高可讀性。
 
 ### 詞彙綁定 - `this`
 
-這是一個另一個更棒的理由來使用箭頭函式。這裡有一個 `this` 上下文（context）的問題。使用箭頭函數，你不需要擔心 `.bind(this)` 或設定 `that = this` 的問題了，在箭頭函式會幫你從詞彙的範圍綁定 `this` 的上下文。看以下的[範例](https://jsfiddle.net/pklinger/rw94oc11/)：
+這是一個另一個更棒的理由來使用箭頭函式。這裡有一個 `this` context 的問題。使用箭頭函數，你不需要擔心 `.bind(this)` 或設定 `that = this` 的問題了，在箭頭函式會幫你從詞彙的範圍綁定 `this` 的 context。看以下的[範例](https://jsfiddle.net/pklinger/rw94oc11/)：
 
 ```javascript
 
@@ -60,7 +60,7 @@ var counterD = new CounterD();
 
 // bad example
 function CounterA() {
-  // CounterA 的 `this` 實例（！！調用時被忽略了）
+  // CounterA 的 `this` 實例（！！這裡被忽略了）
   this.i = 0;
   setInterval(function () {
     // `this` 參考到全域的物件，而不是 CounterA's 的 `this`，
