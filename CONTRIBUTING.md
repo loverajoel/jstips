@@ -8,7 +8,6 @@ Use [this format](https://github.com/loverajoel/jstips/blob/gh-pages/POST_TEMPLA
 - The tip should be readable in less than two minutes
 - Adding links to other sites or videos that give more insight is welcome
 - Mark JS code with ```js
-- Capitalized title (see [here](http://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html) for how it works)
 - Don't mention "JavaScript" in the title (as our tips are about it anyway)
 - Use backticks (`) to mark code in the title ‐ _Warning_: Titles must not start with backticks!
 
@@ -16,13 +15,13 @@ Once your tip is ready, [issue a pull request](https://help.github.com/articles/
 
 # Notes
 
-Leave the date and the tip number with **xx**. When we decide to merge the pull request, you will add them and squash your commits.
+Leave the date and the tip number as **xx**. When the PR is `ready to merge`, we will tell you the correct numbers. Please also [squash](https://davidwalsh.name/squash-commits-git) your commits.
 
 # Tip flow
 
 **Tip proposal** ⇒ **Tip under review** ⇒ **Tip ready to merge**
 
-- When you send a tip, it has to pass the review process and while that happens, its status is `under-review`.
+- When you send a tip, it has to pass the review process and while that happens, its status is `under review`.
 - After the tip had been reviewed by 5 people and they have given their ship it emote (:shipit:), the tip is `ready to merge`.
 
 
