@@ -1,7 +1,7 @@
 ---
 layout: *post
 
-title: Just a Demo Post
+title: Demo post
 tip-number: 01
 tip-username: tip_js
 tip-username-profile: https://twitter.com/tips_js
