@@ -16,9 +16,11 @@ Many of us are still doing these things:
 - `element.addEventListener('type', function (event) {})`
 - `element.addEventListener('type', (event) => {})`
 
-You’ll never be able to remove those listeners. Unless you have addressed your handler in a way you can remove it later on. otherwise you might do is wrong already.
+Closure keeps a pointer to its enclosing scope. As a result, atttaching a closure to a DOM element can create a circular reference and thus, a memory leak. Since `element` also keeps a reference to the closure, we have a cycle that won't be cleaned up by garbage collection.
 
-There must be the correct ways:
+Unless you have addressed your handlers in a way you can remove it later on, otherwise you will never able to remove them. And there must be the correct ways:
+
+Use a reference:
 ```js
 const handler = function () {
   console.log("Tada!")
@@ -37,7 +39,7 @@ element.addEventListener('click', function click(e) {
 });
 ```
 
-And a better approach:
+A better approach:
 ```js
 function handleEvent (eventName, {onElement, withCallback, useCapture = false} = {}, thisArg) {
   const element = onElement || document.documentElement
@@ -60,7 +62,7 @@ function handleEvent (eventName, {onElement, withCallback, useCapture = false} =
 const handleClick = handleEvent('click', {
   onElement: element,
   withCallback: (event) => {
-    console.log('Clicked on', target)
+    console.log('Tada!')
   }
 })
 
