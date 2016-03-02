@@ -67,6 +67,10 @@ permalink: /:categories/:title/
 
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 paginate: 10
 paginate_path: "/:num/"
 
