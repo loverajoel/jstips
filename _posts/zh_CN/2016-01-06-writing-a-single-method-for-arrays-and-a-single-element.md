@@ -17,7 +17,7 @@ categories:
 
 ```javascript
 function printUpperCase(words) {
-  var elements = [].concat(words);
+  var elements = [].concat(words || []);
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i].toUpperCase());
   }
@@ -25,7 +25,7 @@ function printUpperCase(words) {
 ```
 
 
-`printUpperCase`现在可以接受单个单词或多个单词的数组作为它的参数。
+`printUpperCase`现在可以接受单个单词或多个单词的数组作为它的参数。同时也可以避免在不传递参数时抛出的`TypeError`错误的隐患。
 
 ```javascript
 printUpperCase("cactus");

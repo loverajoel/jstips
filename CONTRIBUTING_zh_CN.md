@@ -15,7 +15,7 @@
 
 # 提示
 
-将时间和小知识number保留为**xx**。当我们决定merge此pull request时你可以修改它们并合并commits。
+将时间和小知识number保留为**xx**。当PR为`ready to merge`状态时，我们将告诉你正确的数字。请同时[squash](https://davidwalsh.name/squash-commits-git)你的commits.
 
 # 工作流程
 
