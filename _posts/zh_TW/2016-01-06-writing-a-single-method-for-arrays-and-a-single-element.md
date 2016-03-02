@@ -17,14 +17,14 @@ categories:
 
 ```javascript
 function printUpperCase(words) {
-  var elements = [].concat(words);
+  var elements = [].concat(words || []);
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i].toUpperCase());
   }
 }
 ```
 
-`printUpperCase` 現在已經可以接收單一的 node 或是一個陣列 nodes 當作它的參數了。
+`printUpperCase` 現在已經可以接收單一的 node 或是一個陣列 nodes 當作它的參數了。如果沒有傳送參數，它可以避免拋出潛在的 `TypeError`。
 
 ```javascript
 printUpperCase("cactus");

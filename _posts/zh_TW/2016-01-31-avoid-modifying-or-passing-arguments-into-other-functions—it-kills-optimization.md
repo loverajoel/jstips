@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 避免修改或傳送 `arguments` 到其他函式 - 它會影響優化
+title: 避免修改或傳送 arguments 到其他函式 - 它會影響優化
 tip-number: 31
 tip-username: berkana
 tip-username-profile: https://github.com/berkana
