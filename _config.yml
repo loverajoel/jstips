@@ -70,8 +70,7 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
-paginate: 10
+paginate: 30
 paginate_path: "/:num/"
 
 # The release of Jekyll Now that you're using

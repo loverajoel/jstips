@@ -54,6 +54,7 @@ In contrast, the very names of the `Math.xyz()` functions clearly communicate th
 
 ##### When dealing with large-magnitude numbers
 Because `~` first does a 32-bit conversion, `~~` results in bogus values around &plusmn;2.15 billion. If you don't properly range-check your input, a user could trigger unexpected behavior when the transformed value ends up being a great distance from the original:
+
 ```js
 a = 2147483647.123  // maximum positive 32-bit integer, plus a bit more
 console.log(~~a)    // ->  2147483647     (ok)
@@ -61,13 +62,15 @@ a += 10000          // ->  2147493647.123 (ok)
 console.log(~~a)    // -> -2147483648     (huh?)
 ```
 One particularly vulnerable area involves dealing with Unix epoch timestamps (measured in seconds from 1 Jan 1970 00:00:00 UTC). A quick way to get such values is:
+
 ```js
 epoch_int = ~~(+new Date() / 1000)  // Date() epochs in milliseconds, so we scale accordingly
 ```
 However, when dealing with timestamps after 19 Jan 2038 03:14:07 UTC (sometimes called the **Y2038 limit**), this breaks horribly:
+
 ```js
 // epoch timestamp for 1 Jan 2040 00:00:00.123 UTC
-epoch     = +new Date('2040-01-01') / 1000 + 0.123  // ->  2208988800.123
+epoch = +new Date('2040-01-01') / 1000 + 0.123      // ->  2208988800.123
 
 // back to the future!
 epoch_int = ~~epoch                                 // -> -2085978496
@@ -80,6 +83,7 @@ console.log(new Date(epoch_flr * 1000))             // ->  Sun Jan 01 2040 00:00
 
 ##### When the original input wasn't sanitized
 Because `~~` transforms every non-number into `0`:
+
 ```js
 console.log(~~[])   // -> 0
 console.log(~~NaN)  // -> 0
