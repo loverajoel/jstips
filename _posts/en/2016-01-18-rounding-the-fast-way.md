@@ -5,7 +5,7 @@ title: Truncating the fast (but risky) way
 tip-number: 18
 tip-username: pklinger
 tip-username-profile: https://github.com/pklinger
-tip-tldr: `~~X` is usually a faster `Math.trunc(X)`, but can also make your code do nasty things.
+tip-tldr: .`~~X` is usually a faster `Math.trunc(X)`, but can also make your code do nasty things.
 
 categories:
     - en
