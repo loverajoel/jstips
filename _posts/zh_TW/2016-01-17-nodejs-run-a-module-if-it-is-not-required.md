@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Node.js - 執行尚未被 `required` 的模組
+title: Node.js - 執行尚未被 required 的模組
 tip-number: 17
 tip-username: odsdq
 tip-username-profile: https://twitter.com/odsdq

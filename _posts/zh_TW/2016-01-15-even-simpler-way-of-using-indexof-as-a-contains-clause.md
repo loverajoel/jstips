@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 更簡單的方式將 `indexOf` 當作 contains 使用
+title: 更簡單的方式將 indexOf 當作 contains 使用
 tip-number: 15
 tip-username: jhogoforbroke
 tip-username-profile: https://twitter.com/jhogoforbroke
