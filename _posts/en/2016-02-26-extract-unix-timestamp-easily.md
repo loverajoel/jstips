@@ -15,32 +15,32 @@ We frequently need to calculate with unix timestamp. There are several ways to g
 
 ```js
 const dateTime = Date.now();
-const timestamp = ~~(dateTime / 1000);
+const timestamp = Math.floor(dateTime / 1000);
 ```
 or
 
 ```js
 const dateTime = new Date().getTime();
-const timestamp = ~~(dateTime / 1000);
+const timestamp = Math.floor(dateTime / 1000);
 ```
 
-To get unix timestamp of a specific date pass `yyyy-mm-dd` as a parameter of `Date` constructor. For example
+To get unix timestamp of a specific date pass `YYYY-MM-DD` or `YYYY-MM-DDT00:00:00Z` for iOS devices as a parameter of `Date` constructor. For example
 
 ```js
 const dateTime = new Date('2012-06-08').getTime();
-const timestamp = ~~(dateTime / 1000);
+const timestamp = Math.floor(dateTime / 1000);
 ```
 You can just add a `+` sign also when declaring a `Date` object like below
 
 ```js
 const dateTime = +new Date();
-const timestamp = ~~(dateTime / 1000);
+const timestamp = Math.floor(dateTime / 1000);
 ```
 or for specific date
 
 ```js
 const dateTime = +new Date('2012-06-08');
-const timestamp = ~~(dateTime / 1000);
+const timestamp = Math.floor(dateTime / 1000);
 ```
 Under the hood the runtime calls `valueOf` method of the `Date` object. Then the unary `+` operator calls `toNumber()` with that returned value. For detailed explanation please check the following links
 
