@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: Reduce builtin function usage
+title: How to `reduce()` arrays
 tip-number: 48
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
-tip-tldr: Some reminders about using the reduce function
+tip-tldr: Some reminders about using `reduce()`
 
 categories:
     - en
