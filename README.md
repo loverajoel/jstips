@@ -30,6 +30,7 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 50 - [Helpful Console Logging Tricks](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-03-03-helpful-console-log-hacks.md)
 - 49 - [Easiest way to extract Unix timestamps](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-26-extract-unix-timestamp-easily.md)
 - 48 - [Reduce builtin function usage](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-17-reminders-about-reduce-function-usage.md)
 - 47 - [Basics: Declarations](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-16-basics-declarations.md)
