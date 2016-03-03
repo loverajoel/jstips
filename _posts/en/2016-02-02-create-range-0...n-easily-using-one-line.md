@@ -1,60 +1,48 @@
 ---
 layout: post
 
-title: Create Range 0...(N-1) easily using one line
+title: Create array sequence `[0, 1, ..., N-1]` in one line
 tip-number: 33
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
-tip-tldr: We can create range function which will give 0...(N-1) range using one line only
+tip-tldr: Compact one-liners that generate ordinal sequence arrays
 
 
 categories:
     - en
 ---
 
-Below is the line with which we can create 0...(N-1) range.
+Here are two compact code sequences to generate the `N`-element array `[0, 1, ..., N-1]`:
 
-### Solution 1
+### Solution 1 (requires ES5)
 ```js
-Array.apply(null, {length: N}).map(Number.call, Number);
+Array.apply(null, {length: N}).map(Function.call, Number);
 ```
-### Solution 2 
-```js
- Array.from(new Array(N),(val,index)=>index);
- ```
+#### Brief explanation
+1. `Array.apply(null, {length: N)` returns an `N`-element array filled with `undefined` (i.e. `A = [undefined, undefined, ...]`).
+2. `A.map(Function.call, Number)` returns an `N`-element array, whose index `I` gets the result of `Function.call.call(Number, undefined, I, A)`
+3. `Function.call.call(Number, undefined, I, A)` collapses into `Number(I)`, which is naturally `I`.
+4. Result: `[0, 1, ..., N-1]`.
 
-Lets break down this line into parts. We know how `call()` function works in javascript. So in `call()` first argument will be context and from second arguments, it will be list of arguments of function on which we are calling `call()` function.
+For a more thorough explanation, go [here](https://github.com/gromgit/jstips-xe/blob/master/tips/33.md).
 
+### Solution 2 (requires ES6)
 ```js
-function add(a, b){
-    return (a+b);
-}
-add.call(null, 5, 6);
+Array.from(new Array(N),(val,index)=>index);
 ```
-This will return a sum of 5 and 6.
+#### Brief explanation
+1. `A = new Array(N)` returns an array with `N` _holes_ (i.e. `A = [,,,...]`, but `A[x] = undefined` for `x` in `0...N-1`).
+2. `F = (val,index)=>index` is simply `function F (val, index) { return index; }`
+3. `Array.from(A, F)` returns an `N`-element array, whose index `I` gets the results of `F(A[I], I) == I`.
+4. Result: `[0, 1, ..., N-1]`.
 
-`map()` of array in javascript takes two arguments, first `callback` and second `thisArg(context)`. `callback` is taking three arguments, `value`, `index` and whole array on which we are iterating. So common syntax is like: 
-
-```js
-[1, 2, 3].map(function(value, index, arr){
-    //Code
-}, this);
-```
-Below line create array of given length.
-
-```js
-Array.apply(null, {length: N})
-```
-Putting all parts together below is the solution.
-
-```js
-Array.apply(null, {length: N}).map(Number.call, Number);
-```
-
-If you want range 1...N, it will be like this.
-
+### One More Thing
+If you actually want the sequence [1, 2, ..., N], **Solution 1** becomes:
 ```js
 Array.apply(null, {length: N}).map(function(value, index){
-  return index+1;  
+  return index + 1;
 });
 ```
+and **Solution 2**:
+```js
+Array.from(new Array(N),(val,index)=>index+1);
