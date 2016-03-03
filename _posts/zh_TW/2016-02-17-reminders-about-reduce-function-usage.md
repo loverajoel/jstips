@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: 使用原生的 reduce 函式
+title: 如何 reduce 陣列？
 tip-number: 48
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
-tip-tldr: 有關使用 reduce 函式的一些提醒。
+tip-tldr: 有關使用 `reduce` 函式的一些提醒。
 
 categories:
     - zh_TW
