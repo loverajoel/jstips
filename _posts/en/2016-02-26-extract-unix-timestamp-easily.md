@@ -24,7 +24,7 @@ const dateTime = new Date().getTime();
 const timestamp = Math.floor(dateTime / 1000);
 ```
 
-To get unix timestamp of a specific date pass `YYYY-MM-DD` or `YYYY-MM-DDT00:00:00Z` for iOS devices as a parameter of `Date` constructor. For example
+To get unix timestamp of a specific date pass `YYYY-MM-DD` or `YYYY-MM-DDT00:00:00Z` as parameter of `Date` constructor. For example
 
 ```js
 const dateTime = new Date('2012-06-08').getTime();
