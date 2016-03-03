@@ -1,8 +1,8 @@
 ---
-layout: *post
+layout: post
 
 title: Helpful Console Logging Tricks
-tip-number: xx
+tip-number: 50
 tip-username: zackhall
 tip-username-profile: https://twitter.com/zthall
 tip-tldr: Helpful logging techniques using coercion and conditonal breakpoints.
