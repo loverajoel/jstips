@@ -9,7 +9,7 @@ Use [this format](https://github.com/loverajoel/jstips/blob/gh-pages/POST_TEMPLA
 - Adding links to other sites or videos that give more insight is welcome
 - Mark JS code with ```js
 - Don't mention "JavaScript" in the title (as our tips are about it anyway)
-- Use backticks (`) to mark code in the title ‐ _Warning_: Titles must not start with backticks!
+- Use backticks (`) to mark code in the `title` and/or `tip-tldr` fields. _Warning_: Both values must not start with backticks!
 
 Once your tip is ready, [issue a pull request](https://help.github.com/articles/using-pull-requests/) with this [PR template](https://github.com/loverajoel/jstips/blob/gh-pages/PULL_REQUEST_TEMPLATE.md) and your tip will be reviewed (see below).
 
