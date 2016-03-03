@@ -5,7 +5,7 @@ title: Truncating 最快的方式（含有風險）
 tip-number: 18
 tip-username: pklinger
 tip-username-profile: https://github.com/pklinger
-tip-tldr: `~~X` 速度通常比 `Math.trunc(X)` 快，但是會造成你的程式碼變得很混亂。
+tip-tldr: 通常 `~~X` 速度比 `Math.trunc(X)` 快，但是會造成你的程式碼變得很混亂。
 
 categories:
     - zh_TW
