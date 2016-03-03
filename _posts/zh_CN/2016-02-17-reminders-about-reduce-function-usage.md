@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: 内置函数Reduce的使用
+title: 怎样`reduce()`数组
 tip-number: 48
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
-tip-tldr: 使用reduce函数时的一些建议
+tip-tldr: 使用`reduce()`函数时的一些建议
 
 categories:
     - zh_CN
