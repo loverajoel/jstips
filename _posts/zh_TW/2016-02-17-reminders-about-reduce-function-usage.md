@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 如何 reduce 陣列？
+title: 如何 reduce 陣列
 tip-number: 48
 tip-username: darul75
 tip-username-profile: https://twitter.com/darul75
