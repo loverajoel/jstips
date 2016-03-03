@@ -67,7 +67,10 @@ permalink: /:categories/:title/
 
 markdown: kramdown
 highlighter: rouge
-paginate: 10
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+paginate: 30
 paginate_path: "/:num/"
 
 # The release of Jekyll Now that you're using
