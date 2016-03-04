@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: 有用的控制台`log`技巧
+title: 实用的`log`技巧
 tip-number: 50
 tip-username: zackhall
 tip-username-profile: https://twitter.com/zthall
-tip-tldr: 运用`&&`与条件断点的有用的`log`技巧
+tip-tldr: 运用`&&`与条件断点的实用的`log`技巧
 
 categories:
     - zh_CN
