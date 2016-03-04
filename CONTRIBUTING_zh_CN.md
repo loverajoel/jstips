@@ -9,7 +9,7 @@
 - 增加其他网站或视频的链接提供更深讲解更佳
 - 使用 ```js 标记JS代码
 - 无序在标题处提及"JavaScript"（因为我们的小知识全是关于它的）
-- 使用反引号(`) 标记标题中的代码 ‐ _警告_：标题不能以反引号开头
+- 使用反引号(`) 标记标题或`tip-tldr`中的代码 ‐ _警告_：它们都不能以反引号开头
 
 当你的小知识准备就绪了， 根据这个[PR 模板](https://github.com/loverajoel/jstips/blob/gh-pages/GIT_TEMPLATE.md)，[发布一个pull request](https://help.github.com/articles/using-pull-requests/)你的小知识将被审查（见下文）。
 
