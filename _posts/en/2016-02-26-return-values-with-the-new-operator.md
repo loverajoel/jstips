@@ -80,6 +80,6 @@ console.log(myThing);
 */
 ````
 
-__Here's where we learn:__ when you invoke a function with the `new` keyword, you can set properties on it using the keyword `this` (but you probably already knew that). Returning a primitive value from a function you called with the `new` keyword will not return the value you specified, but instead will return the `this` instance of the function (the one you put properties on, like `this.one = 1;`).
+__Here's where we learn:__ When you invoke a function with the `new` keyword, you can set properties on it using the keyword `this` (but you probably already knew that). Returning a primitive value from a function you called with the `new` keyword will not return the value you specified, but instead will return the `this` instance of the function (the one you put properties on, like `this.one = 1;`).
 
 However, returning a non-primitive, like an `object`, `array`, or `function` will stomp on the `this` instance, and return that non-primitive instead, effectively ruining all the hard work you did assigning everything to `this`.
