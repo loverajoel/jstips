@@ -73,7 +73,17 @@ switch(true) {
 }
 ```
 
-But we must always avoid having several checks in every condition and avoid using `switch` as much as possible. We also must take into account that the most efficient way to do this is through an `object`.
+If refactoring is an option, we can try to simplify the functions themselves. For example instead of having a function for each background color we could have an function that takes the color as an argument.
+
+```javascript
+function printBackground(color) {
+  if (!color || typeof color !== 'string') {
+    return; // Invalid color, return immediately
+  }
+}
+```
+
+But if refactoring is not an option, we must always avoid having several checks in every condition and avoid using `switch` as much as possible. We also must take into account that the most efficient way to do this is through an `object`.
 
 ```javascript
 var colorObj = {
