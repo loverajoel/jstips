@@ -9,7 +9,7 @@
 - 你可以連結到其他的網站或者是影片讓我們了解更多。
 - 程式碼區塊使用 ```js。
 - 避免在 title 提到「JavaScript」（因為我們的 tips 都是與 JavaScript 相關的）。
-- 使用反引號（`）來標記程式碼 - _警告_：tip 標題不要使用反引號。
+- 使用反引號（`）來標記程式碼 - _警告_：tip **標題**和 **tip-tldr** 不要使用反引號。
 
 當你的 tip 準備好了，依據這個 [PR 樣板](https://github.com/loverajoel/jstips/blob/gh-pages/PULL_REQUEST_TEMPLATE.md)，[發送一個 PR](https://help.github.com/articles/using-pull-requests/) 你的 tip 將會被校閱。每天都會有 tip 從可用的 PR 中被合併（merged）。
 
