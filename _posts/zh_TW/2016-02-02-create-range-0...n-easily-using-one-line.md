@@ -5,51 +5,44 @@ title: 使用一行程式碼簡單建立一個 0...(N - 1) 的陣列
 tip-number: 33
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
-tip-tldr: 我們透過一行程式碼簡單建立一個範圍函式，它可以給定一個 0...(N - 1) 的範圍。
+tip-tldr: Compact 一行程式碼，來產生有順序性的陣列。
 
 
 categories:
     - zh_TW
 ---
 
-使用下方的程式碼，我們可以建立一個 0...(N - 1) 的陣列。
+這裡有兩種 compact 程式碼序列方式，來產生一個 `[0, 1, ..., N-1]` 的 `N` 個元素的陣列：
 
+### 方案一（ES5）
 ```js
-Array.apply(null, {length: N}).map(Number.call, Number);
+Array.apply(null, {length: N}).map(Function.call, Number);
 ```
+#### 簡要說明
+1. `Array.apply(null, {length: N)` 回傳一個 `N` 個元素的陣列，裡面陣列元素都是為 `undefined`（i.e. `A = [undefined, undefined, ...]`）。
+2. `A.map(Function.call, Number)` 回傳一個 `N` 個元素的陣列，索引 `I` 從 `Function.call.call(Number, undefined, I, A)` 取得結果。
+3. `Function.call.call(Number, undefined, I, A)` collapses 成 `Number(I)`，這自然就是 `I`。
+4. 結果：`[0, 1, ..., N-1]`。
 
-讓我們來拆解這行程式碼。我們知道 `call` 函式可以在 JavaScript 執行。所以，在 `call` 第一個參數是上下文（context），而第二個參數開始則是呼叫 `call` 函式所需要用到的參數。
+更深入的解釋，請前往[這裡](https://github.com/gromgit/jstips-xe/blob/master/tips/33.md)。
 
+### 方案二（ES6）
 ```js
-function add(a, b){
-    return (a + b);
-}
-add.call(null, 5, 6);
+Array.from(new Array(N), (val, index) => index);
 ```
-回傳 5 和 6 的總和。
+#### 簡要說明
+1. `A = new Array(N)` 回傳一個有 `N` 個 _holes_ 的陣列（i.e. `A = [,,,...]`，但是 `A[x] = undefined`）。
+2. `F = (val, index) => index` 是一個很簡單的 `function F (val, index) { return index; }`。
+3. `Array.from(A, F)` 回傳一個 `N` 個元素的陣列，索引 `I` 取得 `F(A[I], I) == I` 的結果。
+4. 結果：`[0, 1, ..., N-1]`。
 
-在 JavaScript 陣列的 `map()` 帶有兩個參數，第一個是 `callback`，第二個則是 `thisArg(context)`。`callback` 中帶有三個參數，`value`、`index` 以及整個要被迭代的陣列。常見的語法像是這樣：
-
-```js
-[1, 2, 3].map(function(value, index, arr){
-    // 程式碼
-}, this);
-```
-以下程式碼建立特定長度的陣列。
-
-```js
-Array.apply(null, {length: N})
-```
-把所有部分組合一起就是如下的解決方法。
-
-```js
-Array.apply(null, {length: N}).map(Number.call, Number);
-```
-
-如果你想要 1...N 的範圍，你可以像這樣。
-
+### 還有一件事情
+如果你真的想要排序 [1, 2, ..., N]，**方案一**改成：
 ```js
 Array.apply(null, {length: N}).map(function(value, index){
   return index + 1;
 });
 ```
+和 **方案二**：
+```js
+Array.from(new Array(N), (val, index) => index + 1);

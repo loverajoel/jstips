@@ -73,7 +73,17 @@ switch(true) {
 }
 ```
 
-但是我們必須避免使用過多的條件檢查以及避免使用 `switch`。我們使用最有效率的方式，透過 `object`。
+如果重構是一個選擇的話，我們可以嘗試的簡化這些函式。例如，不需要為每個顏色寫一個函式，我們可以寫一個以顏色作為參數的函式。
+
+```javascript
+function printBackground(color) {
+  if (!color || typeof color !== 'string') {
+    return; // 不正確的顏色，立即返回
+  }
+}
+```
+
+如果重構不是一個選擇的話，我們必須避免使用過多的條件檢查以及避免使用 switch。我們使用最有效率的方式，透過 object。
 
 ```javascript
 var colorObj = {
