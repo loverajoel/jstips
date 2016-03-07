@@ -1,15 +1,27 @@
 
-.highlight {
-    background-color: #F9F9F9;
+.highlighter-rouge {
+  max-width: none !important;
+  background-color: #F9F9F9;
+  margin: 20px auto !important;
+  
+  .highlight {
     padding: 20px 0;
-    overflow: scroll;
+  }
+
+  @media (max-width: 900px) {
+    margin: 0 10px;
+    padding: 10px 0;
+  }
+}
+
+div.highlighter-rouge {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    line-height: 1.2;
+  }
 
-    @media (max-width: 900px) {
-        padding: 0 10px
-    }
+.highlight {
+    overflow: scroll;
+    line-height: 1.2;
 }
 
 code {

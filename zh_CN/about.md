@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introducing JavaScript Tips
+title: 关于JavaScript Tips
 permalink: zh_CN/about/
 lang: zh_CN
 ---

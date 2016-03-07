@@ -22,14 +22,16 @@ var fibonacci = function(n){
 it works, but not efficient. it did lots of duplicate computing works, we can cache its previously computed results to speed it up.
 
 ```js
-var fibonacci = (function(){
-    var cache = {
-        0: 0,
-        1: 1
-    };
-    return function self(n){
-        return n <= 1 ? cache[n] : (cache[n] = self(n-1) + self(n-2));
+var fibonacci = (function() {
+  var cache = [0, 1]; // cache the value at the n index
+  return function(n) {
+    if (cache[n] === undefined) {
+      for (var i = cache.length; i <= n; ++i) {
+        cache[i] = cache[i-1] + cache[i-2];
+      }
     }
+    return cache[n];
+  }
 })()
 ```
 Also, we can define a higher-order function that accepts a function as its argument and returns a memoized version of the function.
@@ -40,6 +42,18 @@ var memoize = function(func){
     return function(){
         var key = Array.prototype.slice.call(arguments).toString();
         return key in cache ? cache[key] : (cache[key] = func.apply(this,arguments));
+    }
+}
+fibonacci = memoize(fibonacci);
+```
+And there is a ES6 version of the memoize function.
+
+```js
+var memoize = function(func){
+    const cache = {};
+    return (...args) => {
+        const key = [...args].toString();
+        return key in cache ? cache[key] : (cache[key] = func(...args));
     }
 }
 fibonacci = memoize(fibonacci);

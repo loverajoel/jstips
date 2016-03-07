@@ -61,35 +61,35 @@
 <body>
 <div id="main-wrapper">
 
-    {% if page.is_post%}
-        {% if page.previous.url and page.previous.lang == page.lang %}
+    {% if layout.is_post%}
+        {% if page.previous.url and page.previous.lang == 'en' %}
             <a class="tips-nav prev-tip" href="{{ page.previous.url }}">
                 <i class="fa fa-angle-left"></i>
-                <p>{{site.transl[page.lang].arrow_prev}}</p>
+                <p>{{site.transl[en].arrow_prev}}</p>
             </a>
         {% endif %}
 
-        {% if page.next.url and page.next.lang == page.lang %}
+        {% if page.next.url and page.next.lang == 'en' %}
             <a class="tips-nav next-tip" href="{{ page.next.url }}">
                 <i class="fa fa-angle-right"></i>
-                <p>{{site.transl[page.lang].arrow_next}}</p>
+                <p>{{site.transl[en].arrow_next}}</p>
             </a>
         {% endif %}
     {% endif %}
 
-    {% if page.is_post %}
-    <div id="fixed-bar" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
+    {% if layout.is_post %}
+    <div id="fixed-bar" class="{% if layout.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
         <div class="logo">
-            <a href="{{site.transl[page.lang].menu.home.link}}">
+            <a href="{{site.transl['en'].menu.home.link}}">
                 <img src="{{ site.baseurl }}/images/jstips.png" alt="Js Tips">
             </a>
         </div>
     </div>
     {% endif %}
-    <div id="main-header" class="{% if page.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
+    <div id="main-header" class="{% if layout.is_post %}is-post{% endif %} {% if paginator.page > 1 %} not-first-page {% endif %}">
         <div class="background"></div>
     </div>
-    {% if page.is_post %}
+    {% if layout.is_post %}
     {% else %}
         <div class="menu-home">
             <ul>
@@ -131,7 +131,7 @@
             </ul>
         </div>
     </div>
-    <footer class="{% if page.is_post %}is-post{% endif %}">
+    <footer class="{% if layout.is_post %}is-post{% endif %}">
         <div class="github-fork-ribbon-wrapper right-bottom">
             <div class="github-fork-ribbon">
                 <a href="https://github.com/loverajoel/jstips">Fork me on GitHub</a>
@@ -144,9 +144,9 @@
                 <form action="//jstips.us12.list-manage.com/subscribe/post?u=80795a6c077c65f1648c4dfe3&amp;id=1f7d557661" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <a href="#" name="subscribe"></a>
-                        <label for="mce-EMAIL">{{site.transl[page.lang].footer_subscribe_message}}</label>
+                        <label for="mce-EMAIL">{{site.transl['en'].footer_subscribe_message}}</label>
                         <div class="email-container">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="{{site.transl[page.lang].footer_placeholder_subscribe}}" required>
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="{{site.transl['en'].footer_placeholder_subscribe}}" required>
                             <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">    
                         </div>
                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -158,9 +158,9 @@
             </div>
         </div>
         <ul>
-            <li><a href="{{site.transl[page.lang].menu.home.link}}">{{site.transl[page.lang].menu.home.txt}}</a></li>
-            <li><a href="{{site.transl[page.lang].menu.about.link}}">{{site.transl[page.lang].menu.about.txt}}</a></li>
-            <li><a href="{{site.transl[page.lang].menu.submit_your_tip.link}}">{{site.transl[page.lang].menu.submit_your_tip.txt}}</a></li>
+            <li><a href="{{site.transl['en'].menu.home.link}}">{{site.transl['en'].menu.home.txt}}</a></li>
+            <li><a href="{{site.transl['en'].menu.about.link}}">{{site.transl['en'].menu.about.txt}}</a></li>
+            <li><a href="{{site.transl['en'].menu.submit_your_tip.link}}">{{site.transl['en'].menu.submit_your_tip.txt}}</a></li>
             <li class="github"><a href="https://github.com/loverajoel/jstips"><img src="/images/github.svg"></a></li>
             <li class="twitter">
                 <a href="https://twitter.com/tips_js" class="twitter-follow-button" data-show-count="false">Follow @tips_js</a>
@@ -170,6 +170,7 @@
         </ul>
     </footer>
 </div>
+<script type="text/javascript" src="/js/share.min.js"></script>
 {% include analytics.html %}
 </body>
 </html>
