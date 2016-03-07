@@ -52,8 +52,17 @@ switch(color) {
 }
 ```
 
+如果可以重构的话，我们可以试着简化函数。比如不需要为每个颜色写一个函数，而是将颜色作为函数的参数。
 
-但是如果在每个语句中都有很多条件检查时该怎么办呢？这种情况下，如果我们想要不罗嗦又整洁的话，我们可以用有条件的`switch`。如果我们传递`true`给`switch`语句，我们便可以在每个case中使用条件语句了。
+```javascript
+function printBackground(color) {
+  if (!color || typeof color !== 'string') {
+    return; // Invalid color, return immediately
+  }
+}
+```
+
+但是如果不能重构的话，我们必须避免过多的条件检查，避免过多使用`switch`。我们必须考虑最有效率的方法，使用`object`。
 
 ```javascript
 switch(true) {

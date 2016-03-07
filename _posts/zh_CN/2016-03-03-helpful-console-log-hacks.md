@@ -21,7 +21,7 @@ console.log(data.value) && false
 
 条件断点只有在条件运行的结果为`true`时才会中断页面。所以使用`console.log('foo') && false`这样的条件，由于你把`false`放在了`AND`条件中，所以结果肯定是`false`。因此这并不会中断页面但是会打印`log`到控制台。这也可以应用在计算某个函数或回调被调用了多少次上面。
 
-这里有各个平台下设置条件断点的方法：[Edge](https://dev.windows.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/debugger/#setting-and-managing-breakpoints "Managing Breakpoints in Edge")、[Chrome](https://developer.chrome.com/devtools/docs/javascript-debugging#breakpoints "Managing Breakpoints in Chrome")、[Firefox](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Set_a_conditional_breakpoint "Managing Breakpoints in Firefox")。
+这里有各个平台下设置条件断点的方法：[Edge](https://dev.windows.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/debugger/#setting-and-managing-breakpoints "Managing Breakpoints in Edge")、[Chrome](https://developer.chrome.com/devtools/docs/javascript-debugging#breakpoints "Managing Breakpoints in Chrome")、[Firefox](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Set_a_conditional_breakpoint "Managing Breakpoints in Firefox")、[Safari](https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Debugger/Debugger.html "Managing Breakpoints in Safari")。
 
 ## 打印函数到控制台
 

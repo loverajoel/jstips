@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 仅用一行生成0...(N-1)的数列
+title: 仅用一行生成`[0, 1, ..., N-1]`数列
 tip-number: 33
 tip-username: SarjuHansaliya
 tip-username-profile: https://github.com/SarjuHansaliya
@@ -14,51 +14,39 @@ categories:
 
 使用下面一行代码，我们就可以生成0...(N-1)数列。
 
-### 方法1
+### 方法1 (需要 ES5)
 
 ```js
-Array.apply(null, {length: N}).map(Number.call, Number);
+Array.apply(null, {length: N}).map(Function.call, Number);
 ```
 
-### 方法2 
+#### 简要说明
+1. `Array.apply(null, {length: N})` 返回一个由`undefined`填充的长度为`N`的数组(例如 `A = [undefined, undefined, ...]`)。
+2. `A.map(Function.call, Number)` 返回一个长度为`N`的数组，它的索引为`I`的元素为`Function.call.call(Number, undefined, I, A)`的结果。
+3. `Function.call.call(Number, undefined, I, A)`可转化为`Number(I)`，正好就是`I`。
+4. 结果为：`[0, 1, ..., N-1]`。
+
+更全面的几首，请看[这里](https://github.com/gromgit/jstips-xe/blob/master/tips/33.md).
+
+### 方法2 (需要 ES6)
 
 ```js
  Array.from(new Array(N),(val,index)=>index);
  ```
 
+#### 简要说明
+1. `A = new Array(N)` 返回一个有`N`个_小孔_的数组 (例如 `A = [,,,...]`, 但是对于`x` in `0...N-1`时`A[x] = undefined`)。
+2. `F = (val,index)=>index` 即 `function F (val, index) { return index; }`。
+3. `Array.from(A, F)` 返回一个长度为`N`的数组，它的索引为`I`的元素为`F(A[I], I) => I`的结果。
+4. 结果为：`[0, 1, ..., N-1]`。
 
-让我们把这一行拆分一下。我们知道`call()`方法在Javascript中的作用。`call()`方法的第一个参数是上下文，从第二个参数开始是调用`call()`方法的函数所需要的参数。
-
-```js
-function add(a, b){
-    return (a+b);
-}
-add.call(null, 5, 6);
-```
-这将返回5加6的和。
-
-数组的`map()`接收两个参数，第一个是`callback`，第二个是`this(上下文)`。回调函数接收三个参数：`value` 、`index`和我们正在迭代的整个数组。所以正常的语法就像：
-
-```js
-[1, 2, 3].map(function(value, index, arr){
-    //Code
-}, this);
-```
-如下一行创建了一个所给长度(length)的数组：
-
-```js
-Array.apply(null, {length: N})
-```
-将各部分合并就成了如下解决方案：
-
-```js
-Array.apply(null, {length: N}).map(Number.call, Number);
-```
-
-如果你需要1...N的数列，你可以这样写：
-
+### One More Thing
+如果你需要[1, 2, ..., N]序列， **方法1** 可改为：
 ```js
 Array.apply(null, {length: N}).map(function(value, index){
-  return index+1;  
+  return index + 1;
 });
 ```
+**方法2**可改为：
+```js
+Array.from(new Array(N),(val,index)=>index+1);
