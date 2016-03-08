@@ -39,7 +39,7 @@ Array.apply(null, {length: N}).map(Function.call, Number);
 
 1. `A = new Array(N)` 返回一个有`N`个_小孔_的数组 (例如 `A = [,,,...]`, 但是对于`x` in `0...N-1`时`A[x] = undefined`)。
 2. `F = (val,index)=>index` 即 `function F (val, index) { return index; }`。
-3. `Array.from(A, F)` 返回一个长度为`N`的数组，它的索引为`I`的元素为`F(A[I], I) => I`的结果。
+3. `Array.from(A, F)` 返回一个长度为`N`的数组，它的索引为`I`的元素为`F(A[I], I)`的结果，也就是`I`。
 4. 结果为：`[0, 1, ..., N-1]`。
 
 ### One More Thing

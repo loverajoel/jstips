@@ -39,7 +39,7 @@ Array.from(new Array(N),(val,index)=>index);
 
 1. `A = new Array(N)` returns an array with `N` _holes_ (i.e. `A = [,,,...]`, but `A[x] = undefined` for `x` in `0...N-1`).
 2. `F = (val,index)=>index` is simply `function F (val, index) { return index; }`
-3. `Array.from(A, F)` returns an `N`-element array, whose index `I` gets the results of `F(A[I], I) => I`.
+3. `Array.from(A, F)` returns an `N`-element array, whose index `I` gets the results of `F(A[I], I)`, which is simply `I`.
 4. Result: `[0, 1, ..., N-1]`.
 
 ### One More Thing
