@@ -37,7 +37,7 @@ Array.from(new Array(N), (val, index) => index);
 
 1. `A = new Array(N)` 回傳一個有 `N` 個 _holes_ 的陣列（i.e. `A = [,,,...]`，但是 `x` 在 `0...N-1` 時 `A[x] = undefined`）。
 2. `F = (val, index) => index` 等同於 `function F (val, index) { return index; }`。
-3. `Array.from(A, F)` 回傳一個 `N` 個元素的陣列，索引 `I` 取得 `F(A[I], I) => I` 的結果，也就是 `I`。
+3. `Array.from(A, F)` 回傳一個 `N` 個元素的陣列，索引 `I` 取得 `F(A[I], I)` 的結果，也就是 `I`。
 4. 結果：`[0, 1, ..., N-1]`。
 
 ### 還有一件事情
