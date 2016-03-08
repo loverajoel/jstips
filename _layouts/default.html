@@ -120,7 +120,7 @@
                     <li class="current">{{ page }}</li>
                 {% elsif page == 1 %}
                     <li>
-                        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                        <a href="/">{{ page }}</a>
                     </li>
                 {% else %}
                     <li>
