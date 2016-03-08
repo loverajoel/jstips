@@ -16,9 +16,9 @@ Many of us are still doing these things:
 - `element.addEventListener('type', function (event) {})`
 - `element.addEventListener('type', (event) => {})`
 
-Closure keeps a pointer to its enclosing scope. As a result, atttaching a closure to a DOM element can create a circular reference and thus, a memory leak. Since `element` also keeps a reference to the closure, we have a cycle that won't be cleaned up by garbage collection.
+The above examples all create new anonymous event handlers that can't be removed when no longer needed. This may cause performance problems or unexpected logic bugs, when handlers that you no longer need still get accidentally triggered through unexpected user interactions or [event bubbling](http://www.javascripter.net/faq/eventbubbling.htm).
 
-Unless you have addressed your handlers in a way you can remove it later on, otherwise you will never able to remove them. And there must be the correct ways:
+Safer event-handling patterns include the following:
 
 Use a reference:
 ```js
