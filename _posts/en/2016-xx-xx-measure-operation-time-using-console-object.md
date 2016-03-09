@@ -24,6 +24,6 @@ console.timeEnd("timer");
 
 //Output:: timer: x ms 
 ```
-> Note : As [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) suggested that don't use this for production sites, only use it for development purpose only.
+> Note: As [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) suggested don't use this for production sites, use it for development purposes only.
 
 
