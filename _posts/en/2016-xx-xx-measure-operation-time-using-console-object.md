@@ -11,9 +11,9 @@ categories:
     - en
 ---
 
-Sometime we need to measure time of some tasks to analyze how much time it takes to execute. To achieve that, normal practice is to note down time before starting of the task and note down time after completion of the task, and then take a difference between two times.But this is a lot of work for only time measuring.
+Sometime we need to measure time of some tasks to analyze how much time it takes to execute. To achieve that, normal practice is to note down time before starting the task and note down time after completing the task, and then take the difference between two times. But this is a lot of work for only time measuring.
 
-The most simplest way to achieve this is to use `console.time(label)` and `console.timeEnd(label)`.Here is the snippet.
+The most simplest way to achieve this is to use `console.time(label)` and `console.timeEnd(label)`. Here is the snippet.
 
 ```javascript
 // `timer` is a label which will be used to end that particular timer.
