@@ -17,7 +17,8 @@ categories:
 const dateTime = Date.now();
 const timestamp = Math.floor(dateTime / 1000);
 ```
-or
+
+或
 
 ```js
 const dateTime = new Date().getTime();
