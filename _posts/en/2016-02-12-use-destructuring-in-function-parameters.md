@@ -61,6 +61,8 @@ sayHelloTimes()
 // -> Uncaught TypeError: Cannot match against 'undefined' or 'null'...
 ```
 
+It's conceptually similar to accessing a property of an undefined object, just with a different exception type.
+
 Destructuring assignment with default parameters hides all the above to a certain extent:
 
 ```js
@@ -74,6 +76,21 @@ sayHelloTimes2(5678)
 // -> Hello Anony Moose! I've seen you undefined times before.
 sayHelloTimes2()
 // -> Hello Anony Moose! I've seen you undefined times before.
+```
+
+As for `= {}`, it covers the case of a missing _object_, for which individual property defaults won't help at all:
+
+```js
+var sayHelloTimes2a = function({ name = "Anony", surname = "Moose" }, times) {
+  console.log(`Hello ${name} ${surname}! I've seen you ${times} times before.`);
+};
+
+sayHelloTimes2a({ name: "Pam" }, 5678)
+// -> Hello Pam Moose! I've seen you 5678 times before.
+sayHelloTimes2a(5678)
+// -> Hello Anony Moose! I've seen you undefined times before.
+sayHelloTimes2a()
+// -> Uncaught TypeError: Cannot match against 'undefined' or 'null'.
 ```
 
 ##### Availability
