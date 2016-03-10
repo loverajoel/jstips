@@ -54,16 +54,25 @@ sayHelloTimes(5678)
 // -> Hello undefined undefined! I've seen you undefined times before.
 ```
 
-Destructuring assignment with default parameters hides this to a certain extent:
+Worse, if the parameter to be destructured is missing, an exception is thrown, probably bringing your app to a screeching halt:
+
+```js
+sayHelloTimes()
+// -> Uncaught TypeError: Cannot match against 'undefined' or 'null'...
+```
+
+Destructuring assignment with default parameters hides all the above to a certain extent:
 
 ```js
 var sayHelloTimes2 = function({ name = "Anony", surname = "Moose" } = {}, times) {
   console.log(`Hello ${name} ${surname}! I've seen you ${times} times before.`);
 };
 
-sayHelloTimes({ name: "Pam" }, 5678)
+sayHelloTimes2({ name: "Pam" }, 5678)
 // -> Hello Pam Moose! I've seen you 5678 times before.
 sayHelloTimes2(5678)
+// -> Hello Anony Moose! I've seen you undefined times before.
+sayHelloTimes2()
 // -> Hello Anony Moose! I've seen you undefined times before.
 ```
 
