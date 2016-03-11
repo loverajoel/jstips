@@ -15,7 +15,7 @@ We often need to build a loop, else the condition list would be huge.
 ```js
 
 var index = 0,
-    aList = ['A','B','C', 'D', 'E']
+    aList = ['A','B','C', 'D', 'E'];
 
 function change( dir ){
     
