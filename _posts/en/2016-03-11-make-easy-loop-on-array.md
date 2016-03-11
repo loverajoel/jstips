@@ -53,7 +53,7 @@ change( true); //E LOOP !
 
 ```
 
-Aussi l'opérareur ```%``` change bien la vie :
+Aussi l'opérateur ```%``` change bien la vie et c'est plus élégant:
 
 ```js
 
