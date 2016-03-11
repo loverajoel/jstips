@@ -10,7 +10,7 @@ tip-tldr: Make a elegant loop on array
 categories:
     - fr
 ---
-We often need to build loop, all the conditions can be huge:
+We often need to build a loop, else the condition list would be huge.
 
 ```js
 
@@ -52,7 +52,7 @@ change( true); //E LOOP !
 
 ```
 
-Use operator  ```%``` can change your life and it's prettier:
+Using the ```%``` operator is prettier:
 
 ```js
 
