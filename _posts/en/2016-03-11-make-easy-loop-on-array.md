@@ -2,16 +2,15 @@
 layout: post
 
 title: Make easy loop on array
-tip-number: 51
+tip-number: xx
 tip-username: jamet-julien
 tip-username-profile: https://github.com/jamet-julien
-tip-tldr: Comment faire une jolie boucle dans une liste
+tip-tldr: Make a elegant loop on array 
 
 categories:
     - fr
 ---
-
-On se retrouve souvent à vouloir faire une boucle et l'ensemble des conditions à utiliser peuvent vite être lourdes :
+We often need to build loop, all the conditions can be huge:
 
 ```js
 
@@ -53,7 +52,7 @@ change( true); //E LOOP !
 
 ```
 
-Aussi l'opérateur ```%``` change bien la vie et c'est plus élégant:
+Use operator  ```%``` can change your life and it's prettier:
 
 ```js
 
