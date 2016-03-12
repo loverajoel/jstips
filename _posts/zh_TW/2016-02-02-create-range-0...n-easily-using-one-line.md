@@ -19,6 +19,7 @@ categories:
 ```js
 Array.apply(null, {length: N}).map(Function.call, Number);
 ```
+
 #### 簡要說明
 
 1. `Array.apply(null, {length: N)` 回傳一個 `N` 個元素的陣列，裡面陣列元素都是為 `undefined`（i.e. `A = [undefined, undefined, ...]`）。
@@ -33,6 +34,7 @@ Array.apply(null, {length: N}).map(Function.call, Number);
 ```js
 Array.from(new Array(N), (val, index) => index);
 ```
+
 #### 簡要說明
 
 1. `A = new Array(N)` 回傳一個有 `N` 個 _holes_ 的陣列（i.e. `A = [,,,...]`，但是 `x` 在 `0...N-1` 時 `A[x] = undefined`）。
@@ -43,11 +45,15 @@ Array.from(new Array(N), (val, index) => index);
 ### 還有一件事情
 
 如果你真的想要排序 [1, 2, ..., N]，**方法一**改為：
+
 ```js
 Array.apply(null, {length: N}).map(function(value, index){
   return index + 1;
 });
 ```
+
 和 **方法二**：
+
 ```js
 Array.from(new Array(N), (val, index) => index + 1);
+```
