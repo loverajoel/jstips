@@ -31,3 +31,5 @@ More info:
 [Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (outputs in browser console)
+
+> Note: As [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) suggested don't use this for production sites, use it for development purposes only.
