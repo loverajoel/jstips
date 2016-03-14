@@ -10,7 +10,7 @@ tip-tldr: Create an easy loop using an array
 categories:
     - en
 ---
-We often need to build a loop, else the condition list would be huge.
+Sometimes, we need to loop endlessly over an array of items, like a carousel of images or an audio playlist. Here's how to take an array and give it "looping powers":
 
 ```js
 var aList = ['A','B','C', 'D', 'E'];
