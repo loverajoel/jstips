@@ -34,3 +34,4 @@ console.timeEnd("Array initialize"); // Outputs: Array initialize: 0.711ms
 
 Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa) (在浏览器控制台输出)
 
+> 注意：由于[Mozilla](https://developer.mozilla.org/zh-CN/docs/Web/API/Console/time)不建议将其使用在线上项目中，建议仅在开发中使用。
