@@ -78,7 +78,7 @@ sayHelloTimes2()
 // -> Hello Anony Moose! I've seen you undefined times before.
 ```
 
-对于`= {}`，它解决了_object_未传递时的单个参数的默认值不起作用的问题：
+对于`= {}`，它掩盖了_object_未传递时的情况，但对于个别属性默认值的情形下会抛出异常：
 
 ```js
 var sayHelloTimes2a = function({ name = "Anony", surname = "Moose" }, times) {
