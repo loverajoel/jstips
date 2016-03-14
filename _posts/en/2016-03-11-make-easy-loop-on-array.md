@@ -13,66 +13,97 @@ categories:
 We often need to build a loop, else the condition list would be huge.
 
 ```js
+var aList = ['A','B','C', 'D', 'E'];
 
-var index = 0,
-    aList = ['A','B','C', 'D', 'E'];
+function make_looper( arr ){
 
-function change( dir ){
+    arr.loop_idx = 0;
+
+    // return current item
+    arr.current = function(){
+
+      if( this.loop_idx < 0 ){// First verification
+        this.loop_idx = this.length - 1;// update loop_idx
+      }
+
+      if( this.loop_idx >= this.length ){// second verification
+        this.loop_idx = 0;// update loop_idx
+      }
+
+      return arr[ this.loop_idx ];//return item
+    };
     
-    //Is it the start ? So go to the last element
-    if( index < 0 ){
-      index = aList.length-1;
-    }
-    
-    // Is it the end ? So go to the first element
-    if( index >= aList.length ){
-      index = 0;
-    }
-
-   dir   = ( dir )? -1 : 1;
-   index = index + dir;
-   return aList[ index ];
+    // increment loop_idx AND return new current
+    arr.next = function(){
+      this.loop_idx++;
+      return this.current();
+    };
+    // decrement loop_idx AND return new current
+    arr.prev = function(){
+      this.loop_idx--;
+      return this.current();
+    };
 }
 
-change();//A
-change();//B
-change();//C
-change();//D
-change();//E
-change();//A  LOOP !
-change( true );//A
-change( true );//E
-change( true );//D
-change( true );//C
-change( true );//B
-change( true );//A
-change( true ); //E LOOP !
+
+make_looper( aList);
+
+aList.current();// -> A
+aList.next();// -> B
+aList.next();// -> C
+aList.next();// -> D
+aList.next();// -> E
+aList.next();// -> A
+aList.pop() ;// -> E
+aList.prev();// -> D
+aList.prev();// -> C
+aList.prev();// -> B
+aList.prev();// -> A
+aList.prev();// -> D
 ```
 
 Using the ```%``` operator is prettier:
 
 ```js
 
-var index = 0,
-    aList = ['A','B','C', 'D', 'E']
+var aList = ['A','B','C', 'D', 'E'];
 
-function change( dir ){
-   dir   = ( dir )?  aList.length - 1 : 1 ;
-   index = ( index + dir ) % aList.length;
-   return aList[ index ];
+
+function make_looper( arr ){
+
+    arr.loop_idx = 0;
+
+    // return current item
+    arr.current = function(){
+      this.loop_idx = ( this.loop_idx ) % this.length;// no verification !!
+      return arr[ this.loop_idx ];
+    };
+
+    // increment loop_idx AND return new current
+    arr.next = function(){
+      this.loop_idx++;
+      return this.current();
+    };
+    
+    // decrement loop_idx AND return new current
+    arr.prev = function(){
+      this.loop_idx += this.length - 1;
+      return this.current();
+    };
 }
 
-change();//A
-change();//B
-change();//C
-change();//D
-change();//E
-change();//A  LOOP !
-change( true );//A
-change( true );//E
-change( true );//D
-change( true );//C
-change( true );//B
-change( true );//A
-change( true ); //E LOOP !
+make_looper( aList);
+
+aList.current();// -> A
+aList.next();// -> B
+aList.next();// -> C
+aList.next();// -> D
+aList.next();// -> E
+aList.next();// -> A
+aList.pop() ;// -> E
+aList.prev();// -> D
+aList.prev();// -> C
+aList.prev();// -> B
+aList.prev();// -> A
+aList.prev();// -> D
 ```
