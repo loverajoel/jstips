@@ -62,7 +62,7 @@ aList.prev();// -> A
 aList.prev();// -> D
 ```
 
-Using the ```%``` (Modulus) operator is prettier.The modulus return division's rest ( ``` 2 % 5 = 1``` AND ``` 5 % 5 = 0```):
+Using the ```%``` ( Modulus ) operator is prettier.The modulus return division's rest ( ``` 2 % 5 = 1``` and ``` 5 % 5 = 0```):
 
 ```js
 
