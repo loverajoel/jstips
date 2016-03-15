@@ -16,6 +16,7 @@ ES6中，JS现在有了引号拼接字符串的替代品，模板字符串。
 
 示例:
 普通字符串
+
 ```javascript
 var firstName = 'Jake';
 var lastName = 'Rawr';

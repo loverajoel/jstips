@@ -12,6 +12,7 @@ categories:
 ---
 
 通常下，你并不能给回调函数传递参数。 比如:
+
 ```js
 function callback() {
   console.log('Hi human');
@@ -19,7 +20,9 @@ function callback() {
 
 document.getElementById('someelem').addEventListener('click', callback);
 ```
+
 你可以借助Javascript闭包的优势来传递参数给回调函数。看这个例子:
+
 ```js
 function callback(a, b) {
   return function() {
@@ -37,6 +40,7 @@ document.getElementById('someelem').addEventListener('click', callback(x, y));
 这种方法使参数`x`和`y`在回调方法被调用时处于其作用域内。
 
 另一个办法是使用`bind`方法。比如:
+
 ```js
 var alertText = function(text) {
   alert(text);
@@ -44,4 +48,5 @@ var alertText = function(text) {
 
 document.getElementById('someelem').addEventListener('click', alertText.bind(this, 'hello'));
 ```
+
 两种方法之间有着微小的性能差异,请看[jsperf](http://jsperf.com/bind-vs-closure-23).

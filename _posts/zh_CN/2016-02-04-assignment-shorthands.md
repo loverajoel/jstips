@@ -16,7 +16,7 @@ categories:
 
 这类似于使用：
 
-````javascript
+```js
 x += 23; // x = x + 23;
 y -= 15; // y = y - 15;
 z *= 10; // z = z * 10;
@@ -28,17 +28,17 @@ n <<= 2; // n = n << 2;
 n ++; // n = n + 1;
 n --; n = n - 1;
 
-````
+```
 
 ### `++` 与 `--` 操作符
 
 对于`++`操作符有些特殊。最好用下面的例子解释一下：
 
-````javascript
+```js
 var a = 2;
 var b = a++;
 // 现在 a == 3  b == 2
-````
+```
 
 `a++`做了如下工作：
   1. 返回`a`的值
@@ -46,11 +46,11 @@ var b = a++;
 
 但是如果我们想让值先增加呢？这也很容易：
 
-````javascript
+```js
 var a = 2;
 var b = ++a;
 // 现在a和b都是3
-````
+```
 
 看明白了吗？我将操作符放在了参数_前面_。
 
@@ -60,65 +60,67 @@ var b = ++a;
 
 我们平时会这样写：
 
-````javascript
+```js
 var newValue;
 if(value > 10) 
   newValue = 5;
 else
   newValue = 2;
-````
+```
 
 我们可以使用三元运算符是它更简便：
 
-````javascript
+```js
 var newValue = (value > 10) ? 5 : 2;
-````
+```
 
 ### 检测Null、Undefined、空
 
-````javascript
+```js
 if (variable1 !== null || variable1 !== undefined || variable1 !== '') {
      var variable2 = variable1;
 }
-````
+```
 
 简便写法：
 
-````javascript
+```js
 var variable2 = variable1  || '';
-````
+```
+
 P.S.：如果`variable1`是一个数字，则先检查他是否为0。
 
 ### 对象数组表示法
 
 不要用：
 
-````javascript
+```js
 var a = new Array();
 a[0] = "myString1";
 a[1] = "myString2";
-````
+```
+
 使用：
 
-````javascript
+```js
 var a = ["myString1", "myString2"];
-````
+```
 
 ### 关联数组
 
 不要用：
 
-````javascript
+```js
 var skillSet = new Array();
 skillSet['Document language'] = 'HTML5';
 skillSet['Styling language'] = 'CSS3';
-````
+```
 
 使用：
 
-````javascript
+```js
 var skillSet = {
     'Document language' : 'HTML5', 
     'Styling language' : 'CSS3'
 };
-````
+```

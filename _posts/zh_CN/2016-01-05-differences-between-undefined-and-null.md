@@ -24,19 +24,19 @@ categories:
   (`Boolean(undefined) // false`, `Boolean(null) // false`)
 - 你可以这样判断一个变量是否是[undefined](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
-  ```javascript
+```javascript
   typeof variable === "undefined"
 ```
 
 - 你可以这样判断一个变量是否是[null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)
 
-  ```javascript
+```javascript
   variable === null
 ```
 
 - **双等号**比较时它们相等，但**三等号**比较时不相等
 
-  ```javascript
+```javascript
   null == undefined // true
 
   null === undefined // false

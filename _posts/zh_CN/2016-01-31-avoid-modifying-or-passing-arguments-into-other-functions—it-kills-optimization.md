@@ -19,11 +19,13 @@ categories:
 ```js
 var args = Array.prototype.slice.call(arguments);
 ```
+
 将`arguments`传递给`Array`原型(prototype)上的`slice`方法；`slice`方法返回一个对`arguments`浅复制后的数组对象。更短的写法：
 
 ```js
 var args = [].slice.call(arguments);
 ```
+
 在这里，简单的调用了空数组的`slice`方法，而没有从`Array`的原型(prototype)上调用。
 
 ### 系统优化

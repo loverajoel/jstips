@@ -23,8 +23,10 @@ function empty() {
 }
 empty();
 ```
+
 但是，这有一个效率更高的方法来清空数组。
 你可以这样写:
+
 ```javascript
 var list = [1, 2, 3, 4];
 function empty() {
@@ -33,6 +35,7 @@ function empty() {
 }
 empty();
 ```
+
 * `list = []` 将一个新的数组的引用赋值给变量，其他引用并不受影响。
 这意味着以前数组的内容被引用的话将依旧存在于内存中，这将导致内存泄漏。
 
@@ -41,6 +44,7 @@ empty();
 然而，如果你复制了一个数组（A 和 Copy-A），如果你用`list.length = 0`清空了它的内容，复制的数组也会清空它的内容。
 
 考虑一下将会输出什么：
+
 ```js
 var foo = [1,2,3];
 var bar = [1,2,3];
@@ -52,6 +56,7 @@ console.log(foo, bar, foo2, bar2);
 
 //[] [] [1, 2, 3] []
 ```
+
 更多内容请看Stackoverflow：
 [difference-between-array-length-0-and-array](http://stackoverflow.com/questions/4804235/difference-between-array-length-0-and-array)
 

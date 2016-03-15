@@ -19,6 +19,7 @@ var fibonacci = function(n){
     return n < 2 ? n : fibonacci(n-1) + fibonacci(n-2);
 }
 ```
+
 它可以运行，但并不高效。它做了太多重复的运算，我们可以通过存储这些运算结果来使其加速。
 
 ```js
@@ -34,6 +35,7 @@ var fibonacci = (function() {
   }
 })()
 ```
+
 我们也可以定义一个高阶函数，它接收一个方法作为参数，返回一个该方法运用存储后的新方法。
 
 ```js
@@ -73,6 +75,7 @@ var gcd = memoize(function(a,b){
 })
 gcd(27,183); //=> 3
 ```
+
 * 阶乘运算
 
 ```js

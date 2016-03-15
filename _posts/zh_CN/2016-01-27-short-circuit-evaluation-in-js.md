@@ -25,6 +25,7 @@ var isFalse = function(){
 };
 
 ```
+
 使用逻辑与 - `&&`.
 
 ```js
@@ -37,6 +38,7 @@ if(test){
 
 ( test && isTrue() );  // Test is true
 ```
+
 使用逻辑或 - `||`.
 
 ```js
@@ -47,6 +49,7 @@ if(!test){
 
 ( test || isFalse());  // Test is false.
 ```
+
 逻辑或可以用来给参数设置默认值。
 
 ```js
@@ -57,6 +60,7 @@ function theSameOldFoo(name){
 theSameOldFoo();  // My best friend's name is Bar
 theSameOldFoo('Bhaskar');  // My best friend's name is Bhaskar
 ```
+
 逻辑与可以用来避免调用undefined参数的属性时报错
 例如:-
 

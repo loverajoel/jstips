@@ -29,6 +29,7 @@ render() {
 //good
 <MyComponent key={{item.key}}/>
 ```
+
 - [使用数组索引是一个坏习惯](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` 不会起作用
 

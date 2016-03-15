@@ -29,6 +29,7 @@ arr.push(6);
 arr[arr.length] = 6;
 arr2 = arr.concat([6]);
 ```
+
 两种方法都是修改原始数组。不信？看看[jsperf](http://jsperf.com/push-item-inside-an-array)
 
 ### 手机上的效率
@@ -109,6 +110,7 @@ arr.unshift(0);
 
 [0].concat(arr);
 ```
+
 这里有一些小区别，unshift操作的是原始数组，concat返回一个新数组，参考[jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
 

@@ -27,6 +27,7 @@ if (someText.indexOf('javascript') >= 0) {
 但是让我们看一下这些 [Expressjs](https://github.com/strongloop/express)代码段。
 
 [examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
+
 ```javascript
 for (var key in obj) {
   // "reserved" exports
@@ -34,6 +35,7 @@ for (var key in obj) {
 ```
 
 [lib/utils.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/lib/utils.js#L93)
+
 ```javascript
 exports.normalizeType = function(type){
   return ~type.indexOf('/')
@@ -43,6 +45,7 @@ exports.normalizeType = function(type){
 ```
 
 [examples/web-service/index.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/web-service/index.js#L35)
+
 ```javascript
 // key is invalid
 if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
