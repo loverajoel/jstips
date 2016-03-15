@@ -13,7 +13,7 @@ categories:
 Sometimes, we need to loop endlessly over an array of items, like a carousel of images or an audio playlist. Here's how to take an array and give it "looping powers":
 
 ```js
-var aList = ['A','B','C', 'D', 'E'];
+var aList = ['A','B','C','D','E'];
 
 function make_looper( arr ){
 
@@ -62,11 +62,11 @@ aList.prev();// -> A
 aList.prev();// -> D
 ```
 
-Using the ```%``` operator is prettier:
+Using the ```%``` (Modulus) operator is prettier.The modulus return division's rest ( ``` 2 % 5 = 1``` AND ``` 5 % 5 = 0```):
 
 ```js
 
-var aList = ['A','B','C', 'D', 'E'];
+var aList = ['A','B','C','D','E'];
 
 
 function make_looper( arr ){
