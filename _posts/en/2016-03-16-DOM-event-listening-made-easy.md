@@ -1,8 +1,8 @@
 ---
-layout: *post
+layout: post
 
 title: DOM event listening made easy
-tip-number: 50
+tip-number: 51
 tip-username: octopitus
 tip-username-profile: https://github.com/octopitus
 tip-tldr: An elegant and easy way to handle DOM events
@@ -21,6 +21,7 @@ The above examples all create new anonymous event handlers that can't be removed
 Safer event-handling patterns include the following:
 
 Use a reference:
+
 ```js
 const handler = function () {
   console.log("Tada!")
@@ -31,6 +32,7 @@ element.removeEventListener("click", handler)
 ```
 
 Named function that removes itself:
+
 ```js
 element.addEventListener('click', function click(e) {
   if (someCondition) {
@@ -40,6 +42,7 @@ element.addEventListener('click', function click(e) {
 ```
 
 A better approach:
+
 ```js
 function handleEvent (eventName, {onElement, withCallback, useCapture = false} = {}, thisArg) {
   const element = onElement || document.documentElement
