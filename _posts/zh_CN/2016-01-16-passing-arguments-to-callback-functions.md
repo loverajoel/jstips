@@ -5,7 +5,7 @@ title: 向回调方法传递参数
 tip-number: 16
 tip-username: minhazav
 tip-username-profile: https://twitter.com/minhazav
-tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
+tip-tldr: 通常下，你并不能给回调函数传递参数，但是你可以借助Javascript闭包的优势来传递参数给回调函数。
 
 categories:
     - zh_CN
