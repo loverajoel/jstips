@@ -11,7 +11,8 @@ categories:
     - zh_TW
 ---
 
-如果要快速的測量 JavaScript 程式碼區塊性能的話，我們可以使用 console 函式像是 [`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) 和 [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)。
+如果要快速的測量 JavaScript 程式碼區塊性能的話，我們可以使用 console 函式像是
+[`console.time(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) 和 [`console.timeEnd(label)`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel)。
 
 ```javascript
 console.time("Array initialize");
@@ -30,3 +31,5 @@ console.timeEnd("Array initialize"); // 輸出：陣列初始化：0.711ms
 [Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking)。
 
 範例：[jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa)（在瀏覽器 console 下輸出）。
+
+> 注意：根據 [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) 建議，不該使用在上線環境下使用此方法，只能使用在開發環境。
