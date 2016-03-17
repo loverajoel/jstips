@@ -5,7 +5,7 @@ title: 將參數傳送到 callback 函式
 tip-number: 16
 tip-username: minhazav
 tip-username-profile: https://twitter.com/minhazav
-tip-tldr: JavaScript 模組以及建構步驟變得更多更複雜，但對於新的框架樣板呢？
+tip-tldr: 預設情況下，你不能傳送參數給 callback 函式，但是你可以利用 JavaScrip closure scope 的優點將參數傳給 callback 函式。
 
 categories:
     - zh_TW
