@@ -27,7 +27,10 @@ myThing.one // 1
 myThing.two // 2
 ````
 
-__Note__: `this` refers to our newly created object when we use `new` to create it. Otherwise (if created without `new`,) `this` is going to point to the global object, which is `window`;
+__Note__: `this` refers to the new object created by `new`. Otherwise if `Thing()` is called without `new`, __no object is created__, and `this` is going to point to the global object, which is `window`. This means that:
+
+1. You'll suddenly have two new global variables named `one` and `two`.
+2. `myThing` is now undefined, since nothing is returned in `Thing()`.
 
 Now that you get that example, here's where things get a little bit wonky. Let's say I add something to the constructor function, a little SPICE:
 
