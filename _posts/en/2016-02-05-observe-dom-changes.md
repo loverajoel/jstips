@@ -30,39 +30,39 @@ function initExtension(rootElement, targetSelector, subTargetSelector) {
         if (targetElement) {
             rootObserver.disconnect();
             var elementObserver = new MutationObserver(function(mutations) {
-                console.log("Inside element observer")
+                console.log("Inside element observer");
                 subTargetElement = targetElement.querySelector(subTargetSelector);
                 if (subTargetElement) {
                     elementObserver.disconnect();
-                    console.log("subTargetElement found!")
+                    console.log("subTargetElement found!");
                 }
-            })
+            });
             elementObserver.observe(targetElement, observeConfig);
         }
-    })
+    });
     rootObserver.observe(rootElement, observeConfig);
 }
 
 (function() {
 
-    initExtension(document.body, "div.target", "div.subtarget")
+    initExtension(document.body, "div.target", "div.subtarget");
 
     setTimeout(function() {
         del = document.createElement("div");
-        del.innerHTML = "<div class='target'>target</div>"
-        document.body.appendChild(del)
+        del.innerHTML = "<div class='target'>target</div>";
+        document.body.appendChild(del);
     }, 3000);
 
 
     setTimeout(function() {
-        var el = document.body.querySelector('div.target')
+        var el = document.body.querySelector('div.target');
         if (el) {
             del = document.createElement("div");
-            del.innerHTML = "<div class='subtarget'>subtarget</div>"
-            el.appendChild(del)
+            del.innerHTML = "<div class='subtarget'>subtarget</div>";
+            el.appendChild(del);
         }
     }, 5000);
 
-})()
+})();
 ```
 
