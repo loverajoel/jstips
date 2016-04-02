@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Easiest way to extract unix timestamp in JS
+title: La manera más fácil de extraer marca de tiempo Unix en JS
 tip-number: 49
 tip-username: nmrony
 tip-username-profile: https://github.com/nmrony
-tip-tldr: In Javascript you can easily get the unix timestamp
+tip-tldr: En Javascript se puede conseguir fácilmente la marca de tiempo Unix
 
 categories:
-    - en
+    - es_ES
 ---
 
-We frequently need to calculate with unix timestamp. There are several ways to grab the timestamp. For current unix timestamp easiest and fastest way is
+Con frecuencia tenemos que calcular con marca de tiempo unix. Hay varias maneras de agarrar la marca de tiempo. La forma mas rapida y facil es
 
 ```js
 const dateTime = Date.now();
@@ -24,25 +24,26 @@ const dateTime = new Date().getTime();
 const timestamp = Math.floor(dateTime / 1000);
 ```
 
-To get unix timestamp of a specific date pass `YYYY-MM-DD` or `YYYY-MM-DDT00:00:00Z` as parameter of `Date` constructor. For example
+Para conseguir marca de tiempo unix de una fecha específica pasar `YYYY-MM-DD` o `YYYY-MM-DDT00:00:00Z` como parámetro del constructor `Date`. Por ejemplo
 
 ```js
 const dateTime = new Date('2012-06-08').getTime();
 const timestamp = Math.floor(dateTime / 1000);
 ```
-You can just add a `+` sign also when declaring a `Date` object like below
+Usted puede añadir un signo `+` también cuando se declara un objeto `Date`, como a continuación
 
 ```js
 const dateTime = +new Date();
 const timestamp = Math.floor(dateTime / 1000);
 ```
-or for specific date
+o para una fecha especifica
 
 ```js
 const dateTime = +new Date('2012-06-08');
 const timestamp = Math.floor(dateTime / 1000);
 ```
-Under the hood the runtime calls `valueOf` method of the `Date` object. Then the unary `+` operator calls `toNumber()` with that returned value. For detailed explanation please check the following links
+
+Bajo el capó la ejecucion de llamadas del metodo `valueOf` del objeto `Date`. A continuación, el unario `+` operador llama `toNumber()` con ese valor devuelto. Para una explicación más detallada, consultar los siguientes enlaces
 
 * [Date.prototype.valueOf](http://es5.github.io/#x15.9.5.8)
 * [Unary + operator](http://es5.github.io/#x11.4.6)

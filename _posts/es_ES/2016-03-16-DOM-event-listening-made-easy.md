@@ -1,26 +1,27 @@
 ---
 layout: post
 
-title: DOM event listening made easy
+title: Escuchar eventos DOM mas simple
 tip-number: 51
 tip-username: octopitus
 tip-username-profile: https://github.com/octopitus
-tip-tldr: An elegant and easy way to handle DOM events
+tip-tldr: Una forma elegante y fácil de manejar eventos DOM
 
 categories:
-    - en
+    - es_ES
 ---
-Many of us are still doing these things:
+
+Muchos de nosotros todavía están haciendo estas cosas:
 
 - `element.addEventListener('type', obj.method.bind(obj))`
 - `element.addEventListener('type', function (event) {})`
 - `element.addEventListener('type', (event) => {})`
 
-The above examples all create new anonymous event handlers that can't be removed when no longer needed. This may cause performance problems or unexpected logic bugs, when handlers that you no longer need still get accidentally triggered through unexpected user interactions or [event bubbling](http://www.javascripter.net/faq/eventbubbling.htm).
+Los ejemplos anteriores, crean nuevos controladores de eventos anónimos que no pueden ser retirados cuando ya no sean necesarios. Esto puede causar problemas de rendimiento o errores lógicos inesperados, cuando los controladores que ya no es necesario puden ser accidentalmente activado mediante interacciones del usuario inesperados o [event bubbling](http://www.javascripter.net/faq/eventbubbling.htm)
 
-Safer event-handling patterns include the following:
+Patrones de gestión de eventos más seguras son las siguientes:
 
-Use a reference:
+Utilice una referencia:
 
 ```js
 const handler = function () {
@@ -31,7 +32,7 @@ element.addEventListener("click", handler)
 element.removeEventListener("click", handler)
 ```
 
-Named function that removes itself:
+Función llamada que remueve a sí mismo:
 
 ```js
 element.addEventListener('click', function click(e) {
@@ -41,7 +42,7 @@ element.addEventListener('click', function click(e) {
 });
 ```
 
-A better approach:
+Un mejor enfoque:
 
 ```js
 function handleEvent (eventName, {onElement, withCallback, useCapture = false} = {}, thisArg) {
