@@ -2,7 +2,6 @@
 layout: post
 
 title: Tip para medir el rendimiento de un bloque de Javascript
-
 tip-number: 13
 tip-username: manmadareddy
 tip-username-profile: https://twitter.com/manmadareddy

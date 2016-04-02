@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Improve Nested Conditionals
+title: Mejorar anidaciones Condicionales
 tip-number: 03
 tip-username: AlbertoFuente 
 tip-username-profile: https://github.com/AlbertoFuente
-tip-tldr: How can we improve and make a more efficient nested `if` statement in javascript?
+tip-tldr: ¿Cómo podemos mejorar y hacer una declaración anidada `if` más eficiente en javascript?
 
 categories:
-    - en
+    - es_ES
 ---
 
-How can we improve and make a more efficient nested `if` statement in javascript?
+¿Cómo podemos mejorar y hacer una declaración anidada `if` más eficiente en javascript?
 
 ```javascript
 if (color) {
@@ -29,7 +29,7 @@ if (color) {
 }
 ```
 
-One way to improve the nested `if` statement would be using the `switch` statement. Although it is less verbose and is more ordered, it's not recommended to use it because it's so difficult to debug errors. Here's [why](https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
+Una forma de mejorar el `if` anidado sería usar `switch`. Aunque es menos verbosa y está más ordenado, no se recomienda su uso porque es muy difícil de depurar errores. Aquí [por eso] (https://toddmotto.com/deprecating-the-switch-statement-for-object-literals/).
 
 ```javascript
 switch(color) {
@@ -50,8 +50,8 @@ switch(color) {
 }
 ```
 
-But what if we have a conditional with several checks in each statement? In this case, if we want it less verbose and more ordered, we can use the conditional `switch`.
-If we pass `true` as a parameter to the `switch` statement, it allows us to put a conditional in each case.
+Pero lo que si tenemos un condicional con varios controles en cada declaración? en este caso, si queremos que sean menos detalladas y más ordenada, podemos utilizar el condicional `switch`.
+Si pasamos `true` como parámetro a la declaración `switch`, que nos permite colocar un condicional en cada caso.
 
 ```javascript
 switch(true) {
@@ -73,7 +73,7 @@ switch(true) {
 }
 ```
 
-But we must always avoid having several checks in every condition and avoid using `switch` as much as possible. We also must take into account that the most efficient way to do this is through an `object`.
+Pero siempre hay que evitar tener varios controles en todas las condiciones y evitar el uso de `switch` tanto como sea posible. También hay que tener en cuenta que la forma más eficiente de hacer esto es a través de un `object`.
 
 ```javascript
 var colorObj = {
@@ -89,4 +89,4 @@ if (color in colorObj) {
 }
 ```
 
-Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+Aqui puede obtener mas informacion [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).

@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Pseudomandatory parameters in ES6 functions
+title: Pseudo parámetros obligatorios en funciones ES6
 tip-number: 12
 tip-username: Avraam Mavridis
 tip-username-profile: https://github.com/AvraamMavridis
-tip-tldr: In many programming languages the parameters of a function are by default mandatory and the developer has to explicitly define that a parameter is optional.
+tip-tldr: En muchos lenguajes de programación, los parámetros de una función por defecto son obligatorios y el desarrollador tiene que definir explícitamente que un parámetro es opcional.
 
 categories:
-    - en
+    - es_ES
 ---
 
-In many programming languages the parameters of a function are by default mandatory and the developer has to explicitly define that a parameter is optional. In Javascript, every parameter is optional, but we can enforce this behavior without messing with the actual body of a function, taking advantage of [**es6's default values for parameters**] (http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values) feature.
+En muchos lenguajes de programación, los parámetros de una función por defecto son obligatorios y el desarrollador tiene que definir explícitamente que un parámetro es opcional. En Javascript, cada parámetro es opcional, pero puede hacer cumplir este comportamiento sin jugar con el propio cuerpo de una función, aprovechando [** valores predeterminados para los parámetros de es6's **] (http://exploringjs.com/es6/ch_parameter -handling.html # sec_parameter-valores por defecto).
 
 ```javascript
 const _err = function( message ){
@@ -24,4 +24,4 @@ getSum( 10 ) // throws Error, b is not defined
 getSum( undefined, 10 ) // throws Error, a is not defined
  ```
 
- `_err` is a function that immediately throws an Error. If no value is passed for one of the parameters, the default value is going to be used, `_err` will be called and an Error will be thrown. You can see more examples for the **default parameters feature** on [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+ `_err` es una función que lanza inmediatamente un error. Si no se pasa ningún valor para uno de los parámetros, el valor predeterminado se va a utilizar, `_err` serán tratados y se emite un error. Se puede ver más ejemplos para **caracteristicas de parámetros por defecto** en [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)

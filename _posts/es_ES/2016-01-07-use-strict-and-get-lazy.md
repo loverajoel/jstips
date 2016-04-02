@@ -1,23 +1,23 @@
 ---
 layout: post
 
-title: use strict and get lazy
+title: Utilice strict y obtenga lazy
 tip-number: 07
 tip-username: nainslie
 tip-username-profile: https://twitter.com/nat5an
-tip-tldr: Strict-mode JavaScript makes it easier for the developer to write "secure" JavaScript.
+tip-tldr: Modo estricto en JavaScript hace que sea más fácil para los desarrolladores para escribir "seguro".
 
 categories:
-    - en
+    - es_ES
 ---
 
-Strict-mode JavaScript makes it easier for the developer to write "secure" JavaScript.
+Modo estricto en JavaScript hace que sea más fácil para los desarrolladores para escribir "seguro".
 
-By default, JavaScript allows the programmer to be pretty careless, for example, by not requiring us to declare our variables with "var" when we first introduce them.  While this may seem like a convenience to the unseasoned developer, it's also the source of many errors when a variable name is misspelled or accidentally referred to out of its scope.
+De forma predeterminada, JavaScript permite al programador ser bastante descuidado, por ejemplo, al no requerir que declaremos nuestras variables con "var". Si bien esto puede parecer como una conveniencia para el desarrollador experimentado, que es también la fuente de muchos errores cuando un nombre de variable está mal escrito o accidentalmente se refirió a salir de su scope de aplicación.
 
-Programmers like to make the computer do the boring stuff for us, and automatically check our work for mistakes. That's what the JavaScript "use strict" directive allows us to do, by turning our mistakes into JavaScript errors.
+Los programadores como para hacer que el ordenador haga las cosas aburridas para nosotros, y automáticamente comprobar nuestro trabajo por los errores. Eso es lo que el código JavaScript "use strict" directiva nos permite hacer, haciendo nuestros errores en errores de JavaScript.
 
-We add this directive either by adding it at the top of a js file:
+Añadimos esta directiva ya sea que en la parte superior de un archivo JS:
 
 ```javascript
 // Whole-script strict mode syntax
@@ -25,7 +25,7 @@ We add this directive either by adding it at the top of a js file:
 var v = "Hi!  I'm a strict mode script!";
 ```
 
-or inside a function:
+o dentro de la funcion:
 
 ```javascript
 function f()
@@ -38,24 +38,24 @@ function f()
 function f2() { return "I'm not strict."; }
 ```
 
-By including this directive in a JavaScript file or function, we will direct the JavaScript engine to execute in strict mode which disables a bunch of behaviors that are usually undesirable in larger JavaScript projects.  Among other things, strict mode changes the following behaviors:
+Con la inclusión de esta directiva en un archivo o una función de JavaScript, vamos a dirigir el motor de JavaScript que se ejecutará en modo estricto que desactiva un grupo de comportamientos que son por lo general no deseable en proyectos de JavaScript más grandes. Entre otras cosas, el modo estricto cambia los siguientes comportamientos:
 
-* Variables can only be introduced when they are preceded with "var"
-* Attempting to write to read-only properties generates a noisy error
-* You have to call constructors with the "new" keyword
-* "this" is not implicitly bound to the global object
-* Very limited use of eval() allowed
-* Protects you from using reserved words or future reserved words as variable names
+* Las variables sólo pueden ser introducidos cuando van precedidas con "var"
+* El intento de escribir las propiedades de sólo lectura genera un error de ruido
+* Tienes que llamar a los constructores con la palabra clave "new"
+* "this" no está vinculado de manera implícita al objeto global
+* Un uso permitido muy limitado de eval()
+* Protege el uso de palabras reservadas o futuros palabras reservadas como nombres de variables
 
-Strict mode is great for new projects, but can be challenging to introduce into older projects that don't already use it in most places.  It also can be problematic if your build chain concatenates all your js files into one big file, as this may cause all files to execute in strict mode.
+El modo estricto es ideal para nuevos proyectos, pero puede ser difícil de introducir en los proyectos más antiguos que aún no lo utilizan en la mayoría de lugares. También puede ser problemático si su cadena de acumulación concatena todos sus archivos js en un archivo grande, ya que esto puede causar todos los archivos que se ejecutan en modo estricto.
 
-It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
-Strict mode is supported in:
+No es una declaración, sino una expresión literal, ignorada por las versiones anteriores de JavaScript.
+El modo estricto se apoya en:
 
-* Internet Explorer from version 10.
-* Firefox from version 4.
-* Chrome from version 13.
-* Safari from version 5.1.
-* Opera from version 12.
+* Internet Explorer desde version 10.
+* Firefox desde version 4.
+* Chrome desde version 13.
+* Safari desde version 5.1.
+* Opera desde version 12.
 
-[See MDN for a fuller description of strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+[Ver MDN para una descripción más completa de modo estricto](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).

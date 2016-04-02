@@ -1,17 +1,17 @@
 ---
 layout: post
 
-title: Converting a Node List to an Array
+title: Convitiendo una Node List a un Array.
 tip-number: 08
 tip-username: Tevko
 tip-username-profile: https://twitter.com/tevko
-tip-tldr: Here's a quick, safe, and reusable way to convert a node list into an array of DOM elements.
+tip-tldr: Aquí está una manera rápida, segura y reutilizable para convertir una lista de nodos en un Array de elementos del DOM.
 
 categories:
-    - en
+    - es_ES
 ---
 
-The `querySelectorAll` method returns an array-like object called a node list. These data structures are referred to as "Array-like", because they appear as an array, but can not be used with array methods like `map` and `forEach`. Here's a quick, safe, and reusable way to convert a node list into an array of DOM elements:
+El método `querySelectorAll` devuelve un array similar a un objeto, llamado una lista de nodos. Estas estructuras de datos se denominan como "Array-like", porque aparecen como un array, pero no se pueden utilizar con los métodos de matriz como `map` y `forEach`. Aquí está una manera rápida, segura y reutilizable para convertir una lista de nodos en un Array de elementos del DOM:
 
 ```javascript
 const nodelist = document.querySelectorAll('div');
@@ -26,9 +26,9 @@ nodelistToArray.slice(...);
 //etc...
 ```
 
-The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array-like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
+El método `apply` se utiliza para pasar una serie de argumentos a una función con un determinado valor de `this`.[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) afirma que `apply` tendrá un objeto de tipo vector, que es exactamente lo que `querySelectorAll` retorna. Dado que no es necesario especificar un valor para `this` en el contexto de la función, se pasa en `null` o `0`. El resultado es una matriz real de los elementos DOM que contiene todos los métodos de arreglos disponibles.
 
-Or if you are using ES2015 you can use the [spread operator `...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+O si esta utilizando ES2015 puede usar esto [spread operator `...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
 ```js
 const nodelist = [...document.querySelectorAll('div')]; // returns a real array

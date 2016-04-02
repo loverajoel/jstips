@@ -1,19 +1,19 @@
 ---
 layout: post
 
-title: Writing a single method for arrays and a single element
+title: Escribir un método único para los arrays y elemento unico
 tip-number: 06
 tip-username: mattfxyz
 tip-username-profile: https://twitter.com/mattfxyz
-tip-tldr: Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
+tip-tldr: En lugar de escribir métodos separados para manejar un array y un único parámetro elemento, escriba sus funciones para que puedan manejar ambos. Esto es similar a la forma en que algunas de las funciones de jQuery trabaja(`css` modificará todos los que coinciden con el selector).
 
 categories:
-    - en
+    - es_ES
 ---
 
-Rather than writing separate methods to handle an array and a single element parameter, write your functions so they can handle both. This is similar to how some of jQuery's functions work (`css` will modify everything matched by the selector).
+En lugar de escribir métodos separados para manejar un array y un único parámetro elemento, escriba sus funciones para que puedan manejar ambos. Esto es similar a la forma en que algunas de las funciones de jQuery trabaja(`css` modificará todos los que coinciden con el selector).
 
-You just have to concat everything into an array first. `Array.concat` will accept an array or a single element.
+Sólo tienes que concatenar todo en un array. `Array.concat` aceptará un array o un elemento único.
 
 ```javascript
 function printUpperCase(words) {
@@ -24,7 +24,7 @@ function printUpperCase(words) {
 }
 ```
 
-`printUpperCase` is now ready to accept a single node or an array of nodes as its parameter.
+`printUpperCase` ya está listo para aceptar un único nodo o un conjunto de nodos como su parámetro.
 
 ```javascript
 printUpperCase("cactus");

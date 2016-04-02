@@ -5,27 +5,26 @@ title: AngularJs - `$digest` vs `$apply`
 tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
+tip-tldr: Los pasos para crear modulos en Javascript son cada vez más numerosos y complicados, pero ¿qué hay de los boilerplate en los nuevos frameworks?
 
 categories:
-    - en
+    - es_ES
 ---
 
-One of the most appreciated features of AngularJs is the two-way data binding. In order to make this work AngularJs evaluates the changes between the model and the view through cycles(`$digest`). You need to understand this concept in order to understand how the framework works under the hood.
+Una de las características más apreciadas de AngularJS es el de dos vías de enlace de datos. Con el fin de hacer de este trabajo AngularJS evalúa los cambios entre el modelo y la vista a través de ciclos (`$digest`). Es necesario comprender este concepto con el fin de entender cómo funciona el framework bajo el capó.
 
-Angular evaluates each watcher whenever one event is fired. This is the known `$digest` cycle.
-Sometimes you have to force it to run a new cycle manually and you must choose the correct option because this phase is one of the most influential in terms of performance.
+Angular evalúa cada observador cuando se dispara un evento. Este es el conocido ciclo de `$digest`.
+A veces hay que obligarlo a realizar un nuevo ciclo de forma manual y debe elegir la opción correcta porque esta fase es uno de los más influyentes en términos de rendimiento.
 
 ### `$apply`
-This core method lets you to start the digestion cycle explicitly. That means that all watchers are checked; the entire application starts the `$digest loop`. Internally, after executing an optional function parameter, it calls `$rootScope.$digest();`.
+Este método del core le permite iniciar el ciclo de digestión de forma explícita. Eso significa que todos los observadores son comprobados; toda la aplicación se inicia el `$digest loop`. Internamente, después de ejecutar un parámetro de la función opcional, se llama `$rootScope.$digest();`.
 
 ### `$digest`
-In this case the `$digest` method starts the `$digest` cycle for the current scope and its children. You should notice that the parent's scopes will not be checked.
- and not be affected.
+En este caso, el método `$digest` inicia el ciclo `$digest` para el scope actual y sus descendientes. Usted debe notar que los padres scopes, no serán revisadas, y no se verá afectada.
 
-### Recommendations
-- Use `$apply` or `$digest` only when browser DOM events have triggered outside of AngularJS.
-- Pass a function expression to `$apply`, this has an error handling mechanism and allows integrating changes in the digest cycle.
+### Recomendaciones
+- Use `$apply` o `$digest` sólo cuando eventos del DOM han disparado fuera del AngularJS.
+- Pasar una expresión de función a `$apply`, esto tiene un mecanismo de control de errores y permite la integración de los cambios en el ciclo de digestión.
 
 ```javascript
 $scope.$apply(() => {
@@ -33,6 +32,6 @@ $scope.$apply(() => {
 });
 ```
 
-- If you only need to update the current scope or its children, use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit is self-evident.
-- `$apply()` is a hard process for the machine and can lead to performance issues when there is a lot of binding.
-- If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
+- Si sólo necesita actualizar el scope actual o sus hijos, usar `$digest`, y evitar un nuevo ciclo de digest para toda la aplicación. La ventaja de rendimiento es evidente por sí mismo.
+- `$apply()` es un proceso difícil para la máquina y puede conducir a problemas de rendimiento cuando hay una gran cantidad de unión.
+- Si está utilizando >AngularJS 1.2.X, usar `$evalAsync`, que es un método básico que evaluará la expresión durante el ciclo actual o el siguiente. Esto puede mejorar el rendimiento de su aplicación.

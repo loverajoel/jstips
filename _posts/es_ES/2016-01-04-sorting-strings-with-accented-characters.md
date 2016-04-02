@@ -1,26 +1,26 @@
 ---
 layout: post
 
-title: Sorting strings with accented characters
+title: Ordenando cadenas con caracteres acentuados
 tip-number: 04
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: Javascript has a native method **sort** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. But when you try order an array of non ASCII characters you will obtain a strange result.
+tip-tldr: Javascript tiene un método nativo **sort**  que permite ordenar matrices. Haciendo un simple `array.sort()` va a tratar a cada entrada del array como una cadena y va a tratar de ordenarla alfabéticamente. Pero cuando intenta ordenar un array de caracteres no ASCII obtendrá un resultado extraño.
 
 categories:
-    - en
+    - es_ES
 ---
 
-Javascript has a native method **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. Also you can provide your [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters) function.
+Javascript tiene un método nativo **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** que permite ordenar arrays. Haciendo una simple `array.sort()` va a tratar a cada entrada de la matriz como una cadena y va a tratar de ordenarla alfabéticamente. También puede proporcionar la funcion [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters).
 
 ```javascript
 ['Shanghai', 'New York', 'Mumbai', 'Buenos Aires'].sort();
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
 
-But when you try order an array of non ASCII characters like this `['é', 'a', 'ú', 'c']`, you will obtain a strange result `['c', 'e', 'á', 'ú']`. That happens because sort works only with the English language.
+Pero cuando intenta para un array de caracteres no ASCII como esto `['E', 'a', 'U', 'c']`, se obtendrá un resultado extraño `[' c ',' e ',' A ',' U ']'. Eso sucede porque sort sólo funciona con el idioma Inglés.
 
-See the next example:
+Mire el siguiente ejemplo:
 
 ```javascript
 // Spanish
@@ -32,11 +32,11 @@ See the next example:
 // ["Wann", "Woche", "wäre", "wöchentlich"] // bad order
 ```
 
-Fortunately, there are two ways to overcome this behavior [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) provided by ECMAScript Internationalization API.
+Afortunadamente, hay dos maneras de superar este comportamiento [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) and [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator).
 
-> Both methods have their own custom parameters in order to configure it to work adequately.
+> Ambos métodos tienen sus propios parámetros personalizados con el fin de configurarlo para que funcione adecuadamente.
 
-### Using `localeCompare()`
+### Usando `localeCompare()`
 
 ```javascript
 ['único','árbol', 'cosas', 'fútbol'].sort(function (a, b) {
@@ -50,7 +50,7 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 // ["Wann", "wäre", "Woche", "wöchentlich"]
 ```
 
-### Using `Intl.Collator()`
+### Usando `Intl.Collator()`
 
 ```javascript
 ['único','árbol', 'cosas', 'fútbol'].sort(Intl.Collator().compare);
@@ -60,7 +60,7 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 // ["Wann", "wäre", "Woche", "wöchentlich"]
 ```
 
-- For each method you can customize the location.
-- According to [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator is faster when comparing large numbers of strings.
+- Para cada método se puede personalizar la ubicación.
+- De acuerdo a [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator es más rápida cuando se compara un gran número de cadenas.
 
-So when you are working with arrays of strings in a language other than English, remember to use this method to avoid unexpected sorting.
+Así que cuando se trabaja con arrays de cadenas en un idioma distinto del Inglés, recuerde utilizar este método para evitar la clasificación inesperado.

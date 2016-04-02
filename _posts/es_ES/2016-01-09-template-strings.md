@@ -5,16 +5,16 @@ title: Template Strings
 tip-number: 09
 tip-username: JakeRawr
 tip-username-profile: https://github.com/JakeRawr
-tip-tldr: As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
+tip-tldr: A partir de ES6, JS ahora tiene template strings.
 
 categories:
-    - en
+    - es_ES
 ---
 
-As of ES6, JS now has template strings as an alternative to the classic end quotes strings.
+A partir de ES6, JS ahora tiene template strings
 
-Ex:
-Normal string
+Ejemplo:
+String normal
 
 ```javascript
 var firstName = 'Jake';
@@ -31,9 +31,8 @@ console.log(`My name is ${firstName} ${lastName}`);
 // My name is Jake Rawr
 ```
 
-You can do multi-line strings without `\n` and simple logic (ie 2+3) inside `${}` in template strings.
+Usted puede hacer strings multilínea sin `\n' y lógica simple (ie 2+3) en el interior `$ {}` en template strings.
 
-You are also able to to modify the output of template strings using a function; they are called [tagged template strings]
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings) for example usages of tagged template strings.
+Usted también es capaz de modificar la salida de template strings utilizando una función; se les llama [template strings etiquetados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings), por ejemplo los usos de cadenas de la plantilla etiquetados.
 
-You may also want to [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2) to understand template strings more.
+Tambien puede leer mas sobre Template Strings [read](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2).
