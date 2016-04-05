@@ -13,7 +13,7 @@ categories:
 
 You're going to run into some instances where you'll be using `new` to allocate new objects in JavaScript. It's going to blow your mind unless you read this tip to understand what's happening behind the scenes.
 
-The `new` operator in JavaScript is an operator that, under reasonable circumstances, return a new instance of an object. Let's say we have a constructor function:
+The `new` operator in JavaScript is an operator that, under reasonable circumstances, returns a new instance of an object. Let's say we have a constructor function:
 
 ````js
 function Thing() {
