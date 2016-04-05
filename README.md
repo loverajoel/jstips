@@ -30,6 +30,7 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 52 - [Return Values with the 'new' Operator](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-04-05-return-values-with-the-new-operator.md)
 - 51 - [DOM event listening made easy](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-03-16-DOM-event-listening-made-easy.md)
 - 50 - [Helpful Console Logging Tricks](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-03-03-helpful-console-log-hacks.md)
 - 49 - [Easiest way to extract Unix timestamps](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-02-26-extract-unix-timestamp-easily.md)
