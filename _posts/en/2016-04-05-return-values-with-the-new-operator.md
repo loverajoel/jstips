@@ -2,7 +2,7 @@
 layout: post
 
 title: Return Values with the 'new' Operator
-tip-number: 50
+tip-number: 52
 tip-username: Morklympious
 tip-username-profile: https://github.com/morklympious
 tip-tldr: Understand what gets returned when using new vs. not using new.
