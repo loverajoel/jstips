@@ -26,6 +26,8 @@ var args = [].slice.call(arguments);
 ```
 In this case, instead of calling `slice` from the `Array` prototype, it is simply being called from an empty array literal.
 
+However, the performance of `Array.prototype.slice.call(arguments);` is better than `[].slice.call(arguments);`, here is the [JsPerf](http://jsperf.com/array-vs-array-literal-for-arguments)
+
 ###Optimization
 
 Unfortunately, passing `arguments` into any function call will cause the V8 JavaScript engine used in Chrome and Node to skip optimization on the function that does this, which can result in considerably slower performance. See this article on [optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers). Passing `arguments` to any other function is known as *leaking `arguments`*.
