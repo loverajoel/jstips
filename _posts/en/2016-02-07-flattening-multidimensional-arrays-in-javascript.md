@@ -53,8 +53,17 @@ for (var i = 0; i < myArray.length; ++i) {
 console.log(myNewArray3);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-Take a look [here](https://jsbin.com/qeqicu/edit?js,console) these 3 algorithms in action.
 
-For infinitely nested array try Underscore [flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501).
+### Solution 4: Using [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) in ES6
+
+```js
+var myNewArray4 = [].concat(...myArray);
+console.log(myNewArray4);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+Take a look [here](https://jsbin.com/janana/edit?js,console) these 4 algorithms in action.
+
+For infinitely nested array try Lodash [flattenDeep()](https://lodash.com/docs#flattenDeep).
 
 If you are curious about performance, [here](http://jsperf.com/flatten-an-array-loop-vs-reduce/6) a test for check how it works.
