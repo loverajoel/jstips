@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: 'new'的返回值
+title: new的返回值
 tip-number: 52
 tip-username: Morklympious
 tip-username-profile: https://github.com/morklympious
