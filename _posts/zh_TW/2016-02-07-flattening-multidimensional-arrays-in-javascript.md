@@ -55,6 +55,20 @@ console.log(myNewArray3);
 ```
 在[這裡](https://jsbin.com/qeqicu/edit?js,console)觀察三種方式的實際應用。
 
+### 方案四：使用 ES6 的[展開運算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+
+```js
+var myNewArray4 = [].concat(...myArray);
+console.log(myNewArray4);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+在[這裡](https://jsbin.com/janana/edit?js,console) 查看這四個方法的
+
+如果需要無限的巢狀陣列嘗試使用 Lodash 的 [flattenDeep()](https://lodash.com/docs#flattenDeep)。
+
+如果你擔心效能問題的話，[這裡](http://jsperf.com/flatten-an-array-loop-vs-reduce/6) 有一個測試讓你來確認它們是如何執行的。
+
 對於較大的巢狀陣列可以嘗試使用 Underscore 的 [flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501)。
 
 如果你好奇效能方面的表現, [這裡](http://jsperf.com/flatten-an-array-loop-vs-reduce/6)有相關的測試。
