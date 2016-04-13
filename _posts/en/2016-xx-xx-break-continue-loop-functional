@@ -32,11 +32,12 @@ A quick approach is to use __.forEach__ but
 then we lack the ability to `break`. In this situation the closest we get is `continue` functionality through `return`.
 
 ```javascript
-a.forEach(function(val, index, arr) {
+a.forEach(function(val, i) {
     if (val === 2) {
         // how do we stop?
         return true;
     }
+    console.log(val); // your code
 });
 //> 0, 1, 3, 4
 ```
@@ -50,11 +51,10 @@ a.some(function(val, i) {
     console.log(val); // your code
 });
 //> 0, 1
-//> true
 ```
 
 
-You keep returning `false` to make it `continue` to next input. When you return `true`, the loop will `break` and __a.some(..)__ will `return` `true`.
+You keep returning `false` to make it `continue` to next item. When you return `true`, the loop will `break` and __a.some(..)__ will `return` `true`.
 
 ```javascript
 // Array contains 2
