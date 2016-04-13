@@ -34,9 +34,18 @@ for (var i = 0; i < a.length; i++) {
 // 0, 1
 ```
 
-Lets do it in using .some
+The __.some__ is a method on Array prototype. It tests whether some element in the array passes the test implemented by the provided function. If any value is returning true, then it stops executing. Here is a [MDN link](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some) for more details.
 
-__.some__ is a method on Array prototype, which checks if code execution on any value is returning true. Then it stops executing.
+An example quoted from that link
+```javascript
+function isBiggerThan10(element, index, array) {
+  return element > 10;
+}
+[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[12, 5, 8, 1, 4].some(isBiggerThan10); // true
+```
+
+Now let's continue on our work using __.some__ method.
 
 ```javascript
 // continue
