@@ -40,6 +40,8 @@ function getFileExtension2(filename) {
 }
 ```
 
+Those two solutions couldnot handle some edge cases, here is another more robust solution.
+
 ### Solution3: String `slice`, `lastIndexOf` methods
 
 ```js
@@ -47,19 +49,28 @@ function getFileExtension3(filename) {
   return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
 }
 
-console.log(getFileExtension3(''));                         // ''
-console.log(getFileExtension3('name'));                     // ''
-console.log(getFileExtension3('name.txt'));                 // 'txt'   
-console.log(getFileExtension3('.htpasswd'));                // ''
-console.log(getFileExtension3('name.with.many.dots.myext'));// 'myext'
+console.log(getFileExtension3(''));                            // ''
+console.log(getFileExtension3('filename'));                    // ''
+console.log(getFileExtension3('filename.txt'));                // 'txt'   
+console.log(getFileExtension3('.hiddenfile'));                 // ''
+console.log(getFileExtension3('filename.with.many.dots.ext')); // 'ext'
 ```
 
 _How does it works?_
 
-- [`String.lastIndexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf) method returns the last position of the substring (i.e. `"."`) in the given string (i.e. `filename`). If the substring is not found method returns `-1`.
-- The `"unacceptable"` positions of dot in the filename are `-1` and `0`, which respectively refer to names with no extension (e.g. `"name"`) and to names that start with dot (e.g. `".htpasswd"`).
-- [Zero-fill right shift operator (>>>)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3E%3E%3E_%28Zero-fill_right_shift%29) if used with zero affects negative numbers transforming `-1` to `4294967295` and `-2` to `4294967294`, which is useful for remaining the filename unchanged in the edge cases (sort of a trick here).
-- [String.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) extracts the part of the filename from the position that was calculated as described. If the position number is more than the length of the string method returns `""`.
+- [`String.lastIndexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf) method returns the last occurrence of the specified value (`'.'` in this case). Returns `-1` if the value is not found.
+- The return values of `'filename'` and `'.hiddenfile'` are `0` and `-1` respectively. [Zero-fill right shift operator (>>>)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3E%3E%3E_%28Zero-fill_right_shift%29) will transform `-1` to `4294967295` and `-2` to `4294967294`, here is one trick to remaining the filename unchanged in those edge cases.
+- [String.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) extracts file extension from the index that was calculated above. If the index is more than the length of the filename, the result is `""`.
+
+### Comparation
+
+| Solution                                  | Paramters           | Results  |
+| ----------------------------------------- |:-------------------:|:--------:|
+| Solution 1: Regular Expression            | ''<br>  'filename' <br> 'filename.txt' <br> '.hiddenfile' <br> 'filename.with.many.dots.ext' | undefined <br> undefined <br> 'txt' <br> 'hiddenfile' <br> 'ext' <br> |
+| Solution 2: String `split`                | ''<br>  'filename' <br> 'filename.txt' <br> '.hiddenfile' <br> 'filename.with.many.dots.ext'            | '' <br> 'filename' <br> 'txt' <br> 'hiddenfile' <br> 'ext' <br> |
+| Solution 3: String `slice`, `lastIndexOf` | ''<br>  'filename' <br> 'filename.txt' <br> '.hiddenfile' <br> 'filename.with.many.dots.ext'            | '' <br> '' <br> 'txt' <br> '' <br> 'ext' <br> |
+
+### Live Demo and Performance
 
 [Here](https://jsbin.com/tipofu/edit?js,console) is the live demo of the above codes.
 
