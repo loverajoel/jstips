@@ -2,7 +2,7 @@
 layout: post
 
 title: Get File Extension
-tip-number: xx
+tip-number: 53
 tip-username: richzw
 tip-username-profile: https://github.com/richzw
 tip-tldr: How to get the file extension more efficiently?
