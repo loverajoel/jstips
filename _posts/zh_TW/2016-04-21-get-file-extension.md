@@ -58,7 +58,7 @@ console.log(getFileExtension3('filename.with.many.dots.ext')); // 'ext'
 
 _它是如何處理的呢？_
 
-- [String.lastIndexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf) 方法回傳最後一個符合指定的值（在範例中的 `'.'`）。如果找不到職責回傳 `-1`。
+- [String.lastIndexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf) 方法回傳最後一個符合指定的值（在範例中的 `'.'`）。如果找不到值則回傳 `-1`。
 - 對於參數 `'filename'` 和 `'.hidden'` 的 `lastIndexOf` 的回傳值，分別為 `0` 和 `1`。[無符號右移運算子（>>>）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3E%3E%3E_%28Zero-fill_right_shift%29) 會將 `-1` 轉換成 `4294967295` 和將 `-2` 轉換成 `4294967294`，這裡是一個小技巧來確保在邊緣情況下檔案名稱不會改變。
 - [String.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 從上面計算的索引中提取檔副檔名。如果索引超過檔案的長度，那結果會是 `""`。
 
