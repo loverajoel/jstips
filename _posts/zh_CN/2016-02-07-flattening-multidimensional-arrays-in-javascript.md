@@ -55,6 +55,20 @@ console.log(myNewArray3);
 ```
 在[这里](https://jsbin.com/qeqicu/edit?js,console)看一下三种逻辑的实际作用。
 
-对于无限嵌套的数组试一下Underscore的[flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501).
+### 方案四：使用 ES6 的[展开运算符](https://developer.mozilla.org/zh－CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+
+```js
+var myNewArray4 = [].concat(...myArray);
+console.log(myNewArray4);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+在[这里](https://jsbin.com/janana/edit?js,console) 查看这四种方法
+
+对于无限嵌套的数组请使用 Lodash 的 [flattenDeep()](https://lodash.com/docs#flattenDeep)。
+
+如果你担心性能问题的话，[这里](http://jsperf.com/flatten-an-array-loop-vs-reduce/6) 有一个测试让你确认他们是如何执行的。
+
+对于较大的数组试一下Underscore的[flatten()](https://github.com/jashkenas/underscore/blob/master/underscore.js#L501).
 
 如果你对性能好奇，[这里](http://jsperf.com/flatten-an-array-loop-vs-reduce/6)有一个测试。

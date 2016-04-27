@@ -29,7 +29,7 @@ console.log(a.readonly); // 15
 语法如下：
 
 ```js
-Object.defineProperty(dest, propName, options)
+Object.defineProperty(dest, propName, options);
 ```
 
 或者定义多个：
@@ -38,7 +38,7 @@ Object.defineProperty(dest, propName, options)
 Object.defineProperties(dest, {
   propA: optionsA,
   propB: optionsB, //...
-})
+});
 ```
 
 `options`包含如下的属性：
@@ -60,14 +60,14 @@ Object.defineProperty(obj, 'myPrivateProp', {value: val, enumerable: false, writ
 
 var obj = {
   getTypeFromExternal(): true // illegal in ES5.1
-}
+};
 
 Object.defineProperty(obj, getTypeFromExternal(), {value: true}); // ok
 
 // For the example sake, ES6 introduced a new syntax:
 var obj = {
   [getTypeFromExternal()]: true
-}
+};
 ```
 
 还没有结束！高级特性允许我们创建**getter**和**setter**，就像其他面向对象(OOP)语言！这种情况下，我们不能使用`writable`、`enumerable`和`configurable`参数，而是：
@@ -81,7 +81,7 @@ function Foobar () {
     set: function (value) { _foo = value }
   });
 
-}
+};
 
 var foobar = new Foobar();
 foobar.foo; // 15
@@ -99,9 +99,9 @@ var obj = {a: {b: {c: [{d: 10}, {d: 20}] } } };
 ```js
 Object.defineProperty(obj, 'firstD', {
   get: function () { return a && a.b && a.b.c && a.b.c[0] && a.b.c[0].d }
-})
+});
 
-console.log(obj.firstD) // 10
+console.log(obj.firstD); // 10
 ```
 
 ### 提示

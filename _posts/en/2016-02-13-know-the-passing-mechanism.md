@@ -55,7 +55,7 @@ console.log(me);			// 4  : {'partOf' : 'A Group'}
 	
 ```
 
-In the case of `myGroup` invocation, we are passing the object `me`. But unlike the example 1 scenario, we are not assigning this `me` variable to any new object, effectively meaning the object reference value within the `myGroup` function scope still is the original object's reference value and when we are modifying the property within this scope, it is effectively modifying the original object's property. Hence, you get the output from #`7`.
+In the case of `myGroup` invocation, we are passing the object `me`. But unlike the example 1 scenario, we are not assigning this `me` variable to any new object, effectively meaning the object reference value within the `myGroup` function scope still is the original object's reference value and when we are modifying the property within this scope, it is effectively modifying the original object's property. Hence, you get the output from #`4`.
 
 So does this later case not prove that javascript is pass-by-reference? No, it does not. Remember, *JavaScript passes the reference as value, in case of objects*. The confusion arises as we tend not to understand fully what pass by reference is. This is the exact reason, some prefer to call this as *call-by-sharing*.
 

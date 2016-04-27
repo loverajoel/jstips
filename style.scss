@@ -1112,6 +1112,19 @@ footer {
   background-repeat: no-repeat;
 }
 
+.post .entry table * {
+    width: initial
+}
+
+.post .entry table {
+    width: initial
+}
+
+.post .entry table td, .post .entry table tr {
+    border: 1px solid #ccc;
+    font-size: 15px
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
