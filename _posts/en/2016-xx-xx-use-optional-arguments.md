@@ -15,7 +15,10 @@ Example function where arguments 2 and 3 are optional
 ```js
     function example( err, optionalA, optionalB, callback ) {
         // retrieve arguments as array
-        var args = [].slice.call(arguments);
+        var args = new Array(arguments.length);
+        for(var i = 0; i < args.length; ++i) {
+            args[i] = arguments[i];
+        };
         
         // first argument is the error object
         // shift() removes the first item from the
