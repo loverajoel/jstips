@@ -165,7 +165,7 @@ transl:
       subscribe: 
         txt: Suscribirse
       submit_your_tip:
-        txt: Envianos tu tip
+        txt: Enviá tu tip
         link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_es_ES.md
     footer_subscribe_message: Envianos tu fantastico tips diario!
     footer_placeholder_subscribe: your@email.com
