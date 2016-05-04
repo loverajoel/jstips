@@ -52,6 +52,22 @@ Example function where arguments 2 and 3 are optional
 
     }
 
+    // ES6 with shorter, more terse code
+    function example(...args) {
+        // first argument is the error object
+        const err = args.shift();
+        // if last argument is a function then its the callback function
+        const callback = (typeof args[args.length-1] === 'function') ? args.pop() : null;
+
+        // if args still holds items, these are your optional items which you could retrieve one by one like this:
+        const optionalA = (args.length > 0) ? args.shift() : null;
+        const optionalB = (args.length > 0) ? args.shift() : null;
+        // ... repeat for more items
+
+        if (err && callback) return callback(err);
+
+        /* do your thing */
+    }
 
     // invoke example function with and without optional arguments
     
