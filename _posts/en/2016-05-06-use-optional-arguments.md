@@ -2,7 +2,7 @@
 layout: post
 
 title: How to use optional arguments in functions (with optional callback)
-tip-number: xx
+tip-number: 54
 tip-username: alphashuro
 tip-username-profile: https://github.com/alphashuro
 tip-tldr: You can make function arguments and callback optional
