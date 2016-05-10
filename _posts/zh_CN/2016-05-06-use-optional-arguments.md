@@ -78,6 +78,6 @@ categories:
     example(null, 'AAAA', 'BBBB', function (err) {});
 ```
 
-### How do you determine if optionalA or optionalB is intended?
+### 如何保证optionalA和optionalB是预期的值?
 
-Design your function to require optionalA in order to accept optionalB
+设计你的函数，使其在接收optionalB时optionalA为必选参数。
