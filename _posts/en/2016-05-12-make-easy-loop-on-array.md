@@ -5,7 +5,7 @@ title: Create an easy loop using an array
 tip-number: 55
 tip-username: jamet-julien
 tip-username-profile: https://github.com/jamet-julien
-tip-tldr: Create an easy loop using an array 
+tip-tldr: Sometimes, we need to loop endlessly over an array of items, like a carousel of images or an audio playlist. Here’s how to take an array and give it “looping powers” 
 
 categories:
     - en
