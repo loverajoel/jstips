@@ -2,7 +2,7 @@
 layout: post
 
 title: Create an easy loop using an array
-tip-number: xx
+tip-number: 55
 tip-username: jamet-julien
 tip-username-profile: https://github.com/jamet-julien
 tip-tldr: Create an easy loop using an array 
