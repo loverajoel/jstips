@@ -29,7 +29,7 @@ var filteredAndSortedKeywords = keywords
       return keywords.lastIndexOf(keyword) === index;
     })
   .sort(function (a, b) {
-      return a < b ? -1 : 1;
+      return a.localeCompare(b);
     });
 ```
 
@@ -38,7 +38,7 @@ The **ES6** (ECMAScript 2015) version using [arrow functions](https://developer.
 ```js
 const filteredAndSortedKeywords = keywords
   .filter((keyword, index) => keywords.lastIndexOf(keyword) === index)
-  .sort((a, b) => a < b ? -1 : 1);
+  .sort((a, b) => a.localeCompare(b));
 ```
 
 And this is the final filtered and sorted list of JavaScript reserved keywords:
