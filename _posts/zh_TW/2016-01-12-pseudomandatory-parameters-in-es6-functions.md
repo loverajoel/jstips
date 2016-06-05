@@ -22,6 +22,6 @@ const getSum = (a = _err('a is not defined'), b = _err('b is not defined')) => a
 
 getSum( 10 ) // 拋出錯誤，b 沒有被定義
 getSum( undefined, 10 ) // 拋出錯誤，a 沒有被定義
- ```
+```
 
  `_err` 是一個函式可以立即拋出錯誤。如果沒有傳送其中一個參數，函數預設值就會被使用，`_err` 將會被呼叫而且會拋出錯誤。你可以在 [Mozilla's Developer Network ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters) 看更多關於 **預設參數值特性** 的範例。
