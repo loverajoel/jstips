@@ -3,12 +3,8 @@
 // VARIABLES
 //
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500|Arvo:400,700|Cutive+Mono);
-
 // Colors
 $blue: #4183C4;
-
-// Grays
 $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
@@ -19,14 +15,25 @@ $color-yellow: #F8DA59;
 $color-complement: #2470E0;
 $color-black: rgba(0, 0, 0, .85);
 $color-main-wrapper: #fff;
+$strong-blue: #0086b3;
+$dark-gray-lime: #969896;
+$dark-pink: #a71d5d;
+$dark-blue: #183691;
+$very-light-gray: #F9F9F9;
+$very-light-gray2: #ddd;
+$light-gray: #ccc;
+$very-dark-gray: #5f5f5f;
+$soft-yellow: #F8DA59;
+$soft-yellow2: #E2C64A;
+$bright-yellow: #E0BE2B;
 
 
-// Font stacks
+// Font stacks, `Roboto' is Helvetica clone
 $helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$helveticaNeue: $helvetica;
 $georgia: Georgia, serif;
 
-$mainFont: 'Roboto', Helvetica, Aria, sans-serif;
+$mainFont: $helvetica;
 $titleFont: 'Arvo', Georgia, serif;
 
 // Mobile breakpoints

@@ -1,0 +1,232 @@
+#posts-wrapper-home {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .entry {
+        padding: 0px;
+    }
+}
+
+#posts-wrapper {
+    width: 100%;
+}
+
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+
+.posts {
+    > .post {
+    margin: 50px 0;
+
+    .post-title {
+        .title {
+            line-height: 1.3;
+        }
+        a {
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 900px) {
+                align-items: flex-start;
+            }
+
+            &:hover {
+                color: $color-black;
+
+                .tip-number {
+                    color: $color-yellow;
+                }
+            }
+        }
+    }
+}
+
+}
+
+.the-tips {
+    font: {
+        weight: bold;
+        size: 40px;
+    }
+
+    text-align: center;
+}
+
+.post-title {
+    .title {
+        p {
+            display: inline;
+        }
+
+        @media (max-width: 900px) {
+            line-height: 1;
+            font-size: 26px;
+        }
+    }
+}
+
+.post {
+    overflow: hidden;
+
+    &.single {
+        position: relative;
+        z-index: 5;
+
+        .header-content {
+            background: $color-yellow;
+            border-bottom: 1px solid darken($color-yellow, 20%);
+
+            @media (max-width: 900px) {
+                padding: 10px 20px 0 20px;
+            }
+        }
+
+        .tldt {
+            margin: 23px auto;
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 40px;
+    }
+
+    .post-title {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+
+    .tip-number {
+        background: $color-black;
+        color: $white;
+        padding: 0 10px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .meta-info {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+
+        .meta-item {
+            margin-right: 20px;
+            padding: 10px 0;
+            font-size: 12px;
+
+            i {
+                margin-right: 3px;
+            }
+        }
+
+        .share {
+            color: $color-black;
+            text-transform: uppercase;
+            text-align: right;
+            flex: 1;
+            margin-right: 0;
+
+            a {
+                margin: 0 3px;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+        }
+    }
+
+    blockquote {
+        margin: 1.8em auto !important;
+        border-left: 2px solid $gray;
+        padding: 0.1em 1em;
+        color: $gray;
+        font-size: 22px;
+        font-style: italic;
+    }
+
+    .comments {
+        max-width: 900px;
+        margin: 35px auto 0;
+
+        @media (max-width: 900px) {
+            padding: 0 20px 0 20px;
+        }
+    }
+
+    .read-more {
+        text-transform: uppercase;
+        font-size: 15px;
+        background: $color-yellow;
+        color: $color-black;
+        padding: 10px 17px;
+        display: inline-block;
+        float: right;
+        transition: all .05s ease;
+
+        &:hover {
+            background: darken($color-yellow, 10%);
+        }
+    }
+
+    .entry {
+        font-size: 17px;
+        padding: 50px 0 0 0;
+
+        * {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            word-break: break-word;
+        }
+
+        .highlight {
+            overflow: hidden;
+
+            @media (max-width: 900px) {
+                overflow: auto;
+            }
+        }
+
+        @media (max-width: 900px) {
+            padding: 50px 20px 0 20px;
+        }
+    }
+
+    .tldt {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+.post .entry table * {
+    width: initial
+}
+
+.post .entry table {
+    width: initial
+}
+
+.post .entry table td, .post .entry table tr {
+    border: 1px solid $light-gray;
+    font-size: 15px
+}
