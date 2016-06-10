@@ -23,11 +23,11 @@
         }
 
         .email {
-            &::-webkit-input-placeholder /* WebKit, Blink, Edge */
-            &:-moz-placeholder /* Mozilla Firefox 4 to 18 */
-            &::-moz-placeholder /* Mozilla Firefox 19+ */
-            &:-ms-input-placeholder /* Internet Explorer 10-11 */
-            &:placeholder-shown /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+            &::-webkit-input-placeholder, /* WebKit, Blink, Edge */
+            &:-moz-placeholder, /* Mozilla Firefox 4 to 18 */
+            &::-moz-placeholder, /* Mozilla Firefox 19+ */
+            &:-ms-input-placeholder, /* Internet Explorer 10-11 */
+            &:placeholder-shown, /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
               {
                 color: $very-dark-gray;
               }

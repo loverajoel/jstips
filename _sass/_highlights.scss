@@ -42,149 +42,150 @@ h3 code {
   font-size: 23px;
 }
 
-.highlight 
-.n   // base style
-.na  // name attribute
-.nb  // name builtin
-.nc  // name class
-.no  // name constant
-.ni  // name entity
-.nd  // name decorator
-.ne  // name exception
-.nf  // name function
-.nl  // name label
-.nn  // name space
-.nx  // name other
-.py  // name propery
-.nt  // name tag
-.nv  // name variable
-.vc  // name variable class
-.vg  // name variable global
-.vi  // name variable instance
-.bp  // name builtin pseudo
-.g   // base style
-.gd  // generic deleted
-.ge  // generic emph
-.gr  // generic error
-.gh  // generic heading
-.gi  // generic inserted
-.go  // generic output
-.gp  // generic prompt
-.gs  // generic strong
-.gu  // generic subheading
-.gt  // generic traceback
-.x   // other
-.w   // text whitespace
-.o   // operator word
-.c   // base style
-.cm  // comment Multiline
-.cp  // comment preproc
-.cl  // comment single
-.cs  // comment special
-.k   // base style
-.kc  // keyword constant
-.kd  // keyword declaration
-.kn  // keyword namespace
-.kp  // keyword pseudo
-.kr  // keyword reserved
-.kt  // keyword type
-.l   // base style
-.ld  // literal date
-.m   // literal number
-.mf  // literal number float
-.mh  // literal number hex
-.mi  // literal number integer
-.mo  // literal number octal
-.il  // literal number integer long
-.s   // literal string
-.sb  // literal string backtick
-.sc  // literal string character
-.sd  // literal doc
-.s2  // literal string double
-.se  // literal string escape
-.sh  // literal string heredoc
-.si  // literal string interpolation
-.sx  // literal string other
-.sr  // literal string regex
-.s1  // literal string subgke
-.ss  // literal string symbol
-.p   // punctuation
-.err // error
-.pre // code block
-{
-  background-color: transparent;
+.highlight {
+    .n,   // base style
+    .na,  // name attribute
+    .nb,  // name builtin
+    .nc,  // name class
+    .no,  // name constant
+    .ni,  // name entity
+    .nd,  // name decorator
+    .ne,  // name exception
+    .nf,  // name function
+    .nl,  // name label
+    .nn,  // name space
+    .nx,  // name other
+    .py,  // name propery
+    .nt,  // name tag
+    .nv,  // name variable
+    .vc,  // name variable class
+    .vg,  // name variable global
+    .vi,  // name variable instance
+    .bp,  // name builtin pseudo
+    .g,   // base style
+    .gd,  // generic deleted
+    .ge,  // generic emph
+    .gr,  // generic error
+    .gh,  // generic heading
+    .gi,  // generic inserted
+    .go,  // generic output
+    .gp,  // generic prompt
+    .gs,  // generic strong
+    .gu,  // generic subheading
+    .gt,  // generic traceback
+    .x,   // other
+    .w,   // text whitespace
+    .o,   // operator word
+    .c,   // base style
+    .cm,  // comment Multiline
+    .cp,  // comment preproc
+    .cl,  // comment single
+    .cs,  // comment special
+    .k,   // base style
+    .kc,  // keyword constant
+    .kd,  // keyword declaration
+    .kn,  // keyword namespace
+    .kp,  // keyword pseudo
+    .kr,  // keyword reserved
+    .kt,  // keyword type
+    .l,   // base style
+    .ld,  // literal date
+    .m,   // literal number
+    .mf,  // literal number float
+    .mh,  // literal number hex
+    .mi,  // literal number integer
+    .mo,  // literal number octal
+    .il,  // literal number integer long
+    .s,   // literal string
+    .sb,  // literal string backtick
+    .sc,  // literal string character
+    .sd,  // literal doc
+    .s2,  // literal string double
+    .se,  // literal string escape
+    .sh,  // literal string heredoc
+    .si,  // literal string interpolation
+    .sx,  // literal string other
+    .sr,  // literal string regex
+    .s1,  // literal string subgke
+    .ss,  // literal string symbol
+    .p,   // punctuation
+    .err, // error
+    .pre, // code block
+      {
+        background-color: transparent;
+      }
 }
 
 /* classes with black colour */
-.highlight
-.sb
-.sc
-.s2
-.se
-.sh
-.si
-.sx
-.sr
-.nx
-.p
-.py
-.l
-.ld
-.m
-.mh
-.mo
-.il
-.s
-{
-  color: $black;
+.highlight {
+    .sb,
+    .sc,
+    .s2,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .sr,
+    .nx,
+    .p,
+    .py,
+    .l,
+    .ld,
+    .m,
+    .mh,
+    .mo,
+    .il,
+    .s, {
+      color: $black;
+    }
 }
 
 /* classes with dark gay colour */
-.highlight
-pre
-.err
-{
-  color: $darkGray;
+.highlight {
+  pre,
+  .err, {
+    color: $darkGray;
+  }
 }
 
 /* classes with colour */
-.highlight
-.s
-.o
-.ow
-.k
-.kd
-.kn
-.kt
-.kp
-.kr
-{
-  color: $dark-pink;
+.highlight {
+    .s,
+    .o,
+    .ow,
+    .k,
+    .kd,
+    .kn,
+    .kt,
+    .kp,
+    .kr, {
+      color: $dark-pink;
+    }
 }
 
 /* classes with dark gray lime colour */
-.highlight
-.cm
-.cp
-.c1
-.cs
-{
-  color: $dark-gray-lime;
+.highlight {
+    .cm,
+    .cp,
+    .c1,
+    .cs, {
+      color: $dark-gray-lime;
+    }
 }
 
 /* classes with strong blue colour */
-.highlight
-.mf
-.mi
-.kc
-{
-  color: $strong-blue;
+.highlight {
+    .mf,
+    .mi,
+    .kc, {
+      color: $strong-blue;
+    }
 }
 
 /* classes with dark blue colour */
-.highlight
-.s1
-.ss
-{
-  color: $dark-blue;
+.highlight {
+  .s1,
+  .ss, {
+    color: $dark-blue;
+  }
 }
