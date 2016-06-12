@@ -35,6 +35,12 @@ For a more thorough explanation, go [here](https://github.com/gromgit/jstips-xe/
 Array.from(new Array(N),(val,index)=>index);
 ```
 
+### Solution 3 (requires ES6)
+
+```js
+Array.from(Array(N).keys());
+```
+
 #### Brief explanation
 
 1. `A = new Array(N)` returns an array with `N` _holes_ (i.e. `A = [,,,...]`, but `A[x] = undefined` for `x` in `0...N-1`).
