@@ -12,8 +12,8 @@ categories:
     - zh_CN
 ---
 
-加入有一个对象具有参数"prop1", "prop2", "prop3"。
-我们可以通过传递 __附加参数__ 给 __JSON.stringify__ 来选择性将参数生成字符串，像这样：
+假如有一个对象具有参数"prop1", "prop2", "prop3"。
+我们可以通过传递 __附加参数__ 给 __JSON.stringify__ 来选择性地将参数生成字符串，像这样：
 
 ```javascript
 var obj = {
@@ -31,7 +31,7 @@ var str = JSON.stringify(obj, selectedProperties);
 
 ```
 
- __"str"__ 降至包含选择的参数。
+ __"str"__ 将只包含选择的参数。
 
 除了传递数组，我们也可以传递函数。
 
