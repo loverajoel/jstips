@@ -28,6 +28,21 @@ nodelistToArray.slice(...);
 
 The `apply` method is used to pass an array of arguments to a function with a given `this` value. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) states that `apply` will take an array-like object, which is exactly what `querySelectorAll` returns. Since we don't need to specify a value for `this` in the context of the function, we pass in `null` or `0`. The result is an actual array of DOM elements which contains all of the available array methods.
 
+Alternatively you can use `Array.prototype.slice` combined with `Function.prototype.call` or `Function.prototype.apply` passing the array-like object as the value of `this`:
+
+```javascript
+const nodelist = document.querySelectorAll('div');
+const nodelistToArray = Array.prototype.slice.call(nodelist); // or equivalently Array.prototype.slice.apply(nodelist);
+
+//later on ..
+
+nodelistToArray.forEach(...);
+nodelistToArray.map(...);
+nodelistToArray.slice(...);
+
+//etc...
+```
+
 Or if you are using ES2015 you can use the [spread operator `...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
 ```js
