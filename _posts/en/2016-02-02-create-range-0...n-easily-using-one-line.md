@@ -30,9 +30,15 @@ Array.apply(null, {length: N}).map(Function.call, Number);
 For a more thorough explanation, go [here](https://github.com/gromgit/jstips-xe/blob/master/tips/33.md).
 
 ### Solution 2 (requires ES6)
-
+It uses `Array.from` [https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 ```js
 Array.from(new Array(N),(val,index)=>index);
+```
+
+### Solution 3 (requires ES6)
+
+```js
+Array.from(Array(N).keys());
 ```
 
 #### Brief explanation
