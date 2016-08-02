@@ -36,6 +36,6 @@ There are a lot of way to get update, choose your own
 - Languages flags => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
 
 ### Translations
-- ES [Ariel Porporatto](https://github.com/ppollo07)
-- CN [sjfkai](https://github.com/sjfkai)
-- TW [Peng Jie](https://github.com/neighborhood999)
+- ES => [Ariel Porporatto](https://github.com/ppollo07)
+- CN => [sjfkai](https://github.com/sjfkai)
+- TW => [Peng Jie](https://github.com/neighborhood999)
