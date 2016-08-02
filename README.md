@@ -30,6 +30,7 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 56 - [Copy to Clipboard](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-02-copy-to-clipboard.md)
 - 55 - [Create an easy loop using an array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-05-12-make-easy-loop-on-array.md)
 - 54 - [How to use optional arguments in functions (with optional callback)](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-05-06-use-optional-arguments.md)
 - 53 - [Get File Extension](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-04-21-get-file-extension.md)
