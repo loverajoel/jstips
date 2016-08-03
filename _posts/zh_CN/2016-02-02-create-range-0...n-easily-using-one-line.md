@@ -31,7 +31,7 @@ Array.apply(null, {length: N}).map(Function.call, Number);
 
 ### 方法2 (需要 ES6)
 
-这里用到了`Array.from` [https://developer.mozilla.org/zh_CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from](https://developer.mozilla.org/zh_CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+这里用到了`Array.from` [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 
 ```js
  Array.from(new Array(N),(val,index)=>index);
