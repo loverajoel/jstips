@@ -22,4 +22,6 @@ document.querySelector('#input').select();
 document.execCommand('copy');
 ```
 
-See this in action [here](https://jsbin.com/huhozu/edit?html,js,output)
+<div>
+  <a class="jsbin-embed" href="http://jsbin.com/huhozu/embed?js,console,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.11"></script>
+</div>
