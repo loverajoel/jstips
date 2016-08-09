@@ -32,9 +32,15 @@ console.log(`My name is ${firstName} ${lastName}`);
 // My name is Jake Rawr
 ```
 
+在模板字符串中，你可以不用`\n`来生成多行字符串，在`${}`里做简单的逻辑运算（例如 2+3）甚至使用[逻辑运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)。
 
-在模板字符串中，你可以不用`\n`来生成多行字符串还可以在`${}`里做简单的逻辑运算（例如 2+3）。
+```javascript
+var val1 = 1, val2 = 2;
+console.log(`${val1} is ${val1 < val2 ? 'less than': 'greater than'} ${val2}`)
+// 1 is less than 2
+```
 
-你也可以使用方法修改模板字符串的输出内容；他们被称为[带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings)（其中有带标签的模板字符串的示例）
+你也可以使用函数修改末班字符串的输出内容；这被称为[带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings#带标签的模板字符串)，其中包含了带标签的模板字符串的示例.
+
 
 或许你还想[阅读更多内容](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2)来了解模板字符串。
