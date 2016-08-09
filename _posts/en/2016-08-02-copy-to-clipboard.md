@@ -24,5 +24,5 @@ document.execCommand('copy');
 
 ##### Playground
 <div>
-  <a class="jsbin-embed" href="http://jsbin.com/huhozu/embed?js,console,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.11"></script>
+  <a class="jsbin-embed" href="http://jsbin.com/huhozu/embed?js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.11"></script>
 </div>
