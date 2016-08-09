@@ -1,0 +1,58 @@
+.email-suscribe {
+    width: 100%;
+    position: relative;
+
+    > div {
+        max-width: 900px;
+        height: 200px;
+        margin: auto;
+
+        label {
+            font-size: 30px;
+            margin: 45px 0 0 0;
+            display: inline-block;
+        }
+
+        .email {
+            background: $soft-yellow2;
+            border: 0px;
+            font-size: 20px;
+            padding: 9px;
+            width: 100%;
+            float: left;
+        }
+
+        .email {
+            &::-webkit-input-placeholder, /* WebKit, Blink, Edge */
+            &:-moz-placeholder, /* Mozilla Firefox 4 to 18 */
+            &::-moz-placeholder, /* Mozilla Firefox 19+ */
+            &:-ms-input-placeholder, /* Internet Explorer 10-11 */
+            &:placeholder-shown, /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+              {
+                color: $very-dark-gray;
+              }
+        }
+
+        .button {
+            width: 41px;
+            height: 41px;
+            border: 0px;
+            background: url("/images/email.svg") no-repeat;
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+            background-size: 28px 28px;
+            background-color: $black;
+            background-position: 8px;
+        }
+
+        .email-container {
+            width: 310px;
+            margin: 10px auto 0;
+            position: relative;
+        }
+
+        .clear {
+        }
+    }
+}

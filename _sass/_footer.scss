@@ -1,0 +1,53 @@
+.wrapper-footer {
+    margin-top: 50px;
+    border-top: 1px solid $very-light-gray2;
+    border-bottom: 1px solid $very-light-gray2;
+    background-color: $lightGray;
+}
+
+footer {
+    margin: 50px 0 0 0;
+    text-align: center;
+    background: $color-yellow;
+    overflow: hidden;
+    padding: 0 0 5px 0;
+
+    ul  {
+        max-width: 900px;
+        width: 100%;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0px;
+        text-align: center;
+
+        li {
+            display: inline;
+            margin: 0 10px;
+
+            a {
+                color: $black;
+                font-size: 13px
+            }
+
+            a:hover {
+                color: $black;
+                text-decoration: underline; 
+            }
+        }
+
+        .twitter {
+            iframe {
+                margin: -4px
+            }
+        }
+
+        .github {
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin: -4px;
+            }
+        }
+    }
+}
