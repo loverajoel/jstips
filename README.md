@@ -8,7 +8,7 @@ This is an awesome project about short and useful JavaScript tips that will allo
 Tips are added frequently (read further if you want to stay in touch). 
 
 ## Support the community
-Well, if you like a tip or a writer, if you read in a specific language, you can support the writer and translator. Just send a tip and let them know the awesome work that they are doing!
+If you found a JS Tip useful or you like a writer of the community now you are able to show some respect and support with a tip!
 
 ### Can you help us enrich it?
 Sure, you can help the project in two ways, sending your tip or reviewing future tips.

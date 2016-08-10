@@ -10,7 +10,7 @@ Use [this format](https://github.com/loverajoel/jstips/blob/gh-pages/POST_TEMPLA
 - Mark JS code with ```js
 - Don't mention "JavaScript" in the title (as our tips are about it anyway)
 - Use backticks (`) to mark code in the **title** and/or **tip-tldr** fields. _Warning_: Both values must not start with backticks!
-- **Tip**, if you want, you can add your url (Paypal, Coinbase, etc ) in **tip-writer-support** field and receive the congratulations of readers. If you have an old tip, you can add it and send a PR.
+- How you can be rewarded: If you have a PayPal, Coinbase or another account, type the url on tip-writer-support. That's all! Now your readers will be able to grab you a beer for your knowledge.
 
 Once your tip is ready, [issue a pull request](https://help.github.com/articles/using-pull-requests/) with this [PR template](https://github.com/loverajoel/jstips/blob/gh-pages/PULL_REQUEST_TEMPLATE.md) and your tip will be reviewed (see below).
 

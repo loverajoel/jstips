@@ -17,7 +17,8 @@ Any improvements or suggestions are more than welcome!
 [Click to see the instructions](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md)
 
 ## Support the community
-Well, if you like a tip or a writer, if you read in a specific language, you can support the writer and translator. Just send a tip and let them know the awesome work that they are doing!
+If you found a JS Tip useful or you like a writer of the community now you are able to show some respect and support with a tip!
+
 
 ### Let’s keep in touch
 
