@@ -12,6 +12,7 @@ categories:
 ---
 Apart from being just a delimiter, the comma operator allows you to put multiple statements in a place where one statement is expected.
 Eg:-
+
 ```js
 for(var i=0, j=0; i<5; i++, j++, j++){
   console.log("i:"+i+", j:"+j);
@@ -19,6 +20,7 @@ for(var i=0, j=0; i<5; i++, j++, j++){
 ```
 
 Output:-
+
 ```js
 i:0, j:0
 i:1, j:2
@@ -30,6 +32,7 @@ i:4, j:8
 When placed in an expression, it evaluates every expression from left to right and returns the right most expression.
 
 Eg:-
+
 ```js
 function a(){console.log('a'); return 'a';} 
 function b(){console.log('b'); return 'b';} 
@@ -40,6 +43,7 @@ var x = (a(), b(), c());
 console.log(x);      // Outputs "c"
 ```
 Output:-
+
 ```js
 "a"
 "b"
@@ -52,5 +56,5 @@ Output:-
 
 ##### Playground
 <div>
-  <a class="jsbin-embed" href="https://jsbin.com/vimogap/embed?js,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.11"></script>
+  <a class="jsbin-embed" href="http://jsbin.com/vimogap/embed?js,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.11"></script>
 </div>
