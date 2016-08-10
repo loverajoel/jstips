@@ -52,7 +52,7 @@ Output:-
 "c"
 ```
 
-* Note: The comma(`,`) operator has the lowest priority of all javascript operators, so without the parenthesis the expression would become: ` (x = a()), b(), c();  `.
+* Note: The comma(`,`) operator has the lowest priority of all javascript operators, so without the parenthesis the expression would become: `(x = a()), b(), c();`.
 
 ##### Playground
 <div>
