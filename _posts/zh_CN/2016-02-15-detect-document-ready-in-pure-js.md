@@ -6,6 +6,7 @@ tip-number: 46
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: 跨浏览器且纯JavaScript检测document是否加载完成。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

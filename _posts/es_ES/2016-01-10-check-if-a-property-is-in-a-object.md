@@ -6,6 +6,7 @@ tip-number: 10
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: Estas son formas de comprobar si una propiedad está presente en un objeto.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

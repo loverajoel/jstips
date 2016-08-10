@@ -6,6 +6,7 @@ tip-number: 04
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: Javascript有一个原生方法**sort**可以排列数组。一次简单的`array.sort()`将每一个数组元素视为字符串并按照字母表排列。但是当你试图整理一个非ASCII元素的数组时，你可能会得到一个奇怪的结果。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

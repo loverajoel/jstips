@@ -6,6 +6,7 @@ tip-number: 38
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: 将多位数组转化为单一数组的三种不同方法。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 
 categories:

@@ -6,6 +6,7 @@ tip-number: 02
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: The key is an attribute that you must pass to all components created dynamically from an array. It's a unique and constant id that React uses to identify each component in the DOM and to know whether it's a different component or the same one. Using keys ensures that the child component is preserved and not recreated and prevents weird things from happening.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - en

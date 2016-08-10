@@ -6,6 +6,7 @@ tip-number: 10
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: These are ways to check if a property is present in an object.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - en

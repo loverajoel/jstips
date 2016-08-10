@@ -648,6 +648,10 @@ img {
             }
         }
 
+        a {
+            color: #000;
+        }
+
         .share {
             color: $color-black;
             text-transform: uppercase;
@@ -728,6 +732,32 @@ img {
         max-width: 900px;
         margin: 0 auto;
     }
+}
+
+.support-button {
+    font-size: 12px;
+    float: left;
+    border: 1px solid #000;
+    color: #000;
+    margin: 3px 0 0 0;
+    height: 30px;
+
+    a {
+        color: #000;
+        padding: 5px;
+        float: left;
+
+        img {
+            width: 15px;
+            height: 15px;
+            float: left;
+            margin: 1px 3px 0 0;
+        }
+    }
+}
+
+.support-button:hover {
+    background: #e1b90a;
 }
 
 .email-suscribe {

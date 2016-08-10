@@ -6,6 +6,7 @@ tip-number: 38
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: Three different solutions to merge multidimensional array into a single array.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 
 categories:

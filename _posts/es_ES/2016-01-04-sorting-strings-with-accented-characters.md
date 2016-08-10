@@ -6,6 +6,7 @@ tip-number: 04
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: Javascript tiene un método nativo **sort**  que permite ordenar matrices. Haciendo un simple `array.sort()` va a tratar a cada entrada del array como una cadena y va a tratar de ordenarla alfabéticamente. Pero cuando intenta ordenar un array de caracteres no ASCII obtendrá un resultado extraño.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

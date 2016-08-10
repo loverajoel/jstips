@@ -6,6 +6,7 @@ tip-number: 05
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: Comprendiendo las diferencias entre `undefined` y `null`.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

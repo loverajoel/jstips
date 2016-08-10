@@ -6,6 +6,7 @@ tip-number: 46
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: La forma cross-browser para comprobar si el DOM se ha cargado en JavaScript puro.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

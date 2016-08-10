@@ -6,6 +6,7 @@ tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - en

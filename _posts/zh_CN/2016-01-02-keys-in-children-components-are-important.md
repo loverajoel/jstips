@@ -6,6 +6,7 @@ tip-number: 02
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: key是必须传递给从数组中动态创建的所有组件的一个值。它是一个唯一且固定的id，用来识别DOM中的每个组件，也可以让我们区别它是否是同一个组件。使用key可以确保子容器是可保存而且不需要重复创建的，还可以防止奇怪的事情发生。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

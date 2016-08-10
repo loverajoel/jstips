@@ -6,6 +6,7 @@ tip-number: 32
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
 tip-tldr: 对象是一个无序的对象集合。这意味着如果你想在对象里保存有序的数据，你需要重新处理它，因为对象里的数据不保证是有序的。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

@@ -6,6 +6,7 @@ tip-number: 04
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript 原生的 **sort** 方法讓我們可以排序陣列。做一個簡單的 `array.sort()`， 將每一個陣列元素視為字串並依字母排序。但是當你嘗試排序一個非 ASCII 字元陣列時，你會得到一個奇怪的結果。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

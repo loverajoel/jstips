@@ -6,6 +6,7 @@ tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: Los pasos para crear modulos en Javascript son cada vez más numerosos y complicados, pero ¿qué hay de los boilerplate en los nuevos frameworks?
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

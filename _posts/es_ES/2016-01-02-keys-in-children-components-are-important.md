@@ -6,6 +6,7 @@ tip-number: 02
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: La key es un atributo que se debe pasar a todos los componentes creados dinámicamente a partir de un array. Es un identificador único y constante que React usa para identificar cada componente en el DOM y saber si se trata de un componente diferente o el mismo. Utilizando keys asegura que el componente secundario se conserve y no se cree nuevamente y evita que cosas extrañas sucedan.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

@@ -6,6 +6,7 @@ tip-number: 01
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript 模組以及建構步驟變得更多更複雜，但對於新的框架樣板呢？
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

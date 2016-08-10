@@ -6,6 +6,7 @@ tip-number: 38
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: Tres soluciones diferentes para combinar arrays multidimensional en un sola arrays.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

@@ -6,6 +6,7 @@ tip-number: 00
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: 在一個存在的陣列加入新的元素是一件很常見的事情，你可以使用 push 將元素加入到陣列的末端，或是使用 unshift 在陣列起始位置加入元素，也可以使用 splice 在陣列中間的地方加入元素。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 
 categories:

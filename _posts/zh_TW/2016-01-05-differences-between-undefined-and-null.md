@@ -6,6 +6,7 @@ tip-number: 05
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: 了解 `undefined` 和 `null` 的差別。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

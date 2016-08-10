@@ -6,6 +6,7 @@ tip-number: 10
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: 这是一些检查某对象是否有某属性的方法。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

@@ -6,6 +6,7 @@ tip-number: 32
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
 tip-tldr: Un objeto es una colección desordenada de propiedades... que significa que si está tratando de guardar los datos ordenados dentro de un objeto, hay que revisarlo debido a que las propiedades de orden en los objetos no están garantizados.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

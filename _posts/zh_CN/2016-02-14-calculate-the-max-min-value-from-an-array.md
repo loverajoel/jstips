@@ -6,6 +6,7 @@ tip-number: 45
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: 对于纯数字数组，使用内置函数Math.max()和Math.min()的方法。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

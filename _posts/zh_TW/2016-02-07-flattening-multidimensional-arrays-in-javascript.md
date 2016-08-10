@@ -6,7 +6,7 @@ tip-number: 38
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: 三種不同的解決方法，將多維陣列合併為單一的陣列。
-
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

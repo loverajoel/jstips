@@ -6,6 +6,7 @@ tip-number: 45
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: 在數字陣列使用內建的 Max.max() 和 Max.min() 函式的方式。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

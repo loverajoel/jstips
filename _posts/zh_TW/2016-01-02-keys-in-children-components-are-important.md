@@ -6,6 +6,7 @@ tip-number: 02
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: 你可以從陣列動態建立 key 屬性並傳送到所有的元件（component）。它是一個唯一以及固定的 id，React 用來識別 DOM 裡面的每個元件，並區別它是否為同一個元件。使用 keys 可以確保子元件被保護而不會被重覆建立，也可以防止奇怪的事件發生。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

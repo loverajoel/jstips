@@ -6,6 +6,7 @@ tip-number: 00
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: La inserción de un elemento en un array existente, es una tarea común diaria. Se pueden añadir elementos al final de un array mediante push, al principio usando unshift, al medio que usa splice.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES

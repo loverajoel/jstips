@@ -6,6 +6,7 @@ tip-number: 32
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
 tip-tldr: 物件是一個沒有排序的屬性集合...意思說，如果你想嘗試在你的物件儲存已排序的資料，你需要重新檢查，因為屬性在物件不保證是有排序的。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_TW

@@ -6,7 +6,7 @@ tip-number: 00
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: 向一个数组中插入元素是平时很常见的一件事情。你可以使用push在数组尾部插入元素,可以用unshift在数组头部插入元素,也可以用splice在数组中间插入元素。
-
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

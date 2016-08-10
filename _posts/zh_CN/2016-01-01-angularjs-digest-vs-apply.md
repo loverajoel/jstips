@@ -6,7 +6,7 @@ tip-number: 01
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript模块和构建步骤越来越复杂和多样化，但是新框架里的样板是什么样子的呢？
-
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

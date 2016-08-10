@@ -6,6 +6,7 @@ tip-number: 56
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
 tip-tldr: 本周我做了一个简单的“复制到剪贴板”按钮，这是我第一次做这种功能，向大家分享一下我的实现方法。
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - zh_CN

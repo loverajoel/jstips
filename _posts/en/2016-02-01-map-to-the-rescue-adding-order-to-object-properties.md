@@ -6,6 +6,7 @@ tip-number: 32
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
 tip-tldr: An Object it is an unordered collection of properties... that means that if you are trying to save ordered data inside an Object, you have to review it because properties order in objects are not guaranteed.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - en

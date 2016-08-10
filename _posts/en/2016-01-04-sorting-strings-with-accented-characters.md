@@ -6,6 +6,7 @@ tip-number: 04
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: Javascript has a native method **sort** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. But when you try order an array of non ASCII characters you will obtain a strange result.
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - en

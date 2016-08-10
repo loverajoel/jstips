@@ -6,6 +6,7 @@ tip-number: 45
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
 tip-tldr: Formas de utilizar las funciones Math.max() y Math.min() con array de números
+tip-writer-support: https://www.coinbase.com/loverajoel
 
 categories:
     - es_ES
