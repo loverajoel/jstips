@@ -3,7 +3,7 @@ layout: post
 
 title: AngularJs - `$digest` vs `$apply`
 tip-number: 01
-tip-username: loverajoel 
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: JavaScript modules and build steps are getting more numerous and complicated, but what about boilerplate in new frameworks?
 tip-writer-support: https://www.coinbase.com/loverajoel
@@ -40,4 +40,9 @@ $scope.$apply(() => {
 
 - If you only need to update the current scope or its children, use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit is self-evident.
 - `$apply()` is a hard process for the machine and can lead to performance issues when there is a lot of binding.
-- If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance
+- If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance.
+
+## Playground
+<div>
+  Not available due to the nature of the tip.
+</div>
