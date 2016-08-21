@@ -3,7 +3,7 @@ layout: post
 
 title: Keys in children components are important
 tip-number: 02
-tip-username: loverajoel 
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: The key is an attribute that you must pass to all components created dynamically from an array. It's a unique and constant id that React uses to identify each component in the DOM and to know whether it's a different component or the same one. Using keys ensures that the child component is preserved and not recreated and prevents weird things from happening.
 tip-writer-support: https://www.coinbase.com/loverajoel
@@ -45,3 +45,8 @@ render() {
 - You can create your own unique id. Be sure that the method is fast and attach it to your object.
 - When the number of children is large or contains expensive components, use keys to improve performance.
 - [You must provide the key attribute for all children of ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
+
+## Playground
+<div>
+  Not available due to the nature of the tip.
+</div>
