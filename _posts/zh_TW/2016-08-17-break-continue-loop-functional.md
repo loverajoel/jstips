@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Breaking or continuing loop in functional programming 在 functionall programming
+title: 在 functional programming break 或 continue 迴圈
 tip-number: 58
 tip-username: vamshisuram
 tip-username-profile: https://github.com/vamshisuram
