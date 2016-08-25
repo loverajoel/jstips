@@ -80,7 +80,9 @@ function varvslet() {
   
   More explaination could be found [here](http://stackoverflow.com/questions/30899612/explanation-of-let-and-block-scoping-with-for-loops/30900289#30900289).
 
-  [Here](https://jsbin.com/yumaye/edit?js,console) is the live demo of the above codes
+### Playground
+
+  [JS Bin on jsbin.com](https://jsbin.com/yumaye/edit?js,console)
 
 ### Should I replace `var` with `let`?
 
