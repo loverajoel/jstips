@@ -23,6 +23,7 @@ Those are known methods, but it doesn't mean there isn't a more performant way. 
 Adding an element at the end of the array is easy with push(), but it can be done in different ways.
 
 ```javascript
+
 var arr = [1,2,3,4,5];
 var arr2 = [];
 
