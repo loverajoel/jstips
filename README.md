@@ -5,7 +5,7 @@
 
 This is an awesome project about short and useful JavaScript tips that will allow you to improve your code writing. With less than 2 minutes, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
-Tips are added frequently (read further if you want to stay in touch). 
+Tips are added frequently (read further if you want to stay in touch).
 
 ## Support the community
 If you found a JS Tip useful or you like a writer of the community now you are able to show some respect and support with a tip!
@@ -33,6 +33,8 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 59 - [ES6, var vs let](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-25-keyword-var-vs-let.md)
+- 58 - [Breaking or continuing loop in functional programming](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-17-break-continue-loop-functional.md)
 - 57 - [Comma operator in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-10-comma-operaton-in-js.md)
 - 56 - [Copy to Clipboard](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-02-copy-to-clipboard.md)
 - 55 - [Create an easy loop using an array](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-05-12-make-easy-loop-on-array.md)
