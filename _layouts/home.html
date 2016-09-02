@@ -5,7 +5,7 @@ type: posts
 
 <div id="posts-wrapper-home">
     <div class="posts">
-        {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
+        {% assign posts=site.posts | where:"lang", page.lang %}
         {% for post in posts %}
         <article class="post">
             <h1 class="post-title">
