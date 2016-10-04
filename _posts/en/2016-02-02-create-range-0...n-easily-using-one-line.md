@@ -44,7 +44,7 @@ Array.from(Array(N).keys());
 ### Solution 4 (requires ES6)
 
 ```js
-Array.from({ length: N });
+Array.from({ length: N },(val,index)=>index));
 ```
 
 #### Brief explanation
