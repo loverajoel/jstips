@@ -12,18 +12,17 @@ categories:
     - en
 ---
 
-#### Convert to boolean using "!!"
+#### Getting array items from behind to front
 
-Sometimes we need to verify if a variable is not `false, 0, "", undefined or NaN`, so a short way to do this is:
+If you want to get the array items from behind to front, just do this:
 
 ```javascript
-var varWithoutValue;
+var newArray = [1, 2, 3, 4];
 
-console.log(!!varWithoutValue); // false
-
-varWithoutValue = 'now has value';
-
-console.log(!!varWithoutValue); // true
+console.log(newArray.slice(-1)); // [4]
+console.log(newArray.slice(-2)); // [3, 4]
+console.log(newArray.slice(-3)); // [2, 3, 4]
+console.log(newArray.slice(-4)); // [1, 2, 3, 4]
 ```
 
 #### Short-circuits conditionals
