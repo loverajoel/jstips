@@ -2,7 +2,7 @@
 layout: post
 
 title: Three useful hacks
-tip-number: 00
+tip-number: 60
 tip-username: leandrosimoes 
 tip-username-profile: https://github.com/leandrosimoes
 tip-tldr: Three very useful and syntax sugar hacks to speed up your development.
