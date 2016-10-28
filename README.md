@@ -33,6 +33,7 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 60 - [Three useful hacks](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-10-28-three-useful-hacks.md)
 - 59 - [ES6, var vs let](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-25-keyword-var-vs-let.md)
 - 58 - [Breaking or continuing loop in functional programming](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-17-break-continue-loop-functional.md)
 - 57 - [Comma operator in JS](https://github.com/loverajoel/jstips/blob/gh-pages/_posts/en/2016-08-10-comma-operaton-in-js.md)
