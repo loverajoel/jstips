@@ -203,16 +203,16 @@ transl:
     menu:
       home:
         txt: Главная
-        link: /
+        link: /ru_RU
       about:
         txt: О проекте
-        link: /about
+        link: /ru_RU/about
       subscribe:
         txt: Подписаться
       submit_your_tip:
         txt: Добавить совет
         link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
-    footer_subscribe_message: Subscribe to more awesome daily tips!
+    footer_subscribe_message: Подпишись на классные советы!
     footer_placeholder_subscribe: your@email.com
     arrow_prev: Предыдущий Совет
     arrow_next: Следующий Совет

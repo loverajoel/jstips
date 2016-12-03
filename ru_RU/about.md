@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Introducing JavaScript Tips
-permalink: /about/
-lang: en
+permalink: ru_RU/about/
+lang: ru_RU
 ---
 
-> New year, new project. **A JS tip per day!**
+> Новый год, новый проект. **JS советы каждый день!**
 
-With great excitement, I introduce these short and useful daily JavaScript tips that will allow you to improve your code writing. With less than 2 minutes each day, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+Я рад представить вам проект коротких и полезных JavaScript советов на каждый день. Они помогут улучшить код, который вы пишете.
+Менее чем за 2 минуты в день вы узнаете о производительности, соглашениях, хаках, вопросах на интервью и остальных вещах, которые подготовило для нас будущее этого языка.
 
 At midday, no matter if it is a weekend or a holiday, a tip will be posted and tweeted.
 
@@ -31,13 +32,13 @@ There are a lot of way to get update, choose your own
 - [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
 - [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
 
-> Don't forget to Star the repo, as this will help to promote the project!
+> Не забудь лайкнуть репозиторий, это поможет продвинуть проект!
 
 ### Gratefulness
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Marcos Cosimi](https://github.com/markoscc)
-- Languages flags => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
+- Дизайн сайта JS Tips => [Marcos Cosimi](https://github.com/markoscc)
+- Изображение флагов => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
 
 ### Translations
 - ES => [Ariel Porporatto](https://github.com/ppollo07)
