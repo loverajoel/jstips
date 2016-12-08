@@ -21,8 +21,7 @@ categories:
 
 ## Добавление элемента в конец
 
-Добавление элемента в конец массива
-Adding an element at the end of the array is easy with push(), but it can be done in different ways.
+Добавление элемента в конец массива легко выполняется методом push(), но есть и другие способы.
 
 ```javascript
 
@@ -34,78 +33,78 @@ arr[arr.length] = 6;
 arr2 = arr.concat([6]);
 ```
 
-Два первых метода изменяют оригинальный массив. Не верите мне? Проверьте [jsperf](http://jsperf.com/push-item-inside-an-array)
+Первые два метода меняют оригинальный массив. Не верите мне? Проверьте [jsperf](http://jsperf.com/push-item-inside-an-array)
 
 ### Производительность на мобильных:
 
 #### Android (v4.2.2)
 
-1. _arr.push(6);_ and _arr[arr.length] = 6;_ have the same performance // 3 319 694 ops/sec
-3. _arr2 = arr.concat([6]);_ 50.61 % slower than the other two methods
+1. _arr.push(6);_ и _arr[arr.length] = 6;_ одинаковая производительность // 3 319 694 оп/сек
+3. _arr2 = arr.concat([6]);_ медленнее на 50.61 % предыдущих
 
 #### Chrome Mobile (v33.0.0)
 
-1. _arr[arr.length] = 6;_ // 6 125 975 ops/sec
-2. _arr.push(6);_ 66.74 % slower
-3. _arr2 = arr.concat([6]);_ 87.63 % slower
+1. _arr[arr.length] = 6;_ // 6 125 975 оп/сек
+2. _arr.push(6);_ медленнее на 66.74 %
+3. _arr2 = arr.concat([6]);_ медленнее на 87.63 %
 
 #### Safari Mobile (v9)
 
-1. _arr[arr.length] = 6;_ // 7 452 898 ops/sec
-2. _arr.push(6);_ 40.19 % slower
-3. _arr2 = arr.concat([6]);_ 49.78 % slower
+1. _arr[arr.length] = 6;_ // 7 452 898 оп/сек
+2. _arr.push(6);_ медленнее на 40.19 %
+3. _arr2 = arr.concat([6]);_ медленнее на 49.78 %
 
 ```javascript
-Final victor
+Итог
 
-1. arr[arr.length] = 6; // with an average of 5 632 856 ops/sec
-2. arr.push(6); // 35.64 % slower
-3. arr2 = arr.concat([6]); // 62.67 % slower
+1. arr[arr.length] = 6; // 5 632 856 оп/сек в среднем
+2. arr.push(6); // медленнее на 35.64 %
+3. arr2 = arr.concat([6]); // медленнее на 62.67 %
 ```
 
-### Performance on desktop
+### Производительность на компьютерах
 
 #### Chrome (v48.0.2564)
 
-1. _arr[arr.length] = 6;_ // 21 602 722 ops/sec
-2. _arr.push(6);_ 61.94 % slower
-3. _arr2 = arr.concat([6]);_ 87.45 % slower
+1. _arr[arr.length] = 6;_ // 21 602 722 оп/сек
+2. _arr.push(6);_ медленнее на 61.94 %
+3. _arr2 = arr.concat([6]);_ медленнее на 87.45 %
 
 #### Firefox (v44)
 
-1. _arr.push(6);_ // 56 032 805 ops/sec
-2. _arr[arr.length] = 6;_ 0.52 % slower
-3. _arr2 = arr.concat([6]);_ 87.36 % slower
+1. _arr.push(6);_ // 56 032 805 оп/сек
+2. _arr[arr.length] = 6;_ медленнее на 0.52 %
+3. _arr2 = arr.concat([6]);_ медленнее на 87.36 %
 
 #### IE (v11)
 
-1. _arr[arr.length] = 6;_ // 67 197 046 ops/sec
-2. _arr.push(6);_ 39.61 % slower
-3. _arr2 = arr.concat([6]);_ 93.41 % slower
+1. _arr[arr.length] = 6;_ // 67 197 046 оп/сек
+2. _arr.push(6);_ медленнее на 39.61 %
+3. _arr2 = arr.concat([6]);_ медленнее на 93.41 %
 
 #### Opera (v35.0.2066.68)
 
-1. _arr[arr.length] = 6;_ // 30 775 071 ops/sec
-2. _arr.push(6);_ 71.60 % slower
-3. _arr2 = arr.concat([6]);_ 83.70 % slower
+1. _arr[arr.length] = 6;_ // 30 775 071 оп/сек
+2. _arr.push(6);_ медленнее на 71.60 %
+3. _arr2 = arr.concat([6]);_ медленнее на 83.70 %
 
 #### Safari (v9.0.3)
 
-1. _arr.push(6);_ // 42 670 978 ops/sec
-2. _arr[arr.length] = 6;_ 0.80 % slower
-3. _arr2 = arr.concat([6]);_ 76.07 % slower
+1. _arr.push(6);_ // 42 670 978 оп/сек
+2. _arr[arr.length] = 6;_ медленнее на 0.80 %
+3. _arr2 = arr.concat([6]);_ медленнее на 76.07 %
 
 ```javascript
-Final victor
+Итог
 
-1. arr[arr.length] = 6; // with an average of 42 345 449 ops/sec
-2. arr.push(6); // 34.66 % slower
-3. arr2 = arr.concat([6]); // 85.79 % slower
+1. arr[arr.length] = 6; // со средней скоростью 42 345 449 оп/сек
+2. arr.push(6); // медленнее на 34.66 %
+3. arr2 = arr.concat([6]); // медленнее на 85.79 %
 ```
 
-## Add an element at the beginning
+## Добавление элемента в начало
 
-Now if we are trying to add an item to the beginning of the array:
+Теперь попробуем добавить элемент в начало массива:
 
 ```javascript
 var arr = [1,2,3,4,5];
@@ -113,73 +112,73 @@ var arr = [1,2,3,4,5];
 arr.unshift(0);
 [0].concat(arr);
 ```
-Here is a little more detail: unshift edits the original array; concat returns a new array. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
+Немного больше информации: unshift модифицирует оригинальный массив; concat возвращает новый. [jsperf](http://jsperf.com/unshift-item-inside-an-array)
 
-### Performance on mobile :
+### Производительность на мобильных:
 
 #### Android (v4.2.2)
 
-1. _[0].concat(arr);_ // 1 808 717 ops/sec
-2. _arr.unshift(0);_ 97.85 % slower
+1. _[0].concat(arr);_ // 1 808 717 оп/сек
+2. _arr.unshift(0);_ медленнее на 97.85 %
 
 #### Chrome Mobile (v33.0.0)
 
-1. _[0].concat(arr);_ // 1 269 498 ops/sec
-2. _arr.unshift(0);_ 99.86 % slower
+1. _[0].concat(arr);_ // 1 269 498 оп/сек
+2. _arr.unshift(0);_ медленнее на 99.86 %
 
 #### Safari Mobile (v9)
 
-1. _arr.unshift(0);_ // 3 250 184 ops/sec
-2. _[0].concat(arr);_ 33.67 % slower
+1. _arr.unshift(0);_ // 3 250 184 оп/сек
+2. _[0].concat(arr);_ медленнее на 33.67 %
 
 ```javascript
-Final victor
+Итог
 
-1. [0].concat(arr); // with an average of 4 972 622 ops/sec
-2. arr.unshift(0); // 64.70 % slower
+1. [0].concat(arr); // with an average of 4 972 622 оп/сек
+2. arr.unshift(0); // медленнее на 64.70 %
 ```
 
-### Performance on desktop
+### Производительность на компьютерах
 
 #### Chrome (v48.0.2564)
 
-1. _[0].concat(arr);_ // 2 656 685 ops/sec
-2. _arr.unshift(0);_ 96.77 % slower
+1. _[0].concat(arr);_ // 2 656 685 оп/сек
+2. _arr.unshift(0);_ медленнее на 96.77 %
 
 #### Firefox (v44)
 
-1. _[0].concat(arr);_ // 8 039 759 ops/sec
-2. _arr.unshift(0);_ 99.72 % slower
+1. _[0].concat(arr);_ // 8 039 759 оп/сек
+2. _arr.unshift(0);_ медленнее на 99.72 %
 
 #### IE (v11)
 
-1. _[0].concat(arr);_ // 3 604 226 ops/sec
-2. _arr.unshift(0);_ 98.31 % slower
+1. _[0].concat(arr);_ // 3 604 226 оп/сек
+2. _arr.unshift(0);_ медленнее на 98.31 %
 
 #### Opera (v35.0.2066.68)
 
-1. _[0].concat(arr);_ // 4 102 128 ops/sec
-2. _arr.unshift(0);_ 97.44 % slower
+1. _[0].concat(arr);_ // 4 102 128 оп/сек
+2. _arr.unshift(0);_ медленнее на 97.44 %
 
 #### Safari (v9.0.3)
 
-1. _arr.unshift(0);_ // 12 356 477 ops/sec
-2. _[0].concat(arr);_ 15.17 % slower
+1. _arr.unshift(0);_ // 12 356 477 оп/сек
+2. _[0].concat(arr);_ медленнее на 15.17 %
 
 ```javascript
-Final victor
+Итог
 
-1. [0].concat(arr); // with an average of 6 032 573 ops/sec
-2. arr.unshift(0); // 78.65 % slower
+1. [0].concat(arr); // with an average of 6 032 573 оп/сек
+2. arr.unshift(0); // медленнее на 78.65 %
 ```
 
-## Add an element in the middle
+## Добавление элемента в середину
 
-Adding items in the middle of an array is easy with splice, and it's the most performant way to do it.
+В середину массива элемент можно добавить методом splice, и это самый производительный способ.
 
 ```javascript
 var items = ['one', 'two', 'three', 'four'];
 items.splice(items.length / 2, 0, 'hello');
 ```
 
-I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
+Я запускал эти тесты в разных браузерах и ОС, и результаты были похожие. Надеюсь, эти советы окажутся вам полезны и вы начнете писать свои собственные тесты!
