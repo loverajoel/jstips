@@ -134,7 +134,7 @@ arr.unshift(0);
 ```javascript
 Итог
 
-1. [0].concat(arr); // with an average of 4 972 622 оп/сек
+1. [0].concat(arr); // со средней скоростью 4 972 622 оп/сек
 2. arr.unshift(0); // медленнее на 64.70 %
 ```
 
@@ -168,7 +168,7 @@ arr.unshift(0);
 ```javascript
 Итог
 
-1. [0].concat(arr); // with an average of 6 032 573 оп/сек
+1. [0].concat(arr); // со средней скоростью 6 032 573 оп/сек
 2. arr.unshift(0); // медленнее на 78.65 %
 ```
 
