@@ -35,6 +35,6 @@ $scope.$apply(() => {
 });
 ```
 
-- If you only need to update the current scope or its children, use `$digest`, and prevent a new digest cycle for the whole application. The performance benefit is self-evident.
-- `$apply()` is a hard process for the machine and can lead to performance issues when there is a lot of binding.
-- If you are using >AngularJS 1.2.X, use `$evalAsync`, which is a core method that will evaluate the expression during the current cycle or the next. This can improve your application's performance
+- Если вам нужно обновить только текущую область видимости и ее наследников, используйте `$digest`, и недопускайте новый digest-цикл для всего приложения. Это очевидная выгода в производительности.
+- `$apply()` — тяжелый процесс для компьютера и может стать причиной слабой производительности, при большом количестве связей.
+- Если вы используйте >AngularJS 1.2.X версии, используйте встроенный метод `$evalAsync`, который вызовет выражение в текущем цикле или следующем. Это улучшит производительность приложения.
