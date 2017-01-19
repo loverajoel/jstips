@@ -38,19 +38,19 @@ A copy of the given function along with the specified `this` value and initial a
 ```js
 const myCar = {
  brand: 'Ford',
- type: 'Sedan'
- Color: ‘Red’
+ type: 'Sedan',
+ color: 'Red'
 };
 
-const getBrand = () => {
+const getBrand = function() {
  console.log(this.brand);
 };
 
-const getType = () => {
+const getType = function() {
  console.log(this.type);
 };
 
-const getColor = () => {
+const getColor = function() {
  console.log(this.color);
 };
 
@@ -60,6 +60,6 @@ getBrand(myCar); // object not bind,undefined
 
 getType.bind(myCar)(); // Sedan
 
-getColor.bind(myCar); // Red
+getColor.bind(myCar)(); // Red
 
 ```
