@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Improve Nested Conditionals
+title: Улучшаем вложенные условия
 tip-number: 03
 tip-username: AlbertoFuente
 tip-username-profile: https://github.com/AlbertoFuente
