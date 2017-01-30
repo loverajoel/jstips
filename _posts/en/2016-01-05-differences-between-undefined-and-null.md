@@ -24,17 +24,17 @@ categories:
   (`Boolean(undefined) // false`, `Boolean(null) // false`)
 - You can know if a variable is [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
-  ```javascript
+```javascript
   typeof variable === "undefined"
 ```
 - You can check if a variable is [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 
-  ```javascript
+```javascript
   variable === null
 ```
 - The **equality** operator considers them equal, but the **identity** doesn't
 
-  ```javascript
+```javascript
   null == undefined // true
 
   null === undefined // false
