@@ -41,6 +41,12 @@ Array.from(new Array(N),(val,index)=>index);
 Array.from(Array(N).keys());
 ```
 
+### Solution 4 (requires ES6)
+
+```js
+Array.from({ length: N },(val,index)=>index);
+```
+
 #### Brief explanation
 
 1. `A = new Array(N)` returns an array with `N` _holes_ (i.e. `A = [,,,...]`, but `A[x] = undefined` for `x` in `0...N-1`).
