@@ -20,15 +20,15 @@ function varvslet() {
   console.log(i); // i is undefined due to hoisting
   // console.log(j); // ReferenceError: j is not defined
 
-  for( var i = 0; i < 3; i++ ) {
+  for (var i = 0; i < 3; i++) {
     console.log(i); // 0, 1, 2
   };
 
   console.log(i); // 3
   // console.log(j); // ReferenceError: j is not defined
 
-  for( let j = 0; j < 3; j++ ) {
-    console.log(j);
+  for (let j = 0; j < 3; j++) {
+    console.log(j); // 0, 1, 2
   };
 
   console.log(i); // 3
@@ -61,7 +61,7 @@ function varvslet() {
 ```js
 for (var i = 0; i < 5; ++i) {
   setTimeout(function () {
-    console.log(i); // output '5' 5 times
+    console.log(i); // output 5, 5, 5, 5, 5
   }, 100);  
 }
 ```
@@ -69,7 +69,6 @@ for (var i = 0; i < 5; ++i) {
   After replacing `var` with `let`
   
 ```js
-// print 1, 2, 3, 4, 5
 for (let i = 0; i < 5; ++i) {
   setTimeout(function () {
     console.log(i); // output 0, 1, 2, 3, 4 
