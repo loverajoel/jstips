@@ -1,3 +1,4 @@
+
 ---
 layout: post
 
@@ -23,19 +24,19 @@ categories:
 //bad
 ...
 render() {
-	<div key={{item.key}}>{{item.name}}</div>
+	<div key={% raw %}{{item.key}}{% endraw %}>{% raw %}{{item.name}}{% endraw %}</div>
 }
 ...
 
 //good
-<MyComponent key={{item.key}}/>
+<MyComponent key={% raw %}{{item.key}}{% endraw %}/>
 ```
 - [使用陣列索引是不好的習慣。](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` 將無法使用。
 
 ```javascript
 //bad
-<MyComponent key={{Math.random()}}/>
+<MyComponent key={% raw %}{{Math.random()}}{% endraw %}/>
 ```
 
 
