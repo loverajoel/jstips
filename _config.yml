@@ -90,6 +90,13 @@ version: v1.1.0
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  startings: [head, body]
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem

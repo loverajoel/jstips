@@ -19,7 +19,7 @@ type: posts
                 <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ post.tip-username-profile }}" target="_blank"> @{{ post.tip-username }}</a></div>
             </div>
             <div class="entry">
-                {{ post.tip-tldr | markdownify }}
+                <p>{{ post.tip-tldr }}</p>
             </div>
         </article>
         {% endfor %}
