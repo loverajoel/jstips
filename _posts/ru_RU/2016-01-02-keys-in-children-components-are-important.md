@@ -23,19 +23,19 @@ categories:
 //плохо
 ...
 render() {
-	<div key={{item.key}}>{{item.name}}</div>
+	<div key={% raw %}{{item.key}}{% endraw %}>{% raw %}{{item.name}}{% endraw %}</div>
 }
 ...
 
 //Хорошо
-<MyComponent key={{item.key}}/>
+<MyComponent key={% raw %}{{item.key}}{% endraw %}/>
 ```
 - [Использование позиции в массиве как ключ — плохая идея.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` не сработает
 
 ```javascript
 //плохо
-<MyComponent key={{Math.random()}}/>
+<MyComponent key={% raw %}{{ Math.random() }}{% endraw %} />
 ```
 
 - Вы можете создавать свой уникальный id. Только проверьте, что метод генерации не тормозит ваше приложение.
