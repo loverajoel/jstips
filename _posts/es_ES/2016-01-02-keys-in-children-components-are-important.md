@@ -3,7 +3,7 @@ layout: post
 
 title: Keys en componentes secundarios son importantes
 tip-number: 02
-tip-username: loverajoel 
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: La key es un atributo que se debe pasar a todos los componentes creados dinámicamente a partir de un array. Es un identificador único y constante que React usa para identificar cada componente en el DOM y saber si se trata de un componente diferente o el mismo. Utilizando keys asegura que el componente secundario se conserve y no se cree nuevamente y evita que cosas extrañas sucedan.
 tip-writer-support: https://www.coinbase.com/loverajoel
@@ -23,19 +23,19 @@ La [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-
 //bad
 ...
 render() {
-	<div key={{item.key}}>{{item.name}}</div>
+	<div key={% raw %}{{item.key}}{% endraw %}>{% raw %}{{item.name}}{% endraw %}</div>
 }
 ...
 
 //good
-<MyComponent key={{item.key}}/>
+<MyComponent key={% raw %}{{item.key}}{% endraw %}/>
 ```
 - [Usar el indice de un array es una mala practica.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` no funcionara.
 
 ```javascript
 //bad
-<MyComponent key={{Math.random()}}/>
+<MyComponent key={% raw %}{{Math.random()}}{% endraw %}/>
 ```
 
 - Usted puede crear su propia única id. Asegúrese de que el método es rápido y adjuntarlo a su objeto.

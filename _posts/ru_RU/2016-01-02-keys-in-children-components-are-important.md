@@ -35,7 +35,7 @@ render() {
 
 ```javascript
 //плохо
-<MyComponent key={% raw %}{{ Math.random() }}{% endraw %} />
+<MyComponent key={% raw %}{{Math.random()}}{% endraw %}/>
 ```
 
 - Вы можете создавать свой уникальный id. Только проверьте, что метод генерации не тормозит ваше приложение.
