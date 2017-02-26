@@ -3,7 +3,7 @@ layout: post
 
 title: Keys in children components are important
 tip-number: 02
-tip-username: loverajoel 
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: The key is an attribute that you must pass to all components created dynamically from an array. It's a unique and constant id that React uses to identify each component in the DOM and to know whether it's a different component or the same one. Using keys ensures that the child component is preserved and not recreated and prevents weird things from happening.
 tip-writer-support: https://www.coinbase.com/loverajoel
@@ -23,19 +23,19 @@ The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic
 //bad
 ...
 render() {
-	<div key={{item.key}}>{{item.name}}</div>
+	<div key={% raw %}{{item.key}}{% endraw %}>{% raw %}{{item.name}}{% endraw %}</div>
 }
 ...
 
 //good
-<MyComponent key={{item.key}}/>
+<MyComponent key={% raw %}{{item.key}}{% endraw %}/>
 ```
 - [Using array index is a bad practice.](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
 - `random()` will not work
 
 ```javascript
 //bad
-<MyComponent key={{Math.random()}}/>
+<MyComponent key={% raw %}{{Math.random()}}{% endraw %}/>
 ```
 
 - You can create your own unique id. Be sure that the method is fast and attach it to your object.

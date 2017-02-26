@@ -41,7 +41,7 @@ defaults:
       layout: default
       lang: es_ES
       is_post: true
-      
+
   -
     scope:
       path: _posts/zh_TW
@@ -49,6 +49,14 @@ defaults:
     values:
       layout: default
       lang: zh_TW
+      is_post: true
+  -
+    scope:
+      path: _posts/ru_RU
+      type: posts
+    values:
+      layout: default
+      lang: ru_RU
       is_post: true
 
 
@@ -112,12 +120,15 @@ languages:
   -
     name: zh_CN
     link: /zh_CN
-  - 
+  -
     name: es_ES
     link: /es_ES
   -
     name: zh_TW
     link: /zh_TW
+  -
+    name: ru_RU
+    link: /ru_RU
 
 transl:
   en:
@@ -156,13 +167,13 @@ transl:
     arrow_next: 下一条
   es_ES:
     menu:
-      home: 
+      home:
         txt: Inicio
         link: /es_ES
-      about: 
+      about:
         txt: Jstips
         link: /es_ES/about
-      subscribe: 
+      subscribe:
         txt: Suscribirse
       submit_your_tip:
         txt: Enviá tu tip
@@ -188,3 +199,20 @@ transl:
     footer_placeholder_subscribe: your@email.com
     arrow_prev: 上一篇 tip
     arrow_next: 下一篇 tip
+  ru_RU:
+    menu:
+      home:
+        txt: Главная
+        link: /ru_RU
+      about:
+        txt: О проекте
+        link: /ru_RU/about
+      subscribe:
+        txt: Подписаться
+      submit_your_tip:
+        txt: Добавить совет
+        link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+    footer_subscribe_message: Подпишись на классные советы!
+    footer_placeholder_subscribe: your@email.com
+    arrow_prev: Предыдущий Совет
+    arrow_next: Следующий Совет

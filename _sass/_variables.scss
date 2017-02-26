@@ -3,7 +3,7 @@
 // VARIABLES
 //
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500|Arvo:400,700|Cutive+Mono);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500|Cutive+Mono|Roboto+Slab:400,700&amp;subset=cyrillic);
 
 // Colors
 $blue: #4183C4;
@@ -27,7 +27,7 @@ $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
 $mainFont: 'Roboto', Helvetica, Aria, sans-serif;
-$titleFont: 'Arvo', Georgia, serif;
+$titleFont: 'Roboto Slab', Georgia, serif;
 
 // Mobile breakpoints
 @mixin mobile {
