@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/safe-string-concatenation/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 假如你需要拼接一些不确定类型的变量为字符串，你需要确保算术运算符在你拼接时不会起作用。使用concat：

@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/using-json-stringify/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 假如有一个对象具有参数"prop1", "prop2", "prop3"。

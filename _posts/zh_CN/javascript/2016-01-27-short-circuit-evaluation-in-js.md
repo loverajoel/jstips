@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/short-circuit-evaluation-in-js/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 [短路求值](https://zh.wikipedia.org/wiki/%E7%9F%AD%E8%B7%AF%E6%B1%82%E5%80%BC)是说, 只有当第一个运算数的值无法确定逻辑运算的结果时，才对第二个运算数进行求值：当AND(`&&`)的第一个运算数的值为false时，其结果必定为false；当OR(`||`)的第一个运算数为true时，最后结果必定为true。

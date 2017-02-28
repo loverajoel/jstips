@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/differences-between-undefined-and-null/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 

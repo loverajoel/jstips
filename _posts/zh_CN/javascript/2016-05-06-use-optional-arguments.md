@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/use-optional-arguments/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 实例函数中第2个与第3个参数为可选参数

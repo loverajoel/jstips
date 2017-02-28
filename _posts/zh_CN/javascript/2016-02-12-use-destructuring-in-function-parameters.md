@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/use-destructuring-in-function-parameters/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 大家一定对[ES6解构赋值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)非常熟悉。但是你知道在函数参数里也可以使用它吗？

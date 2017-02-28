@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/preventing-unapply-attacks/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 重写内置对象的原型方法，外部代码可以通过重写代码达到暴漏和修改已绑定参数的函数。这在es5的方法下使用`polyfill`时是一个严重的安全问题。

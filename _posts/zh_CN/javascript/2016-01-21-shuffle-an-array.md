@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/shuffle-an-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
  

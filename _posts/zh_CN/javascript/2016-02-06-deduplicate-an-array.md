@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/deduplicate-an-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 # 原始变量

@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/keys-in-children-components-are-important/
 
 categories:
-    - react
     - zh_CN
+    - react
 ---
 
 [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children)必须传递给从数组中动态创建的所有组件的一个值。它是一个唯一且固定的id，用来识别DOM中的每个组件，也可以让我们区别它是否是同一个组件。使用key可以确保子容器是可保存而且不需要重复创建的，还可以防止奇怪的事情发生。

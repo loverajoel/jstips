@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/break-continue-loop-functional/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 

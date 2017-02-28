@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/copy-to-clipboard/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 这是一个简单的小知识，本周我做了一个简单的“复制到剪贴板”按钮，这是我第一次做这种功能，向大家分享一下我的实现方法。

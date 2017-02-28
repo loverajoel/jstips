@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/know-the-passing-mechanism/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 理论上，JavaScript通过值传递。它既不是值传递也不是引用传递，具体取决于它的真实场景。要理解传值机制，看一下下面两个实例代码和解释。

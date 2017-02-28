@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/tip-to-measure-performance-of-a-javascript-block/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 在许多编程语言中，方法的参数是默认强制需要的，开发人员必须明确定义一个可选的参数。在Javascript 中每一个参数都是可选的，但是我们可以利用[**es6参数默认值**](http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values)特性的优点来达到强制要求这种目的，并且不污染函数体本身。

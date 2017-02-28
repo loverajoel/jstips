@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/angularjs-digest-vs-apply/
 
 categories:
-    - angular
     - zh_CN
+    - angular
 ---
 
 AngularJs最令人欣赏的特性之一就是双向数据绑定。AngularJs通过循环(`$digest`)检查model和view的变化实现此功能。想要理解框架底层的运行机制你需要理解这个概念。

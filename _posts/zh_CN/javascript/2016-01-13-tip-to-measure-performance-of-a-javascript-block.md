@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/fat-arrow-functions/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 快速的测量javascript的性能，我们可以使用console的方法，例如

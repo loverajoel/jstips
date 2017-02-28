@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/converting-truthy-falsy-values-to-boolean/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 你可以使用`!!`操作符将[truthy](https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy)或[falsy](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy)值转换为布尔值。

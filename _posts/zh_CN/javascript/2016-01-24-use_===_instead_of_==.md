@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/use_===_instead_of_==/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 `==` (或者 `!=`) 操作在需要的情况下自动进行了类型转换。`===` (或 `!==`)操作不会执行任何转换。`===`在比较值和类型时，可以说比`==`更快([jsPref](http://jsperf.com/strictcompare))。 

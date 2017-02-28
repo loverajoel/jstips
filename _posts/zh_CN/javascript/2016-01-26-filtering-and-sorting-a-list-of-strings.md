@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/filtering-and-sorting-a-list-of-strings/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 你可能有一个很多名字组成的列表，需要过滤掉重复的名字并按字母表将其排序。

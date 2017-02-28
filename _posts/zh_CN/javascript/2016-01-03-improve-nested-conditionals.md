@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/improve-nested-conditionals/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 

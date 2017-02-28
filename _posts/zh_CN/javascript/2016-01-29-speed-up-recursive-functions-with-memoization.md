@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/speed-up-recursive-functions-with-memoization/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 大家对斐波那契(Fibonacci)数列都很熟悉。我们可以再20秒内写出下面这样一个方法。

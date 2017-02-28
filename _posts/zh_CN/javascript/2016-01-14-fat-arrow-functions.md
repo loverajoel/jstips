@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/fat-arrow-functions/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 
