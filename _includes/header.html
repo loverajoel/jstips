@@ -1,0 +1,38 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <div class="menu-container">
+      {% if page.lang == 'en' %}
+        <a class="site-title" href="/">
+      {% else if %}
+        <a class="site-title" href="/{{ page.lang }}">
+      {% endif %}
+        <img src="{{ "/assets/images/logo.svg" | relative_url }}">
+      </a>
+      <nav class="site-nav">
+          <a class="btn-submit-tip" href="{{ site.transl[page.lang].btn_submit_your_tip.link }}">{{ site.transl[page.lang].btn_submit_your_tip.txt }}</a>
+
+          <div class="page-link lang-menu">
+            <span>{{ site.transl[page.lang].dropdown_lang[page.lang].txt }}</span>
+            <ul>
+              {% for lang in site.languages %}
+                {% if lang.name != page.lang %}
+                    <li><a href="{{ lang.link }}">{{ site.transl[page.lang].dropdown_lang[lang.name].txt }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+
+      </nav>
+    </div>
+  </div>
+
+  <div class="categories-container">
+    <nav class="site-nav">
+      {% for category in site.myCategories %}
+        <a class="page-link {% if page.filter == category %} active-{{ page.filter }} {% endif %} {{ category }}" href="/{{ page.lang }}/{{ category }}">{{ site.transl[page.lang].categories[category] }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+
+</header>

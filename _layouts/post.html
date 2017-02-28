@@ -1,52 +1,23 @@
 ---
 layout: default
-is_post: true
 ---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<article class="post single">
-    <div class="header-content">
-        <h1 class="post-title">
-            <span class="tip-number">{{ page.tip-number }}</span>
-            <span class="title">{{ page.title | markdownify}}</span>
-        </h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">By <a itemprop="name" target="_blank" href="{{ page.tip-username-profile }}">@{{ page.tip-username }}</a></span>
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">on {{ page.date | date: "%b %-d, %Y" }}</time>
+    </p>
+  </header>
 
-        <div class="tldt">
-            <p>{{ page.tip-tldr | markdownify}}</p>
-        </div>
-
-        <div class="meta-info">
-            <time class="date meta-item" datetime="{{ page.date }}"><i class="fa fa-calendar"></i> {{ page.date | date_to_string }}</time>
-
-            <div class="contributor meta-item"><i class="fa fa-user"></i><a href="{{ page.tip-username-profile }}" target="_blank"> @{{ page.tip-username }}</a></div>
-
-            {% if page.tip-writer-support %}
-                <div class="contributor meta-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADNUlEQVRoQ82aj7FNMRDGv1cBKkAFqAAVoAJUgApQASpABagAFaACVIAKmJ/JmjhnT7K5yT25O/PmvXl3k91vk/2be6YxdF7SA0m3JV1NW36W9FbSC0k/x4hZ73I2YON7kp5JAoRHKP9I0qsBslZb9AJA+ZdBxe4fA0QPACz+tWD5JS5O4vLo69QD4Imkx0HrG9tTSawbRj0APmUOG1UIx74WZY7w9QD4HRHg8JRkXkrRDJ6Hkf1PCQDXEaXxrbDD9wD4IOl6xEoZz0dJNxZrUPj94jpeiDp7DwCsRfxvIfLB82yBp7wHclNGD4AWxbd4vUDQFKlmAtgKwzclcT1D1AOAiIEPcKf5mxpoq5wwZUhmKEeNxFXy+Jt0amJOWqAohRtlxGj6nowR3rcFANayUBcW0MjY5MDsHQWA1d+0WqdRediPAgDlidO1+32AvqslBoC+wvyluG/tBPZUPj8BqlwCQzUjlwBgceI0G+1FnACNT95jFEGUALDR3b00z+S8XsjlKlHBfvN0MQCUBIRFmO4kRo5xBlFyW19t8skdJLgVAcAy4peUXAABmBnWLxnMzdAAMIexCpC7/2OG6Ssy3WYIANaYGABCGDH/FIkShGIPMH8JADjJuVSf8CHZFhAziHIbJSGucbXnBsCsaLM00LJX4PPq4AAAxHmOhFOYSV4Xhm7FaGhhlLBFh8XVmQWkC0Bu+UOnDb2n53VioSu0FHxIs96rvK1HYTIxRB6qDsG8UmImgGZDeAAOmTY0Cx61wANQ9fxRwkfss1WNkkxujRBw7D22ABBW6QVOid4lp/5XRqBcqR9g7MH04RSIyOROQWodGRHpymQEv1K14L6z1XpiSuvZIGiwrMBb2bIGgAUzQXQ19TnaGQVfVfmaEy+Pa8+yOzzgilyhvE6pNhiDHD48Ym8BsGdy2wybSwO1ALDmv2ZkJszQxQUj/2fiQZKs9Rzw8aZcpSiA6KSCAdR/mdLRILpX6J0sCoBHDAa8JQo7XsottQfC0EtNFABh1L6JwhXwsjPfSgm97aYBmlemMFzjBO2bLu44MbdiFIBneU4FMPZD7RT9Rgp1DWBNWX6H38VyZf4A7T2UJ/rOgjgAAAAASUVORK5CYII=" target="_blank" width="13" height="13" /><a href="{{ page.tip-writer-support }}" target="_blank" onClick="ga('send', 'event', 'Support this writer', 'Click', '{{ page.tip-username }}');"> Support this writer</a></div>
-            {% endif %}
-
-            {% if page.tip-translator-support %}
-                <div class="contributor meta-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAADtklEQVRoQ92agZENQRCG/4sAESACRIAIEAEiQASIABFwESACRIAIkAERUN/Vtlr7dqa7Z2bfbemqq6u6N7vTf/893X/PvROdn12X9EjSA0k/JX2Zfj5K+jT9Le3dSfqJvgcuSroj6bEkANUMgC8lvc+AOwYgA3FXEj8t9kbSc0nfvYe3BAQTACClRhmMAYwUXbXRgAwEQGBmCwPMPUmctQMbAeiWpPsTG1uBWPP9oSRS8R9rBYTjVqGubEFD8J03psr4d3kLIKrThw1TKojlbNmrqWI2A4KZz5LOkxVz/nSt4GQZettRejOR99Z+LfWxDCCa4QtvpyN9fru3ypFipNoxq1gpNqupZoujDFEEKM97sCI7OBcBRKd/vQckkopnJ8oQKfZtJ6mGz08mwVqMr8fQM0lPE+z8knQhsT679JKnvGuAWtghvykgVMRrK94y59zMopjWM0a4ar0GKMvOQdeepSqCkgBRXLw5qIR3VbstF9cAcXaiiqBaSqdNe5oyqYwvxbEhUhR+B1NjjZnlo8wxiNlWiwTs7N01hpg3avnOJsj31blk5vmIsn+gqkuRqQHypE4kp0cocwpJuKnXAOEMcqdkXtXpLQK2b1UZZIoCa7mUuFwBVQsI6qL3PiHFjneG+Nw7zFcXNzGwwjhOukYrZCle4co2f4GnFGppt5QhAKF39QLBP8BwbribS5kHqJR286oDANIrfHAdD5vBRFJuLe3m1Q0pAphRcxJqmnOXZibSWG3NPO3mlW1Ef5mTRYMmZV01UGM4knI8T8QQm1YEYAYpM8IIEkCaWckUBVsLG5wRfo+4+eGcvJuAuPfVmahFGeKdpB5R9BREbX/OCK0AMF2pVdokA8jegTPcYWcMRmCXZze1FkCeaF063F25MhFoAYTCpolGDDCcvU3Sa82BDCAcgx1+M3l6Np+TaL5DD3/vGbIGikLAsVoP+jEVDjsvtjalmr1o9QKycZwqh2OkEFWP/gFj3PSgjElHq2CUd66OTXETCPrYphZJuWUTJe2QP7UUKgnVyFDYBTgCaK0IwJCxATOwgZKAtdroEL4baEUVAcTU2nr1tPRr87SLAIre/kSDGtkz+q6DdZGX/3eATGk3R232oPvfg95NIgy1aLeSX7soCiMHuV2UbaLtXWdFMgUFMeICpbpXJOV4wYgJla+z7Gp8yKjsZRQ3Pzu2YZQhW98C6mhgcDILyNKPMbp2Rcy6peqOnLPuNS2AbFO7OEEW2b8f6TP0LQTswTelur0NvOAPYRy1NRXSErMAAAAASUVORK5CYII=" target="_blank" width="13" height="13" /><a href="{{ page.tip-translator-support }}" target="_blank" onClick="ga('send', 'event', 'Support this translator', 'Click', '{{ page.tip-translator-support }}');"> Support this translator</a></div>
-            {% endif %}
-
-            <div id="social" class="share meta-item social-sharer minimalism">
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="entry">
-        {{ content }}
-    </div>  
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            Share(
-              document.getElementById('social'),
-              {
-                url: 'http://www.jstips.co{{page.url}}',
-                title: 'joel',
-                networks: ['in', 'fb', 'tw']
-              }
-            ); 
-        });
-    </script>
-    {% include disqus.html %}
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 </article>
+{% include related_tips.html %}
+<div class="wrapper">
+  {% if site.disqus %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</div>

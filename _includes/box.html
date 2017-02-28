@@ -1,0 +1,11 @@
+<li class="{{ post.categories[1] }}-color">
+  <div>
+    <span class="post-meta">@{{ post.tip-username }} in <span class="category">{{ post.categories[1] }}</span></span>
+
+    <h2>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h2>
+    <p>{{ post.tip-tldr  | truncatewords:43 }}</p>
+  </div>
+  <a class="read-more" href="{{ post.url | relative_url }}">{{ site.transl[page.lang].txt_read_more }} <span class="shape">→</span></a>
+</li>

@@ -1,0 +1,57 @@
+// Define defaults for each variable.
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500');
+
+$titles-font: 'Roboto Mono', monospace;
+$default-font: 'Roboto', sans-serif;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$titles-font-weight: 500 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$javascript: #f9d732;
+$react: #4ad5ff;
+$angular: #dd0031;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #242424 !default;
+$font-color:       #242424 !default;
+$background-color: #f7f7f4 !default;
+$brand-color:      $javascript;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Width of the content area
+$content-width:    1080px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        1080px !default;
+
+// My colors
+$color-text:       #242424 !default;
+$color-background: #f7f7f4 !default;
+$color-brand:      $javascript !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
