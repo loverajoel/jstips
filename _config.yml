@@ -1,0 +1,237 @@
+
+title: Js Tips - A JS tip per day!
+email: hello@jstips.co
+description: A JS tip per day!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jstips.co" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+markdown: kramdown
+
+permalink: /:categories/:title/
+
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+disqus: tipsjs
+
+google_analytics: UA-72764095-1
+
+defaults:
+  -
+    scope:
+      path: _posts/en
+      type: posts
+    values:
+      layout: default
+      lang: en
+      is_post: true
+  -
+    scope:
+      path: _posts/zh_CN
+      type: posts
+    values:
+      layout: default
+      lang: zh_CN
+      is_post: true
+  -
+    scope:
+      path: _posts/es_ES
+      type: posts
+    values:
+      layout: default
+      lang: es_ES
+      is_post: true
+  -
+    scope:
+      path: _posts/zh_TW
+      type: posts
+    values:
+      layout: default
+      lang: zh_TW
+      is_post: true
+
+myCategories:
+  - javascript
+  - react
+  - angular
+
+# languages var
+languages:
+  -
+    name: en
+    link: /
+  -
+    name: zh_CN
+    link: /zh_CN
+  - 
+    name: es_ES
+    link: /es_ES
+  -
+    name: zh_TW
+    link: /zh_TW
+
+transl:
+  en:
+    btn_submit_your_tip:
+      txt: Submit your tip
+      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+    dropdown_lang:
+      en:
+        txt: English
+        link: /
+      es_ES:
+        txt: Español
+        link: /
+      zh_TW:
+        txt: 台灣
+        link: /
+      zh_CN:
+        txt: 中国大陆
+        link: /
+    txt_latest_tips: Latest Tips
+    txt_popular_tips: Popular Tips
+    txt_read_more: Read More
+    txt_email_suscriber: Get the latest in JavaScript, once a week.
+    txt_email_suscriber_2: Become a friend.
+    txt_email_placeholder: E-mail address
+    txt_email_button: Send
+    menu_footer:
+      about:
+        txt: About
+        link: /
+      contact:
+        txt: Contact
+        link: /
+    txt_footer: JS Tips is a collection of useful daily JavaScript tips that will allow you to improve your code writing
+    categories:
+      javascript: JavaScript
+      react: React
+      angular: Angular
+    read_more: Read More
+    show_me_next_page: Show me next page
+    show_me_prev_page: Show me previous page
+  es_ES:
+    btn_submit_your_tip:
+      txt: Envía tu tip
+      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+    dropdown_lang:
+      en:
+        txt: English
+        link: /
+      es_ES:
+        txt: Español
+        link: /
+      zh_TW:
+        txt: 台灣
+        link: /
+      zh_CN:
+        txt: 中国大陆
+        link: /
+    txt_latest_tips: Úlitmos Tips
+    txt_popular_tips: Tips Populares
+    txt_read_more: Leer más
+    txt_email_suscriber: Get the latest in JavaScript, once a week.
+    txt_email_suscriber_2: Become a friend.
+    txt_email_placeholder: E-mail address
+    txt_email_button: Enviar
+    menu_footer:
+      about:
+        txt: Acerca
+        link: /
+      contact:
+        txt: Contacto
+        link: /
+    txt_footer: JS Tips is a collection of useful daily JavaScript tips that will allow you to improve your code writing
+    categories:
+      javascript: JavaScript
+      react: React
+      angular: Angular
+    read_more: Leer más
+    show_me_next_page: Siguiente Página
+    show_me_prev_page: Página Anterior
+  zh_CN:
+    btn_submit_your_tip:
+      txt: 提交小知识
+      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+    dropdown_lang:
+      en:
+        txt: English
+        link: /
+      es_ES:
+        txt: Español
+        link: /
+      zh_TW:
+        txt: 台灣
+        link: /
+      zh_CN:
+        txt: 中国大陆
+        link: /
+    txt_latest_tips: Latest Tips
+    txt_popular_tips: Popular Tips
+    txt_read_more: Read More
+    txt_email_suscriber: Get the latest in JavaScript, once a week.
+    txt_email_suscriber_2: Become a friend.
+    txt_email_placeholder: E-mail address
+    txt_email_button: Send
+    menu_footer:
+      about:
+        txt: 关于
+        link: /
+      contact:
+        txt: Contact
+        link: /
+    txt_footer: JS Tips is a collection of useful daily JavaScript tips that will allow you to improve your code writing
+    categories:
+      javascript: JavaScript
+      react: React
+      angular: Angular
+    read_more: Read More
+    show_me_next_page: 下一条
+    show_me_prev_page: 上一条
+  zh_TW:
+    btn_submit_your_tip:
+      txt: 提交你的 tip
+      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+    dropdown_lang:
+      en:
+        txt: English
+        link: /
+      es_ES:
+        txt: Español
+        link: /
+      zh_TW:
+        txt: 台灣
+        link: /
+      zh_CN:
+        txt: 中国大陆
+        link: /
+    txt_latest_tips: Latest Tips
+    txt_popular_tips: Popular Tips
+    txt_read_more: Read More
+    txt_email_suscriber: Get the latest in JavaScript, once a week.
+    txt_email_suscriber_2: Become a friend.
+    txt_email_placeholder: E-mail address
+    txt_email_button: Send
+    menu_footer:
+      about:
+        txt: 關於
+        link: /
+      contact:
+        txt: Contact
+        link: /
+    txt_footer: JS Tips is a collection of useful daily JavaScript tips that will allow you to improve your code writing
+    categories:
+      javascript: JavaScript
+      react: React
+      angular: Angular
+    read_more: Read More
+    show_me_next_page: 下一篇 tip
+    show_me_prev_page: 上一篇 tip

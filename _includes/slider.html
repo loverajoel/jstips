@@ -1,0 +1,33 @@
+ <div class="swiper-container">
+  <div class="swiper-wrapper">
+    {% for category in site.myCategories %}
+      {% assign counter=0 %}
+      <div class="swiper-slide {{ category }}">
+        <span class="big">{{ category }}</span>
+        <span class="title">{{ category }}</span>
+        <ul>
+          {% assign posts=site.posts | where:"lang", page.lang %}
+          {% for post in posts %}
+            {% if post.categories contains category %}
+              {% if counter < 5 %}
+                <li>
+                    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </li>
+                {% assign counter=counter | plus:1 %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next" id="joel">
+    <img src="{{ "/assets/images/arrow.svg" | relative_url }}">
+  </div>
+  <div class="swiper-button-prev">
+    <img src="{{ "/assets/images/arrow.svg" | relative_url }}">
+  </div>
+</div>

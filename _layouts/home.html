@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% if page.filter %}
+  <div class="category-header {{page.filter}}">
+    <div class="wrapper">
+      {% assign i_top = true %}
+      {% assign posts=site.posts | where:"lang", page.lang %}
+      {% for post in posts %}
+        {% if post.categories contains page.filter %}
+          {% if i_top %}
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.tip-tldr  | truncatewords:43 }}</p>
+            <a class="read-more" href="{{ post.url | relative_url }}">{{ site.transl[page.lang].read_more }}</a>
+            {% assign i_top = false %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+<div class="wrapper">
+  <div class="home">
+
+    <div class="page-cont">
+      <h1 class="page-heading">Posts</h1>
+    
+      {{ content }}
+
+      <ul class="post-list">
+        {% assign i_list = false %}
+        {% assign posts=site.posts | where:"lang", page.lang %}
+        {% for post in posts %}
+          {% if page.filter %}
+            {% if post.categories contains page.filter %}
+              {% if i_list %}
+                {% include box.html %}
+              {% else %}
+                {% assign i_list = true %}
+              {% endif %}
+            {% endif %}
+          {% else  %}
+            {% if i_list %}
+                {% include box.html %}
+             {% else %}
+                {% assign i_list = true %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <div class="next-infinite">{{ site.transl[page.lang].show_me_next_page }}</div>
+    </div>
+
+    {% include sidebar.html %}
+  </div>
+</div>
+{% include slider.html %}

@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="JS Tips">
+  <meta itemprop="description" content="This is about one JS tip every day!">
+  <meta itemprop="image" content="http://www.jstips.co/images/jstips-header-blog">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://www.jstips.co">
+  <meta name="twitter:title" content="JS Tips">
+  <meta name="twitter:description" content="This is about one JS tip every day!">
+  <meta name="twitter:creator" content="@tips_js">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="JS Tips" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.jstips.co" />
+  <meta property="og:image" content="http://www.jstips.co/images/jstips-header-blog-static.png" />
+  <meta property="og:description" content="This is about one JS tip every day!" />
+  <meta property="og:site_name" content="JS Tips" />
+
+  <link rel="stylesheet" href="{{ "/assets/js/swiper/swiper.min.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
+  
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+</head>
