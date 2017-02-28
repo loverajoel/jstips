@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/passing-arguments-to-callback-functions/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Por defecto no se puede pasar argumentos a una función de callback. Por ejemplo:

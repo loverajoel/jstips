@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/create-range-0...n-easily-using-one-line/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 A continuación mostraremos como crear el rango 0...N-1).

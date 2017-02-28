@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/use-optional-arguments/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Ejemplo de función donde los argumentos 2 y 3 son opcionales

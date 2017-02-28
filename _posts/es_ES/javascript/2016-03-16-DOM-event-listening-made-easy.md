@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/DOM-event-listening-made-easy/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Muchos de nosotros todavía están haciendo estas cosas:

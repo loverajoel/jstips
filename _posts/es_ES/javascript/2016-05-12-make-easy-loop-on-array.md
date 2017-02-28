@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/make-easy-loop-on-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 A veces, necesitamos un ciclo sin fin sobre un array de items, como un carrusel de imágenes o un lista de reproducción de audio. Así es como tomar un array y darle "bucle poderosos"

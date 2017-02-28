@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/calculate-the-max-min-value-from-an-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 JavaScript es pass-by-value, técnicamente. No es ni pass-by-value, ni pass-by-reference, pasando por el verdadero sentido de estos términos. Para entender este mecanismo de paso, echar un vistazo a los siguientes dos fragmentos de código de ejemplo y las explicaciones.

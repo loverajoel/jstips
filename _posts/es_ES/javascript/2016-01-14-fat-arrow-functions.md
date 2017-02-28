@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/fat-arrow-functions/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Introducido como una nueva característica en ES6, funciones de dirección pueden ser una herramienta muy útil para escribir más código en un menor número de líneas. El nombre proviene de su sintaxis, `=>`, que es una "flecha", en comparación con una flecha delgada `->`. Algunos programas ya reconocen a este tipo de función de diferentes lenguajes como Haskell, como 'lambda expressions', o 'anonymous functions'. Se le llama en el anonimato, ya que estas funciones de dirección no tienen un nombre de función descriptiva.

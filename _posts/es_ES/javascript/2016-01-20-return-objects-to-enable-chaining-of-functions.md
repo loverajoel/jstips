@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/return-objects-to-enable-chaining-of-functions/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Al crear funciones en un objeto en Javascript orientado a objetos, devolver el objeto a la función le permitirá encadenar funciones.

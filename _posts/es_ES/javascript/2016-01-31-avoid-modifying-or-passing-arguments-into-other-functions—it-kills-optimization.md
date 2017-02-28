@@ -13,8 +13,8 @@ redirect_from:
   - /es_es/avoid-modifying-or-passing-arguments-into-other-functions-it-kills-optimization/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 ###Background

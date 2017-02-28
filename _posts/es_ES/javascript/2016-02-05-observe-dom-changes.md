@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/observe-dom-changes/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver) es una solución para escuchar a los cambios del DOM y hacer lo que quiere hacer con los elementos cuando cambiaron. En el siguiente ejemplo, hay una cierta emulación del contenido de la carga dinámica con una ayuda de contadores de tiempo, después de la primera creación del elemento "target" pasa "subTarget".
 En código de la extensión en primer lugar rootObserver funciona hasta la apariencia del targetElement luego empieza el elementObserver. Esta observación en cascada ayuda a obtener finalmente el momento en que se encuentra subTargetElement.

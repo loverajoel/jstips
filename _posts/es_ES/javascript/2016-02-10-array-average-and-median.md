@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/array-average-and-median/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Los siguientes ejemplos se basan en el siguiente array:

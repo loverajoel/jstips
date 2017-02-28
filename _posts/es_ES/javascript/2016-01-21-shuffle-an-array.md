@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/shuffle-an-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
  Este codigo utiliza [Fisher-Yates Shuffling](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle) Algoritmo para mezclar un array.

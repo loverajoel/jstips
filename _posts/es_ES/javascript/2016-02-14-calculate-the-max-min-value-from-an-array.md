@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/detect-document-ready-in-pure-js/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Las funciones [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) and [Math.min()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min) encontrar el valor máximo y mínimo de los argumentos, respectivamente.

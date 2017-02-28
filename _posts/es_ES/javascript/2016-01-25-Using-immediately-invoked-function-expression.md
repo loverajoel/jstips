@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/Using-immediately-invoked-function-expression/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Denominado como "Iffy" >dudoso< (IIFE - expresión de la función invocada inmediatamente) es una expresión de la función anónima que se invoca inmediatamente y tiene algunos usos importantes en Javascript.

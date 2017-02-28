@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/implementing-asynchronous-loops/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Vamos a probar a escribir una función asíncrona que imprime el valor del índice del bucle cada segundo.

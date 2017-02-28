@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/template-strings/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 A partir de ES6, JS ahora tiene template strings
