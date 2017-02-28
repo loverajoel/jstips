@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/speed-up-recursive-functions-with-memoization/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Fibonacci es muy familiar. podemos escribir la siguiente función en 20 segundos.

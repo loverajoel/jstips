@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/use_===_instead_of_==/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 El operador `==` (or `!=`) lleva a cabo una conversión automática de tipos si es necesario. El operador `===` (or `!==`) no va a realizar ninguna conversión. En él se compara el valor y el tipo, que podría considerarse más rápido ([jsPref](http://jsperf.com/strictcompare)) que `==`.

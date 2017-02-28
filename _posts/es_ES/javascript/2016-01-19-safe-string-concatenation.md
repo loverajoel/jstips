@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/safe-string-concatenation/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Suponga que tiene un par de variables con tipos desconocidos y desea concatenar en una cadena. Para asegurarse de que la operación aritmética no se puede aplicar durante la concatenación, utilizar 'concat':

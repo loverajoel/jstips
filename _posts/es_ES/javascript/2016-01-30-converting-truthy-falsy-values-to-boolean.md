@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/converting-truthy-falsy-values-to-boolean/
   
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Puede convertir un valor [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) o [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) a verdadero booleano con el `!!` operador.

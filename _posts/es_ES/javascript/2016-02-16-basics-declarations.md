@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/basics-declarations/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 A continuación, las diferentes formas de declarar las variables en JavaScript. 

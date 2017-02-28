@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/use-destructuring-in-function-parameters/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Estoy seguro que muchos de ustedes ya están familiarizados con el [ES6 Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). ¿Sabías que también se puede utilizar en los parámetros de una función?

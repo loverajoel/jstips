@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/flattening-multidimensional-arrays-in-javascript/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Estas son las tres formas conocidas para fusionar arrays multidimensional en una sola arrays.

@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/get-file-extension/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Usted va a correr dentro de algunas instancias en las que va a utilizar `new` para asignar nuevos objetos en JavaScript. Se va a volar tu mente a menos que lea este consejo para entender lo que está sucediendo por detrás.

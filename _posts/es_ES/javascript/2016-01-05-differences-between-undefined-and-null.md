@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/differences-between-undefined-and-null/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 - `undefined` significa una variable no se ha declarado, o se ha declarado pero aún no se le ha asignado un valor

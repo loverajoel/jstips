@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/sorting-strings-with-accented-characters/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Javascript tiene un método nativo **[sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)** que permite ordenar arrays. Haciendo una simple `array.sort()` va a tratar a cada entrada de la matriz como una cadena y va a tratar de ordenarla alfabéticamente. También puede proporcionar la funcion [own custom sorting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters).

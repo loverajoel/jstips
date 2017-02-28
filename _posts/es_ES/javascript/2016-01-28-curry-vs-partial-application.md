@@ -12,8 +12,8 @@ redirect_from:
   - es_es/curry-vs-partial-application/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 **Currying**

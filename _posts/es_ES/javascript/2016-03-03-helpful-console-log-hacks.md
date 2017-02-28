@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/helpful-console-log-hacks/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 ## Usando breakpoints condicionales

@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/preventing-unapply-attacks/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Reemplazando el constructor de prototypes, código externo puede ocasionar que el código roto sea reescribiendo código para exponer y cambiar los argumentos ligados. Esto puede ser un problema serio que rompe las aplicaciones que funciona mediante el uso de métodos polyfill ES5.

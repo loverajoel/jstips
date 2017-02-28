@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/even-simpler-way-of-using-indexof-as-a-contains-clause/
 
 categories:
-    - javascript
-    - es_ES	
+    - es_ES
+    - javascript	
 ---
 
 JavaScript por defecto no tiene un método contains. Y para comprobar la existencia de una subcadena en una cadena o un elemento de un array puede hacer esto:

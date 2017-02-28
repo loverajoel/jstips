@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/reminders-about-reduce-function-usage/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Como está escrito en la documentación del método `reduce()` aplica una función contra un acumulador y cada valor del array (de izquierda a derecha) para reducirla a un solo valor.

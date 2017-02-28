@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/deduplicate-an-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 # Primitivos

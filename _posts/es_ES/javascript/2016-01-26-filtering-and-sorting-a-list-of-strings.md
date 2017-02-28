@@ -11,8 +11,8 @@ redirect_from:
   - /filtering-and-sorting-a-list-of-strings/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Es posible que tenga una gran lista de nombres que necesita filtrar con el fin de eliminar los duplicados y ordenarlos alfabéticamente.

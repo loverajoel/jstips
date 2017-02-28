@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/converting-to-number-fast-way/
   
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 La conversión de cadenas en números es muy común. La forma más rápida ([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29)) y más fácil de lograr que sería utilizar el operador `+` (mas).

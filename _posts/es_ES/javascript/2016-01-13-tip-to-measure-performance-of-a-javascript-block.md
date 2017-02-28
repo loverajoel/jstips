@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/tip-to-measure-performance-of-a-javascript-block/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Para medir rápidamente el rendimiento de un bloque de Javascript, podemos utilizar las funciones de la consola como

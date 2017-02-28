@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/converting-a-node-list-to-an-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 El método `querySelectorAll` devuelve un array similar a un objeto, llamado una lista de nodos. Estas estructuras de datos se denominan como "Array-like", porque aparecen como un array, pero no se pueden utilizar con los métodos de matriz como `map` y `forEach`. Aquí está una manera rápida, segura y reutilizable para convertir una lista de nodos en un Array de elementos del DOM:

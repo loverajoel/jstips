@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/map-to-the-rescue-adding-order-to-object-properties/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 ## Propiedades de orden del Objeto
