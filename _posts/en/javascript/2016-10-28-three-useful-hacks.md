@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Three useful hacks
+title: Three useful hacks demo
 tip-number: 60
 tip-username: leandrosimoes 
 tip-username-profile: https://github.com/leandrosimoes
