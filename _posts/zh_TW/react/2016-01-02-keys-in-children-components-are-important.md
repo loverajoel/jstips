@@ -12,8 +12,8 @@ redirect_from:
   - /zh_tw/keys-in-children-components-are-important/
 
 categories:
-    - react
     - zh_TW
+    - react
 ---
 
 你可以從陣列動態建立 [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) 屬性並傳送到所有的元件（component）。它是一個唯一以及固定的 id，React 用來識別 DOM 裡面的每個元件，並區別它是否為同一個元件。使用 keys 可以確保子元件被保護而不會被重覆建立，也可以防止奇怪的事件發生。

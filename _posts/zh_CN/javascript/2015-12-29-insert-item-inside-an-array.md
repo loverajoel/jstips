@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/insert-item-inside-an-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 # 向一个数组中插入元素
 

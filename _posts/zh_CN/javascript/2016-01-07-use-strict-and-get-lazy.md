@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/use-strict-and-get-lazy/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 （译者注：此片翻译较渣，欢迎指正，建议大家[阅读原文](http://www.jstips.co/en/use-strict-and-get-lazy/)或直接阅读[MDN对严格模式的中文介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 并欢迎PR）

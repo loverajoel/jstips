@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/observe-dom-changes/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 [MutationObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)是监听DOM变化与当元素变化时做适当操作的一个解决方法。在下面的例子中我们使用计时器模拟了内容的动态加载，第一个元素"target"创建后，创建"subTarget"。
 在扩展中的代码，`rootObserver`首先开始工作，直到`targetElement`被创建后`rootObserver`停止，然后`elementObserver`开始工作。这个级联观测可以在发现`subTargetElement`时提醒你。

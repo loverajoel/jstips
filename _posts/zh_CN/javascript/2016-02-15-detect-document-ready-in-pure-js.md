@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/detect-document-ready-in-pure-js/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 跨浏览器且纯JavaScript检测document是否加载完成的方法是使用[`readyState`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/readyState).

@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/return-values-with-the-new-operator/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 你将会遇到在JavaScript中使用`new`来分配新对象的一些情况。这将会扰乱你的思绪，除非你阅读了这篇文章并理解在内部发生了什么。

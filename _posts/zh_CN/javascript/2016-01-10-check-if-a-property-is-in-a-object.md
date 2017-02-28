@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/check-if-a-property-is-in-a-object/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 当你需要检查某属性是否存在于一个[对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)，你可能会这样做：

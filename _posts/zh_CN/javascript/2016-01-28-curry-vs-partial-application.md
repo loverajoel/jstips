@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/curry-vs-partial-application/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 **柯里化(currying)**

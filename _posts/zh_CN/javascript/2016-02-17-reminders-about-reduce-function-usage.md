@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/reminders-about-reduce-function-usage/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 文档里说`reduce()`方法接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始合并，最终为一个值。

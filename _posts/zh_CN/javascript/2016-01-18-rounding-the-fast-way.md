@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/rounding-the-fast-way/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 本条小知识关于性能...

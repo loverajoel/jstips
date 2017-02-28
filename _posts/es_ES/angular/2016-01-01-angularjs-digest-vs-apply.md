@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/angularjs-digest-vs-apply/
 
 categories:
-    - angular
     - es_ES
+    - angular
 ---
 
 Una de las características más apreciadas de AngularJS es el de dos vías de enlace de datos. Con el fin de hacer de este trabajo AngularJS evalúa los cambios entre el modelo y la vista a través de ciclos (`$digest`). Es necesario comprender este concepto con el fin de entender cómo funciona el framework bajo el capó.

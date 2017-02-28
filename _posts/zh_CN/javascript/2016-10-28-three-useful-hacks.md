@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/three-useful-hacks/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 #### 从后向前获取数组元素

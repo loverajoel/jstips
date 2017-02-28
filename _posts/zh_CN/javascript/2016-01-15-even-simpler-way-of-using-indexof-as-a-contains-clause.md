@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/even-simpler-way-of-using-indexof-as-a-contains-clause/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 

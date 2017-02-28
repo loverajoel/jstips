@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/basics-declarations/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 下文是JavaScript中声明变量的不同方法。 

@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/comma-operaton-in-js/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 除了分号之外，逗号允许你在同一个地方放多个语句。
 例如：
