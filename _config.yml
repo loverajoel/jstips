@@ -82,7 +82,7 @@ transl:
   en:
     btn_submit_your_tip:
       txt: Submit your tip
-      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+      link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md
     dropdown_lang:
       en:
         txt: English
@@ -121,7 +121,7 @@ transl:
   es_ES:
     btn_submit_your_tip:
       txt: Envía tu tip
-      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+      link: https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING_es_ES.md
     dropdown_lang:
       en:
         txt: English
@@ -160,7 +160,7 @@ transl:
   zh_CN:
     btn_submit_your_tip:
       txt: 提交小知识
-      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_zh_CN.md
     dropdown_lang:
       en:
         txt: English
@@ -199,7 +199,7 @@ transl:
   zh_TW:
     btn_submit_your_tip:
       txt: 提交你的 tip
-      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING.md
+      link: https://github.com/loverajoel/jstips/blob/gh-pages/CONTRIBUTING_zh_TW.md
     dropdown_lang:
       en:
         txt: English

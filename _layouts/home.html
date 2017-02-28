@@ -40,11 +40,7 @@ layout: default
               {% endif %}
             {% endif %}
           {% else  %}
-            {% if i_list %}
-                {% include box.html %}
-             {% else %}
-                {% assign i_list = true %}
-            {% endif %}
+            {% include box.html %}
           {% endif %}
         {% endfor %}
       </ul>
