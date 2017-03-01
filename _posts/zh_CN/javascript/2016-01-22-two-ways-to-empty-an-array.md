@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/two-ways-to-empty-an-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 如果你定义了一个数组，然后你想清空它。

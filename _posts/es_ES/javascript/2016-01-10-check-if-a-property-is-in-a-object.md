@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/check-if-a-property-is-in-a-object/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Cuando usted tiene que comprobar si una propiedad está presente en un [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), es probable que esté haciendo algo como esto:

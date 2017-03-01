@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/assignment-shorthands/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 赋值是很常见的。有时候打字对于我们这些“懒惰的程序员”来说是很费时间的。

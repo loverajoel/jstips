@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/sorting-strings-with-accented-characters/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 Javascript有一个原生方法**[sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)**可以排列数组。一次简单的`array.sort()`将每一个数组元素视为字符串并按照字母表排列。你也可以提供[自定义排列方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Parameters)。

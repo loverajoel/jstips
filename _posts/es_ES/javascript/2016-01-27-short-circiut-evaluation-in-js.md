@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/short-circiut-evaluation-in-js/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 [Evaluación Short-circuit](https://en.wikipedia.org/wiki/Short-circuit_evaluation) dice, el segundo argumento se ejecuta o evalúa sólo si el primer argumento no es suficiente para determinar el valor de la expresión: cuando el primer argumento de la función AND ('&&') se evalúa como falsa, el valor total debe ser falso; y cuando el primer argumento de la función OR ('||') da como resultado true, el valor total debe ser verdad.

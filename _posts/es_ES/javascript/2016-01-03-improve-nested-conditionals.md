@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/improve-nested-conditionals/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 ¿Cómo podemos mejorar y hacer una declaración anidada `if` más eficiente en javascript?

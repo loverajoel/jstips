@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/converting-a-node-list-to-an-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 `querySelectorAll`方法返回一个类数组对象称为node list。这些数据结构被称为“类数组”，因为他们看似数组却没有类似`map`、`foreach`这样的数组方法。这是一个快速、安全、可重用的方法将node list转换为DOM元素的数组：

@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/implementing-asynchronous-loops/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 让我们试着写一个异步方法，每秒打印一次循环的索引值。

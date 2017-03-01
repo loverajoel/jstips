@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/extract-unix-timestamp-easily/
   
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Con frecuencia tenemos que calcular con marca de tiempo unix. Hay varias maneras de agarrar la marca de tiempo. La forma mas rapida y facil es

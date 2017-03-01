@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/avoid-modifying-or-passing-arguments-into-other-functions-it-kills-optimization/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 ### 背景

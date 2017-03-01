@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/extract-unix-timestamp-easily/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 

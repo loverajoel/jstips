@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/writing-a-single-method-for-arrays-and-a-single-element/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 En lugar de escribir métodos separados para manejar un array y un único parámetro elemento, escriba sus funciones para que puedan manejar ambos. Esto es similar a la forma en que algunas de las funciones de jQuery trabaja(`css` modificará todos los que coinciden con el selector).

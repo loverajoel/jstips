@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/basics-declarations/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 La forma cross-browser para comprobar si el documento se ha cargado en JavaScript puro utiliza [`readyState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState).

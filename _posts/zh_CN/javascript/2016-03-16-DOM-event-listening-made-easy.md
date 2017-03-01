@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/DOM-event-listening-made-easy/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 很多人还在这样做：
 

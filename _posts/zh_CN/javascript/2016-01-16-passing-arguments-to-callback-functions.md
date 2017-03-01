@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/passing-arguments-to-callback-functions/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 通常下，你并不能给回调函数传递参数。 比如:

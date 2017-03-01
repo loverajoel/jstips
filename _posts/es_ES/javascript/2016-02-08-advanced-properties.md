@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/advanced-properties/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Es posible configurar las propiedades del objeto en Javascript, por ejemplo, para establecer las propiedades de ser pseudo-privada o de sólo lectura. Esta característica está disponible desde ECMAScript 5.1, por lo tanto, es soportado por todos los navegadores recientes.

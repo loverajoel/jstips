@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/helpful-console-log-hacks/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 ## 使用条件断点输出`log`

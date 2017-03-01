@@ -10,8 +10,8 @@ redirect_from:
   - /zh_cn/keyword-var-vs-let/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 ### 概述

@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/use-strict-and-get-lazy/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Modo estricto en JavaScript hace que sea más fácil para los desarrolladores para escribir "seguro".

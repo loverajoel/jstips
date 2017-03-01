@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/map-to-the-rescue-adding-order-to-object-properties/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 ## 对象属性顺序

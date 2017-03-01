@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/array-average-and-median/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 下面的例子都基于如下数组：

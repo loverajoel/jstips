@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/insert-item-inside-an-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 La inserción de un elemento en un array existente, es una tarea común diaria. Se pueden añadir elementos al final de un array mediante push, al principio usando unshift, al medio que usa splice.

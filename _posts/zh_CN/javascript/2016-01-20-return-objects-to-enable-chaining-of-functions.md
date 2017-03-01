@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/return-objects-to-enable-chaining-of-functions/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 在面向对象的Javascript中为对象建立一个方法时，返回当前对象可以让你在一条链上调用方法。

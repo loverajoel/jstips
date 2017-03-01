@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/nodejs-run-a-module-if-it-is-not-required/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 En Node, puede decir que su programa va a hacer dos cosas diferentes dependiendo de si se ejecuta el código `require('./something.js')` o `node something.js`. Esto es útil si desea interactuar con uno de sus módulos de forma independiente.

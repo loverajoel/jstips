@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/assignment-shorthands/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Asignación es muy común. A veces volvemos a escribir, perdemos tiempo los 'Programadores perezosos'. Por lo tanto, podemos utilizar algunos trucos para ayudarnos y hacer nuestro código más claro y más simple.

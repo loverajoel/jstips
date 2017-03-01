@@ -12,8 +12,8 @@ redirect_from:
   - /es_es/using-json-stringify/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Digamos que hay un objeto con propiedades"prop1", "prop2", "prop3".

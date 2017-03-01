@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/make-easy-loop-on-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 有时我们需要不停的循环数组的元素，就像一组旋转的图片，或者音乐的播放列表。这里告诉你如何使一个数组拥有循环的能力：
 

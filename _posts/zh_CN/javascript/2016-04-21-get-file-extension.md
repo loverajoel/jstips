@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/get-file-extension/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 ### 问题 1: 怎样取得文件扩展名?

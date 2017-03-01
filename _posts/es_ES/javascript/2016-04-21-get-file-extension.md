@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/get-file-extension/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 ### Pregunta: ¿Cómo conseguir la extensión de archivo?

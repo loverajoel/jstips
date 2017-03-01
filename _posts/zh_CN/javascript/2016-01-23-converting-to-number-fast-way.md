@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/converting-to-number-fast-way/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 将字符串转换为数字是极为常见的。最简单和快速的方法([jsPref](https://jsperf.com/number-vs-parseint-vs-plus/29))`+`(加号) 来实现。

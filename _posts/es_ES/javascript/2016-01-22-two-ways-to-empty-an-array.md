@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/two-ways-to-empty-an-array/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 Se define un array y desea vaciar su contenido.

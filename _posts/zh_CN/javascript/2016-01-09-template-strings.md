@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/template-strings/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 

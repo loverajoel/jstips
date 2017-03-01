@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/calculate-the-max-min-value-from-an-array/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 内置函数[Math.max()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/max)和[Math.min()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/min)可以分别找出参数中的最大值和最小值。

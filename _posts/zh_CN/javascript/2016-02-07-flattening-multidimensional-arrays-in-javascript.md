@@ -13,8 +13,8 @@ redirect_from:
   - /zh_cn/flattening-multidimensional-arrays-in-javascript/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 下面是将多位数组转化为单一数组的三种不同方法。

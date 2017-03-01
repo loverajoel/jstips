@@ -11,8 +11,8 @@ redirect_from:
   - /zh_cn/nodejs-run-a-module-if-it-is-not-required/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 在Node里,你可以让你的程序根据其运行自`require('./something.js')`或者`node something.js`而做不同的处理。如果你想与你的一个独立的模块进行交互，这是非常有用的。

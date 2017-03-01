@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/advanced-properties/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 在Javascript里配置对象属性是可以实现的，比如将一个参数设为伪私有或者只读。这个特性从ECMAScript 5.1开始就可以使用了，因此近来的浏览器都是支持的。

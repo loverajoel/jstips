@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/pseudomandatory-parameters-in-es6-functions/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 En muchos lenguajes de programación, los parámetros de una función por defecto son obligatorios y el desarrollador tiene que definir explícitamente que un parámetro es opcional. En Javascript, cada parámetro es opcional, pero puede hacer cumplir este comportamiento sin jugar con el propio cuerpo de una función, aprovechando [** valores predeterminados para los parámetros de es6's **] (http://exploringjs.com/es6/ch_parameter -handling.html # sec_parameter-valores por defecto).

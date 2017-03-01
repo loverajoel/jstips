@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/Using-immediately-invoked-function-expression/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 立即执行函数表达式( IIFE - immediately invoked function expression)是一个立即执行的匿名函数表达式，它在Javascript中有一些很重要的用途。

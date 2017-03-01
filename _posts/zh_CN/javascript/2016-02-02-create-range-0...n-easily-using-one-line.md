@@ -12,8 +12,8 @@ redirect_from:
   - /zh_cn/create-range-0...n-easily-using-one-line/
 
 categories:
-    - javascript
     - zh_CN
+    - javascript
 ---
 
 使用下面一行代码，我们就可以生成0...(N-1)数列。

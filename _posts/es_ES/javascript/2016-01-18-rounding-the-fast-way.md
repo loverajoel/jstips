@@ -11,8 +11,8 @@ redirect_from:
   - /es_es/rounding-the-fast-way/
 
 categories:
-    - javascript
     - es_ES
+    - javascript
 ---
 
 El tip de hoy es sobre el rendimiento. [Nunca llegó a través del operador dobletilde] (http://stackoverflow.com/questions/5971645/what-is-the-double-tilde-operator-in-javascript) `~~`? A veces también se llama el doble operador NOT (operador de bits). Se puede utilizar como un sustituto más rápido para `Math.floor()`. ¿Porqué es eso?
