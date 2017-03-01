@@ -1,3 +1,41 @@
+<nav class="navigation-mobile">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <li>Categories</li>
+      {% for category in site.myCategories %}
+        <li><a href="/{{ page.lang }}/{{ category }}">{{ site.transl[page.lang].categories[category] }}</a></li>
+      {% endfor %}
+
+      <li>Lenguages</li>
+      {% for lang in site.languages %}
+        {% if lang.name != page.lang %}
+            <li><a href="{{ lang.link }}">{{ site.transl[page.lang].dropdown_lang[lang.name].txt }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
 <header class="site-header" role="banner">
 
   <div class="wrapper">
