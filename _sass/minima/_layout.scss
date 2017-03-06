@@ -1,5 +1,41 @@
+/**
+ * Mixins
+ */
+
+@mixin transition($property, $animation: ease, $time: .5s) {
+  -webkit-transition: $property $animation $time;
+  -moz-transition: $property $animation $time;
+  -o-transition: $property $animation $time;
+  transition: $property $animation $time;
+}
+
+@mixin box-shadow($x, $y, $blur, $spread:0px, $color:rgba(0,0,0,.2)) {
+  box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  -webkit-box-shadow: $x $y $blur $spread $color;
+}
+
+/**
+ * Colors
+ */
+
+$color-primary: #F9D732;
+$color-text: #29293F;
+$color-angular: #DD0031;
+$color-react: #4AD5FF;
+$color-white: #F8F8F4;
+
+
+/**
+ * Generals
+ */
+
 body {
-  background: #fff;
+  background-color: #F7F7F9;
+}
+
+a {
+  @include transition(color);
 }
 
 /**
@@ -19,17 +55,18 @@ body {
     width: 157px;
     height: 40px;
     border-radius: 4px;
-    background-color: #f8f8f4;
+    background-color: $color-white;
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
-    line-height: 3.1;
+    line-height: 40px;
     text-align: center;
-    box-shadow: 0px 1px 3px 0px #6f6f6f;
+    @include box-shadow(0,1px,1px,0);
+    @include transition(box-shadow, ease, .2s);
   }
 
   .btn-submit-tip:hover {
-    box-shadow: 0px 2px 3px 0px #6f6f6f;
+    @include box-shadow(0,2px,1px,0);
   }
 }
 
@@ -79,31 +116,11 @@ body {
     font-size: 14px;
     
     a {
-      color: #fff;
+      color: $color-white;
     }
 
-    a.react:hover {
-      color: $react;
-    }
-
-    a.angular:hover {
-      color: $angular;
-    }
-
-    a.javascript:hover {
-      color: $javascript;
-    }
-
-    a.active-react {
-      color: $react; 
-    }
-
-    a.active-angular {
-      color: $angular; 
-    }
-
-    a.active-javascript {
-      color: $javascript; 
+    a:hover {
+      color: $color-primary;
     }
   }
 }
@@ -177,7 +194,7 @@ body {
  * Site footer
  */
 .site-footer {
-  background: #29293f;
+  background: $color-text;
   padding: 50px 0 80px 0;
 
   @include media-query($on-laptop) {
@@ -186,6 +203,7 @@ body {
 
   p {
     font-size: 16px;
+    margin-bottom: 30px;
     line-height: 1.44;
     color: #ffffff;
 
@@ -203,12 +221,24 @@ body {
       
       li {
         float: left;
-        margin: 0 10px 0 0;
+        margin: 0 20px 0 0;
         
         a {
           font-size: 14px;
           font-weight: 500;
-          color: #f9d732;
+          color: $color-primary;
+        }
+      }
+
+      @include media-query($on-laptop) {
+        width: 100%;
+        float: left;
+        text-align: center;
+
+        li {
+          float: none;
+          display: inline-block;
+          margin: 20px;
         }
       }
     }
@@ -226,12 +256,20 @@ body {
   float: right;
 
   li {
-    margin: 5px;
+    margin-bottom: 20px;
     a {
-      color: #fff;
+      color: $color-white;
+      @include transition(color);
+
       img {
         width: 20px;
         margin: 0 10px 0 0
+      }
+    }
+
+    &:hover {
+      a {
+        color: $color-primary;
       }
     }
   }
@@ -239,6 +277,17 @@ body {
   li:nth-child(2) {
     img {
       margin: 0 13px 0 0 
+    }
+  }
+
+  @include media-query($on-laptop) {
+    float: left;
+    width: 100%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 20px;
     }
   }
 }
@@ -286,9 +335,8 @@ body {
 
 @include media-query($on-palm) {
   .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    float: left;
+    width: 100%;
   }
 }
 
@@ -298,22 +346,26 @@ body {
  * Page content
  */
 .page-content {
-  background: #f3f3f3
+  background: #f3f3f3;
+  text-align: center;
 }
 
 .page-heading {
-  font-size: 20px;
+  font-size: 24px;
+  text-align: left;
 }
 
 .page-cont {
   width: 100%;
   max-width: 732px;
   float: left;
-  margin: 0 0 100px 0;
+  margin: 0 0 75px 0;
   padding: 60px 0 0;
 
   @include media-query($on-laptop) {
     margin: 0 0 50px 0;
+    padding: 60px 20px 0;
+    box-sizing: border-box;
   }
 
   h1 {
@@ -326,8 +378,9 @@ body {
 .page-sidebar {
   width: 348px;
   float: left;
-  margin-top: 105px;
+  margin-top: 111px;
   margin-bottom: 50px;
+  text-align: left;
 
   @include media-query($on-laptop) {
     float: none;
@@ -339,29 +392,34 @@ body {
   max-width: 900px; 
   margin-left: 0;
   list-style: none;
+  text-align: left;
 
   > li {
     margin: 0 20px 20px 0;
     width: 345px;
     float: left;
+    position: relative;
     height: 300px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 4px;
     padding: 18px;
     box-sizing: border-box;
     border-top: 2px solid;
-    box-shadow: 0px 2px 2px 1px #cecece;
+    @include box-shadow(0, 2px, 2px, 1px, #cecece);
+    @include transition(box-shadow, ease, .2s);
 
     @include media-query($on-laptop) {
       margin: 20px auto;
       float: none;
     }
 
+    &:hover {
+      @include box-shadow(0,2px,2px,2px, #cecece);
+    }
+
     div {
       width: 100%;
-      height: 230px;
       float: left;
-      box-shadow: 0 1px 0 0 #fbfbfb;
       box-sizing: border-box;
       
       p {
@@ -377,6 +435,8 @@ body {
     .read-more {
       width: 345px;
       height: 50px;
+      position: absolute;
+      bottom: 0;
       background: #fbfbfb;
       float: left;
       border-radius: 0 0 8px 8px;
@@ -385,11 +445,7 @@ body {
       box-sizing: border-box;
       font-weight: 500;
       margin: 0 0 0 -18px;
-      box-shadow: 0px -2px 0px #f5f3ee;
-
-      .shape {
-
-      }
+      @include box-shadow(0,-1px,0,0, #F5F3EE);
     }
   }
   .react-color {
@@ -425,7 +481,8 @@ body {
 .post-header {
   margin-bottom: $spacing-unit;
   max-width: 710px;
-  margin: 75px auto 75px;
+  margin: 0 auto;
+  padding: 75px 0 20px;
 
   @include media-query($on-laptop) {
     text-align: center;
@@ -434,7 +491,7 @@ body {
   .post-meta {
     font-size: 16px;
     color: #1f1e30;
-    margin: 37px 0;
+    margin: 5px 0 35px;
 
     a {
       font-weight: 500;
@@ -447,8 +504,8 @@ body {
   font-family: $titles-font;
   font-size: 60px;
   font-weight: 500;
-  line-height: 1;
-  color: #29293f;
+  line-height: 80px;
+  color: $color-text;
 
   @include media-query($on-laptop) {
     font-size: 36px;
@@ -456,7 +513,8 @@ body {
 }
 
 .post {
-  background: #fff;
+  background: #ffffff;
+  text-align: left;
 
   @include media-query($on-laptop) {
     padding: 10px;
@@ -464,14 +522,13 @@ body {
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
   padding-bottom: 100px;
 
   > * {
     max-width: 710px;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 16px;
-    line-height: 1.62;
+    line-height: 26px;
   }
 
   .language-javascript, .language-js {
@@ -482,7 +539,7 @@ body {
   h2, h3, h4, h5 {
     font-family: $default-font;
     font-weight: 500;
-    margin: 25px auto;
+    margin: 50px auto 30px;
   }
 
   h2 {
@@ -508,6 +565,22 @@ body {
       /*font-size: 18px;*/
     }
   }
+
+  blockquote {
+    border-left-color: $color-primary;
+    color: $color-text;
+    font-size: 24px;
+    line-height: 35px;
+    margin: 50px auto 30px;
+  }
+
+  ul {
+    padding-left: 75px;
+
+    @include media-query($on-laptop) {
+      padding-left: 40px;
+    }
+  }
 }
 
 /*
@@ -516,12 +589,12 @@ body {
 
 .widget-popular-tips {
   width: 100%;
-  background: #fff;
+  background: #ffffff;
   border-radius: 4px;
   padding: 18px;
   box-sizing: border-box;
-  box-shadow: 0px 2px 2px 1px #cecece;
   float: left;
+  @include box-shadow(0,2px,2px,1px,#cecece);
 
   h3 {
     font-size: 18px;
@@ -546,13 +619,14 @@ body {
         width: 50px;
         height: 50px;
         border-radius: 4px;
-        background-color: #29293f;
+        background-color: $color-text;
         float: left;
+        font-family: "Roboto Mono", monospace;
         font-size: 24px;
-        color: #fff;
+        color: $color-white;
         text-align: center;
-        line-height: 2.2;
-        margin: 0 20px 0 0;
+        line-height: 50px;
+        margin: 0 15px 0 0;
       }
     }
   }
@@ -564,10 +638,11 @@ body {
 
 .email-suscribe {
   padding: 100px;
-  background: #f3f3f3;
+  text-align: center;
+  background: #ffffff;
 
   @include media-query($on-laptop) {
-    padding: 20px;
+    padding: 50px 20px;
     box-sizing: border-box;
   }
 
@@ -575,7 +650,7 @@ body {
     font-family: $titles-font;
     font-size: 24px;
     line-height: 1.42;
-    text-align: center;
+    margin: 5px 0;
     width: 100%;
     clear: both;
     display: inline-block;
@@ -586,8 +661,8 @@ body {
   }
 
   .email-container {
-    width: 624px;
-    margin: 20px auto;
+    margin: 50px 0 0;
+    display: inline-block;
 
     @include media-query($on-laptop) {
       width: 100%;
@@ -598,16 +673,23 @@ body {
       height: 60px;
       border-radius: 4px 0 0 4px;
       background-color: #ffffff;
-      border: solid 1px #e1e1e1;
+      box-shadow: inset 0 0 0 1px #E1E1E1;
+      border: none;
+      outline: none;
       float: left;
-      border: 0px;
       padding: 10px;
       box-sizing: border-box;
       font-size: 15px;
+      @include transition(box-shadow);
 
       @include media-query($on-laptop) {
         width: 100%;
         border-radius: 4px 4px 0 0;
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-primary;
       }
     }
 
@@ -615,18 +697,26 @@ body {
       width: 110px;
       height: 60px;
       border-radius: 0px 4px 4px 0;
-      background-color: #29293f;
+      background-color: $color-text;
       float: left;
       font-family: $titles-font;
       font-size: 16px;
       font-weight: 500;
-      color: #fff;
+      color: $color-white;
       border: 0px;
       cursor: pointer;
+      outline: none;
+      @include transition(background-color);
 
       @include media-query($on-laptop) {
         width: 100%;
         border-radius: 0 0 4px 4px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #1A1A1E;
       }
     }
   }
@@ -644,40 +734,71 @@ body {
   > span {
     cursor: pointer;
     display: inline-block;
-    padding: 9px 9px 20px 9px;
+    padding: 9px 9px 30px 9px;
     border-radius: 5px;
     font-size: 14px;
     
     &:hover {
       /*background: #e0bd16;*/
     }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: url("images/arrow_down.svg") no-repeat;
+      width: 12px;
+      height: 7px;
+      margin: 0 0 1px 10px;
+    }
   }
   
   ul {
-    left: -56px;
-    top: 35px;
+    right: 0;
+    top: 48px;
     position: absolute;
-    background: #fff;
+    background: #ffffff;
+    padding: 5px 0;
     list-style: none;
     margin: 0px;
     border-radius: 5px;
-    width: 121px;
-    overflow: hidden;
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(opacity);
+    @include box-shadow(0,0,5px,0);
 
     li {
-      padding: 5px 5px 5px 15px;
-      border-bottom: 1px solid #bdbdbd;
+      border-bottom: 1px solid #E2E2E2;
 
       a {
         display: inline-block;
-        width: 100%;
+        min-width: 150px;
+        padding: 10px 15px;
+        @include transition(color);
       }
+      a:hover {
+        color: $color-primary;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      right: 10px;
+      border-style: solid;
+      border-width: 8px 8px 0;
+      border-color: #FFFFFF transparent;
+      transform: rotate(180deg);
+      display: block;
+      width: 0;
+      z-index: 1;
     }
   }
   &:hover {
     ul {
-      display: block;
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
@@ -690,7 +811,7 @@ body {
     width: 182px;
     border-radius: 4px;
     font-family: $titles-font;
-    border: solid 2px #29293f;
+    border: solid 2px $color-text;
     font-size: 14px;
     font-weight: 500;
     padding: 20px;
@@ -715,8 +836,6 @@ body {
   }
 
   .big {
-    color: #000;
-    opacity: 0.1;
     position: absolute;
     font-size: 338px;
     top: -206px;
@@ -724,7 +843,8 @@ body {
     cursor: default;
 
     @include media-query($on-laptop) {
-      display: none;
+      font-size: 250px;
+      top: -150px;
     }
   }
 
@@ -762,12 +882,20 @@ body {
     left: 10%;
     transform: rotate(180deg);
   }
+
+  .swiper-slide-active {
+    .big,
+    .title,
+    ul {
+      opacity: 1;
+    }
+  }
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: $color-white;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -785,14 +913,26 @@ body {
 
   &.react {
     background: $react;
+
+    .big {
+      color: #20C8FB;
+    }
   }
 
   &.angular {
     background: $angular;
+
+    .big {
+      color: #D0002E;
+    }
   }
 
   &.javascript {
     background: $javascript;
+
+    .big {
+      color: #F1CC1C;
+    }
   }
   ul {
     margin: 0px;
@@ -822,11 +962,22 @@ body {
         width: 100%;
         text-align: left;
       }
+
+      @include media-query($on-laptop) {
+        padding: 0 20px;
+      }
     }
 
     li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5) {
       display: block;
     }
+  }
+
+  .big,
+  .title,
+  ul {
+    opacity: 0;
+    @include transition(opacity, ease, 1.3s);
   }
 }
 
@@ -836,10 +987,25 @@ body {
   background: $angular;
   padding: 70px 0 0 0;
   box-sizing: border-box;
+  text-align: left;
 
   @include media-query($on-laptop) {
     height: auto;
     padding: 20px;
+  }
+
+  .wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media-query($on-laptop) {
+      position: relative;
+      top: 0;
+      transform: none;
+    }
   }
 
   &.react {
@@ -854,7 +1020,7 @@ body {
 
   &.angular {
     background: $angular;
-    color: #fff;
+    color: $color-white;
   }
 
   &.javascript {
@@ -882,29 +1048,31 @@ body {
     width: 110px;
     border-radius: 4px;
     font-family: "Roboto Mono", monospace;
-    border: solid 2px #fff;
+    border: solid 2px $color-white;
     font-size: 14px;
     font-weight: 500;
     padding: 10px;
     display: inline-block;
     text-align: center;
     margin: 20px 0 0 0;
-    color: #fff;
+    color: $color-white;
   }
 }
 
 .next-infinite {
-  width: 182px;
   border-radius: 4px;
   font-family: "Roboto Mono", monospace;
-  border: solid 2px #29293f;
+  border: solid 2px $color-text;
+  background-color: transparent;
   font-size: 14px;
   font-weight: 500;
-  padding: 20px;
+  padding: 15px 20px;
   text-align: center;
-  margin: 20px auto;
+  display: inline-block;
+  margin: 50px auto 0;
   clear: both;
   cursor: pointer;
+  @include transition(background-color,ease, .2s);
 
   @include media-query($on-laptop) {
     margin: 50px auto 0;  
@@ -913,7 +1081,8 @@ body {
 }
 
 .next-infinite:hover {
-  box-shadow: 0px 2px 3px 0px #6f6f6f;
+  background-color: $color-text;
+  color: $color-white;
 }
 
 .related-tips {
@@ -943,8 +1112,15 @@ body {
   }
 }
 
+#disqus_thread {
+  padding: 0 20px 40px;
+}
+
 .related-tips .wrapper > h2 {
   text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 50px 30px;
 }
 
 
@@ -970,8 +1146,8 @@ body {
 
     a {
       text-decoration: none;
-      color: #ccc;
-      padding: 0 0 0 19px;
+      color: $color-primary;
+      padding: 0;
     }
 
   }
@@ -997,7 +1173,7 @@ body {
 {
   display: block;
   width: 33px;
-  height: 4px;
+  height: 3px;
   margin-bottom: 5px;
   position: relative;
   
@@ -1029,8 +1205,8 @@ body {
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #fff;
+  transform: rotate(45deg) translate(-4px, -1px);
+  background: $color-white;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3)
@@ -1056,12 +1232,12 @@ body {
   background: #242424;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  color: #fff;
-
+  color: $color-white;
+  text-align: center;
   box-sizing: border-box;
   width: 100%;
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   height: 3400px;
 
@@ -1069,7 +1245,7 @@ body {
 
 #menu li
 {
-  padding: 5px 0;
+  padding: 10px 0;
   font-size: 22px;
 }
 
