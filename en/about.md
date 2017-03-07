@@ -36,8 +36,7 @@ There are a lot of way to get update, choose your own
 ### Gratefulness
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Marcos Cosimi](https://github.com/markoscc)
-- Languages flags => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
+- JS Tips Theme => [Agustín Schelstraete](https://github.com/aschelstraete)
 
 ### Translations
 - ES => [Ariel Porporatto](https://github.com/ppollo07)

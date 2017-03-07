@@ -841,6 +841,7 @@ a {
     top: -206px;
     user-select: none;
     cursor: default;
+    text-transform: capitalize;
 
     @include media-query($on-laptop) {
       font-size: 250px;

@@ -32,5 +32,4 @@ Existen distintas maneras de obtener la actualización, seleccione la que m&aacu
 ### Agradecimiento
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Marcos Cosimi](https://github.com/markoscc)
-- Languages flags => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
+- JS Tips Theme => [Agustín Schelstraete](https://github.com/aschelstraete)

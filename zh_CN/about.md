@@ -31,5 +31,4 @@ lang: zh_CN
 ### 鸣谢
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips 主题 => [Marcos Cosimi](https://github.com/markoscc)
-- 多语言旗帜 => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)
+- JS Tips Theme => [Agustín Schelstraete](https://github.com/aschelstraete)

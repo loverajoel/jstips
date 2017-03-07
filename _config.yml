@@ -116,7 +116,7 @@ transl:
       react: React
       angular: Angular
     read_more: Read More
-    show_me_next_page: Show me next page
+    show_me_next_page: Load me more tips
     show_me_prev_page: Show me previous page
   es_ES:
     btn_submit_your_tip:
