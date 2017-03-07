@@ -413,6 +413,14 @@ a {
       float: none;
     }
 
+    .highlighter-rouge {
+      font-size: 14px;
+      border: 0px;
+      border-radius: 3px;
+      background-color: #f3f3f3;
+      color: #29293f;
+    }
+
     &:hover {
       @include box-shadow(0,2px,2px,2px, #cecece);
     }
@@ -523,6 +531,13 @@ a {
 
 .post-content {
   padding-bottom: 100px;
+
+  .highlighter-rouge {
+    border: 0px;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    color: #29293f;
+  }
 
   > * {
     max-width: 710px;
@@ -989,6 +1004,13 @@ a {
   padding: 70px 0 0 0;
   box-sizing: border-box;
   text-align: left;
+
+  .highlighter-rouge {
+    font-size: 14px;
+    border: 0px;
+    border-radius: 3px;
+    background-color: #191925;
+  }
 
   @include media-query($on-laptop) {
     height: auto;

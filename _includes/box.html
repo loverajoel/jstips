@@ -5,7 +5,7 @@
     <h2>
       <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
     </h2>
-    <p>{{ post.tip-tldr  | truncatewords:43 }}</p>
+    <p>{{ post.tip-tldr  | truncatewords:43 | markdownify}}</p>
   </div>
   <a class="read-more" href="{{ post.url | relative_url }}">{{ site.transl[page.lang].txt_read_more }} <span class="shape">→</span></a>
 </li>

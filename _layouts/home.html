@@ -10,7 +10,7 @@ layout: default
         {% if post.categories contains page.filter %}
           {% if i_top %}
             <h1>{{ post.title }}</h1>
-            <p>{{ post.tip-tldr  | truncatewords:43 }}</p>
+            <p>{{ post.tip-tldr  | truncatewords:43 | markdownify}}</p>
             <a class="read-more" href="{{ post.url | relative_url }}">{{ site.transl[page.lang].read_more }}</a>
             {% assign i_top = false %}
           {% endif %}
