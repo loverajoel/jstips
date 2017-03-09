@@ -2,7 +2,7 @@
 layout: post
 
 title: Preventing Unwanted Scopes Creation in AngularJs
-tip-number: 01
+tip-number: 62
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: In this tip I am going to show how to pass data between scopes preventing unwanted scopes created by `ng-repeat` and `ng-if`
