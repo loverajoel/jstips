@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Introducing JavaScript Tips
+layout: about
+title: JSTips is a collection of useful daily JavaScript tips that will allow you to improve you code writting.
 permalink: /en/about/
 lang: en
 ---
@@ -36,7 +36,7 @@ There are a lot of way to get update, choose your own
 ### Gratefulness
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Agustín Schelstraete](https://github.com/aschelstraete)
+- JS Tips Theme => [Agustín Schelstraete](http://www.aschelstraete.com/)
 
 ### Translations
 - ES => [Ariel Porporatto](https://github.com/ppollo07)

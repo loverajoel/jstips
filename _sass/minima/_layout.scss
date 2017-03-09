@@ -1010,6 +1010,7 @@ a {
     border: 0px;
     border-radius: 3px;
     background-color: #191925;
+    color: #F8F8F4;
   }
 
   @include media-query($on-laptop) {
@@ -1278,4 +1279,29 @@ a {
   transform: scale(1.0, 1.0);
   opacity: 1;
 }
+}
+
+.about-header {
+  background: #f8da59;
+  img {
+    width: 80%;
+  }
+}
+
+.about-post {
+  background: #ffffff;
+  text-align: left;
+  margin: -113px auto 0;
+  position: relative;
+  width: 1024px;
+
+  @include media-query($on-laptop) {
+    width: 100%;
+  }
+
+  .post-title {
+    font-size: 33px;
+    line-height: 45px;
+    text-align: center;
+  }
 }

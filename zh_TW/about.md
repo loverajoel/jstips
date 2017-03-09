@@ -33,4 +33,5 @@ lang: zh_TW
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
 - JS Tips 佈景主題 => [Marcos Cosimi](https://github.com/markoscc)
+- JS Tips Theme => [Agustín Schelstraete](http://www.aschelstraete.com/)
 - 語系圖示 => [Muharrem Senyil](https://dribbble.com/shots/1211759-Free-195-Flat-Flags)

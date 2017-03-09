@@ -32,4 +32,4 @@ Existen distintas maneras de obtener la actualización, seleccione la que m&aacu
 ### Agradecimiento
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Agustín Schelstraete](https://github.com/aschelstraete)
+- JS Tips Theme => [Agustín Schelstraete](http://www.aschelstraete.com/)

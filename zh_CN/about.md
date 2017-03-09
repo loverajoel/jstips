@@ -31,4 +31,4 @@ lang: zh_CN
 ### 鸣谢
 
 - GIF's => [Maxi Albella](https://dribbble.com/maxialbella)
-- JS Tips Theme => [Agustín Schelstraete](https://github.com/aschelstraete)
+- JS Tips Theme => [Agustín Schelstraete](http://www.aschelstraete.com/)

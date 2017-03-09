@@ -1,6 +1,6 @@
 <li class="{{ post.categories[1] }}-color">
   <div>
-    <span class="post-meta">@{{ post.tip-username }} in <span class="category">{{ post.categories[1] }}</span></span>
+    <span class="post-meta">@{{ post.tip-username }} in <a class="category" href="/{{page.lang}}/{{ post.categories[1] }}">{{ post.categories[1] }}</a></span>
 
     <h2>
       <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
