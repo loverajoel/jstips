@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about
 title: 關於 JavaScript tip
 permalink: zh_TW/about/
 lang: zh_TW

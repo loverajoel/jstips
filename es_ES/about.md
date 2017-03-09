@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about
 title: Introducci&oacute;n JavaScript Tips
 permalink: es_ES/about/
 lang: es_ES
