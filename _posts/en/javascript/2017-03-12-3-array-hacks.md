@@ -8,9 +8,6 @@ tip-username-profile: https://github.com/helfi92
 tip-tldr: Arrays are everywhere and with the new spread operators introduced in ECMAScript 6, you can do awesome things with them. In this post I will show you 3 useful tricks you can use when programming.
 
 
-redirect_from:
-  - /en/3-array-hacks/
-
 categories:
     - en
     - javascript
