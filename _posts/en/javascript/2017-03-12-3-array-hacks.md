@@ -23,14 +23,14 @@ Arrays are everywhere in JavaScript and with the new [spread operators](https://
 JavaScript arrays are sparse in nature in that there are a lot of holes in them. Try creating an array using the Array’s constructor and you will see what I mean.
 
 ```javascript
-> var arr = new Array(4);
+> const arr = new Array(4);
 [undefined, undefined, undefined, undefined]
 ```
 
 You may find that iterating over a sparse array to apply a certain transformation is hard.
 
 ```javascript
-> var arr = new Array(4);
+> const arr = new Array(4);
 > arr.map((elem, index) => index);
 [undefined, undefined, undefined, undefined]
 ```
@@ -38,7 +38,7 @@ You may find that iterating over a sparse array to apply a certain transformatio
 To solve this, you can use `Array.apply` when creating the array.
 
 ```javascript
-> var arr = Array.apply(null, new Array(4));
+> const arr = Array.apply(null, new Array(4));
 > arr.map((elem, index) => index);
 [0, 1, 2, 3, 4]
 ```
@@ -70,6 +70,6 @@ I personally don’t like using `null` since JavaScript treats it as an object a
 I always wonder why the Array constructor does not have a designated method to facilitate the use of unique array values. Spread operators are here for the rescue. Use spread operators with the `Set` constructor to generate unique array values.
 
 ```javascript
-> var magic = [...new Set([1, 2, 3, 3])]
+> const arr = [...new Set([1, 2, 3, 3])];
 [1, 2, 3]
 ```
