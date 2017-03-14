@@ -3,8 +3,8 @@ layout: post
 
 title: 3 Array Hacks
 tip-number: 64
-tip-username: helfi92
-tip-username-profile: https://github.com/helfi92
+tip-username: hassanhelfi
+tip-username-profile: https://twitter.com/hassanhelfi
 tip-tldr: Arrays are everywhere and with the new spread operators introduced in ECMAScript 6, you can do awesome things with them. In this post I will show you 3 useful tricks you can use when programming.
 
 
@@ -53,7 +53,7 @@ A workaround that people usually resort to is to pass either `null` or `undefine
 
 ```javascript
 > method('parameter1', null, 'parameter3') // or
-> method('paramter1', undefined, 'parameter3');
+> method('parameter1', undefined, 'parameter3');
 ```
 
 I personally don’t like using `null` since JavaScript treats it as an object and that’s just weird. With the introduction of spread operators in ES6, there is a neater way of passing empty parameters to a method. As previously mentioned, arrays are sparse in nature and so passing empty values to it is totally okay. We'll use this to our advantage.
