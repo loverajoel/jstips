@@ -37,7 +37,7 @@ To solve this, you can use `Array.apply` when creating the array.
 ```javascript
 > const arr = Array.apply(null, new Array(4));
 > arr.map((elem, index) => index);
-[0, 1, 2, 3, 4]
+[0, 1, 2, 3]
 ```
 
 ### 2. Passing an empty parameter to a method
@@ -59,7 +59,7 @@ A workaround that people usually resort to is to pass either `null` or `undefine
 I personally don’t like using `null` since JavaScript treats it as an object and that’s just weird. With the introduction of spread operators in ES6, there is a neater way of passing empty parameters to a method. As previously mentioned, arrays are sparse in nature and so passing empty values to it is totally okay. We'll use this to our advantage.
 
 ```javascript
-> method(...['parameter1', , 'paramter3']); // works!
+> method(...['parameter1', , 'parameter3']); // works!
 ```
 
 ### Unique array values
