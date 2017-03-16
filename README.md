@@ -33,6 +33,9 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 65 - [Tapping for quick debugging](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-16-tapping-for-quick-debugging.md)
+- 64 - [3 Array Hacks](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-12-3-array-hacks.md)
+- 63 - [Working With Websocket Timeout](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-09-working-with-websocket-timeout.md)
 - 62 - [Preventing Unwanted Scopes Creation in AngularJs](https://github.com/loverajoel/jstips/blob/master/_posts/en/angular/2017-03-07-preventing-unwanted-scopes-creation-in-angularjs.md)
 - 61 - [Binding objects to functions](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-01-19-binding-objects-to-functions.md)
 - 60 - [Three useful hacks](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2016-10-28-three-useful-hacks.md)
