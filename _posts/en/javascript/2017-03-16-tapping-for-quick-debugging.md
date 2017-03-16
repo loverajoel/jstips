@@ -15,16 +15,16 @@ categories:
     - javascript
 ---
 
+This little beastie here is tap. A really useful function for quick-debugging
+chains of function calls, anonymous functions and, actually, whatever you just
+want to print.
+
 ``` javascript
 function tap(x) {
     console.log(x);
     return x;
 }
 ```
-
-This little beastie here is tap. A really useful function for quick-debugging
-chains of function calls, anonymous functions and, actually, whatever you just
-want to print.
 
 Why would you use instead of good old `console.log`? Let me show you an example:
 
