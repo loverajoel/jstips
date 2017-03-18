@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: 三個有用的 hack
+title: 三個有用的技巧
 tip-number: 60
 tip-username: leandrosimoes
 tip-username-profile: https://github.com/leandrosimoes
-tip-tldr: 三個非常有用的 hack 方法來加速你的開發速度。
+tip-tldr: 三個非常有用的技巧來加速你的開發速度。
 
 
 redirect_from:
