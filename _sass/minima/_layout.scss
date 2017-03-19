@@ -746,6 +746,7 @@ a {
   display: inline;
   position: relative;
   margin: 0 10px 0 26px;
+  z-index: 90000;
 
   > span {
     cursor: pointer;
