@@ -12,7 +12,11 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+    {% if page.tip-md-link %}
+      <a class="improve-tip" href="{{page.tip-md-link}}">>_ Improve this tip</a>
+    {% endif %}
   </div>
+
   <div class="js-share">
     <ul>
       <li class="header">
