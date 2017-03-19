@@ -523,6 +523,7 @@ a {
 .post {
   background: #ffffff;
   text-align: left;
+  position: relative;
 
   @include media-query($on-laptop) {
     padding: 10px;
@@ -1303,5 +1304,57 @@ a {
     font-size: 33px;
     line-height: 45px;
     text-align: center;
+  }
+}
+
+/* Share */
+.js-share {
+  width: 50px;
+  height: 200px;
+  position: fixed;
+  left: 100px;
+  top: 275px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+
+  @include media-query($on-laptop) {
+    width: 200px;
+    position: initial;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    
+    li {
+      padding: 0px;
+      margin: 0px;
+      width: 50px;
+      height: 50px;
+      float: left;
+      cursor: pointer;
+
+      img {
+        width: 20px;
+        margin: 14px;
+      }
+
+      &.header {
+        background: #29293f;
+        border-radius: 2px 2px 0 0;
+        cursor: initial;
+      }
+
+      &.header:hover {
+        background: #29293f;
+      }
+    }
+
+    li:hover {
+      background: #eaeaea;
+    }
   }
 }

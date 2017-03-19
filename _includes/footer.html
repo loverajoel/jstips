@@ -34,17 +34,19 @@
 
 <!-- Initialize Swiper -->
 <script>
-window.onload = function() {
-  
-  var swiper = new Swiper('.swiper-container', {
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true
-  });
+var isPost = document.querySelector('.post-header');
 
-  // if (document.querySelectorAll('.category-header').length) {
+if (!isPost) {
+  window.onload = function() {
+    
+    var swiper = new Swiper('.swiper-container', {
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true
+    });
+
     var pagination = 4;
     var current = 0;
     var total = document.querySelectorAll('.post-list li').length;
@@ -64,6 +66,42 @@ window.onload = function() {
     paginate();
 
     document.querySelector('.next-infinite').addEventListener('click', paginate);
-  // }
-};
+  };
+}
+
+if (isPost) {
+  var share_abs = true;
+  window.onscroll = function() {
+    if (document.querySelector('.related-tips').getBoundingClientRect().top < 645) {
+      if (!share_abs) {
+        document.querySelector('.js-share').style.position = "absolute";
+        document.querySelector('.js-share').style.bottom = "127px";
+        document.querySelector('.js-share').style.top = "initial";
+        share_abs = true;
+      }
+    } else {
+      if (share_abs) {
+        document.querySelector('.js-share').style.position = "fixed";
+        document.querySelector('.js-share').style.bottom = "inital";
+        document.querySelector('.js-share').style.top = "275px";
+        share_abs = false;
+      }
+    }
+  }
+
+  // share
+  var social_share = {
+    share_tw: function(title, url) {return 'http://twitter.com/share?text='+title+'&url='+url},
+    share_fb: function(title, url) {return 'http://www.facebook.com/sharer.php?u='+url+'&t='+title},
+    share_in: function(title, url) {return 'http://www.linkedin.com/shareArticle?mini=true&url='+url},
+  };
+
+  document.querySelector('.js-share ul').onclick = function(event) {
+    open(
+      social_share[event.target.classList[0]](document.title, window.location.href),
+      'Share',
+      'height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0'
+    );
+  }
+}
 </script>
