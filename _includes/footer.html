@@ -71,20 +71,23 @@ if (!isPost) {
 
 if (isPost) {
   var share_abs = true;
+  var isMobile = window.outerWidth < 450;
   window.onscroll = function() {
-    if (document.querySelector('.related-tips').getBoundingClientRect().top < 645) {
-      if (!share_abs) {
-        document.querySelector('.js-share').style.position = "absolute";
-        document.querySelector('.js-share').style.bottom = "127px";
-        document.querySelector('.js-share').style.top = "initial";
-        share_abs = true;
-      }
-    } else {
-      if (share_abs) {
-        document.querySelector('.js-share').style.position = "fixed";
-        document.querySelector('.js-share').style.bottom = "inital";
-        document.querySelector('.js-share').style.top = "275px";
-        share_abs = false;
+    if (!isMobile) {
+      if (document.querySelector('.related-tips').getBoundingClientRect().top < 645) {
+        if (!share_abs) {
+          document.querySelector('.js-share').style.position = "absolute";
+          document.querySelector('.js-share').style.bottom = "127px";
+          document.querySelector('.js-share').style.top = "initial";
+          share_abs = true;
+        }
+      } else {
+        if (share_abs) {
+          document.querySelector('.js-share').style.position = "fixed";
+          document.querySelector('.js-share').style.bottom = "inital";
+          document.querySelector('.js-share').style.top = "275px";
+          share_abs = false;
+        }
       }
     }
   }
