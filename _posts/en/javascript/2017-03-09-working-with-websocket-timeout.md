@@ -26,7 +26,7 @@ function keepAlive() {
 }  
 function cancelKeepAlive() {  
     if (timerId) {  
-        cancelTimeout(timerId);  
+        clearTimeout(timerId);  
     }  
 }
 ```
