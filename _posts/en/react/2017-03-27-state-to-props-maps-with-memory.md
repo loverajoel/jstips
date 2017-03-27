@@ -56,7 +56,7 @@ proceed, if they haven't, it will just return the last result.
 
 Let's bring selectors!
 
-```javscript
+```javascript
 const getVisibilityFilter = (state) => state.visibilityFilter
 const getTodos = (state) => state.todos
 ```
