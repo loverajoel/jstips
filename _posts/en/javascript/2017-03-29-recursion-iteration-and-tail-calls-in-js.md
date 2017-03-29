@@ -5,7 +5,8 @@ title: Recursion, iteration and tail calls in JS
 tip-number: 67
 tip-username: loverajoel
 tip-username-profile: https://twitter.com/loverajoel
-tip-tldr: If you've been on the business for some time, you have, most likely, come across the definition of recursion, for which the factorial of a given number `n! = n * n - 1 * ... * 1` is a standard example..
+tip-tldr: If you've been on the business for some time, you have, most likely, come across the definition of recursion, for which the factorial of a given number `n! = n * n - 1 * ... * 1` is a standard example...
+tip-md-link: https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-29-recursion-iteration-and-tail-calls-in-js.md
 
 categories:
     - en
