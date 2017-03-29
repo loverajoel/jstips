@@ -591,10 +591,10 @@ a {
   }
 
   ul {
-    padding-left: 75px;
+    padding-left: 0px;
 
     @include media-query($on-laptop) {
-      padding-left: 40px;
+      padding-left: 0px;
     }
   }
 }
