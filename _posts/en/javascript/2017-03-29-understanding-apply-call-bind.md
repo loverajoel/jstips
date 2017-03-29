@@ -1,6 +1,20 @@
-**Call apply and bind. and how they are different.**
+---
+layout: post
 
-Lets learn call and apply using any daily terminology. 
+title: Call apply and bind. and how they are different.
+tip-number: 68
+tip-username: munjalsagar 
+tip-username-profile: https://github.com/sagarmunjal
+tip-tldr: Call apply and Bind are few of the most important concepts which lay a good foundation for JS Ninja. 
+
+
+categories:
+    - en
+    - javascript
+---
+
+
+
 
 You have three automobiles `your_scooter , your_car and your_jet` which start with the same mechanism (method). 
 We created an object `automobile` with a method `push_button_engineStart`. 
