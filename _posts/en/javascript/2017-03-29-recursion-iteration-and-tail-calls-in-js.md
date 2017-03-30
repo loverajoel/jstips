@@ -15,7 +15,7 @@ categories:
 
 If you've been on the business for some time, you have, most likely,
 come across the definition of recursion, for which the factorial of
-a given number `n! = n * n - 1 * ... * 1` is a standard example.
+a given number `n! = n * (n - 1) * ... * 1` is a standard example.
 
 ``` javascript
 function factorial(n) {
@@ -46,7 +46,7 @@ For the sake of completeness, let's look at how this executes for
       - ... 4 * 6 = 24
     - 5 * 24 = 120
   - 6 * 120 = 720
-- factorial(6) = 120
+- factorial(6) = 720
 
 Now, we must be very cautious as to what's happening so we can understand
 what is to come next.
