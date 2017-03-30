@@ -33,6 +33,8 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
+- 67 - [Recursion, iteration and tail calls in JS](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-29-recursion-iteration-and-tail-calls-in-js.md)
+- 66 - [State to Props maps with memory](https://github.com/loverajoel/jstips/blob/master/_posts/en/react/2017-03-27-state-to-props-maps-with-memory.md)
 - 65 - [Tapping for quick debugging](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-16-tapping-for-quick-debugging.md)
 - 64 - [3 Array Hacks](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-12-3-array-hacks.md)
 - 63 - [Working With Websocket Timeout](https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-09-working-with-websocket-timeout.md)
