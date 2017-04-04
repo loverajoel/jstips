@@ -1,7 +1,7 @@
 
 title: Js Tips - A JS tip per day!
 email: hello@jstips.co
-description: A JS tip per day!
+description: This is about one JS tip every day!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jstips.co" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

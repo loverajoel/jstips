@@ -7,24 +7,24 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="JS Tips">
-  <meta itemprop="description" content="This is about one JS tip every day!">
+  <meta itemprop="name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta itemprop="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta itemprop="image" content="http://www.jstips.co/images/jstips-header-blog">
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="http://www.jstips.co">
-  <meta name="twitter:title" content="JS Tips">
-  <meta name="twitter:description" content="This is about one JS tip every day!">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="twitter:creator" content="@tips_js">
 
   <!-- Open Graph data -->
-  <meta property="og:title" content="JS Tips" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://www.jstips.co" />
   <meta property="og:image" content="http://www.jstips.co/images/jstips-header-blog-static.png" />
-  <meta property="og:description" content="This is about one JS tip every day!" />
-  <meta property="og:site_name" content="JS Tips" />
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta property="og:site_name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
 
   <link rel="stylesheet" href="{{ "/assets/js/swiper/swiper.min.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
