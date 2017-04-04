@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Enhancing React components: Composition
+title: Enhancing React components, Composition
 tip-number: 69
 tip-username: loverajoel 
 tip-username-profile: https://github.com/loverajoel
