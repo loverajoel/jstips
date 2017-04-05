@@ -24,6 +24,8 @@ GEM
       jekyll (>= 2.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
+    jekyll-sitemap (0.12.0)
+      jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.13.1)
@@ -52,10 +54,11 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-paginate
   jekyll-redirect-from
+  jekyll-sitemap
   minima (~> 2.0)
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.0.0p648
 
 BUNDLED WITH
    1.14.6

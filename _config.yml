@@ -15,6 +15,7 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
