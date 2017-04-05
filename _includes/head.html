@@ -5,6 +5,8 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="keywords" content="javascript, tips, react, angular, nodejs, front-end, frameworks" />
+  <meta name="author" content="Lovera Joel">
 
   <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
