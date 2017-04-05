@@ -12,6 +12,7 @@ categories:
     - javascript
 ---
 
+
 Sometimes we need to whitelist certain attributes from an object, say we've
 got an array representation of a database table and we need to `select` just
 a few fields for some function:
