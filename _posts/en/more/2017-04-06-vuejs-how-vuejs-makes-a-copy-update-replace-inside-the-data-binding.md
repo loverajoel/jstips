@@ -32,7 +32,7 @@ But it bites you sometimes if you don't know how it works. Here is an example of
 <div class="pages">
   <div class="page" date-page="test" id="test">
     <div class="page-content" id="test1">
-    <p>{{content}}</p>
+    <p>{% raw %}{{content}}{% endraw %}</p>
     </div>
   </div>
 </div>
