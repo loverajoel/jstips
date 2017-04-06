@@ -30,7 +30,7 @@ Vuejs是一款簡單而強大的軟體傑作，類似其它流行的UI框架，A
 <div class="pages">
   <div class="page" date-page="test" id="test">
     <div class="page-content" id="test1">
-    <p>{{content}}</p>
+    <p>{% raw %}{{content}}{% endraw %}</p>
     </div>
   </div>
 </div>
