@@ -24,6 +24,7 @@ $color-text: #29293F;
 $color-angular: #DD0031;
 $color-react: #4AD5FF;
 $color-white: #F8F8F4;
+$more: #607d8b;
 
 
 /**
@@ -109,7 +110,7 @@ a {
 
   .site-nav {
     margin: 0 auto;
-    width: 250px;
+    width: 330px;
     float: none;
     text-transform: capitalize;
     font-weight: $titles-font-weight;
@@ -466,6 +467,10 @@ a {
   
   .javascript-color {
     border-color: $javascript;
+  }
+
+  .more-color {
+    border-color: $more;
   }
 }
 
@@ -952,6 +957,10 @@ a {
       color: #F1CC1C;
     }
   }
+
+  &.more {
+    background: $more;
+  }
   ul {
     margin: 0px;
     padding: 0px;
@@ -1036,6 +1045,16 @@ a {
 
   &.react {
     background: $react;
+    color: #000;
+
+    .read-more {
+      border-color: #000;
+      color: #000;
+    }
+  }
+
+  &.more {
+    background: $more;
     color: #000;
 
     .read-more {

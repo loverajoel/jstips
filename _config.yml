@@ -63,6 +63,7 @@ myCategories:
   - javascript
   - react
   - angular
+  - more
 
 # languages var
 languages:
@@ -116,6 +117,7 @@ transl:
       javascript: JavaScript
       react: React
       angular: Angular
+      more: More
     read_more: Read More
     show_me_next_page: Load me more tips
     show_me_prev_page: Show me previous page
@@ -155,6 +157,7 @@ transl:
       javascript: JavaScript
       react: React
       angular: Angular
+      more: Más
     read_more: Leer más
     show_me_next_page: Siguiente Página
     show_me_prev_page: Página Anterior
@@ -194,6 +197,7 @@ transl:
       javascript: JavaScript
       react: React
       angular: Angular
+      more: More
     read_more: Read More
     show_me_next_page: 下一条
     show_me_prev_page: 上一条
@@ -233,6 +237,7 @@ transl:
       javascript: JavaScript
       react: React
       angular: Angular
+      more: More
     read_more: Read More
     show_me_next_page: 下一篇 tip
     show_me_prev_page: 上一篇 tip
