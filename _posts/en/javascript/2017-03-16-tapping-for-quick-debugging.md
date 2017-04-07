@@ -76,6 +76,7 @@ property, perform a logical operation, etc. with our tapped object? Then we
 call old good tap with an extra argument, a function to be applied at the moment
 of tapping.
 
+
 ``` javascript
 tap(3, x => x + 2) === 3; // prints 5, but expression evaluates to true, why :-)?
 ```
