@@ -9,7 +9,7 @@ tip-tldr: 在这里 tap 是一个小怪物。一个可以用来快速调试、�
 tip-md-link: https://github.com/loverajoel/jstips/blob/master/_posts/en/javascript/2017-03-16-tapping-for-quick-debugging.md
 
 categories:
-    - en
+    - zh_CN
     - javascript
 ---
 
