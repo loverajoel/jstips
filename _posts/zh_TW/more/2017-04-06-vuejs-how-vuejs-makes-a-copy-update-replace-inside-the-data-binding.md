@@ -8,7 +8,7 @@ tip-username-profile: https://github.com/pansila
 tip-tldr: 在這個提示中，我會通過一個例子向您展示Vue會如何與其它軟體衝突如果你不知道這一點。
 
 categories:
-    - zh_CN
+    - zh_TW
 ---
 
 ### 概述
@@ -69,3 +69,4 @@ myApp.onPageInit('test', function (page) {
 - [Vue](https://github.com/Vuejs/Vue)
 - [Vue教程] (https://cn.vuejs.org/)
 - [Framework7](https://framework7.io/)
+

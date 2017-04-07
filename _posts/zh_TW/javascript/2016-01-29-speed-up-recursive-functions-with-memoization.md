@@ -19,19 +19,19 @@ categories:
 大家對費式（Fibonacci）數列都很熟悉。我們可以在 20 秒內寫出以下的函式。
 
 ```js
-var fibonacci = function(n){
+var fibonacci = function(n) {
     return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
 }
 ```
 它可以執行，但是效率不高。它做了大量的重複計算，我們可以快取先前的計算結果來加快計算速度。
 
 ```js
-var fibonacci = (function() {
-  var cache = [0, 1]; // cache the value at the n index
+const fibonacci = (function() {
+  let cache = [0, 1]; // cache the value at the n index
   return function(n) {
     if (cache[n] === undefined) {
-      for (var i = cache.length; i <= n; ++i) {
-        cache[i] = cache[i-1] + cache[i-2];
+      for (let i = cache.length; i <= n; ++i) {
+        cache[i] = cache[i - 1] + cache[i - 2];
       }
     }
     return cache[n];
@@ -41,22 +41,23 @@ var fibonacci = (function() {
 也許，我們可以定義高階函式，來接受一個函式作為參數，並回傳一個函式回傳的暫存值。
 
 ```js
-var memoize = function(func){
-    var cache = {};
-    return function(){
-        var key = Array.prototype.slice.call(arguments).toString();
+const memoize = function(func) {
+    let cache = {};
+    return function() {
+        const key = JSON.stringify(Array.prototype.slice.call(arguments));
         return key in cache ? cache[key] : (cache[key] = func.apply(this, arguments));
     }
 }
 fibonacci = memoize(fibonacci);
 ```
+
 這裡是 ES6 版本的 memoize 函式。
 
 ```js
-var memoize = function(func){
+const memoize = function(func) {
     const cache = {};
     return (...args) => {
-        const key = [...args].toString();
+        const key = JSON.stringify(args)
         return key in cache ? cache[key] : (cache[key] = func(...args));
     }
 }
@@ -66,12 +67,12 @@ fibonacci = memoize(fibonacci);
 * GCD（最大公因數）
 
 ```js
-var gcd = memoize(function(a, b){
-    var t;
+const gcd = memoize(function(a, b) {
+    let t;
     if (a < b) t = b, b = a, a = t;
-    while(b != 0) t = b, b = a % b, a = t;
+    while (b != 0) t = b, b = a % b, a = t;
     return a;
-})
+});
 gcd(27, 183); //=> 3
 ```
 * 階乘計算
@@ -82,3 +83,8 @@ var factorial = memoize(function(n) {
 })
 factorial(5); //=> 120
 ```
+
+學習更多關於 memoization：
+
+- [Memoization - Wikipedia](https://en.wikipedia.org/wiki/Memoization)
+- [Implementing Memoization in JavaScript](https://www.sitepoint.com/implementing-memoization-in-javascript/)
