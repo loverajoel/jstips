@@ -1,5 +1,5 @@
 ---
 layout: home
-lang: es
+lang: es_ES
 filter: more
 ---
