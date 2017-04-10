@@ -37,7 +37,7 @@ pick(row, ['client.name']); // 取得 Client 名稱
 table.map(row => pick(row, ['client.name'])); // 取得一些 client 名稱的列表
 ```
 
-在 pick 有透過一個小手段，首先，我們 `map` 一個 function，每次透過目前的 key 只有該屬性的物件被回傳（或者，如果在物件內沒有任何的屬性會回傳一個空的物件）。然後透過 merge 物件，我們 `reduce` 這些單一屬性的集合物件。
+在 pick 我們透過一個小手段，首先，我們 `map` 一個 function，每次透過目前的 key 只有該屬性的物件被回傳（或者，如果在物件內沒有任何的屬性會回傳一個空的物件）。然後透過 merge 物件，我們 `reduce` 這些單一屬性的集合物件。
 
 但是如果我們想要 `reject` 屬性呢？好吧，function 需要一些改變：
 
