@@ -5,8 +5,7 @@ title: Protocols for the Brave
 tip-number: 73
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: You might have heard about the old ways gaining hype recently, and we don't mean praying to the gods of the north. Today we're introducing a feature found in Clojure which allows you to define
-interfaces for your classes.
+tip-tldr: You might have heard about the old ways gaining hype recently, and we don't mean praying to the gods of the north. Today we're introducing a feature found in Clojure which allows you to define interfaces for your classes.
 
 categories:
     - en
