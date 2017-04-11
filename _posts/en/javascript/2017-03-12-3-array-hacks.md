@@ -62,7 +62,7 @@ I personally don’t like using `null` since JavaScript treats it as an object a
 > method(...['parameter1', , 'parameter3']); // works!
 ```
 
-### Unique array values
+### 3. Unique array values
 
 I always wonder why the Array constructor does not have a designated method to facilitate the use of unique array values. Spread operators are here for the rescue. Use spread operators with the `Set` constructor to generate unique array values.
 
