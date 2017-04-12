@@ -78,13 +78,12 @@ We can encapsulate functionality a bit further by defining an inner function.
 
 ``` javascript
 function factorial(n) {
-    function inner_factorial(n, res) {
+    return (function inner_factorial(n, res) {
         if (n === 0) {
             return res;
         }
         return inner_factorial(n - 1, res * n);
-    }
-    return inner_factorial(n, 1);
+    })(n,1);
 }
 ```
 
