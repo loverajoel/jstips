@@ -13,91 +13,117 @@ categories:
     - javascript
 ---
 
+# Call apply and bind. and how they are different. 
+
+prerequisites. 
+
+-function invocation
+-execution context
+-variable environment
+-scope
+-scope chain
+-objects
+-methods
+
+**Call and Apply**
+
+Call apply and bind are methods listed in `Prototype property` of `Function Object`. 
+
+Using `Object.prototype` `hasOwnProperty()` method you can get a boolean value. 
+
+`Object.prototype.hasOwnProperty()`
+
+The above returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
+
+
+```javascript=
+Function.prototype.hasOwnProperty('call'); // true
+Function.prototype.hasOwnProperty('apply'); // true
+Function.prototype.hasOwnProperty('bind'); // true
+```
+We use call and apply interchangeably and soon we will also get to know the how the two differ. 
+As we know that Objects have properties and methods. 
+
+Call or Apply help us to manipulate the `context` of any method or function.
+
+By use of Call or Apply we can chose a `context` of our choice. 
+
+In other words you can also think of it as a method or a stand-alone-function given capability to extend functionality of another object.
+
+We have defined a function `getName` and an object `o` with a property `name` in line 1 below. 
+
+Function `getName` logs the value of `this.name` which equals to the name property of the object invoking that function. 
+
+We use `apply` to invoke `getName` on the object `o`. We will discuss the difference between call and apply next. 
+
+```javascript=
+function getName(){console.log(this.name)}
+var o = {name : "kafka"};
+getName(); // undefined
+getName.apply(o); // returns kafka
+getName.call(o); // returns kafka
+```
+
+
+In the above example we had used the function `getName.apply(o)` and `getName.call(o)`. 
+
+Both call and apply, expect the first argument to be the `Execution Context` i.e. the name of the `object` on which the function or method is being applied. 
+```
+functionName.call(executionCotext);
+functionName.apply(executionCotext);
+```
 
 
 
-You have three automobiles `your_scooter , your_car and your_jet` which start with the same mechanism (method). 
-We created an object `automobile` with a method `push_button_engineStart`. 
+Earlier we defined a function `getName` and we used call and apply to use it on the object `o` which then  logged the name property of the object which was passed as the parameter. 
 
-    var your_scooter, your_car, your_jet;
-    var automobile = {
-    	    push_button_engineStart: function (runtime){
-    		console.log(this.name + "'s" + ' engine_started, buckle up for the ride for ' + runtime + " minutes");
-    	}
-    }
+We have defined a new function `addAge` and `addProfession`. Both the functions expect an argument and those values are passed as `properties` to the `object`.
 
-Lets understand when is call and apply used. Lets suppose that you are an engineer and you have `your_scooter`, `your_car` and `your_jet` which did not come with a push_button_engine_start and you wish to use a third party `push_button_engineStart`.
+`addAge` accepts an argument `age` i.e. `Number` and `addProfession` expects an argument `profession` i.e. `String`.  
+When we invoke the function on line 6-7 we pass the arguments as the second argument to the `apply` and `call` method. 
 
-If you run the following lines of code, they will give an error. WHY?
+Call and apply both accept the first argument as the `execution context` and the following arguments are the arguments that have to be passed to the function `call` and `apply` respectively.
 
-    //your_scooter.push_button_engineStart();
-    //your_car.push_button_engineStart();
-    //your_jet.push_button_engineStart();
-    
-    
-    automobile.push_button_engineStart.apply(your_scooter,[20]);
-    automobile.push_button_engineStart.call(your_jet,10);
-    automobile.push_button_engineStart.call(your_car,40);
+```
+addAge.apply(o,[19]);  // 19 is the argument
+addAge.profession(o,"JavaScriptNinja") // "JavaScriptNinja" is the argument
+```
 
-So the above example is successfully gives your_scooter, your_car, your_jet a feature from automobile object.
- 
-**Let's dive deeper**
-Here we will split the above line of code. 
-`automobile.push_button_engineStart` is helping us to get the method being used. 
+The small difference between call and apply is only that apply accepts its arguments in the form of an array and call accepts the arguments in the form of a comma separated list.  
 
-Further we use apply or call using the dot notation. 
-`automobile.push_button_engineStart.apply()`
+Below we invoke `addAge` and `addProfession` using call and apply in line 6-7 and pass the respective arguments. The function `addAge` and `addProfession` add two more properties to the object `o`. 
 
-
-Now apply and call accept two parameters. 
+```javascript=
+function addAge(age){
+    this.age = age;
+    return this;
+}
+function addProfession(profession){
+    this.profession = age;
+    return this;
+}
+var o = {name : "kafka"};
+addAge.apply(o,[19]);
+addProfession.call(o,"JavaScriptNinja");
 
 
- 1. context
- 2. arguments
-
-So here we set the context in the final line of code. 
-
-`automobile.push_button_engineStart.apply(your_scooter,[20])`
-
-**Difference between call and apply** is just that apply accepts parameters in the form of an array while call simply can accept a comma separated list of arguments. 
+```
 
 
-**what is JS Bind function?**
+**Bind**
 
 
-A bind function is basically which binds the context of something and then stores it into a variable for execution at a later stage. 
+A bind function is basically which binds the context of something and then stores it into a variable for invocation at a later stage. 
 
-Let's make our previous example even better. Earlier we used a method belonging to the automobile object and used it to equip `your_car, your_jet and your_scooter`. Now lets imagine we want to give a separate `push_button_engineStart` separately to start our automobiles individually at any later stage of the execution we wish. 
+Below we are again using the same example as mentioned above and on line 3 we are storing reference to the `o.name` in `variable` `objectName`.
 
+Unlike, call and apply, bind helps us to first store reference in a variable (line 3). Invoke the function at a later stage in line 4. 
+Also, it makes the code more readable. 
 
+```javascript=
+function getName(){console.log(this.name)}
+var o = {name:"kafka"};
+var objectName = getName.bind(o);
+objectName();
 
-    var scooty_engineStart = automobile.push_button_engineStart.bind(your_scooter);
-    var car_engineStart = automobile.push_button_engineStart.bind(your_car);
-    var jet_engineStart = automobile.push_button_engineStart.bind(your_jet);
-    
-    
-    setTimeout(scooty_engineStart,5000,30);
-    setTimeout(car_engineStart,10000,40);
-    setTimeout(jet_engineStart,15000,5);
-
-***still not satisfied?***
-
-Let's make it clear as teardrop. Time to experiment. We will go back to call and apply function application and try storing the value of the function as a reference. 
-
-The experiment below fails because call and apply are invoked immediately, hence, we never get to the stage of storing a reference in a variable which is where bind function steals the show
-
-
-`var test_function = automobile.push_button_engineStart.apply(your_scooter);`
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
