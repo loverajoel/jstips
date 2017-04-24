@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Improving your Async Fuctions with WebWorkers
+title: Improving your Async functions with WebWorkers
 tip-number: 74
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
