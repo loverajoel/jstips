@@ -24,7 +24,7 @@ JavaScript 中直接创建的数组是松散的，以至于会有很多坑。试
 [undefined, undefined, undefined, undefined]
 ```
 
-你会发现，通过一个讼案的数组去循环调用一些转换是非常难得。
+你会发现，通过一个松散的数组去循环调用一些转换是非常难的。
 
 ```javascript
 > const arr = new Array(4);
