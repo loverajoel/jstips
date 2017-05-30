@@ -38,7 +38,7 @@ So, for example, if you've got the following:
 
 And you insert an element at the beginning
 
-``` html+django
+``` html
 <ul>
     <li>Mycroft Holmes</li>
     <li>Sherlock Holmes</li>
