@@ -3,7 +3,7 @@ layout: post
 
 title: 给函数 Bind 对象
 tip-number: 61
-tip-username: loverajoel 
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: 理解在 JavaScript 中如何使用 `Bind` 方法绑定对象和函数
 
@@ -42,19 +42,19 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 ```js
 const myCar = {
  brand: 'Ford',
- type: 'Sedan'
- Color: ‘Red’
+ type: 'Sedan',
+ color: 'Red'
 };
 
-const getBrand = () => {
+const getBrand = function () {
  console.log(this.brand);
 };
 
-const getType = () => {
+const getType = function () {
  console.log(this.type);
 };
 
-const getColor = () => {
+const getColor = function () {
  console.log(this.color);
 };
 
@@ -64,6 +64,7 @@ getBrand(myCar); // object not bind,undefined
 
 getType.bind(myCar)(); // Sedan
 
-getColor.bind(myCar); // Red
+let boundGetColor = getColor.bind(myCar);
+boundGetColor(); // Red
 
 ```
