@@ -42,28 +42,29 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 ```js
 const myCar = {
  brand: 'Ford',
- type: 'Sedan'
- Color: ‘Red’
+ type: 'Sedan',
+ color: 'Red'
 };
 
-const getBrand = () => {
+const getBrand = function () {
  console.log(this.brand);
 };
 
-const getType = () => {
+const getType = function () {
  console.log(this.type);
 };
 
-const getColor = () => {
+const getColor = function () {
  console.log(this.color);
 };
 
-getBrand(); // 物件沒有被 bind，undefined
+getBrand(); // object not bind,undefined
 
-getBrand(myCar); // 物件沒有被 bind，undefined
+getBrand(myCar); // object not bind,undefined
 
 getType.bind(myCar)(); // Sedan
 
-getColor.bind(myCar); // Red
+let boundGetColor = getColor.bind(myCar);
+boundGetColor(); // Red
 
 ```
