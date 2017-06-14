@@ -42,7 +42,7 @@ objects anyways, and they must come, as their name says, from external sources,
 then you might be more comfortable handling the matter to yet another external
 library and focus on what matters the most, i.e, your application itself.
 
-One such library is (pvorb/clone)[https://github.com/pvorb/clone], which has a
+One such library is [pvorb/clone](https://github.com/pvorb/clone), which has a
 very simple API. To clone an object you only have to
 
 ``` javascript
@@ -56,8 +56,8 @@ console.log(b); // {foo: {bar: 'baz'}}
 ```
 
 There are, of course, many more libraries that allow you to do the same such as
-(Ramda)[http://ramdajs.com/docs/#clone], (lodash.clonedeep)[https://www.npmjs.com/package/lodash.clonedeep]
-and (lodash.clone)[https://www.npmjs.com/package/lodash.clone].
+[Ramda](http://ramdajs.com/docs/#clone), [lodash.clonedeep](https://www.npmjs.com/package/lodash.clonedeep)
+and [lodash.clone](https://www.npmjs.com/package/lodash.clone).
 
 As an end note, if you are serious about dealing with immutable structures, you
 might want to check **ClojureScript** or (for those that feel that Haskell's
