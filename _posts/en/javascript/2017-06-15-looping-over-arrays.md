@@ -120,3 +120,4 @@ if (array.some(over_seven)) {
 } else {
   console.log('No element bigger than 7 was found');
 }
+```
