@@ -5,8 +5,7 @@ title: Looping over arrays
 tip-number: 79
 tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
-tip-tldr: There's a few methods for looping over arrays in Javascript. We'll start
-with the classical ones and move towards additions made to the standard.
+tip-tldr: There's a few methods for looping over arrays in Javascript. We'll start with the classical ones and move towards additions made to the standard.
 
 categories:
     - en
