@@ -48,5 +48,6 @@ for(key in cleanMap){
 }
 ```
 
-* Object.create() was introduced in ES5 [[Compatibility]](http://kangax.github.io/compat-table/es5/)
+## Notes:
+* Object.create() was introduced in ES5: [Compatibility](http://kangax.github.io/compat-table/es5/)
 * ES6 introduced some new structures: [Map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map), [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap), [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and [Weak Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
