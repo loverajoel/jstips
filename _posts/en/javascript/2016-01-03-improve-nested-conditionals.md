@@ -3,7 +3,7 @@ layout: post
 
 title: Improve Nested Conditionals
 tip-number: 03
-tip-username: AlbertoFuente 
+tip-username: AlbertoFuente
 tip-username-profile: https://github.com/AlbertoFuente
 tip-tldr: How can we improve and make a more efficient nested `if` statement in javascript?
 
@@ -104,3 +104,6 @@ if (color in colorObj) {
 ```
 
 Here you can find more information about [this](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/).
+
+## Playground
+<a class="jsbin-embed" href="https://jsbin.com/vubeno/embed?js,console">JS Bin on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.39.12"></script>

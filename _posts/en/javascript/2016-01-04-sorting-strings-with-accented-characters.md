@@ -3,7 +3,7 @@ layout: post
 
 title: Sorting strings with accented characters
 tip-number: 04
-tip-username: loverajoel 
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: Javascript has a native method **sort** that allows sorting arrays. Doing a simple `array.sort()` will treat each array entry as a string and sort it alphabetically. But when you try order an array of non ASCII characters you will obtain a strange result.
 tip-writer-support: https://www.coinbase.com/loverajoel
@@ -69,3 +69,8 @@ Fortunately, there are two ways to overcome this behavior [localeCompare](https:
 - According to [Firefox](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance) Intl.Collator is faster when comparing large numbers of strings.
 
 So when you are working with arrays of strings in a language other than English, remember to use this method to avoid unexpected sorting.
+
+## Playground
+<div>
+    <a class="jsbin-embed" href="https://jsbin.com/bazume/embed?js,console">JSTips.co - Sorting strings with accented characters on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.39.12"></script>
+</div>

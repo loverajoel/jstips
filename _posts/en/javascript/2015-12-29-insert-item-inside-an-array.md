@@ -185,3 +185,8 @@ items.splice(items.length / 2, 0, 'hello');
 ```
 
 I tried to run these tests in various Browsers and OS and the results were similar. I hope these tips will be useful for you and encourage to perform your own tests!
+
+## Playground
+<div>
+  <a class="jsbin-embed" href="http://jsbin.com/xeqeya/embed?js,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.12"></script>
+</div>
