@@ -2,7 +2,7 @@
 layout: *post
 
 title: Hash maps without side effects
-tip-number: xx
+tip-number: 73
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
 tip-tldr: Create hash maps(without side effects) using `Object.create(null)`.
