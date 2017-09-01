@@ -33,7 +33,7 @@ There are a lot of ways to get updates, choose your own
 
 # Tips list
 
-
+- 73 - [Hash maps without side effects](http://www.jstips.co/en/javascript/hash-maps-without-side-effects/)
 - 72 - [Adventurers Guide to React (Part I)](http://www.jstips.co/en/react/adventurers-guide-to-react/)
 - 71 - [VueJS, How VueJS makes a copy-update-replace inside the data binding](http://www.jstips.co/en/more/vuejs-how-vuejs-makes-a-copy-update-replace-inside-the-data-binding/)
 - 70 - [Picking and rejecting object properties](http://www.jstips.co/en/javascript/picking-and-rejecting-object-properties/)
