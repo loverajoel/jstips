@@ -33,7 +33,7 @@ while (index < array.length) {
 
 ```javascript
 const array = [1,2,3,4,5,6];
-for (let index = 0; index < array.length, index++) {
+for (let index = 0; index < array.length; index++) {
   console.log(array[index]);
 }
 ```
@@ -60,7 +60,7 @@ const array = [1,2,3,4,5,6];
 const square = x => Math.pow(x, 2);
 const squares = array.map(square);
 console.log(`Original array: ${array}`);
-console.log(`Squared array: ${array}`);
+console.log(`Squared array: ${squares}`);
 ```
 
 The full signature for `map` is `.map(current_value, index, array)`.
