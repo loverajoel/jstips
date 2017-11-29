@@ -379,7 +379,7 @@ a {
 .page-sidebar {
   width: 348px;
   float: left;
-  margin-top: 111px;
+  margin-top: 0px;
   margin-bottom: 50px;
   text-align: left;
 
@@ -471,6 +471,30 @@ a {
 
   .more-color {
     border-color: $more;
+  }
+}
+
+.links {
+  width: 348px;
+  float: left;
+  margin-top: 111px;
+  margin-bottom: 25px;
+  text-align: left;
+
+  span {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 11px;
+    margin: 10px 0;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-query($on-laptop) {
+    float: none;
+    margin: 0 auto;
   }
 }
 
