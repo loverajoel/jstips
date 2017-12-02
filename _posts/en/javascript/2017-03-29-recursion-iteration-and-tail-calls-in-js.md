@@ -145,3 +145,13 @@ recursion. How cool is that?
 The good news is, this is a feature in ES6. As long as your recursive call
 is in tail position and your function has strict mode, tail call optimization
 will kick in and save you from having a `maximum stack size exceeded` error.
+
+UPDATE Dec 1, 2017:
+The only major browser with tail call optimization is Safari.<sup id="a1">1</sup> V8 has an implentation<sup>2</sup> but has not shipped it yet<sup>3</sup> for the reasons listed.
+
+1: https://kangax.github.io/compat-table/es6/#test-proper_tail_calls_(tail_call_optimisation)
+
+2: https://bugs.chromium.org/p/v8/issues/detail?id=4698
+
+3: https://v8project.blogspot.com/2016/04/es6-es7-and-beyond.html
+ 
