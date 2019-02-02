@@ -1425,15 +1425,12 @@ a {
 
 
 .love {
-  width: 728px;
-  height: 90px;
+  width: 710px;
+  height: 120px;
   float: left;
   margin: 0 0 30px 0;
   background-size: contain;
-
-  @include media-query($on-laptop) {
-    display: none;
-  }
+  background-image: url("images/love.png");
 }
 
 .love_r {
