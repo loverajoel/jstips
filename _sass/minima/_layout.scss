@@ -1433,7 +1433,7 @@ a {
   width: 710px;
   height: 120px;
   background-image: url('http://www.jstips.co/assets/images/love.png');
-  @include media-query($on-laptop) { display: block !important; width: 100%; background-size: auto; background-position-x: right; }
+  @include media-query($on-laptop) { display: block !important; width: 100%; background-size: contain; background-repeat: no-repeat; }
 }
 
 .love_r {
