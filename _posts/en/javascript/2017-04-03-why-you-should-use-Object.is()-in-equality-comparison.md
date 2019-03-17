@@ -35,7 +35,7 @@ Object.is([1], true); //false
 Object.is(NaN, NaN); //true
 ```
 
-Mozilla team doesn't think that Object.is is "stricter" than '===' they say that we should think of how this method deal with NaN, -0 and +0 but overall I think it is now a good practice in real applications.
+Mozilla team doesn't think that Object.is is "stricter" than '===', they say that we should think of how this method deal with NaN, -0 and +0 but overall I think it is now a good practice in real applications.
 
 Now this table illustrates..
 
