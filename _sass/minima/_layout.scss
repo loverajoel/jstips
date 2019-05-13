@@ -1450,3 +1450,19 @@ a {
     display: block;
   }
 }
+
+
+.flashcard {
+  background: #fff;
+  margin: -100px 0 0 0;
+
+  h2 {
+    font-size: 24px !important;
+    margin: none !important;
+  }
+
+  #root {
+    padding: 30px;
+    background-color: #f9d73247;
+  }
+}

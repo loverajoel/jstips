@@ -20,7 +20,7 @@ layout: default
     <!-- <script> -->
     <!-- (adsbygoogle = window.adsbygoogle || []).push({}); -->
     <!-- </script> -->
-    <a class="love" href="https://readsmart.co/?ref=jstips_camp" target="_blank"></a>
+    <!-- <a class="love" href="https://readsmart.co/?ref=jstips_camp" target="_blank"></a> -->
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -29,6 +29,15 @@ layout: default
       <a class="improve-tip" href="{{page.tip-md-link}}">>_ Improve this tip</a>
     {% endif %}
   </div>
+  {% if page.title == "Two ways to empty an array" %}
+  <div class="related-tips flashcard">
+    <div class="wrapper">
+      <h2>Let’s review what you've learned. Answer the next 3 questions</h2>
+      <div id="root"></div>
+      <script type="text/javascript" src="https://build-loverajoel.falcon-team1.now.sh/static/js/main.877edc49.js"></script>
+    </div>  
+  </div>
+  {% endif %}
 
   <div class="js-share">
     <ul>
@@ -47,6 +56,7 @@ layout: default
     </ul>
   </div>
 </article>
+
 {% include related_tips.html %}
 <div class="wrapper">
   {% if site.disqus %}
