@@ -1462,7 +1462,15 @@ a {
   }
 
   #root {
-    padding: 30px;
-    background-color: #f9d73247;
+    min-height: 480px
   }
+}
+
+.highlight-title {
+  background: #f9d631;
+  font-size: 30px;
+}
+
+.block {
+  display: block;
 }
