@@ -29,12 +29,13 @@ layout: default
       <a class="improve-tip" href="{{page.tip-md-link}}">>_ Improve this tip</a>
     {% endif %}
   </div>
-  {% if page.title == "Two ways to empty an array" %}
+  {% if page.title == "Two ways to empty an array" or page.title == "Calculate the Max/Min value from an array" or page.title == "Passing arguments to callback functions" %}
   <div class="related-tips flashcard">
     <div class="wrapper">
       <h2><span class="highlight-title">Let’s review what you've learned.</span> <span class="block">Answer the next 3 questions</span></h2>
       <div id="root" data-post-id="{{ page.title | escape }}"></div>
       <script type="text/javascript" src="https://flashcards-loverajoel.falcon-team1.now.sh/build/static/js/main.js" ></script>
+      <!-- <script type="text/javascript" src="http://localhost:3000/static/js/bundle.js" ></script> -->
     </div>  
   </div>
   {% endif %}
