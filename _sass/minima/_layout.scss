@@ -1459,6 +1459,7 @@ a {
   h2 {
     font-size: 24px !important;
     margin: none !important;
+    margin: 50px 30px 0 !important;
   }
 
   #root {
@@ -1473,4 +1474,17 @@ a {
 
 .block {
   display: block;
+}
+
+
+.formElement {
+  fieldset {
+    & > div {
+      margin: 20px 0 0 0
+    }
+  }
+}
+
+.powrMark {
+  display: none !important
 }
