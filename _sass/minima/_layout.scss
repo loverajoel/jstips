@@ -519,7 +519,7 @@ a {
   margin-bottom: $spacing-unit;
   max-width: 710px;
   margin: 0 auto;
-  padding: 75px 0 20px;
+  padding: 0 0 20px;
   overflow: auto;
 
   @include media-query($on-laptop) {
@@ -1487,4 +1487,28 @@ a {
 
 .powrMark {
   display: none !important
+}
+
+
+.bite-container {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.bites {
+  width: 900px;
+  height: 150px;
+  margin: 30px auto;
+  background-size: cover;
+  display: inline-block;
+  text-align: center;
+
+  @include media-query($on-laptop) {
+    display: none;
+  }
+
+  &.v1 {
+    background-image: url('/assets/images/jsbites_1.jpg')
+  }
 }
