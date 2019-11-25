@@ -12,8 +12,6 @@ categories:
     - javascript
 ---
 
-
-# Creating immutable objects in native JavaScript
 Javascript it’s a flexible language, you can redefine anything. But when projects get complex we find problems with mutable data structures.
 With the latest versions of JavaScript this situation changed. Now it’s possible to create immutable objects. I’ll walk you through how to do it in three different ways.
 
@@ -23,7 +21,7 @@ With the latest versions of JavaScript this situation changed. Now it’s possib
 Let’s suppose we need to define a car [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) and use its properties to perform operations throughout our entire project.
 We can’t allow modifying by mistake any data.
 
-```
+```js
 const myTesla = {
 	maxSpeed: 250,
 	batteryLife: 300,
@@ -36,7 +34,7 @@ const myTesla = {
 This method prevents the addition of new properties to our existing object. 
 `preventExtensions()` is a irreversible operation. We can never add extra properties to the object again.
 
-```
+```js
 Object.isExtensible(myTesla); // true
 Object.preventExtensions(myTesla);
 Object.isExtensible(myTesla); // false
@@ -47,7 +45,7 @@ console.log(myTesla.color) // undefined
 ## [Object.seal()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal)
 It prevents additions or deletion of properties. `seal()` also prevents the modification of property descriptors.
 
-```
+```js
 Object.isSealed(myTesla); // false
 Object.seal(myTesla);
 Object.isSealed(myTesla); // true
@@ -64,7 +62,7 @@ Object.defineProperty(myTesla, 'batteryLife'); // TypeError: Cannot redefine pro
 ## [Object.freeze()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
 It does the same that `Object.seal()` plus it makes the properties non-writable.
 
-```
+```js
 Object.isFrozen(myTesla); // false
 Object.freeze(myTesla);
 Object.isFrozen(myTesla); // true
