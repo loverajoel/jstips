@@ -554,6 +554,7 @@ a {
   background: #ffffff;
   text-align: left;
   position: relative;
+  padding-top: 50px;
 
   @include media-query($on-laptop) {
     padding: 10px;
@@ -561,7 +562,7 @@ a {
 }
 
 .post-content {
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
 
   .highlighter-rouge {
     border: 0px;
@@ -1498,8 +1499,8 @@ a {
 
 .bites {
   width: 900px;
-  height: 150px;
-  margin: 30px auto;
+  height: 259px;
+  margin: 50px auto;
   background-size: cover;
   display: inline-block;
   text-align: center;
@@ -1509,10 +1510,10 @@ a {
   }
 
   &.v1 {
-    background-image: url('/assets/images/jsbites_1.jpg')
+    background-image: url('/assets/images/cards_v1.png')
   }
 
   &.v2 {
-    background-image: url('/assets/images/jsbites_2.jpg')
+    background-image: url('/assets/images/cards_v2.png')
   }
 }

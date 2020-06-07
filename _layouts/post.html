@@ -2,15 +2,6 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="bite-container">
-    <script type="text/javascript">
-      var number = Math.floor(Math.random() * 2) + 1;
-      setTimeout(function() {
-        document.querySelector('.bites').classList.add('v'+number);
-      });
-    </script>
-    <a class="bites" href="https://forms.gle/jLdx3bXUa5vRdLjh7" target="_blank" onclick="ga('send', 'event', 'bites', 'click', 'v'+number, 1);"></a>
-  </div>
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -72,8 +63,16 @@ layout: default
       </li>
     </ul>
   </div>
+  <div class="bite-container">
+    <script type="text/javascript">
+      var number = Math.floor(Math.random() * 2) + 1;
+      setTimeout(function() {
+        document.querySelector('.bites').classList.add('v'+number);
+      });
+    </script>
+    <a class="bites" href="https://www.jstips.co/cards/" target="_blank" onclick="ga('send', 'event', 'cards', 'click', 'v'+number, 1);"></a>
+  </div>
 </article>
-
 {% include related_tips.html %}
 {% include email-suscribe.html %}
 <div class="wrapper">
