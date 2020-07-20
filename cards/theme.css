@@ -60,6 +60,7 @@ body {
   background-color: #fadd51 !important;
   border-color: #fadd51 !important;
   color: #000 !important;
+  font-size: 15px;
 }
 
 .button-primary:hover {
@@ -87,4 +88,9 @@ body {
   margin: 0 0 0 15px;
   background: #f7c281;
   padding: 3px 20px;
+}
+
+.button2 {
+  text-align: center;
+  display: block;
 }
