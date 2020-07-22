@@ -555,6 +555,7 @@ a {
   text-align: left;
   position: relative;
   padding-top: 50px;
+  padding-bottom: 50px;
 
   @include media-query($on-laptop) {
     padding: 10px;
@@ -1500,7 +1501,7 @@ a {
 .bites {
   width: 900px;
   height: 259px;
-  margin: 50px auto;
+  margin: 0 auto;
   background-size: cover;
   display: inline-block;
   text-align: center;
