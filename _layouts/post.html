@@ -22,20 +22,26 @@ layout: default
     <!-- </script> -->
     <!-- <a class="love" href="https://readsmart.co/?ref=jstips_camp" target="_blank"></a> -->
   </header>
-<!--   <div class="bite-container">
-    <script type="text/javascript">
-      var number = Math.floor(Math.random() * 2) + 1;
-      setTimeout(function() {
-        document.querySelector('.bites').classList.add('v'+number);
-      });
-    </script>
-    <a class="bites" href="https://www.jstips.co/cards/" target="_blank" onclick="ga('send', 'event', 'cards', 'click', 'v'+number, 1);"></a>
-  </div> -->
   <div class="post-content" itemprop="articleBody">
     {{ content }}
     {% if page.tip-md-link %}
       <a class="improve-tip" href="{{page.tip-md-link}}">>_ Improve this tip</a>
     {% endif %}
+  </div>
+
+  <div class="bite-container">
+    <script type="text/javascript">
+      var number = Math.floor(Math.random() * 2) + 1;
+      var urls = {
+        1: 'https://bit.ly/3fyJkuk',
+        2: 'https://bit.ly/2PzFCG7'
+      }
+      setTimeout(function() {
+        document.querySelector('.bites').classList.add('v'+number);
+        document.querySelector('.bites').href = urls[number];
+      });
+    </script>
+    <a class="bites" href="https://www.jstips.co/books/" target="_blank" onclick="ga('send', 'event', 'books', 'click', 'v'+number, 1);"></a>
   </div>
 
   <!-- <div class="related-tips flashcard">
