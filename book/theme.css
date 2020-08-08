@@ -1,0 +1,97 @@
+body {
+  background: #fdfcfa;
+}
+
+.logo {
+  width: 49px;
+  height: 70px;
+  background: url(./assets/logo.png);
+  background-size: contain;
+  margin: 50px 0 50px 0;
+}
+
+.hero-img {
+  height: 312px;
+  background: url(./assets/cover.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.half-center {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 3.5rem;
+  margin-top: 5px;
+}
+
+.hero-description {
+  font-size: 1.1em;
+  line-height: 22px;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .half-center {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.half-center h4 {
+  text-align: center;
+}
+
+.margin-100 {
+  margin: 100px 0 100px 0;
+}
+
+.align-center {
+  margin: 0 auto;
+}
+
+.button-primary {
+  background-color: #fadd51 !important;
+  border-color: #fadd51 !important;
+  color: #000 !important;
+  font-size: 13px;
+  line-height: 2.8;
+}
+
+.button-primary:hover {
+  background-color: #fde781 !important;
+  border-color: #fadd51 !important;
+  color: #000 !important;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  display: flex;
+}
+
+.features svg {
+  width: 23px;
+  height: 23px;
+  margin: 0 10px 0 0;
+}
+
+.offer {
+  font-size: 12px;
+  margin: 0 0 0 15px;
+  background: #f7c281;
+  padding: 3px 20px;
+}
+
+.button2 {
+  text-align: center;
+  display: block;
+}
