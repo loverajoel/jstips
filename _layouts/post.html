@@ -33,13 +33,32 @@ layout: default
     <script type="text/javascript">
       var number = Math.floor(Math.random() * 2) + 1;
       var urls = {
-        1: 'https://bit.ly/3fyJkuk',
-        2: 'https://bit.ly/2PzFCG7'
+        1: 'https://www.jstips.co/book/?utm_source=jstips&utm_medium=banner&utm_campaign=book&utm_content=interview',
+        2: 'https://www.jstips.co/book/?utm_source=jstips&utm_medium=banner&utm_campaign=book&utm_content=concepts'
       }
       setTimeout(function() {
         document.querySelector('.bites').classList.add('v'+number);
         document.querySelector('.bites').href = urls[number];
       });
+
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document. documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document. documentElement.clientWidth)
+        );
+      }
+
+      function check (event) {
+        if (isElementInViewport(document.querySelector('.bites'))) {
+          ga('send', 'event', 'books', 'print', 'v'+number, 1);
+          window.removeEventListener('scroll', check);
+        }
+      }
+
+      window.addEventListener('scroll', check, false);
     </script>
     <a class="bites" href="https://www.jstips.co/books/" target="_blank" onclick="ga('send', 'event', 'books', 'click', 'v'+number, 1);"></a>
   </div>
