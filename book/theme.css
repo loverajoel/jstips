@@ -1,5 +1,6 @@
 body {
   background: #fdfcfa;
+  font-size: 17px;
 }
 
 .logo {
@@ -7,14 +8,30 @@ body {
   height: 70px;
   background: url(./assets/logo.png);
   background-size: contain;
-  margin: 50px 0 50px 0;
+  margin: 20px 0 20px 0;
+}
+
+.hero-text {
+  margin-top: 44px;
 }
 
 .hero-img {
-  height: 312px;
+  height: 300px;
   background: url(./assets/cover.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: top right;
+  margin-top: 50px;
+  margin-left: -20px;
+}
+
+.info {
+  background: #fce985;
+  padding: 50px;
+}
+
+.info p {
+  font-size: 18px;
 }
 
 .half-center {
@@ -29,7 +46,8 @@ body {
 
 .hero-description {
   font-size: 1.1em;
-  line-height: 22px;
+  line-height: 1.4;
+  margin-bottom: 50px;
 }
 
 /* Larger than mobile */
@@ -62,6 +80,7 @@ body {
   color: #000 !important;
   font-size: 13px;
   line-height: 2.8;
+  width: 100%;
 }
 
 .button-primary:hover {
@@ -76,22 +95,74 @@ body {
 
 .features li {
   display: flex;
+  margin: 20px 0;
 }
 
-.features svg {
-  width: 23px;
-  height: 23px;
+.features img {
+  width: 25px;
+  height: 25px;
   margin: 0 10px 0 0;
 }
 
 .offer {
   font-size: 12px;
-  margin: 0 0 0 15px;
+  margin: 0 auto;
   background: #f7c281;
   padding: 3px 20px;
+  display: block;
+  text-align: center;
 }
 
 .button2 {
   text-align: center;
   display: block;
+}
+
+.cards {
+  margin-top: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .half-center {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .logo {
+    width: 49px;
+    height: 70px;
+    background: url(./assets/logo.png);
+    background-size: contain;
+    margin: 50px 0 50px 0;
+  }
+
+  .button-primary {
+    width: auto;
+  }
+
+  .offer {
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .hero-description {
+    margin-bottom: 20px;
+  }
+
+  .hero-img {
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-top: 0px;
+    margin-left: auto;
+  }
+
+  .hide {
+    display: block;
+  }
 }
