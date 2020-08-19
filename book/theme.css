@@ -150,7 +150,7 @@ body {
   }
 
   .hero-description {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 
   .hero-img {
@@ -165,4 +165,15 @@ body {
   .hide {
     display: block;
   }
+}
+
+.purple {
+  background-color: #00C2FF !important;
+  border-color: #00C2FF !important;
+}
+
+.gray {
+  background-color: #e2cece !important;
+  border-color: #e2cece !important;
+  color: #383636;
 }
