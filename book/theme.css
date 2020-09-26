@@ -1,7 +1,21 @@
 body {
-  background: #fdfcfa;
-  font-size: 17px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif !important;
+  /* background: #fff; */
+  background: linear-gradient(
+    to bottom, 
+    #FEF7D6 0%, 
+    #FEF7D6 610px, 
+    #fff 610px, 
+    #fff 100%
+  );
 }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 .logo {
   width: 49px;
@@ -26,7 +40,7 @@ body {
 }
 
 .info {
-  background: #fce985;
+  background: #FEF7D6;
   padding: 50px;
 }
 
@@ -48,6 +62,13 @@ body {
   font-size: 1.1em;
   line-height: 1.4;
   margin-bottom: 50px;
+}
+
+.hello-there {
+  font-weight: 600;
+  font-size: 24px !important;
+  line-height: 33px;
+  /* font-style: italic; */
 }
 
 /* Larger than mobile */
@@ -78,15 +99,51 @@ body {
   background-color: #fadd51 !important;
   border-color: #fadd51 !important;
   color: #000 !important;
-  font-size: 13px;
-  line-height: 2.8;
-  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  height: auto;
+  padding: 14px 25px;
+  min-width: 220px;
 }
 
 .button-primary:hover {
   background-color: #fde781 !important;
   border-color: #fadd51 !important;
   color: #000 !important;
+}
+
+.button-primary .paypal {
+  height: 32px;
+  margin: -8px 10px -10px -4px;
+  display: inline-block;
+}
+
+.button-primary .amazon {
+  height: 20px;
+  margin: -8px auto -10px auto;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  max-width: 499px;
+  margin: 42px auto 0;
+  flex-wrap: wrap;
+}
+
+.buttons a {
+  justify-content: center;
+}
+
+.buttons span {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  flex-basis: 100%;
+  margin: 20px 0 0 0;
+}
 }
 
 .features {
@@ -113,9 +170,8 @@ body {
   text-align: center;
 }
 
-.button2 {
-  text-align: center;
-  display: block;
+.button {
+  text-transform: none !important;
 }
 
 .cards {
@@ -126,7 +182,95 @@ body {
   display: none;
 }
 
+h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: #221A5A;
+  text-align: center;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: #221A5A;
+  text-align: center;
+}
+
+.section-heading {
+  text-align: left !important;
+}
+
+.book-cover {
+  width: 264px;
+  margin: 50px auto 0;
+  display: block;
+}
+
+.middle-header {
+  max-width: 600px;
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.hero-mini {
+  font-size: 12px;
+  color: #919191;
+  display: block;
+  margin: 80px auto 15px;
+  text-align: center;
+}
+
+.hero-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #2B2B2B;
+}
+
+.info {
+  max-width: 700px;
+}
+
 @media (min-width: 400px) {
+
+  .book-cover {
+    width: 264px;
+    margin: 50px auto 0;
+    display: block;
+  }
+
+  .middle-header {
+    /* width: 600px; */
+    margin: 0 auto !important;
+    float: none !important;
+  }
+
+  .hero-mini {
+    font-size: 12px;
+    color: #919191;
+    display: block;
+    margin: 80px auto 15px;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #2B2B2B;
+  }
+
+  .info {
+    max-width: 700px;
+  }
   .half-center {
     margin: 0 auto;
     width: 50%;
