@@ -38,7 +38,6 @@
     ga('create', 'UA-174552496-1', 'auto');
     ga('send', 'pageview');
     </script>
-
 </head>
 <body>
 
@@ -75,7 +74,20 @@
       <div class="row">
         <div class="middle-header">
           <h2><b>Save $5</b> and preorder the ebook now for <b>$7.99</b>.</h2>
-          <div class="buttons">
+
+          <div class="container-countdown">
+            <span class="endsin">PREORDER ENDS IN</span>
+            <div id="countdown">
+              <ul>
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="buttons" style="margin: 0 auto">
             <a class="button button-primary align-center" target="_blank" onclick="ga('send', 'event', 'preorder', 'click', 'header', 1);" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7PXACJKDZ82JJ"><img src="assets/paypal.png" class="paypal"/>Preorder <b>Now</b></a>
             <!-- <a class="button button-primary align-center" href="#"><img src="assets/amazon.svg" class="amazon"/></a> -->
             <!-- <span>
@@ -182,10 +194,12 @@
         <div class="row">
           <div class="column">
             <h2 class="section-heading">FAQ</h2>
+            <p><b>What if I’m not happy with the book?</b></p>
+            <p>I'm confident you will find fantastic value in this book. If that's not the case, you can ask for a 100% refund.</p>
             <p><b>Why preoder now?</b></p>
             <p>I'm currently getting feedback on my last draft and ultimate details. Pre-order now, save $5 and get the flashcards for free.</p>
             <p><b>When am I going to receive the book?</b></p>
-            <p>Pre-order ends October 1. Book will be sent in November. Book price after pre-order will be $12.99.</p>
+            <p>Pre-order ends October 11. Book will be sent in November. Book price after pre-order will be $12.99.</p>
             <p><b>How can I use the cards?</b></p>
             <p>There are plenty of mobile and browser apps to consume flashcards. The Cards supports almost all formats.</p>
             <p><b>What are the ebook formats??</b></p>
@@ -201,5 +215,37 @@
   </div>
 
   <div class="rights"><a href="https://codepen.io/HighFlyer/pen/LaXrgV" target="new">* Book animation</a></div>
+  <script>
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+let countDown = new Date("Oct 11, 2020 00:00:00").getTime(),
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+
+      document.getElementById("days").innerText = Math.floor(distance / (day)),
+        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+      //do something later when date is reached
+      if (distance < 0) {
+        let headline = document.getElementById("headline"),
+            countdown = document.getElementById("countdown"),
+            content = document.getElementById("content");
+        
+        headline.innerText = "It's my birthday!";
+        countdown.style.display = "none";
+        content.style.display = "block";
+
+        clearInterval(x);
+      }
+
+    }, second)
+  </script>
 </body>
 </html>

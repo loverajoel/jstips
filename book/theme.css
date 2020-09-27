@@ -484,3 +484,52 @@ a {
 a:hover {
   color: #2B2B2B;
 }
+
+/* countdown */
+.container-countdown {
+  color: #333;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+
+.container-countdown h1 {
+  font-weight: normal;
+}
+
+.container-countdown li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #BFBFBD;
+}
+
+.container-countdown li span {
+  display: block;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+  color: #FC9791;
+}
+
+.container-countdown .message {
+  font-size: 4rem;
+}
+
+.container-countdown #content {
+  display: none;
+  padding: 1rem;
+}
+
+.endsin {
+  font-size: 12px;
+  color: #919191;
+  display: block;
+  /* margin: 10px auto 10px; */
+  text-align: center; 
+}
