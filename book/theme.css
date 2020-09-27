@@ -451,3 +451,36 @@ box-shadow: 7px 9px 11px 0px rgb(113 112 113 / 60%);
 .left-side h2 span:last-child{
   /* font-family: acumin-pro, sans-serif; */
 } 
+
+.pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.pic img {
+  width: 100%;
+}
+
+.rights {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.rights a {
+  font-size: 10px;
+  color: #2B2B2B;
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  color: #2B2B2B;
+}
+
+a:hover {
+  color: #2B2B2B;
+}
