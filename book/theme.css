@@ -533,3 +533,7 @@ a:hover {
   /* margin: 10px auto 10px; */
   text-align: center; 
 }
+
+.community li {
+  text-transform: none !important;
+}
