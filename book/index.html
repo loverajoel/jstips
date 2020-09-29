@@ -194,7 +194,7 @@
         <div class="one-half half-center">
           <div class="pic"><img src="assets/joel.jpeg" /></div>
           <h2 class="value-multiplier">About the author</h2>
-          <p style="text-align: center;">My name is <a href="https://twitter.com/loverajoel" target="_blank">Joel Lovera</a>. I’m a developer with 10+ years of experience in tech. During my career, I’ve created and launched several products. I led teams, managed architecture and created and collaborated on <a href="http://github.com/loverajoel" target="_blank">open source</a> projects.</p>
+          <p style="text-align: center;">My name is <a href="https://twitter.com/loverajoel" target="_blank">Joel Lovera</a>. I'm a developer with +15 years of experience in tech. During my career, I've created and launched several products. In 2015 I started jstips.co, where I write for +5 million readers.</p>
         </div>
       </div>
     </div>
@@ -239,22 +239,9 @@ let countDown = new Date("Oct 11, 2020 00:00:00").getTime(),
           distance = countDown - now;
 
       document.getElementById("days").innerText = Math.floor(distance / (day)),
-        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-      //do something later when date is reached
-      if (distance < 0) {
-        let headline = document.getElementById("headline"),
-            countdown = document.getElementById("countdown"),
-            content = document.getElementById("content");
-        
-        headline.innerText = "It's my birthday!";
-        countdown.style.display = "none";
-        content.style.display = "block";
-
-        clearInterval(x);
-      }
+      document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+      document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+      document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
     }, second)
   </script>
