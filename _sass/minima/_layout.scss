@@ -1518,3 +1518,13 @@ a {
     background-image: url('/assets/images/cards_v2.png')
   }
 }
+
+.book {
+  background: #221A5A;
+  .wrapper {
+    width: 900px;
+    @include media-query($on-laptop) {
+      width: 100%;
+    }
+  }
+}

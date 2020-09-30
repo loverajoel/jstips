@@ -29,7 +29,7 @@ layout: default
     {% endif %}
   </div>
 
-  <div class="bite-container">
+  <!-- <div class="bite-container">
     <script type="text/javascript">
       var number = Math.floor(Math.random() * 2) + 1;
       var urls = {
@@ -61,7 +61,7 @@ layout: default
       window.addEventListener('scroll', check, false);
     </script>
     <a class="bites" href="https://www.jstips.co/books/" target="_blank" onclick="ga('send', 'event', 'books', 'click', 'v'+number, 1);"></a>
-  </div>
+  </div> -->
 
   <!-- <div class="related-tips flashcard">
     <div class="wrapper">
@@ -97,6 +97,9 @@ layout: default
     </ul>
   </div>
 </article>
+<div class="book">
+  <div class="wrapper"><a onclick="ga('send', 'event', 'books', 'click', 'big_1', 1);" href="/book"><img src="/assets/images/book.png"></a></div>
+</div>
 {% include related_tips.html %}
 {% include email-suscribe.html %}
 <div class="wrapper">
