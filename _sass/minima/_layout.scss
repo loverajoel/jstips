@@ -1317,6 +1317,7 @@ a {
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   height: 3400px;
+  display: none;
 
 }
 
@@ -1330,7 +1331,7 @@ a {
 #menuToggle input:checked ~ ul
 {
   transform: scale(1.0, 1.0);
-  opacity: 1;
+  display: block;
 }
 }
 
@@ -1526,5 +1527,8 @@ a {
     @include media-query($on-laptop) {
       width: 100%;
     }
+  }
+  @include media-query($on-laptop) {
+    display: none;
   }
 }

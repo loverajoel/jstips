@@ -8,29 +8,33 @@
   <meta name="keywords" content="javascript, tips, react, angular, nodejs, front-end, frameworks" />
   <meta name="author" content="Lovera Joel">
 
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}"> 
+
   <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta itemprop="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta itemprop="image" content="http://www.jstips.co/assets/images/share-fb">
+  <meta itemprop="image" content="https://www.jstips.co/assets/images/share-fb">
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="http://www.jstips.co">
+  <meta name="twitter:site" content="https://www.jstips.co">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="twitter:creator" content="@tips_js">
+  <meta name="twitter:image" content="https://www.jstips.co/assets/images/share-fb.png" />
 
   <!-- Open Graph data -->
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://www.jstips.co/assets/images/share-fb.png" />
+  <meta property="og:image" content="https://www.jstips.co/assets/images/share-fb.png" />
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   <meta property="og:site_name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+  <meta property="og:url" content="https://www.jstips.co">
 
   <link rel="stylesheet" href="{{ "/assets/js/swiper/swiper.min.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <link href="https://flashcards-loverajoel.falcon-team1.now.sh/build/static/css/main.css" rel="stylesheet">
+  <!-- <link href="https://flashcards-loverajoel.falcon-team1.now.sh/build/static/css/main.css" rel="stylesheet"> -->
   <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
 
   <meta name="google-site-verification" content="0k2HJ5gAPZcLtyA-M66gKgucophcIiwan_X1ky02JlY" />
