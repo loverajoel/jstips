@@ -37,8 +37,6 @@ layout: default
     },
     "image": {
       "@type": "ImageObject",
-      "width": {{ page.img_width | default: site.img_width }},
-      "height": {{ page.img_height | default: site.img_height }},
       "url": "{{ site.url }}{{ page.img_url | default: site.img_url }}"
     }
   }
