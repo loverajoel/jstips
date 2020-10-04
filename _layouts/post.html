@@ -73,7 +73,15 @@ layout: default
   </div>
 </article>
 <div class="book">
-  <div class="wrapper"><a onclick="ga('send', 'event', 'books', 'click', 'big_1', 1);" href="/book"><img src="/assets/images/book.png"></a></div>
+  <div class="wrapper">
+    <a class="book-img" onclick="ga('send', 'event', 'books', 'click', 'big_1', 1);" href="/book"><img src="/assets/images/book.png" alt="jstips book"></a>
+    <div class="book-big">
+      <span>MEET THE NEW JSTIPS BOOK</span>
+      <a class="title-book" onclick="ga('send', 'event', 'books', 'click', 'big_1', 1);" href="/book">Slay the JavaScript Interview.</a>
+      <p>Use the 100 answers of this tiny book to take your knowledge to the next level and get the job you are looking for.</p>
+      <a class="button-book" onclick="ga('send', 'event', 'books', 'click', 'big_1', 1);" href="/book">GET THE BOOK NOW</a>
+    </div>
+  </div>
 </div>
 {% include related_tips.html %}
 {% include email-suscribe.html %}

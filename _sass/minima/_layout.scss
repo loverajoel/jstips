@@ -1524,6 +1524,13 @@ a {
   background: #221A5A;
   .wrapper {
     width: 900px;
+    
+    .book-img {
+      width: 250px;
+      float: left;
+      margin: 30px 0;
+    }
+
     @include media-query($on-laptop) {
       width: 100%;
     }
@@ -1531,4 +1538,61 @@ a {
   @include media-query($on-laptop) {
     display: none;
   }
+
+  .book-big {
+    width: 625px;
+    float: left;
+    margin: 98px 0 0 21px;
+
+    span {
+      font-size: 12px;
+      line-height: 37px;
+      color: #FFFFFF;
+      display: block;
+      float: left;
+      clear: both;
+    }
+
+    .title-book {
+      font-weight: 400;
+      font-size: 36px;
+      color: #FDA9A4;
+      display: block;
+      float: left;
+      clear: both;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      color: #FFFFFF;
+      display: block;
+      float: left;
+      clear: both;
+      text-align: left;
+    }
+
+    .button-book {
+      font-size: 19px;
+      line-height: 23px;
+      text-align: center;
+      color: #221A5A;
+      background: #FED06F;
+      border-radius: 5px;
+      padding: 12px 30px;
+      display: block;
+      float: left;
+      clear: both;
+      margin-top: 27px;
+
+      &:hover {
+        background: #f8d646;
+      }
+    }
+  }
+
 }
