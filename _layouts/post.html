@@ -1,15 +1,57 @@
 ---
 layout: default
 ---
-<article itemscope itemtype="http://schema.org/Article" class="post">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "url": "{{ site.url }}{{ page.url }}",
+    "name": {{ page.title | jsonify }},
+    "headline": {{ page.title | jsonify }},
+    "keywords": {{ page.tags | join: ',' | jsonify }},
+    "description": {{ page.excerpt | strip_newlines | strip | jsonify }},
+    "articleBody": {{ page.content | strip_html | jsonify }},
+    "datePublished": {{ page.date | jsonify }},
+    "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ page.tip-username | jsonify }},
+      "givenName": "Joel",
+      "familyName": "Lovera",
+      "email": {{ site.email | jsonify }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "width": 32,
+        "height": 32,
+        "url": "{{ site.url }}/icon/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "width": {{ page.img_width | default: site.img_width }},
+      "height": {{ page.img_height | default: site.img_height }},
+      "url": "{{ site.url }}{{ page.img_url | default: site.img_url }}"
+    }
+  }
+  </script>
+<article class="post">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name">{{ page.title | escape }}</h1>
+    <h1 class="post-title" >{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <span>By <a itemprop="author name" itemscope itemtype="http://schema.org/Person" target="_blank" href="{{ page.tip-username-profile }}">@{{ page.tip-username }}</a></span>
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">on {{ page.date | date: "%b %-d, %Y" }}</time>
+      <span>By <a  target="_blank" href="{{ page.tip-username-profile }}">@{{ page.tip-username }}</a></span>
+      <time>on {{ page.date | date: "%b %-d, %Y" }}</time>
     </p>
   </header>
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     {{ content }}
     {% if page.tip-md-link %}
       <a class="improve-tip" href="{{page.tip-md-link}}">>_ Improve this tip</a>
