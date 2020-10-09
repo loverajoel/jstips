@@ -239,6 +239,11 @@ h2 {
 
 @media (min-width: 400px) {
 
+  h1 {
+    width: 450px;
+    margin: 0 auto 2rem;
+  }
+
   .book-cover {
     width: 264px;
     margin: 50px auto 0;
