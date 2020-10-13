@@ -67,6 +67,14 @@ console.log(myNewArray4);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
+### Solution 5: Using [`flat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) in ES10
+
+```js
+var myNewArray5 = myArray.flat();
+console.log(myNewArray5);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 Take a look [here](https://jsbin.com/janana/edit?js,console) these 4 algorithms in action.
 
 For infinitely nested array try Lodash [flattenDeep()](https://lodash.com/docs#flattenDeep).

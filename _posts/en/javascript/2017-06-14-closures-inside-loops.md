@@ -18,12 +18,12 @@ If you ever come across the likes of
 var funcs = [];
 for (var i = 0; i < 3; i++) {
   funcs[i] = function() {
-    console.log("i value is" + i);
+    console.log("i value is " + i);
   };
 }
 
-for (var i = 0; i < 3; i++) {
-  funcs[i]();
+for (var k = 0; k < 3; k++) {
+  funcs[k]();
 }
 ```
 
@@ -38,9 +38,9 @@ i value is 2
 Doesn't match the actual output which will resemble
 
 ```
-i value is 2
-i value is 2
-i value is 2
+i value is 3
+i value is 3
+i value is 3
 ```
 
 This is because of how the capturing mechanism of closures work and how `i` is represented internally.
@@ -50,7 +50,7 @@ To solve this situation you can do as follows:
 ```javascript
 for (var i = 0; i < 3; i++) {
   funcs[i] = (function(value) {
-    console.log("i value is " + 3);
+    console.log("i value is " + i);
   })(i);
 }
 ```
@@ -60,7 +60,7 @@ Which effectively copies i by value by handing it to our closure or
 ```javascript
 for (let i = 0; i < 3; i++) {
   funcs[i] = function() {
-    console.log("i value is " + 3);
+    console.log("i value is " + i);
   }
 }
 ```
