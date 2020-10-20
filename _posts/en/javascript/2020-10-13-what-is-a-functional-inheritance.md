@@ -41,10 +41,4 @@ console.log(myCat.sayHello());
 // Output: "Hello, I'm Rufi"
 ```
 
-### Further readings:
-
-- [Currying in JavaScript](https://dev.to/suprabhasupi/currying-in-javascript-1k3l)
-- [Lodash curry](https://lodash.com/docs/#curry)
-- [JavaScript currying](http://zetcode.com/javascript/currying/)
-
 
