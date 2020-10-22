@@ -234,10 +234,11 @@ h2 {
 }
 
 .info {
+  width: 100%;
   max-width: 700px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
 
   h1 {
     width: 450px;
