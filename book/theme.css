@@ -44,6 +44,11 @@ body {
   padding: 50px;
 }
 
+.info img {
+  width: 88px;
+  float: right;
+}
+
 .info p {
   font-size: 18px;
 }
