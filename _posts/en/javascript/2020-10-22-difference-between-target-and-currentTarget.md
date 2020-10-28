@@ -5,7 +5,7 @@ title: What is the difference between Target and currentTarget in the event cont
 tip-number: 77
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: `target` refers to the element that triggers an event. `currentTarget` to the element that the event listener is listening on.
+tip-tldr: target refers to the element that triggers an event. currentTarget to the element that the event listener is listening on.
 
 categories:
     - en
