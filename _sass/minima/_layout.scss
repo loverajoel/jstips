@@ -1542,7 +1542,7 @@ a {
   .book-big {
     width: 625px;
     float: left;
-    margin: 98px 0 0 21px;
+    margin: 88px 0 0 21px;
 
     span {
       font-size: 12px;
@@ -1560,6 +1560,9 @@ a {
       display: block;
       float: left;
       clear: both;
+      text-align: left;
+      line-height: 46px;
+      margin: 0 0 21px 0;
       
       &:hover {
         text-decoration: underline;
@@ -1587,7 +1590,7 @@ a {
       display: block;
       float: left;
       clear: both;
-      margin-top: 27px;
+      margin-top: 19px;
 
       &:hover {
         background: #f8d646;
