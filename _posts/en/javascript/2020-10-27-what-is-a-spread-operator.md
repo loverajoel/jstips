@@ -15,7 +15,7 @@ The spread operator is a useful syntax for adding items to arrays, combining arr
 
 ```js
 // Concatenating arrays and objects
-let arr1 = [1,2,3]; 
+let arr = [1,2,3]; 
 let arr2 = [4,5]; 
 let arr = [...arr,...arr2]; 
 console.log(arr);
