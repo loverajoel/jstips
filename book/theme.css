@@ -548,3 +548,9 @@ a:hover {
 .community li {
   text-transform: none !important;
 }
+
+.best_seller {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+}
