@@ -554,3 +554,34 @@ a:hover {
   display: block;
   margin: 0 auto;
 }
+
+blockquote {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+blockquote .quote {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: #221A5A;
+  display: block;
+  margin: 0 0 30px 0;
+}
+
+blockquote .avatar {
+  float: left;
+  width: 60px;
+  border-radius: 100px;
+  margin: 0 20px 0 10px;
+}
+
+blockquote .user {
+  display: inline-block;
+  font-weight: 600;
+}
+
+blockquote .title {
+  display: inline-block;
+}
