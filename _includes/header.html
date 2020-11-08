@@ -26,7 +26,7 @@
         <li><a href="/{{ page.lang }}/{{ category }}">{{ site.transl[page.lang].categories[category] }}</a></li>
       {% endfor %}
 
-      <li>Lenguages</li>
+      <li>Languages</li>
       {% for lang in site.languages %}
         {% if lang.name != page.lang %}
             <li><a href="{{ lang.link }}">{{ site.transl[page.lang].dropdown_lang[lang.name].txt }}</a></li>
