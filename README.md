@@ -1,4 +1,4 @@
-[![header](https://www.jstips.co/book/assets/gb.png)](https://www.jstips.co/book/?utm_source=github&utm_medium=header&utm_campaign=book&utm_content=pro)
+[![header](https://pbs.twimg.com/profile_banners/4539400881/1604319005/1500x500)](https://www.jstips.co/book/?utm_source=github&utm_medium=header&utm_campaign=book&utm_content=pro)
 
 # JS Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 > Useful JavaScript tips
