@@ -77,7 +77,7 @@ body {
 }
 
 /* Larger than mobile */
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .half-center {
     margin: 0 auto;
     width: 50%;
@@ -149,7 +149,13 @@ body {
   flex-basis: 100%;
   margin: 20px 0 0 0;
 }
+.button-primary {
+  width: 100%;
+  margin: 10px;
 }
+}
+
+
 
 .features {
   list-style: none;
@@ -297,6 +303,7 @@ h2 {
 
   .button-primary {
     width: auto;
+    margin: auto;
   }
 
   .offer {
