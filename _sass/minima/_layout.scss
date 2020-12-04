@@ -1531,6 +1531,12 @@ a {
       margin: 30px 0;
     }
 
+    .card-img {
+      width: 250px;
+      float: left;
+      margin: 115px 0;
+    }
+
     @include media-query($on-laptop) {
       width: 100%;
     }

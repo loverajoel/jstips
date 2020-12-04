@@ -72,7 +72,19 @@ layout: default
     </ul>
   </div>
 </article>
-<div class="book">
+<div class="book" id="love-1">
+  <div class="wrapper">
+    <a class="card-img" onclick="ga('send', 'event', 'cards', 'click', 'big_1', 1);" href="/cards"><img src="/assets/images/cards.png" alt="jstips cards"></a>
+    <div class="book-big">
+      <span>THE JSTIPS FLASHCARDS</span>
+      <a class="title-book" onclick="ga('send', 'event', 'cards', 'click', 'big_1', 1);" href="/cards">Learn JavaScript twice as fast. Remember forever.</a>
+      <p>Five years worth of JavaScript that you can learn in just a few weeks. This is the most complete and efficient flashcards ever created.</p>
+      <a class="button-book" onclick="ga('send', 'event', 'cards', 'click', 'big_1', 1);" href="/cards">GET THE CARDS NOW</a>
+      <!-- <a class="best-seller" onclick="ga('send', 'event', 'books', 'click', 'amazon', 1);" href="/book"><img width="300" src="/book/assets/bestseller.png" alt="jstips amazon"></a> -->
+    </div>
+  </div>
+</div>
+<div class="book" id="love-2">
   <div class="wrapper">
     <a class="book-img" onclick="ga('send', 'event', 'books', 'click', 'big_1', 1);" href="/book"><img src="/assets/images/book.png" alt="jstips book"></a>
     <div class="book-big">
@@ -84,6 +96,12 @@ layout: default
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  var number = Math.floor(Math.random() * 2) + 1;
+  setTimeout(function() {
+    document.querySelector(`#love-${number}`).style.display = 'none';
+  });
+</script>
 {% include related_tips.html %}
 {% include email-suscribe.html %}
 <div class="wrapper">
