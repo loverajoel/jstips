@@ -32,13 +32,28 @@ body {
   line-height: 22px;
 }
 
+
+.main-button {
+  width: 100%;
+}
+
 /* Larger than mobile */
 @media (min-width: 400px) {
   .half-center {
     margin: 0 auto;
     width: 50%;
   }
+
+  .main-button {
+    width: auto !important;
+  }
+
+  .offer {
+    margin: 0 0 0 15px !important;
+    display: inline !important;
+  }
 }
+
 
 .text-center {
   text-align: center;
@@ -75,6 +90,21 @@ body {
 
 .features li {
   display: flex;
+  margin: 20px 0;
+}
+
+.features img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  display: flex;
 }
 
 .features svg {
@@ -85,12 +115,19 @@ body {
 
 .offer {
   font-size: 12px;
-  margin: 0 0 0 15px;
+  margin: 0px auto;
   background: #f7c281;
   padding: 3px 20px;
+  display: block;
+  text-align: center;
 }
 
 .button2 {
   text-align: center;
   display: block;
+}
+
+.video {
+  width: 300px;
+  margin: 0 auto;
 }
