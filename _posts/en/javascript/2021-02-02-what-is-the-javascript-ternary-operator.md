@@ -5,7 +5,7 @@ title: What is the JavaScript ternary operator?
 tip-number: 81
 tip-username: loverajoel
 tip-username-profile: https://www.twitter.com/loverajoel
-tip-tldr: The method received as an argument for the promise.
+tip-tldr: The ternary operator is a shortcut for the if statement.
 
 categories:
     - en
