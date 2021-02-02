@@ -24,9 +24,9 @@ console.log(drink); // "Beer"
 // Equivalent to:
 let drink;
 if ((age >= 21)) {
-	drink = "Beer";
+  drink = "Beer";
 } else {
-	drink = "Juice";
+  drink = "Juice";
 }
 
 console.log(drink); // "Beer"
