@@ -105,7 +105,7 @@ body {
   border-color: #fadd51 !important;
   color: #000 !important;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 18px;
   line-height: 25px;
   height: auto;
@@ -591,4 +591,16 @@ blockquote .user {
 
 blockquote .title {
   display: inline-block;
+}
+
+.promo {
+  background: #221A5A;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.promo span {
+  color: #fadd51
 }
