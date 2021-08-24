@@ -563,18 +563,34 @@ a:hover {
 }
 
 blockquote {
-  max-width: 600px;
-  margin: 50px auto;
+  margin: 20px;
+  width: 300px;
+  padding: 30px;
+  box-shadow: 2px 4px 40px rgb(78 77 82 / 12%);
+  transition: all .2s;
+  float: left;
+}
+
+.quotes {
+  width: 100%;
+  max-width: 1202px;
+}
+
+@media (max-width: 500px) {
+  .quotes {
+    width: 80% !important;
+  }
 }
 
 blockquote .quote {
   font-style: normal;
   font-weight: 600;
-  font-size: 25px;
-  line-height: 34px;
+  font-size: 19px;
+  line-height: 28px;
   color: #221A5A;
   display: block;
   margin: 0 0 30px 0;
+  min-height: 140px;
 }
 
 blockquote .avatar {
@@ -591,6 +607,7 @@ blockquote .user {
 
 blockquote .title {
   display: inline-block;
+  font-size: 14px;
 }
 
 .promo {
