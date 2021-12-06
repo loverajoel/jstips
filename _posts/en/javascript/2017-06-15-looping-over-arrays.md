@@ -14,7 +14,7 @@ categories:
 
 # Looping over arrays
 
-There's a few methods for looping over arrays in Javascript. We'll start
+There're few methods for looping over arrays in Javascript. We'll start
 with the classical ones and move towards additions made to the standard.
 
 ## while
