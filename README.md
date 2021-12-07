@@ -76,7 +76,7 @@ There are a lot of ways to get updates, choose your own
 - 36 - [Observe DOM changes in extensions](http://www.jstips.co/en/javascript/observe-dom-changes/)
 - 35 - [Assignment Operators](http://www.jstips.co/en/javascript/assignment-shorthands/)
 - 34 - [Implementing asynchronous loop](http://www.jstips.co/en/javascript/implementing-asynchronous-loops/)
-- 33 - [Create Range 0...N easily using one line](http://www.jstips.co/en/javascript/create-range-0...n-easily-using-one-line/)
+- 33 - [Create Range 0...N easily using one line](http://www.jstips.co/en/javascript/create-range-0-n-easily-using-one-line/)
 - 32 - [`Map()` to the rescue: adding order to Object properties](http://www.jstips.co/en/javascript/map-to-the-rescue-adding-order-to-object-properties/)
 
 - 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](http://www.jstips.co/en/javascript/avoid-modifying-or-passing-arguments-into-other-functions-it-kills-optimization/)
