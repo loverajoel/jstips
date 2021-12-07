@@ -42,7 +42,7 @@ There are a lot of ways to get updates, choose your own
 - 71 - [VueJS, How VueJS makes a copy-update-replace inside the data binding](http://www.jstips.co/en/more/vuejs-how-vuejs-makes-a-copy-update-replace-inside-the-data-binding/)
 - 70 - [Picking and rejecting object properties](http://www.jstips.co/en/javascript/picking-and-rejecting-object-properties/)
 - 69 - [Enhancing React components, Composition](http://www.jstips.co/en/react/enhancing-react-components-composition/)
-- 68 - [Why you should use Object.is() in equality comparison](<http://www.jstips.co/en/javascript/why-you-should-use-Object.is()-in-equality-comparison/>)
+- 68 - [Why you should use Object.is() in equality comparison](http://www.jstips.co/en/javascript/why-you-should-use-Object.is()-in-equality-comparison/)
 - 67 - [Recursion, iteration and tail calls in JS](http://www.jstips.co/en/javascript/recursion-iteration-and-tail-calls-in-js/)
 - 66 - [State to Props maps with memory](http://www.jstips.co/en/react/state-to-props-maps-with-memory/)
 - 65 - [Tapping for quick debugging](http://www.jstips.co/en/javascript/tapping-for-quick-debugging/)
