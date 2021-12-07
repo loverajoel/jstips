@@ -1,4 +1,4 @@
-[![header](https://pbs.twimg.com/profile_banners/4539400881/1604319005/1500x500)](https://www.jstips.co/book/?utm_source=github&utm_medium=header&utm_campaign=book&utm_content=pro)
+[![header](https://pbs.twimg.com/profile_banners/4539400881/1613214971/1500x500)](https://www.jstips.co/book/?utm_source=github&utm_medium=header&utm_campaign=book&utm_content=pro)
 
 # JS Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
@@ -26,11 +26,7 @@ There are a lot of ways to get updates, choose your own
 - [Official Twitter Account](https://twitter.com/tips_js)
 - [Hubot](https://github.com/dggriffin/hubot-jstips)
 - [Slackbot](https://github.com/radibit/js-tips-slack-bot)
-- [js2016.tips](http://js2016.tips/)
-- [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
-- [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
 - [iOS App](https://goo.gl/Y9WiBc)
-- [Android App](https://goo.gl/lYorrU)
 
 > Don't forget to Star★ the repo, as this helps promoting the project!
 
