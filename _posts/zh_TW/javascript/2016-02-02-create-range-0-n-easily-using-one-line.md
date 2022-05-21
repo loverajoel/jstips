@@ -9,7 +9,7 @@ tip-tldr: 使用一行程式碼，來產生有順序性的陣列。
 
 
 redirect_from:
-  - /zh_tw/create-range-0...n-easily-using-one-line/
+  - /zh_tw/create-range-0-n-easily-using-one-line/
 
 categories:
     - zh_TW

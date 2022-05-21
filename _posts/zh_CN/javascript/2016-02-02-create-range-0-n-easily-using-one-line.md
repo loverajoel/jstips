@@ -9,7 +9,7 @@ tip-tldr: 我们可以创建一个函数，它可以仅用一行代码生成0...
 
 
 redirect_from:
-  - /zh_cn/create-range-0...n-easily-using-one-line/
+  - /zh_cn/create-range-0-n-easily-using-one-line/
 
 categories:
     - zh_CN

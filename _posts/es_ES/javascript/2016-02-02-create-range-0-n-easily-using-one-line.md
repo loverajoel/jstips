@@ -1,6 +1,7 @@
 ---
 layout: post
 
+
 title: Crear rangos 0...(N-1) facilmente usando una linea
 tip-number: 33
 tip-username: SarjuHansaliya
@@ -8,7 +9,7 @@ tip-username-profile: https://github.com/SarjuHansaliya
 tip-tldr: Podemos crear una función de rango que dará un rango entre 0...(N-1) utilizando una sola línea
 
 redirect_from:
-  - /es_es/create-range-0...n-easily-using-one-line/
+  - /es_es/create-range-0-n-easily-using-one-line/
 
 categories:
     - es_ES

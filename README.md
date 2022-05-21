@@ -1,6 +1,7 @@
-[![header](https://pbs.twimg.com/profile_banners/4539400881/1604319005/1500x500)](https://www.jstips.co/book/?utm_source=github&utm_medium=header&utm_campaign=book&utm_content=pro)
+[![header](https://pbs.twimg.com/profile_banners/4539400881/1613214971/1500x500)](https://www.jstips.co/book/?utm_source=github&utm_medium=header&utm_campaign=book&utm_content=pro)
 
 # JS Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
 > Useful JavaScript tips
 
 This is an awesome project about short and useful JavaScript tips that will allow you to improve your code writing. With less than 2 minutes, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
@@ -8,9 +9,11 @@ This is an awesome project about short and useful JavaScript tips that will allo
 Tips are added frequently (read further if you want to stay in touch).
 
 ## Support the community
+
 If you found a JS Tip useful or you like a writer of the community now you are able to show some respect and support with a tip!
 
 ### Can you help us enrich it?
+
 Sure, you can help the project in two ways, sending your tip or reviewing future tips.
 Any improvements or suggestions are more than welcome!
 [Instructions are here](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md).
@@ -23,16 +26,13 @@ There are a lot of ways to get updates, choose your own
 - [Official Twitter Account](https://twitter.com/tips_js)
 - [Hubot](https://github.com/dggriffin/hubot-jstips)
 - [Slackbot](https://github.com/radibit/js-tips-slack-bot)
-- [js2016.tips](http://js2016.tips/)
-- [Hingsir](http://hingsir.com/jstips-site/dist/tips/)
-- [Awesomelists](https://awesomelists.top/#/repos/loverajoel/jstips)
 - [iOS App](https://goo.gl/Y9WiBc)
-- [Android App](https://goo.gl/lYorrU)
 
 > Don't forget to Star★ the repo, as this helps promoting the project!
 
 # Tips list
 
+- 74 - [Check the reason make your page re-render by changed props and state](http://www.jstips.co/en/react/trace-the-reason-make-your-page-rerender/)
 - 73 - [Hash maps without side effects](http://www.jstips.co/en/javascript/hash-maps-without-side-effects/)
 - 72 - [Adventurers Guide to React (Part I)](http://www.jstips.co/en/react/adventurers-guide-to-react/)
 - 71 - [VueJS, How VueJS makes a copy-update-replace inside the data binding](http://www.jstips.co/en/more/vuejs-how-vuejs-makes-a-copy-update-replace-inside-the-data-binding/)
@@ -76,7 +76,7 @@ There are a lot of ways to get updates, choose your own
 - 36 - [Observe DOM changes in extensions](http://www.jstips.co/en/javascript/observe-dom-changes/)
 - 35 - [Assignment Operators](http://www.jstips.co/en/javascript/assignment-shorthands/)
 - 34 - [Implementing asynchronous loop](http://www.jstips.co/en/javascript/implementing-asynchronous-loops/)
-- 33 - [Create Range 0...N easily using one line](http://www.jstips.co/en/javascript/create-range-0...n-easily-using-one-line/)
+- 33 - [Create Range 0...N easily using one line](http://www.jstips.co/en/javascript/create-range-0-n-easily-using-one-line/)
 - 32 - [`Map()` to the rescue: adding order to Object properties](http://www.jstips.co/en/javascript/map-to-the-rescue-adding-order-to-object-properties/)
 
 - 31 - [Avoid modifying or passing `arguments` into other functions — it kills optimization](http://www.jstips.co/en/javascript/avoid-modifying-or-passing-arguments-into-other-functions-it-kills-optimization/)
@@ -113,4 +113,5 @@ There are a lot of ways to get updates, choose your own
 - 00 - [Insert item inside an Array](http://www.jstips.co/en/javascript/insert-item-inside-an-array/)
 
 ### License
+
 [GNU GENERAL PUBLIC LICENSE](https://github.com/loverajoel/jstips/blob/master/LICENSE.md)
