@@ -2,7 +2,7 @@
 layout: post
 
 title: What is the flat method?
-tip-number: 82
+tip-number: 75
 tip-username: katiie
 tip-username-profile: https://github.com/katiie
 tip-tldr: The flat method is used to flatten an array
