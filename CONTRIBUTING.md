@@ -24,7 +24,7 @@ Leave the date and the tip number as **xx**. When the PR is `ready to merge`, we
 **Tip proposal** ⇒ **Tip under review** ⇒ **Tip ready to merge**
 
 - When you send a tip, it has to pass the review process and while that happens, its status is `under review`.
-- After the tip had been reviewed by 5 people and they have given their ship it emote (:shipit:), the tip is `ready to merge`.
+- Once the tip is reviewed by 5 people and has been given the reviewer's ship it emote (:shipit:), the tip is `ready to merge`.
 
 
 We are looking forward to your contribution!

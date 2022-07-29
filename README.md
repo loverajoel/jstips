@@ -4,23 +4,23 @@
 
 > Useful JavaScript tips
 
-This is an awesome project about short and useful JavaScript tips that will allow you to improve your code writing. With less than 2 minutes, you will be able to read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
+This is an awesome project about short and useful JavaScript tips that will help you improve your code writing. In less than 2 minutes, you can read about performance, conventions, hacks, interview questions and all the items that the future of this awesome language holds for us.
 
 Tips are added frequently (read further if you want to stay in touch).
 
 ## Support the community
 
-If you found a JS Tip useful or you like a writer of the community now you are able to show some respect and support with a tip!
+If you found a JS Tip useful or if you like a writer of the community, you can show your support and respect with a tip!
 
 ### Can you help us enrich it?
 
-Sure, you can help the project in two ways, sending your tip or reviewing future tips.
+Sure, you can help the project in two ways: sending a tip or reviewing future tips.
 Any improvements or suggestions are more than welcome!
 [Instructions are here](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md).
 
 ### Let’s keep in touch
 
-There are a lot of ways to get updates, choose your own
+There are a lot of ways to get updates:
 
 - [Official Blog](http://www.jstips.co)
 - [Official Twitter Account](https://twitter.com/tips_js)
@@ -28,7 +28,7 @@ There are a lot of ways to get updates, choose your own
 - [Slackbot](https://github.com/radibit/js-tips-slack-bot)
 - [iOS App](https://goo.gl/Y9WiBc)
 
-> Don't forget to Star★ the repo, as this helps promoting the project!
+> Don't forget to Star★ the repo, as this helps promote the project!
 
 # Tips list
 
