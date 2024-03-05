@@ -31,7 +31,7 @@ There are a lot of ways to get updates:
 > Don't forget to Star★ the repo, as this helps promote the project!
 
 # Tips list
-
+- 75 - [Using flat method in JS]()
 - 74 - [Check the reason make your page re-render by changed props and state](http://www.jstips.co/en/react/trace-the-reason-make-your-page-rerender/)
 - 73 - [Hash maps without side effects](http://www.jstips.co/en/javascript/hash-maps-without-side-effects/)
 - 72 - [Adventurers Guide to React (Part I)](http://www.jstips.co/en/react/adventurers-guide-to-react/)
