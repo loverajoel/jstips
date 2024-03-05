@@ -1,0 +1,40 @@
+---
+layout: *post
+
+title: Swapping 2 values without temp variable
+tip-number: xx
+tip-username: gk3000
+tip-username-profile: https://twitter.com/gk3000
+tip-tldr: Swapping two values in a single expression thanks to destructuring
+<!-- tip-writer-support: Paypal, Coinbase, Etc -->
+<!-- tip-translator-support: Paypal, Coinbase, Etc -->
+
+categories:
+    - en
+---
+With array destructuring it's really easy to swap two values in a single expression without need of a temporary variable. 
+
+```js
+let foo = 10, bar = 5;
+[foo, bar] = [bar, foo]
+```
+
+That's it, now `foo` is 5 and `bar` is 10. 
+
+JS first evaluates newly created array on the right of the assignment operator and then destructures it according to the order of vars on the left and since they are the same but in reverse order their values are swapped. 
+
+Works for array's items as well:
+
+```js
+let foo = [1,2,3,4,5];
+[foo[0], foo[4]] = [foo[4],foo[0]]
+```
+
+And objects:
+
+```js
+let foo = {a:1,b:2,c:3};
+[foo.a,foo.b]=[foo.b,foo.a]
+```
+
+👻
