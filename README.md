@@ -18,6 +18,12 @@ Sure, you can help the project in two ways: sending a tip or reviewing future ti
 Any improvements or suggestions are more than welcome!
 [Instructions are here](https://github.com/loverajoel/jstips/blob/master/CONTRIBUTING.md).
 
+### Join our Community on #Slack
+
+We created a community on #Slack where everyone can weigh in and discuss issues in realtime
+
+- [Get an Invite](https://jstips-slack.herokuapp.com)
+
 ### Let’s keep in touch
 
 There are a lot of ways to get updates:
