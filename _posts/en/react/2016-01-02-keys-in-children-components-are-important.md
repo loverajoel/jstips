@@ -42,6 +42,7 @@ render() {
 <MyComponent key={% raw %}{{Math.random()}}{% endraw %}/>
 ```
 
+
 - You can create your own unique id. Be sure that the method is fast and attach it to your object.
 - When the number of children is large or contains expensive components, use keys to improve performance.
 - [You must provide the key attribute for all children of ReactCSSTransitionGroup.](http://docs.reactjs-china.com/react/docs/animation.html)
